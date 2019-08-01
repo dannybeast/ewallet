@@ -1,0 +1,88 @@
+// кнопка
+.btn {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    font-family: $main-font;
+    transition: all 0.05s ease;
+    padding: 0 3em;
+    white-space: nowrap;
+
+    &--icon-right {
+        display: inline-flex;
+        align-items: center;
+        padding-right: 1.5em;
+
+        svg {
+            margin-left: 20px;
+        }
+
+        img {
+            margin-left: 20px;
+            display: block;
+        }
+    }
+
+    &--icon-left {
+        display: inline-flex;
+        align-items: center;
+        padding-left: 1.5em;
+
+        svg {
+            margin-right: 20px;
+            order: -1;
+        }
+
+        img {
+            margin-right: 20px;
+            display: block;
+        }
+    }
+
+    &--icon {
+        padding: 0;
+        width: 50px;
+
+        img {
+            width: 24px;
+        }
+
+        svg {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+
+    &--disabled {
+        cursor: not-allowed;
+        background: #e8edf6;
+        color: #bdbdbd;
+        box-shadow: none;
+
+        &:hover {
+            background: #e8edf6;
+            color: #bdbdbd;
+            box-shadow: none;
+
+            svg {
+                fill: #bdbdbd;
+            }
+        }
+
+        svg {
+            fill: #bdbdbd;
+        }
+    }
+
+    &--full {
+        width: 100%;
+    }
+
+}

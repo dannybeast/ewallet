@@ -1,0 +1,89 @@
+.checkbox,
+.radio {
+    user-select: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+
+
+    &>span {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        width: 30px;
+        height: 30px;
+        border: solid 2px $color-6;
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        position: relative;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 14px;
+            height: 14px;
+            background: $color-14;
+            border-radius: 3px;
+            display: none;
+        }
+    }
+
+    &:hover {
+
+        .checkbox__icon,
+        .radio__icon {
+            border-color: #dedbdb;
+        }
+    }
+
+    input {
+        display: none;
+
+        &:checked+span {
+
+            .checkbox__icon,
+            .radio__icon {
+                &:before {
+                    display: block;
+                }
+            }
+
+        }
+    }
+
+    &--error {
+        color: $red;
+
+        .checkbox__icon,
+        .radio__icon {
+            border-color: $red;
+        }
+
+        &:hover {
+
+            .checkbox__icon,
+            .radio__icon {
+                border-color: $red;
+            }
+        }
+    }
+
+    &--disabled {
+        color: #bdbdbd;
+        cursor: not-allowed;
+
+        &:hover {
+
+            .checkbox__icon,
+            .radio__icon {
+                border-color: $color-6;
+            }
+        }
+    }
+
+}

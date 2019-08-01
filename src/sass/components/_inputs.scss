@@ -1,0 +1,132 @@
+@mixin input-base() {
+    border: solid 2px $color-6;
+    background: $white;
+    padding-left: 20px;
+    width: 100%;
+    max-width: 350px;
+    display: inline-block;
+    font-weight: 300;
+    font-family: $main-font;
+    font-size: 14px;
+    font-weight: 400;
+    transition: border 0.3s ease;
+    color: $color-6;
+
+    &--error {
+        border-color: $red !important;
+        animation: errorInput 0.2s ease;
+    }
+
+    &--disabled {
+        cursor: not-allowed;
+        background: $color-6;
+        pointer-events: none;
+    }
+
+    &::placeholder {
+        color: #bdbdbd;
+        font-family: $main-font;
+    }
+
+    &:hover {
+        border-color: #dedbdb;
+    }
+
+    &:focus,
+    &.focus {
+        border-color: #dedbdb;
+    }
+
+    &::-ms-clear {
+        display: none !important;
+    }
+}
+
+@keyframes errorInput {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-6px);
+    }
+
+    100% {
+        transform: translateX(6px);
+    }
+}
+
+@mixin fieldArrow {
+    content: '';
+    width: 8px;
+    display: block;
+    height: 8px;
+    position: absolute;
+    border-bottom: 2px solid $color-6;
+    border-right: 2px solid $color-6;
+    right: 20px;
+    top: 50%;
+    margin-top: -6px;
+    opacity: 0.3;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.field {
+    &__error-message {
+        color: $red;
+        font-size: 14px;
+        margin: 10px 0 0 22px;
+    }
+}
+
+
+.field-name {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    display: block;
+    margin: 0 0 20px 20px;
+}
+
+
+.field,
+.datepicker-module input {
+    @include input-base();
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+    padding-top: 10px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.field-row {
+    margin-bottom: 35px;
+    position: relative;
+
+    &__name {
+        font-weight: 700;
+        font-size: 14px;
+        margin-bottom: 15px;
+        display: block;
+        padding-left: 20px;
+    }
+
+
+    input,
+    textarea {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    textarea {
+        height: 120px;
+    }
+
+    @include media-breakpoint-down(xs) {
+        margin-bottom: 20px;
+    }
+}

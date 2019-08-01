@@ -1,0 +1,27 @@
+// усечение текста @include truncate(100%);
+@mixin truncate($truncation-boundary) {
+    max-width: $truncation-boundary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// vertical-align at center
+@mixin vcenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin hcenter {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+// off animate
+@mixin offAnimate() {
+    transform: none;
+    opacity: 1;
+}

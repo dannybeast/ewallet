@@ -1,0 +1,22 @@
+---
+title: Index Page
+---
+extends layouts/_layout
+block content
+
+  .container
+    
+    // mixin example
+    +icon('user')
+
+    //- img(src="img/icons/001-employee.svg", alt="")
+    .box
+
+        svg(viewBox="0 0 833 112")
+          defs
+            linearGradient#PSgrad_0(x1='0%' x2='0%' y1='100%' y2='0%')
+              stop(offset='0%' stop-color='rgb(190,128,30)' stop-opacity='1')
+              stop(offset='100%' stop-color='rgb(252,208,124)' stop-opacity='1')
+          text(fill='url(#PSgrad_0)' transform='matrix( 0.09942430682403, 0, 0, 0.09943907494284,4.40998545693986, 34.8549232028107)' font-size='512.544px') КАЧЕСТВЕННОЕ
+          text(fill='url(#PSgrad_0)' transform='matrix( 0.23408566833855, 0, 0, 0.23412043855794,0.69374437306038, 100.24958762915)' font-size='257.044px')
+            tspan ДОСТУПНОЕ ОБРАЗОВАНИЕ
