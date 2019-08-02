@@ -50,9 +50,9 @@ $quiet-color: #ccc;
 $loud-color: #000;
 $heading-color: #111;
 
-$link-color: $blue;
-$link-hover-color: #004dff;
-$link-visited-color: #003abf;
+$link-color: $color-2;
+$link-hover-color: $color-2;
+$link-visited-color: $color-12;
 
 $base-font-family: $main-font;
 $base-font-size: 18px;
@@ -97,45 +97,37 @@ body {
  * Typography
  */
 
-.link {
+.title {
+    font-size: 52px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: $accent-font;
+    line-height: 1.1;
+
+    small {
+        font-size: 80%;
+    }
+}
+
+.link,
+a {
     color: $link-color;
     text-decoration: none;
-    border-bottom: 1px solid rgba(#0789e7, 0.2);
 
     &:visited {
         color: $link-visited-color;
     }
 
     &:active {
-        color: #0039bf;
+        color: $link-color;
     }
 
     &:hover,
     &:visited:hover {
         text-decoration: none;
         color: $link-hover-color;
-        border-color: transparent;
     }
 
-    &--dashed {
-        color: #c8cdd3;
-        border-bottom: dashed 1px rgba(#c8cdd3, 0.4);
-
-        &:visited {
-            color: #a9a9a9;
-        }
-
-        &:active {
-            color: #a9a9a9;
-        }
-
-        &:hover,
-        &:visited:hover {
-            text-decoration: none;
-            color: #bdbdbd;
-            border-color: transparent;
-        }
-    }
 }
 
 .fixed {

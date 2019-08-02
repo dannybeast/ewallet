@@ -1,0 +1,64 @@
+.footer {
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 45px 0;
+    }
+
+    &__logo {
+        width: 110px;
+        opacity: 0.5;
+        transition: all .2s ease;
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &__bottom {
+        border-top: 1px solid rgba(#fff, 0.1);
+        padding: 40px 0;
+    }
+
+    &__copyright {
+        font-size: 19px;
+    }
+
+    &--black {
+        background: #000;
+        color: #fff;
+    }
+
+}
+
+.payments {
+    ul {
+        display: flex;
+        align-items: center;
+    }
+
+    li {
+        margin: 0 10px;
+    }
+
+    img {
+        display: block;
+    }
+
+    a {
+        transition: all .2s ease;
+        opacity: 0.4;
+        display: block;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

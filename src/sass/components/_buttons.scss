@@ -9,10 +9,79 @@
     text-decoration: none;
     text-align: center;
     font-size: 14px;
+    height: 45px;
     font-family: $main-font;
     transition: all 0.05s ease;
-    padding: 0 3em;
+    padding: 0 2em;
     white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3.36px;
+    color: #000;
+
+    &--gr-accent {
+        background-image: linear-gradient(to top, #be801e 0%, #fcd07c 100%);
+        color: #fff;
+        font-family: $accent-font;
+        letter-spacing: normal;
+        text-transform: none;
+        font-weight: normal;
+        border-radius: 10px;
+        padding: 0 1em;
+        font-size: 28px;
+        text-shadow: 0 1px #000;
+    }
+
+    &--white {
+        color: #fff;
+
+        svg {
+            fill: #fff;
+        }
+    }
+
+    &--black {
+        background: #000;
+        color: #fff;
+
+        svg {
+            fill: #fff;
+        }
+    }
+
+    &--border-white {
+        border: solid 2px #fff;
+        color: #fff;
+
+        svg {
+            fill: #fff;
+        }
+
+        &:hover {
+            border-color: #fff;
+        }
+    }
+
+    &--border-gray {
+        border: solid 2px $color-6;
+
+        &:hover {
+            border-color: $color-6;
+        }
+    }
+
+    &--border-accent {
+        border: solid 2px $color-2;
+        color: $color-2;
+
+        svg {
+            fill: $color-2;
+        }
+
+        &:hover {
+            border-color: $color-2;
+        }
+    }
 
     &--icon-right {
         display: inline-flex;
@@ -20,11 +89,11 @@
         padding-right: 1.5em;
 
         svg {
-            margin-left: 20px;
+            margin-left: 10px;
         }
 
         img {
-            margin-left: 20px;
+            margin-left: 10px;
             display: block;
         }
     }
@@ -35,30 +104,15 @@
         padding-left: 1.5em;
 
         svg {
-            margin-right: 20px;
+            margin-right: 10px;
             order: -1;
         }
 
         img {
-            margin-right: 20px;
+            margin-right: 10px;
             display: block;
         }
     }
-
-    &--icon {
-        padding: 0;
-        width: 50px;
-
-        img {
-            width: 24px;
-        }
-
-        svg {
-            width: 30px;
-            height: 30px;
-        }
-    }
-
 
     &--disabled {
         cursor: not-allowed;

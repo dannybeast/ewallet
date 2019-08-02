@@ -1,0 +1,54 @@
+.form-section {
+
+    &__block {
+        border-radius: 10px;
+        border: 2px solid $color-7;
+        padding: 40px 85px;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &__desc {
+        text-align: center;
+        font-size: 22px;
+        display: block;
+        max-width: 470px;
+        margin: 0 auto 50px;
+        position: relative;
+
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            width: 124px;
+            height: 29px;
+            position: absolute;
+            top: 50%;
+            background: url('../img/decor/form-desc-before.png') center no-repeat;
+        }
+
+        &:before {
+            right: 100%;
+            margin-right: 30px;
+            transform: translateY(-50%);
+        }
+
+        &:after {
+            transform: translateY(-50%) scale(-1, 1);
+            left: 100%;
+            margin-left: 30px;
+        }
+    }
+
+    &__row {
+        display: flex;
+
+    }
+
+    .field-row {
+        flex-grow: 1;
+    }
+}

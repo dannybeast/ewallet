@@ -4,19 +4,206 @@ title: Index Page
 extends layouts/_layout
 block content
 
-  .container
+  +b.SECTION.advantages(class="skew-l").section
+    .container
+      +b.H3.title
+        small Наши 
+        | преимущества
+      +e.row
+        +e.col
+          +b.advantages-item
+            +e.icon
+              img(src="img/icons/001-employee.svg", alt="")
+            +e.P.title Профессии
+            +e.desc
+              p Самые востребованные профессии 21 века в сфере образования со стоимостью от 500$ до 5000$  со скидкой 90%
+        +e.col
+          +b.advantages-item
+            +e.icon
+              img(src="img/icons/002-creative.svg", alt="")
+            +e.P.title Фин. грамотность
+            +e.desc
+              p Увеличение финансовой грамотности и вашего дохода, обучение без воды
+        +e.col
+          +b.advantages-item
+            +e.icon
+              img(src="img/icons/004-bar-chart.svg", alt="")
+            +e.P.title Продажи
+            +e.desc
+              p Ведение переговоров, искусство продаж, ораторское искусство. Обучения от самых ТОПовых коучей мира
+        +e.col
+          +b.advantages-item
+            +e.icon
+              img(src="img/icons/005-gym.svg", alt="")
+            +e.P.title ЗОЖ
+            +e.desc
+              p Правильное питание и здоровый образ жизни. Консультаций от высокооплачиваемых тренеров и диетологов мира
+      +b.buttons
+        +b.A(href="#" class="btn --border-gray --white") Подробнее о нас
+  
+  +b.SECTION.how-work(class="skew-r").section
+    .container
+      +e.row
+        +e.col-l
+        +e.col-r
+          +b.H3.title
+            small Как это 
+            | работает?
+      +e.row
+        +e.col-l
+          +b.UL.dark-list
+            li У нас может обучаться любой человек из любой точки мира  
+            li Самые востребованные и иновационные профессии  
+            li Применяйте последние технологий для продвижения вашего бизнеса  
+            li Наши навыки нужны абсолютно всем: от школьников до крупных инвесторов
+        +e.col-r
+          +b.A(href="#").dark-video
+            img(src="img/how-work/video.jpg", alt="")
+      +e.row
+        +e.col-l
+          +b.sign-module
+            +e.P.desc Бесплатно!
+            +e.P.title Запишитесь 
+              span.
+                на пробный 
+                курс!
+            +e.buttons
+              +b.A(href="#", class="btn --black") Записаться
+        +e.col-r
+  
+  +b.SECTION.target.section
+    .container
+      +e.row
+        +e.media
+          img(src="img/target/target-pic.png", alt="")
+        +e.content
+          +b.H3.title
+            small.gr-accent цель 
+            | LuxLife Club
+          +e.text
+            p ДАТЬ СЖАТОЕ, КАЧЕСТВЕННОЕ И СОВРЕМЕННОЕ ОБРАЗОВАНИЕ ЗА ДОСТУПНУЮ ЦЕНУ И ЗА КОРОТКИЙ ПЕРИОД, В СООТВЕТСТВИИ С МИРОВЫМИ ТРЕНДАМИ
+
+  +b.SECTION.problems(class="skew-r").section
+    .container
+      +b.H3.title
+        small.gr-accent Какие 
+        small.gr-accent проблемы  
+        | Мы решаем?
+      +e.row
+        +e.col
+          +b.card-block
+            +e.icon
+              img(src="img/icons/care.svg", alt="")
+            +e.P.title ЗДОРОВЬЕ
+            +e.desc
+              p Большая часть населения не имеют достаточного времени и денег, чтобы следить за здоровьем
+        +e.col
+          +b.card-block
+            +e.icon
+              img(src="img/icons/money.svg", alt="")
+            +e.P.title ДОЛГОВАЯ ЯМА
+            +e.desc
+              p Неправильное мышление, отсутствие идеи и не видят четких направлений для создания благополучия
+        +e.col
+          +b.card-block
+            +e.icon
+              img(src="img/icons/employee.svg", alt="")
+            +e.P.title ПРОФЕССИОНАЛИЗМ 
+            +e.desc
+              p 95% люди не владеют искусством продаж и боятся выступать публично
+        +e.col
+          +b.card-block
+            +e.icon
+              img(src="img/icons/analysis.svg", alt="")
+            +e.P.title ФИНАНСОВАЯ НЕГРАМОТНОСТЬ 
+            +e.desc
+              p Финансово не грамотны, не умеют правильно распоряжаться деньгами
+        +e.col
+          +b.card-block
+            +e.icon
+              img(src="img/icons/internet.svg", alt="")
+            +e.P.title ИНСТРУМЕНТЫ
+            +e.desc
+              p Не применяют современные тренды продвижения бизнеса в интернете 
+        +e.col
+          +b.card-block
+            +e.icon
+              img(src="img/icons/robber.svg", alt="")
+            +e.P.title ПОТЕРЯ ДЕНЕГ
+            +e.desc
+              p Не знают куда инвестировать, не умеют выбирать нишу для нужных навыков и инвестирования, теряют деньги в разных мошеннических схемах, остаются в долгах
+  
+  +b.SECTION.percent-section.section
+    .container
+      +e.row
+        +e.text
+          p Не работают по своей специальности
+        +e.P.count 86%
+        +e.text
+          p выпускников образовательных вузов Казахстана
+  
+  +b.SECTION.reviews.section
+    .container
+      +b.H3.title
+        small.gr-accent Отзывы 
+        | Наших клиентов
+      +e.row
+        +e.col
+          +b.review-block
+            img(src="img/reviews/pic.png", alt="")
+        +e.col
+          +b.review-block
+            img(src="img/reviews/pic.png", alt="")
+        +e.col
+          +b.review-block
+            img(src="img/reviews/pic.png", alt="")
+        +e.col
+          +b.review-block
+            img(src="img/reviews/pic.png", alt="")
+      +e.buttons.buttons
+        +b.A(href="#" class="btn --border-gray") Смотреть все отзывы
+  
+  +b.bottom-skew.skew-l
+    +b.SECTION.well-being.section
+      .container
+        +b.H3.title
+          small Lux Life Club - это путь 
+          span.gr-accent к вашему благополучию!
+        +e.row
+          +e.col
+            +b.circle-item
+              +e.icon
+                img(src="img/icons/research.svg", alt="")
+              +e.desc
+                p Освой более 10 самых востребованных профессий 21 века!
+          +e.col
+            +b.circle-item
+              +e.icon
+                img(src="img/icons/education.svg", alt="")
+              +e.desc
+                p Прокачай свою финансовую грамотность в LuxLife Club!
+          +e.col
+            +b.circle-item
+              +e.icon
+                img(src="img/icons/bars.svg", alt="")
+              +e.desc
+                p Пробей свой финансовый потолок и реши главные денежные проблемы за 3 мес.
     
-    // mixin example
-    +icon('user')
-
-    //- img(src="img/icons/001-employee.svg", alt="")
-    .box
-
-        svg(viewBox="0 0 833 112")
-          defs
-            linearGradient#PSgrad_0(x1='0%' x2='0%' y1='100%' y2='0%')
-              stop(offset='0%' stop-color='rgb(190,128,30)' stop-opacity='1')
-              stop(offset='100%' stop-color='rgb(252,208,124)' stop-opacity='1')
-          text(fill='url(#PSgrad_0)' transform='matrix( 0.09942430682403, 0, 0, 0.09943907494284,4.40998545693986, 34.8549232028107)' font-size='512.544px') КАЧЕСТВЕННОЕ
-          text(fill='url(#PSgrad_0)' transform='matrix( 0.23408566833855, 0, 0, 0.23412043855794,0.69374437306038, 100.24958762915)' font-size='257.044px')
-            tspan ДОСТУПНОЕ ОБРАЗОВАНИЕ
+    +b.SECTION.form-section.section
+        .container
+          form
+            +e.block
+              +e.H3.title Вступайте в LuxLife Club!
+              +e.desc
+                p Просто заполните форму и получите дальнейшие инфструкции по электронной почте
+              +e.row
+                +b.field-row
+                  +e.LABEL.name Ваше имя:
+                  +e.INPUT(type="text")
+                +b.field-row
+                  +e.LABEL.name E-mail:
+                  +e.INPUT(type="email")
+                +b.field-row
+                  +e.LABEL.name Телефон:
+                  +e.INPUT(type="text")
+                +b.BUTTON.btn(class="--gr-accent") Отправить

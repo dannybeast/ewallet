@@ -1,0 +1,61 @@
+.well-being {
+    .title {
+        margin-bottom: 60px;
+        text-align: right;
+
+        small {
+            display: block;
+
+        }
+    }
+
+    &__row {
+        @include make-row();
+    }
+
+    &__col {
+        @include make-col(4, 12);
+        @include make-col-ready();
+    }
+
+    .buttons {
+        margin-top: 40px;
+    }
+}
+
+.circle-item {
+    text-align: center;
+    font-size: 25px;
+
+    &__icon {
+        margin-bottom: 20px;
+        border-radius: 50%;
+        border: solid 2px #fcd07c;
+        width: 148px;
+        height: 148px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 50px;
+
+        img {
+            width: 68px;
+        }
+    }
+
+    svg {
+        width: 100%;
+    }
+
+    &__desc {
+        max-width: 315px;
+        font-family: $accent-font;
+        margin: 0 auto;
+    }
+}
+
+
+.bottom-skew {
+    background: #301f01;
+    margin-top: 5%;
+}

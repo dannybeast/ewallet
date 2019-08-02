@@ -1,3 +1,7 @@
-import sayHello from './lib/detectTouch';
+import './components/ieDetect';
 
-sayHello();
+$(document).ready(function () {
+
+
+
+});

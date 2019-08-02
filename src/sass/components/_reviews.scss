@@ -1,0 +1,35 @@
+.reviews {
+    font-size: 30px;
+    font-family: $accent-font;
+
+    .title {
+        margin-bottom: 60px;
+        text-align: center;
+
+        small {
+            display: block;
+        }
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -30px;
+    }
+
+    &__col {
+        width: calc(50% - 60px);
+        margin: 30px;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+
+    .buttons {
+        margin-top: 50px;
+        text-align: center;
+        justify-content: center;
+    }
+}
