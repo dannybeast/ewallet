@@ -1,14 +1,16 @@
 ---
-title: Index Page
+title: LuxLife Club
 ---
 extends layouts/_layout
+include partials/_footer
 block content
 
-  +b.SECTION.advantages(class="skew-l").section
+  +b.SECTION.advantages(class="skew-l")
     .container
       +b.H3.title
-        small Наши 
-        | преимущества
+        small 
+          span.gr-diagonal Наши 
+        span.gr-accent преимущества
       +e.row
         +e.col
           +b.advantages-item
@@ -20,14 +22,14 @@ block content
         +e.col
           +b.advantages-item
             +e.icon
-              img(src="img/icons/002-creative.svg", alt="")
+              img(src="img/icons/004-bar-chart.svg", alt="")
             +e.P.title Фин. грамотность
             +e.desc
               p Увеличение финансовой грамотности и вашего дохода, обучение без воды
         +e.col
           +b.advantages-item
             +e.icon
-              img(src="img/icons/004-bar-chart.svg", alt="")
+              img(src="img/icons/002-creative.svg", alt="")
             +e.P.title Продажи
             +e.desc
               p Ведение переговоров, искусство продаж, ораторское искусство. Обучения от самых ТОПовых коучей мира
@@ -163,7 +165,8 @@ block content
       +e.buttons.buttons
         +b.A(href="#" class="btn --border-gray") Смотреть все отзывы
   
-  +b.bottom-skew.skew-l
+  +b.bottom-skew
+    +e.decor
     +b.SECTION.well-being.section
       .container
         +b.H3.title
@@ -175,35 +178,37 @@ block content
               +e.icon
                 img(src="img/icons/research.svg", alt="")
               +e.desc
-                p Освой более 10 самых востребованных профессий 21 века!
+                p Освой более 10 самых<br> востребованных<br> профессий 21 века!
           +e.col
             +b.circle-item
               +e.icon
                 img(src="img/icons/education.svg", alt="")
               +e.desc
-                p Прокачай свою финансовую грамотность в LuxLife Club!
+                p Прокачай свою<br> финансовую грамотность<br> в LuxLife Club!
           +e.col
             +b.circle-item
               +e.icon
                 img(src="img/icons/bars.svg", alt="")
               +e.desc
-                p Пробей свой финансовый потолок и реши главные денежные проблемы за 3 мес.
+                p Пробей свой финансовый<br> потолок и реши главные<br> денежные проблемы за 3 мес.
     
     +b.SECTION.form-section.section
         .container
           form
             +e.block
-              +e.H3.title Вступайте в LuxLife Club!
+              +e.H3.title.gr-accent Вступайте в LuxLife Club!
               +e.desc
                 p Просто заполните форму и получите дальнейшие инфструкции по электронной почте
               +e.row
                 +b.field-row
                   +e.LABEL.name Ваше имя:
-                  +e.INPUT(type="text")
+                  +b.INPUT(type="text" class="field --white")
                 +b.field-row
                   +e.LABEL.name E-mail:
-                  +e.INPUT(type="email")
+                  +b.INPUT(type="email" class="field --white --error")
                 +b.field-row
                   +e.LABEL.name Телефон:
-                  +e.INPUT(type="text")
+                  +b.INPUT(type="text" class="field --white")
+                // btn--disabled
                 +b.BUTTON.btn(class="--gr-accent") Отправить
+    +footer()

@@ -36,6 +36,19 @@
         color: #fff;
     }
 
+    @include media-breakpoint-down(md) {
+        .payments {
+            margin-left: auto;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        &__copyright {
+            font-size: 14px;
+            text-align: center;
+        }
+
+    }
 }
 
 .payments {
@@ -59,6 +72,13 @@
 
         &:hover {
             opacity: 1;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        img {
+            max-height: 50px;
+            max-width: 50px;
         }
     }
 }

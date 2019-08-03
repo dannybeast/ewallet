@@ -3,7 +3,7 @@
     font-family: $accent-font;
 
     .title {
-        margin-bottom: 60px;
+        margin-bottom: 30px;
         text-align: center;
 
         small {
@@ -28,8 +28,32 @@
     }
 
     .buttons {
-        margin-top: 50px;
+        margin-top: 35px;
         text-align: center;
         justify-content: center;
+    }
+
+    @include media-breakpoint-down(xl) {
+        &__row {
+            margin: 0 -15px;
+        }
+
+        &__col {
+            width: calc(50% - 30px);
+            margin: 15px;
+        }
+    }
+
+
+
+    @include media-breakpoint-down(sm) {
+        &__row {
+            margin: 0;
+        }
+
+        &__col {
+            width: 100%;
+            margin: 0px 0 15px 0;
+        }
     }
 }

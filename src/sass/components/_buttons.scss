@@ -12,12 +12,13 @@
     height: 45px;
     font-family: $main-font;
     transition: all 0.05s ease;
-    padding: 0 2em;
+    padding: 0 1.65em;
     white-space: nowrap;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 3.36px;
     color: #000;
+    transition: all .1s ease;
 
     &--gr-accent {
         background-image: linear-gradient(to top, #be801e 0%, #fcd07c 100%);
@@ -30,6 +31,10 @@
         padding: 0 1em;
         font-size: 28px;
         text-shadow: 0 1px #000;
+
+        &:hover {
+            background-image: linear-gradient(to top, #fcd07c 0%, #be801e 100%);
+        }
     }
 
     &--white {
@@ -38,6 +43,7 @@
         svg {
             fill: #fff;
         }
+
     }
 
     &--black {
@@ -49,24 +55,14 @@
         }
     }
 
-    &--border-white {
-        border: solid 2px #fff;
-        color: #fff;
-
-        svg {
-            fill: #fff;
-        }
-
-        &:hover {
-            border-color: #fff;
-        }
-    }
 
     &--border-gray {
         border: solid 2px $color-6;
 
         &:hover {
             border-color: $color-6;
+            background: $color-6;
+            color: #fff !important;
         }
     }
 
@@ -80,6 +76,27 @@
 
         &:hover {
             border-color: $color-2;
+            background: $color-2;
+            color: #fff;
+        }
+    }
+
+    &--border-white {
+        border: solid 2px #fff;
+        color: #fff;
+
+        svg {
+            fill: #fff;
+        }
+
+        &:hover {
+            border-color: #fff;
+            background: #fff;
+            color: #000 !important;
+
+            svg {
+                fill: #000;
+            }
         }
     }
 
@@ -116,22 +133,22 @@
 
     &--disabled {
         cursor: not-allowed;
-        background: #e8edf6;
-        color: #bdbdbd;
+        background: #8f8f8f;
+        color: #dbdbdb;
         box-shadow: none;
 
         &:hover {
-            background: #e8edf6;
-            color: #bdbdbd;
+            background: #8f8f8f;
+            color: #dbdbdb;
             box-shadow: none;
 
             svg {
-                fill: #bdbdbd;
+                fill: #dbdbdb;
             }
         }
 
         svg {
-            fill: #bdbdbd;
+            fill: #dbdbdb;
         }
     }
 

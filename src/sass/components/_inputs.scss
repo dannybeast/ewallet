@@ -8,10 +8,16 @@
     display: inline-block;
     font-weight: 300;
     font-family: $main-font;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     transition: border 0.3s ease;
     color: $color-6;
+
+    &--white {
+        background: transparent;
+        border-color: #fff;
+        color: $color-2;
+    }
 
     &--error {
         border-color: $red !important;
@@ -82,18 +88,14 @@
 }
 
 
-.field-name {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1;
-    display: block;
-    margin: 0 0 20px 0;
-}
-
-
 .field,
 .datepicker-module input {
     @include input-base();
+    height: 50px;
+
+    &:focus {
+        border-color: $color-2;
+    }
 }
 
 textarea {
@@ -129,7 +131,11 @@ textarea {
         height: 120px;
     }
 
-    @include media-breakpoint-down(xs) {
+    @include media-breakpoint-down(sm) {
         margin-bottom: 20px;
+
+        &__name {
+            margin-bottom: 10px;
+        }
     }
 }

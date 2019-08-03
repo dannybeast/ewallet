@@ -75,6 +75,7 @@
     "run-sequence": "^2.2.1",
     "sass-em": "^1.0.3",
     "sass-rem": "^2.0.1",
+    "svgxuse": "^1.2.6",
     "through2": "^3.0.1",
     "webpack": "^4.29.6",
     "webpack-bundle-analyzer": "^3.1.0",

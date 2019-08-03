@@ -1,16 +1,20 @@
 .how-work {
-    background: url('../img/how-work/bg.png') center no-repeat;
-    background-size: cover;
+    background: url('../img/how-work/bg.jpg') center top no-repeat;
+    background-size: 100% 89.5%;
     position: relative;
     z-index: 1;
 
     &.skew-r {
-        padding: 26% 0 0%;
+        padding: 25.2% 0 0%;
         margin-top: -21%;
     }
 
+    .dark-video {
+        height: 100%;
+    }
+
     .title {
-        margin-bottom: 50px;
+        margin-bottom: 40px;
         position: relative;
 
         &:before {
@@ -21,13 +25,25 @@
             background: #000;
             position: absolute;
             right: 100%;
-            margin-right: 60px;
+            margin-right: 66px;
             bottom: 25%;
         }
 
         small {
             display: block;
             color: #fff;
+        }
+
+        @include media-breakpoint-down(sm) {
+            display: inline-block;
+
+            &:before {
+                width: calc(100vw - 300px);
+                left: 100%;
+                right: inherit;
+                margin-right: 0;
+                margin-left: 30px;
+            }
         }
     }
 
@@ -48,14 +64,46 @@
         padding-right: 60px;
         color: #fff;
         padding-bottom: 60px;
+
+        @include media-breakpoint-down(md) {
+            padding-top: 0;
+            padding-right: 30px;
+            padding-bottom: 20px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding-right: 0;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+
+
+        &__col-l,
+        &__col-r {
+            width: 50%;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        &.skew-r {
+            padding: 40% 0 0%;
+        }
+
+        &__col-l,
+        &__col-r {
+            width: 100%;
+        }
     }
 }
 
 .sign-module {
-    padding: 50px 50px 50px 60px;
-    background: linear-gradient(45deg, rgba(213, 160, 53, 1) 0%, rgba(230, 191, 117, 1) 65%, rgba(254, 253, 251, 1) 100%);
+    padding: 57px 50px 50px 52px;
     text-transform: uppercase;
     font-size: 20px;
+    position: relative;
+    background: url('../img/how-work/sign-module.svg') center top no-repeat;
+    background-size: cover;
 
     &__desc {
         font-family: $accent-font;
@@ -64,7 +112,7 @@
 
     &__title {
         font-size: 36px;
-        line-height: 1.15;
+        line-height: 1.09;
         font-family: $accent-font;
 
         span {
@@ -84,16 +132,33 @@
     .btn {
         font-size: 18px;
     }
+
+    @include media-breakpoint-down(sm) {
+        padding: 30px;
+        background-size: 100%;
+
+        &__title {
+            font-size: 34px;
+        }
+
+        &__buttons {
+            justify-content: flex-start;
+            margin-right: 0;
+            margin-top: 15px;
+        }
+    }
 }
 
 .dark-list {
     list-style: none;
     font-size: 17px;
+    padding-top: 10px;
 
     li {
         position: relative;
-        padding-left: 25px + 30px;
+        padding-left: 64px;
         margin-bottom: 30px;
+        line-height: 1.45;
 
         &:last-child {
             margin-bottom: 0;
@@ -101,7 +166,7 @@
 
         &:before {
             content: '';
-            width: 25px;
+            width: 36px;
             height: 19px;
             display: block;
             position: absolute;
@@ -111,18 +176,27 @@
             background: url('../img/icons/check.svg') center no-repeat;
             background-size: contain;
         }
+
     }
+
+
 }
+
 
 .dark-video {
     position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
+    background: #000;
+    $icoW: 160px;
+    $iconH: 118px;
 
     &:before {
         content: '';
-        width: 160px;
-        height: 118px;
+        width: $icoW;
+        height: $iconH;
         display: block;
         position: absolute;
         top: 50%;
@@ -148,6 +222,7 @@
 
     img {
         display: block;
+        min-height: 100%;
         max-width: 100%;
         transition: all 1.2s ease;
     }
@@ -155,6 +230,13 @@
     &:hover {
         &:before {
             transform: translate(-50%, -50%) scale(1.1);
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        &:before {
+            width: $iconH / 1.5;
+            height: $iconH / 1.5;
         }
     }
 }

@@ -12,8 +12,9 @@
     &__count {
         font-size: em(192px, 30px);
         @extend .gr-accent;
-        letter-spacing: -0.6px;
+        letter-spacing: -0.03em;
         margin: 0 60px;
+        text-align: center;
         position: relative;
 
         &:after {
@@ -35,4 +36,29 @@
         font-style: italic;
         line-height: 1.2;
     }
+
+    @include media-breakpoint-down(md) {
+        text-align: center;
+        font-size: 24px;
+        position: relative;
+        z-index: 2;
+
+        &__row {
+            flex-wrap: wrap;
+            padding-bottom: 0;
+            justify-content: center;
+        }
+
+        &__count {
+            font-size: em(150px, 30px);
+
+            &:after {
+                position: relative;
+                margin-bottom: 30px;
+                margin-top: 0;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {}
 }
