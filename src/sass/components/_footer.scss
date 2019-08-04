@@ -37,6 +37,10 @@
     }
 
     @include media-breakpoint-down(md) {
+        .navigation {
+            display: none;
+        }
+
         .payments {
             margin-left: auto;
         }

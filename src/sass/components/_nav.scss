@@ -1,31 +1,102 @@
 .navigation {
+    position: relative;
+    $parent: &;
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__close {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__logo {
+        width: 100px;
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+    }
+
     .menu-button {
         display: none;
     }
+
     a {
         text-decoration: none;
         color: $color-2;
+
         &:hover {
             text-decoration: underline;
             color: #fff;
         }
     }
+
     li {
         display: inline-block;
         vertical-align: top;
         margin: 0 40px 0 0;
+
         &.active {
             a {
                 color: #b2b2b2;
             }
         }
     }
+
+    &__mobile-bar {
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
     @include media-breakpoint-down(md) {
         .menu-button {
             display: block;
         }
-        ul {
+
+        &__mobile-bar {
+            display: flex;
+        }
+
+        &__menu {
             display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: url('../img/well-being/bg.jpg') center no-repeat;
+            width: 100%;
+            height: 100%;
+            z-index: 99999;
+            overflow-y: auto;
+        }
+
+        li {
+            display: block;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        a {
+            padding: 15px;
+            display: block;
+            border-bottom: 1px solid rgba(#fff, 0.1);
+        }
+
+        &.is-show-menu {
+            #{$parent}__menu {
+                display: block;
+            }
         }
     }
 }

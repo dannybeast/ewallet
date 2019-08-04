@@ -1,20 +1,21 @@
-import './components/ieDetect';
+// vendors
+import 'lazyload/lazyload.min';
+import '@fancyapps/fancybox';
+
+// polyfills
 import 'svgxuse';
-import { TimelineMax } from 'gsap';
 
+// components
+import './components/ieDetect';
+import './components/animations';
+import './components/navigation';
 
-let tl = new TimelineMax();
+// main
+$(document).ready(function () {
+  $('img[data-src]').lazyload();
 
-tl
-    .fromTo('.loader__inside', 1, { scale: 0, opacity: 0 }, {
-        scale: 1,
-        opacity: 1,
-        onComplete: function() {
-            $('.loader').remove();
-        }
-    })
-    .fromTo('.header-top', 0.2, { opacity: 0 }, { opacity: 1 })
-    .fromTo('.header-intro__title', 0.3, { x: -50, opacity: 0 }, { x: 0, opacity: 1 })
-    .fromTo('.header-intro__desc', 0.3, { x: -50, opacity: 0 }, { x: 0, opacity: 1 })
-    .fromTo('.header-intro .buttons', 0.3, { opacity: 0 }, { opacity: 1 })
-    .fromTo('.header-intro__pic', 1, { opacity: 0 }, { opacity: 1 })
+  // modal window
+  $('.js-modal').fancybox();
+  //-
+
+});

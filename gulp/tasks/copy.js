@@ -4,7 +4,7 @@ import config from '../config.js';
 
 gulp.task('copy:img', () => gulp
   .src([
-    config.src.img + '/**/*.{jpg,png,jpeg,svg,gif}',
+    config.src.img + '/**/*.*',
     '!' + config.src.img + '/svgo/**/*.*'
 	])
 	// .pipe(imagemin([], {
@@ -14,7 +14,7 @@ gulp.task('copy:img', () => gulp
 );
 
 gulp.task('copy:fonts', () => gulp
-  .src(config.src.fonts + '/*.{ttf,eot,woff,woff2}')
+  .src(config.src.fonts + '/**/*.*')
   .pipe(gulp.dest(config.dest.fonts))
 );
 

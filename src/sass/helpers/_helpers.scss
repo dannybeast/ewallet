@@ -107,3 +107,57 @@ $skewMargin: 10.5%;
     }
 
 }
+
+
+//
+.language-module {
+    position: relative;
+    $parent: &;
+
+    &__dropdown {
+        position: absolute;
+        top: 100%;
+        left: -1px;
+        width: calc(100% + 2px);
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all .3s ease;
+
+        a {
+            width: 100%;
+            padding: 5px;
+            display: block;
+            border: solid 1px #fff;
+            color: #fff !important;
+            margin-bottom: -1px;
+
+            &:hover {
+                background: $color-4;
+                color: #000 !important;
+            }
+        }
+
+        // display: none;
+    }
+
+    &:hover {
+        #{$parent}__dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+        }
+    }
+}
+
+//
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: -10px;
+
+    .btn {
+        margin: 10px;
+    }
+}
