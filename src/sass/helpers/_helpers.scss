@@ -1,6 +1,6 @@
 // gradients
 .gr-accent {
-    background-image: linear-gradient(to top, #be801e 0%, #ebb95d 100%);
+    background-image: linear-gradient(to top, #bf8120 0%, #fccf7b 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #be801e;
@@ -28,25 +28,20 @@
         color: #ebb95d;
         -webkit-text-fill-color: inherit;
     }
-
     .gr-white,
     .gr-diagonal {
         background-image: none;
         color: #fff;
         -webkit-text-fill-color: inherit;
     }
-
-
 }
 
 $skewDeg: 11.75deg;
 $skewMargin: 10.5%;
-
 .skew-l {
     transform: skewY(-$skewDeg);
     transform-origin: top;
     margin-top: -$skewMargin;
-
     .container {
         transform: skewY($skewDeg);
     }
@@ -57,7 +52,6 @@ $skewMargin: 10.5%;
     transform-origin: top;
     padding: 32% 0 10%;
     margin-top: -21%;
-
     .container {
         transform: skewY(-$skewDeg);
     }
@@ -70,13 +64,11 @@ $skewMargin: 10.5%;
     overflow: hidden;
     padding-top: 10.8%;
     margin-top: -2.2%;
-
     section,
     footer {
         position: relative;
         z-index: 2;
     }
-
     &__decor {
         transform: skewY(-$skewDeg);
         position: relative;
@@ -89,7 +81,6 @@ $skewMargin: 10.5%;
         left: 0;
         margin-top: $skewMargin;
         overflow: hidden;
-
         &:after {
             content: '';
             width: 100%;
@@ -105,15 +96,12 @@ $skewMargin: 10.5%;
             margin-top: -$skewMargin;
         }
     }
-
 }
-
 
 //
 .language-module {
     position: relative;
     $parent: &;
-
     &__dropdown {
         position: absolute;
         top: 100%;
@@ -123,7 +111,6 @@ $skewMargin: 10.5%;
         opacity: 0;
         transform: translateY(-10px);
         transition: all .3s ease;
-
         a {
             width: 100%;
             padding: 5px;
@@ -131,16 +118,13 @@ $skewMargin: 10.5%;
             border: solid 1px #fff;
             color: #fff !important;
             margin-bottom: -1px;
-
             &:hover {
                 background: $color-4;
                 color: #000 !important;
             }
         }
-
         // display: none;
     }
-
     &:hover {
         #{$parent}__dropdown {
             opacity: 1;
@@ -156,7 +140,6 @@ $skewMargin: 10.5%;
     flex-wrap: wrap;
     align-items: center;
     margin: -10px;
-
     .btn {
         margin: 10px;
     }

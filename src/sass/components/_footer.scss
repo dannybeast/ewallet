@@ -1,57 +1,80 @@
 .footer {
-
     &__top {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 45px 0;
     }
-
     &__logo {
         width: 110px;
         opacity: 0.5;
         transition: all .2s ease;
-
         img {
             max-width: 100%;
             display: block;
         }
-
         &:hover {
             opacity: 1;
         }
     }
-
     &__bottom {
         border-top: 1px solid rgba(#fff, 0.1);
         padding: 40px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
-
     &__copyright {
-        font-size: 19px;
+        font-size: 16px;
+        opacity: 0.5;
     }
-
+    &__links {
+        li {
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 30px;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+        a {
+            color: #fff;
+            opacity: 0.5;
+            text-decoration: underline;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
     &--black {
         background: #000;
         color: #fff;
     }
-
     @include media-breakpoint-down(md) {
         .navigation {
             display: none;
         }
-
         .payments {
             margin-left: auto;
         }
+        &__bottom {
+            flex-wrap: wrap;
+        }
+        &__links {
+            margin-top: 15px;
+            width: 100%;
+            li {
+                margin-right: 15px;
+                margin-bottom: 5px;
+                margin-left: 0;
+            }
+        }
     }
-
     @include media-breakpoint-down(sm) {
         &__copyright {
             font-size: 14px;
             text-align: center;
         }
-
     }
 }
 
@@ -60,25 +83,20 @@
         display: flex;
         align-items: center;
     }
-
     li {
         margin: 0 10px;
     }
-
     img {
         display: block;
     }
-
     a {
         transition: all .2s ease;
         opacity: 0.4;
         display: block;
-
         &:hover {
             opacity: 1;
         }
     }
-
     @include media-breakpoint-down(md) {
         img {
             max-height: 50px;

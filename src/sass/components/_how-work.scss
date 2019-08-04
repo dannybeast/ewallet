@@ -60,12 +60,13 @@
         }
         @include media-breakpoint-down(sm) {
             padding-right: 0;
+            padding-bottom: 40px;
         }
     }
     @include media-breakpoint-down(md) {
         &__col-l,
         &__col-r {
-            width: 50%;
+            width: 50%
         }
     }
     @include media-breakpoint-down(sm) {
@@ -91,17 +92,18 @@
         margin-bottom: 10px;
     }
     &__title {
-        font-size: 36px;
-        line-height: 1.09;
+        font-size: 38px;
+        line-height: 1.1;
         font-family: $accent-font;
         span {
             color: #fff;
             display: block;
+            font-size: 30px;
             margin-top: 10px;
         }
     }
     &__buttons {
-        margin-top: 10px;
+        margin-top: 30px;
         margin-right: -110px;
         display: flex;
         justify-content: flex-end;
