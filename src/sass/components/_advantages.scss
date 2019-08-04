@@ -5,30 +5,23 @@
     z-index: 2;
     overflow: hidden;
     padding-bottom: 43px;
-
     .title {
         margin-bottom: 60px;
         text-align: right;
         letter-spacing: 0.6px;
-
         small {
             display: block;
         }
     }
-
     &__row {
         @include make-row();
     }
-
     &__col {
         @include make-col(3, 12);
         @include make-col-ready();
-
     }
-
     .container {
         position: relative;
-
         &:after {
             content: '';
             width: 1384px;
@@ -41,42 +34,35 @@
             z-index: -1;
         }
     }
-
     .buttons {
         margin-top: 33px;
     }
-
     @include media-breakpoint-down(md) {
         &__col {
-            @include make-col(6, 12);
+            @include make-col(6,
+            12);
             margin-bottom: 30px;
         }
-
         &__row {
             margin-bottom: -30px;
         }
     }
-
     @include media-breakpoint-down(sm) {
         padding-top: 30px;
     }
-
     @include media-breakpoint-down(xs) {
         .title {
             font-size: 30px;
         }
-
         .buttons {
             justify-content: center;
         }
-
         &__col {
-            @include make-col(12, 12);
+            @include make-col(12,
+            12);
         }
-
     }
 }
-
 
 .advantages-item-title {
     font-size: 21px;
@@ -87,19 +73,15 @@
 }
 
 .advantages-item {
-
     &__icon {
         margin-bottom: 20px;
-
         img {
             width: 68px;
         }
     }
-
     svg {
         width: 100%;
     }
-
     &__title {
         background-image: linear-gradient(to top, #be801e 0%, #fcd07c 100%);
         background-clip: text;
@@ -107,26 +89,21 @@
         -webkit-text-fill-color: transparent;
         margin-bottom: 8px;
         @extend .advantages-item-title;
-
         &:last-child {
             margin-bottom: 0;
         }
     }
-
     &__desc {
         max-width: 220px;
         line-height: 1.54;
     }
-
     @include media-breakpoint-down(md) {
         &__title {
             font-size: 19px;
         }
     }
-
     @include media-breakpoint-down(xs) {
         text-align: center;
-
         &__desc {
             margin: 0 auto;
         }
