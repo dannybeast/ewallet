@@ -95,7 +95,6 @@ function posChecker(sectionClass, timelineName, beforeTop){
     var beforeTop = beforeTop === undefined ? windowHeight/2 : beforeTop;
 
     function check(that, sectionClass, timelineName){
-        console.log(timelineName, beforeTop);
         let scrlPos = that.scrollTop();
         let sectPos = $(sectionClass).offset().top - beforeTop;
         let sectHeight = $(sectionClass).outerHeight();

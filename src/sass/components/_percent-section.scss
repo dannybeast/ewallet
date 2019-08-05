@@ -55,5 +55,12 @@
             }
         }
     }
-    @include media-breakpoint-down(sm) {}
+    @include media-breakpoint-down(sm) {
+        &__count{
+            color: #be801e !important;
+            display: block;    
+            background-image: none;
+            -webkit-text-fill-color: inherit;
+        }
+    }
 }

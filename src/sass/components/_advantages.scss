@@ -112,7 +112,8 @@
 
 //ie
 .ie11,
-.ie10 {
+.ie10,
+.not-support-gradients  {
     .advantages-item {
         &__title {
             color: $color-19;

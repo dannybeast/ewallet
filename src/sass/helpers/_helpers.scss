@@ -22,7 +22,8 @@
 
 // ie
 .ie11,
-.ie10 {
+.ie10,
+.not-support-gradients {
     .gr-accent {
         background-image: none;
         color: #ebb95d;

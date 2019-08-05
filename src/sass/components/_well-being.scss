@@ -47,8 +47,17 @@
         }
 
         .title {
-            font-size: 36px;
+            font-size: 30px;
+            display: block;
             text-align: center;
+            span{
+                display: block;
+            }
+            .gr-accent {
+                background-image: none;
+            color: #ebb95d !important;
+            -webkit-text-fill-color: inherit;
+            }
         }
 
     }

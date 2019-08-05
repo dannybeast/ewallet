@@ -9,6 +9,7 @@ import 'svgxuse';
 import './components/ieDetect';
 import './components/animations';
 import './components/navigation';
+import './components/supports';
 
 // main
 $(document).ready(function () {
