@@ -1,0 +1,48 @@
+---
+title: Профессии
+---
+extends layouts/_layout
+include partials/_footer
+include partials/_header
+
+block variables 
+  - var pageName = "page-2-details"
+
+block content
+  +header()
+  
+  //
+  +b.SECTION.section
+    .container
+
+      +b.breadcrumbs
+        a(href="page-index.html") Главная
+        +e.separator / 
+        span Профессии
+
+      +b.page-title
+        h3.title Профессии
+  
+  //
+  +b.bottom-skew
+    +e.decor
+    +b.SECTION.form-section.section
+        .container
+          form
+            +e.block
+              +e.H3.title.gr-accent Вступайте в LuxLife Club!
+              +e.desc
+                p Просто заполните эту форму и наши консультанты перезвонят Вам!
+              +e.row
+                +b.field-row
+                  +e.LABEL.name Ваше имя:
+                  +b.INPUT(type="text" class="field --white")
+                +b.field-row
+                  +e.LABEL.name E-mail:
+                  +b.INPUT(type="email" class="field --white --error")
+                +b.field-row
+                  +e.LABEL.name Телефон:
+                  +b.INPUT(type="text" class="field --white")
+                // btn--disabled
+                +b.BUTTON.btn(class="--gr-accent") Отправить
+    +footer()

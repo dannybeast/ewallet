@@ -11,13 +11,13 @@
           span
           span
     ul
-      li.active
+      li(class=(pageName === "page-index" ? " active" : undefined))
         a(href="page-index.html") Главная
-      li
+      li(class=(pageName === "page-1" ? " active" : undefined))
         a(href="page-1.html") О компании
-      li
+      li(class=(pageName === "page-2" ? " active" : undefined))
         a(href="page-2.html") Профессии
-      li
+      li(class=(pageName === "page-3" ? " active" : undefined))
         a(href="page-3.html") FAQ
-      li
+      li(class=(pageName === "page-4" ? " active" : undefined))
         a(href="page-4.html") Контакты

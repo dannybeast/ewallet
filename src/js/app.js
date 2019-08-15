@@ -1,6 +1,7 @@
 // vendors
 import 'lazyload/lazyload.min';
 import '@fancyapps/fancybox';
+import './lib/jquery-ui.min';
 
 // polyfills
 import 'svgxuse';
@@ -19,4 +20,12 @@ $(document).ready(function () {
   $('.js-modal').fancybox();
   //-
 
+  // accordion
+  $('.js-accordion').accordion({
+    header: '> div > h4',
+    collapsible: true,
+    active: false,
+    heightStyle: 'content'
+  });
+  //-
 });

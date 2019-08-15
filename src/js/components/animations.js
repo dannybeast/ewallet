@@ -36,9 +36,9 @@ $(window).on('load', function(){
                 if ($('.well-being').length){
                     posChecker('.well-being', tl_wellBeing);
                 }
-                if ($('.form-section').length){
-                    posChecker('.form-section', tl_formSection);
-                }
+                // if ($('.form-section').length){
+                //     posChecker('.form-section', tl_formSection);
+                // }
             }
         })
 })
@@ -121,12 +121,12 @@ tl_wellBeing
 //-
 }
 // animation form section
-if ($('.form-section').length) {
-var tl_formSection = new TimelineLite({paused:true}); 
-tl_formSection
-    .fromTo('.form-section__block', 0.5, { y: -10, opacity:0 }, { y:0, opacity: 1 })  
-//-
-}
+// if ($('.form-section').length) {
+// var tl_formSection = new TimelineLite({paused:true}); 
+// tl_formSection
+//     .fromTo('.form-section__block', 0.5, { y: -10, opacity:0 }, { y:0, opacity: 1 })  
+// //-
+// }
 
 function posChecker(sectionClass, timelineName, beforeTop){
     var windowHeight = $(window).outerHeight();

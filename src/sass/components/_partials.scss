@@ -70,3 +70,79 @@
     }
   }
 }
+
+// faq
+.faq{
+  padding-top: 30px;
+}
+
+.faq-answers {
+  @mixin blockStyle(){
+    padding: 20px 30px;
+    position: relative;
+    border:solid 1px #e2e2e2;
+    background: $white;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.05);
+  }
+  &__content{
+    @include blockStyle();
+    z-index: 2;
+    margin-top: -1px;
+    border-top:none;
+    padding-top: 0px;
+    padding-bottom: 30px;
+  }
+  &__title {
+      @extend .h3;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      @include blockStyle();
+      padding-right: 60px;
+
+      &:after {
+          content: "";
+          display: block;
+          flex-shrink: 0;
+          width: 27px;
+          position: absolute;
+          top: 50%;
+          right: 25px;
+          margin-top: -7px;
+          height:14px;
+          background: url("../img/icons/arrow.svg") center no-repeat;
+          background-size: cover;
+          transition: all 0.3s ease;
+          transform: rotate(0deg);
+          opacity: 0.3;
+      }
+
+      &.ui-state-active {
+          &:after {
+            transform: rotate(-180deg);
+          }
+      }
+
+  }
+
+  &__block {
+      border-radius: 20px;
+      background: $white;
+      margin-bottom: 20px;
+
+      &:last-child {
+          margin-bottom: 0;
+      }
+  }
+
+  @include media-breakpoint-down(sm) {
+      &__title{
+        padding: 15px 60px 15px 15px;
+        font-size: 18px;
+      }
+      &__content{
+        padding: 15px;
+      }
+  }
+}
+//-
