@@ -1,5 +1,6 @@
 .well-being {
     padding-top: 0;
+
     .title {
         margin-bottom: 93px;
         font-size: 49px;
@@ -25,7 +26,7 @@
     }
 
     @include media-breakpoint-down(md) {
-        padding-top: 30px;
+        padding-top: 60px;
 
         .title {
             font-size: 40px;
@@ -45,7 +46,8 @@
         &__col {
             @include make-col(6, 12);
             margin-bottom: 30px;
-            &:last-child{
+
+            &:last-child {
                 margin-bottom: 0;
             }
         }
@@ -54,13 +56,15 @@
             font-size: 30px;
             display: block;
             text-align: center;
-            span{
+
+            span {
                 display: block;
             }
+
             .gr-accent {
                 background-image: none;
-            color: #ebb95d !important;
-            -webkit-text-fill-color: inherit;
+                color: #ebb95d !important;
+                -webkit-text-fill-color: inherit;
             }
         }
 

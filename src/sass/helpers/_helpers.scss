@@ -54,7 +54,7 @@ $skewMargin: 11.5%;
 .skew-r {
     transform: skewY($skewDeg);
     transform-origin: top;
-    padding: 0% 0 10%;
+    padding: 30px 0 8%;
     margin-top: -21%;
 
     .container {
@@ -68,7 +68,7 @@ $skewMargin: 11.5%;
     position: relative;
     overflow: hidden;
     padding-top: 15%;
-    margin-top: -5.5%;
+    margin-top: -2.5%;
 
     .form-section {
         padding-top: 80px;

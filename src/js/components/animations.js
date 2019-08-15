@@ -7,7 +7,7 @@ $(window).on('load', function(){
     tl_loader
         .fromTo('.loader__inside', 0.3, { y: 0, opacity: 1 }, { y: -10, opacity: 0 })
         .fromTo('.loader', 0.6, { x: 0, opacity: 1 }, {
-            x: 2000,
+            x: 0,
             opacity: 0,
             onComplete: function() {
                 $('.loader').remove();

@@ -3,16 +3,20 @@
     background-size: 100% 89.5%;
     position: relative;
     z-index: 1;
+
     &.skew-r {
         padding: 28.2% 0 0%;
         margin-top: -21%;
     }
+
     .dark-video {
         height: 100%;
     }
+
     .title {
         margin-bottom: 40px;
         position: relative;
+
         &:before {
             content: '';
             width: 300px;
@@ -24,12 +28,15 @@
             margin-right: 66px;
             bottom: 25%;
         }
+
         small {
             display: block;
             color: #fff;
         }
+
         @include media-breakpoint-down(sm) {
             display: inline-block;
+
             &:before {
                 width: calc(100vw - 300px);
                 left: 100%;
@@ -39,40 +46,50 @@
             }
         }
     }
+
     &__row {
         display: flex;
         flex-wrap: wrap;
     }
+
     &__col-l {
         width: 370px;
     }
+
     &__col-r {
         width: calc(100% - 370px);
     }
+
     .dark-list {
         padding-right: 60px;
         color: #fff;
         padding-bottom: 60px;
+
         @include media-breakpoint-down(md) {
             padding-top: 0;
             padding-right: 30px;
             padding-bottom: 20px;
         }
+
         @include media-breakpoint-down(sm) {
             padding-right: 0;
             padding-bottom: 40px;
         }
     }
+
     @include media-breakpoint-down(md) {
+
         &__col-l,
         &__col-r {
             width: 50%
         }
     }
+
     @include media-breakpoint-down(sm) {
         &.skew-r {
             padding: 40% 0 0%;
         }
+
         &__col-l,
         &__col-r {
             width: 100%;
@@ -87,14 +104,17 @@
     position: relative;
     background: url('../img/how-work/sign-module.svg') left bottom no-repeat;
     background-size: cover;
+
     &__desc {
         font-family: $accent-font;
         margin-bottom: 10px;
     }
+
     &__title {
         font-size: 38px;
         line-height: 1.1;
         font-family: $accent-font;
+
         span {
             color: #fff;
             display: block;
@@ -102,24 +122,27 @@
             margin-top: 10px;
         }
     }
+
     &__buttons {
         margin-top: 30px;
         margin-right: -110px;
         display: flex;
         justify-content: flex-end;
     }
+
     .btn {
         font-size: 18px;
     }
-    @include media-breakpoint-down(sm) {
+
+    @include media-breakpoint-down(md) {
         padding: 30px;
-        background-size: 100%;
+
         &__title {
             font-size: 34px;
         }
+
         &__buttons {
             margin-right: 0;
-            margin-top: 15px;
         }
     }
 }
@@ -128,14 +151,17 @@
     list-style: none;
     font-size: 17px;
     padding-top: 10px;
+
     li {
         position: relative;
         padding-left: 64px;
         margin-bottom: 30px;
         line-height: 1.45;
+
         &:last-child {
             margin-bottom: 0;
         }
+
         &:before {
             content: '';
             width: 36px;
@@ -160,6 +186,7 @@
     background: #000;
     $icoW: 160px;
     $iconH: 118px;
+
     &:before {
         content: '';
         width: $icoW;
@@ -173,6 +200,7 @@
         background-size: contain;
         transition: all .3s ease;
     }
+
     &:after {
         content: '';
         width: 100%;
@@ -185,17 +213,20 @@
         left: 0;
         background: url('../img/how-work/video-after.png') center no-repeat;
     }
+
     img {
         display: block;
         min-height: 100%;
         max-width: 100%;
         transition: all 1.2s ease;
     }
+
     &:hover {
         &:before {
             transform: translate(-50%, -50%) scale(1.1);
         }
     }
+
     @include media-breakpoint-down(md) {
         &:before {
             width: $iconH / 1.5;

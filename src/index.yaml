@@ -1,5 +1,23 @@
 ProjectTitle: testing
 
 PageList:
-- file: page.html
-  ready: 50
+- file: page-index.html
+  ready: 100
+- file: page-1.html
+  ready: 100
+- file: page-2.html
+  ready: 100
+- file: page-2-details.html
+  ready: 100
+- file: page-3.html
+  ready: 100
+- file: page-4.html
+  ready: 100
+- file: policy.html
+  ready: 100
+- file: sign.html
+  ready: 100
+- file: reg.html
+  ready: 100
+- file: recover.html
+  ready: 100

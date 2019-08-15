@@ -18,7 +18,7 @@
     font-weight: 700;
     letter-spacing: 3.36px;
     color: #000;
-    transition: all .1s ease;
+    transition: all .2s ease;
 
     &--gr-accent {
         background-image: linear-gradient(to top, #be801e 0%, #fcd07c 100%);
@@ -36,6 +36,7 @@
             background-image: linear-gradient(to top, #fcd07c 0%, #be801e 100%);
         }
     }
+
     &--gr-gray {
         background-image: linear-gradient(to top, #505050 0%, #989898 100%);
         color: #fff;
@@ -49,7 +50,7 @@
         text-shadow: 0 1px #000;
 
         &:hover {
-            background-image: linear-gradient(to top, #505050 0%, #989898 100%);
+            background-image: linear-gradient(to top, #989898 0%, #505050 100%);
         }
     }
 

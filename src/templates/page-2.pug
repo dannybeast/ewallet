@@ -23,12 +23,11 @@ block content
       // begin custom content
       
       +b.intro-module
-        .container
-          +e.block
-            +e.H3.title Профессии<br> 
-              span.gr-accent Lux Life Club
-            +e.content
-              p Качественное, доступное образование по мировым трендам, стоимостью от $200 до $5000 со скидкой 90%
+        +e.block
+          +e.H3.title Профессии<br> 
+            span.gr-accent Lux Life Club
+          +e.content
+            p Качественное, доступное образование по мировым трендам, стоимостью от $200 до $5000 со скидкой 90%
       +b.intro-text
         p Мы даем сжатое, качественное и современное образование за доступную цену и за короткий период, в соответствии с мировыми трендами.
 
@@ -86,7 +85,7 @@ block content
         +e.LI
           +profession-item()
 
-  +b.SECTION.problems(class="--not-shadow ").section
+  +b.SECTION.problems.section
     .container
       +b.H3.title(class="--center")
         small.gr-accent Какие проблемы  

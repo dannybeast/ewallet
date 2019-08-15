@@ -3,6 +3,7 @@
     font-family: $accent-font;
     position: relative;
     z-index: 2;
+    margin-bottom: 0;
 
     .title {
         margin-bottom: 30px;
@@ -47,6 +48,8 @@
     }
 
     @include media-breakpoint-down(sm) {
+        margin-bottom: 45px;
+
         &__row {
             margin: 0;
         }

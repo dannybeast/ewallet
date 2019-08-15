@@ -1,11 +1,13 @@
 const webpack = require('webpack');
 const path = require('path');
 const config = require('./gulp/config');
-const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
+const {
+  BundleAnalyzerPlugin
+} = require('webpack-bundle-analyzer');
 
 function createConfig(env) {
   let isProduction;
-    let webpackConfig;
+  let webpackConfig;
 
   if (env === undefined) {
     env = process.env.NODE_ENV;
@@ -19,6 +21,7 @@ function createConfig(env) {
     entry: {
       // vendor: ['jquery'],
       app: './app.js',
+      contacts: './contacts.js'
     },
     output: {
       path: path.join(__dirname, config.dest.js),
