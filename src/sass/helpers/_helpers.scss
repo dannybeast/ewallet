@@ -63,8 +63,15 @@ $skewMargin: 10.5%;
     margin-top: 3%;
     position: relative;
     overflow: hidden;
-    padding-top: 10.8%;
-    margin-top: -2.2%;
+    padding-top: 15%;
+    margin-top: -4.2%;
+
+    @include media-breakpoint-down(sm){
+        margin-top: -2.2%;
+        .form-section{
+            padding-bottom: 0;
+        }
+      }
     section,
     footer {
         position: relative;
@@ -96,7 +103,8 @@ $skewMargin: 10.5%;
             transform: skewY($skewDeg);
             margin-top: -$skewMargin;
         }
-    }
+        
+    }  
 }
 
 //

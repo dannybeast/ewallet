@@ -1,31 +1,21 @@
-+b.HEADER.header(class="header--intro")
-  .container
-    +b.header-top
-      +e.A(href="page-index.html").logo
-        img(src="img/logo/logo.png", alt="LuxLife")
-      +e.right
-        include ./_nav
-        +b.buttons
-          +b.A(href="#", class="btn --icon-left --border-white --white")
-            +icon('user')
-            span Войти
-          +b.language-module.btn.btn--border-accent
-            +e.current RU
-            +e.UL.dropdown
-              li
-                a(href="#") EN
-              li
-                a(href="#") CZ
-    +b.header-intro
-      +e.content
-        +e.H1.title 
-          span <small class="gr-accent">Самые востребованные</small> <br><small class="gr-accent">и высокооплачиваемые</small> 
-          span <big class="gr-white">профессии XXI века</big>
-        +e.desc
-          p. 
-            По доступным ценам и<br>
-            за короткий срок
-        +b.buttons
-          +b.A(href="#", class="btn --border-accent") Зарегистрироваться
-      +e.pic
-        img(src="img/header-intro/pic.png", alt="")
+mixin header(itemClass)
+  +b.HEADER.header(class=itemClass)
+    .container
+      +b.header-top
+        +e.A(href="page-index.html").logo
+          img(src="img/logo/logo.png", alt="LuxLife")
+        +e.right
+          include ./_nav
+          +b.buttons
+            +b.A(href="#", class="btn --icon-left --border-white --white")
+              +icon('user')
+              span Войти
+            +b.language-module.btn.btn--border-accent
+              +e.current RU
+              +e.UL.dropdown
+                li
+                  a(href="#") EN
+                li
+                  a(href="#") CZ
+      if block
+        block

@@ -1,0 +1,15 @@
+---
+title: LuxLife Club
+---
+extends layouts/_layout
+include partials/_footer
+include partials/_header
+block content
+  +header()
+  
+  //
+  +b.SECTION.breadcrumbs.section
+    .container
+      a(href="page-index.html") Главная
+      +e.separator / 
+      span Политика конфиденциальности

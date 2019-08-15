@@ -36,6 +36,22 @@
             background-image: linear-gradient(to top, #fcd07c 0%, #be801e 100%);
         }
     }
+    &--gr-gray {
+        background-image: linear-gradient(to top, #505050 0%, #989898 100%);
+        color: #fff;
+        font-family: $accent-font;
+        letter-spacing: normal;
+        text-transform: none;
+        font-weight: normal;
+        border-radius: 10px;
+        padding: 0 1em;
+        font-size: 28px;
+        text-shadow: 0 1px #000;
+
+        &:hover {
+            background-image: linear-gradient(to top, #505050 0%, #989898 100%);
+        }
+    }
 
     &--white {
         color: #fff;

@@ -55,7 +55,7 @@ $link-hover-color: $color-2;
 $link-visited-color: $color-12;
 
 $base-font-family: $main-font;
-$base-font-size: 18px;
+$base-font-size: 15px;
 $base-font-weight: 400;
 $base-line-height: 1.6;
 
@@ -85,11 +85,8 @@ $heading-font-weight: 400;
  */
 
 body {
-    color: $text-color;
-    font-size: $base-font-size;
     font-family: $base-font-family;
     font-weight: $base-font-weight;
-    line-height: $base-line-height;
 }
 
 
@@ -166,8 +163,8 @@ b {
 .h4,
 .h5,
 .h6 {
-    font-family: $heading-font-family;
     font-weight: $heading-font-weight;
+     font-family: $accent-font;
 }
 
 .h1 {
@@ -192,7 +189,7 @@ b {
 }
 
 .h3 {
-    font-size: 133.333%;
+    font-size: 160%;
 }
 
 .h4 {
@@ -216,6 +213,8 @@ b {
 }
 
 .typography {
+    font-size: $base-font-size;
+    line-height: $base-line-height;
     a {
         @extend .link;
     }
