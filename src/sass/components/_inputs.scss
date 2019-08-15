@@ -1,5 +1,5 @@
 @mixin input-base() {
-    border: solid 2px $color-6;
+    border: solid 2px #edeef0;
     border-radius: 10px;
     background: $white;
     padding-left: 20px;
@@ -102,7 +102,7 @@ textarea {
     min-height: 100px;
     resize: vertical;
     padding-top: 10px;
-    width: 100%;  
+    width: 100%;
     font-family: $accent-font;
     max-width: 450px;
 }

@@ -15,51 +15,34 @@
     <div class="loader">
       <div class="loader__inside"><img src="img/logo/logo.png" alt=""><img src="img/loader.svg" alt=""></div>
     </div>
-    <header class="header">
-      <div class="container">
-        <div class="header-top"><a class="header-top__logo" href="page-index.html"><img src="img/logo/logo.png" alt="LuxLife" /></a>
-          <div class="header-top__right">
-            <nav class="navigation">
-              <div class="navigation__button">
-                <div class="menu-button"><span></span><span></span><span></span></div>
-              </div>
-              <div class="navigation__menu">
-                <div class="navigation__mobile-bar">
-                  <div class="navigation__logo"><img src="img/logo/logo.png" alt="" /></div>
-                  <div class="navigation__close">
-                    <div class="menu-button open"><span></span><span></span><span></span></div>
-                  </div>
-                </div>
-                <ul>
-                  <li><a href="page-index.html">Главная</a></li>
-                  <li><a href="page-1.html">О компании</a></li>
-                  <li><a href="page-2.html">Профессии</a></li>
-                  <li><a href="page-3.html">FAQ</a></li>
-                  <li><a href="page-4.html">Контакты</a></li>
-                </ul>
-              </div>
-            </nav>
-            <div class="buttons"><a class="btn btn--icon-left btn--border-white btn--white" href="#"><svg class="icon icon-user ">
-                  <use xlink:href="img/icons/sprite.svg#icon-user"></use>
-                </svg><span>Войти</span></a>
-              <div class="language-module btn btn btn--border-accent">
-                <div class="language-module__current">RU</div>
-                <ul class="language-module__dropdown">
-                  <li><a href="#">EN</a></li>
-                  <li><a href="#">CZ</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+    <div class="auth">
+      <div class="auth__col">
+        <div class="auth-module">
+          <h3 class="auth-module__title">Войдите используя свой логин и пароль</h3>
+          <form>
+            <div class="field-row"><label class="field-row__name">Логин</label><input class="field" type="text" placeholder="Введите логин" /></div>
+            <div class="field-row"><label class="field-row__name">Пароль</label><input class="field" type="password" placeholder="Введите пароль" /><button class="field-row__eye js-show-password"><svg class="icon icon-eye ">
+                  <use xlink:href="img/icons/sprite.svg#icon-eye"></use>
+                </svg></button></div>
+            <div class="field-row"><label class="checkbox"><input type="checkbox"><span class="checkbox__content"><span>Запомнить меня</span></span></label><a href="recover.html">Забыли пароль?</a></div><button class="btn btn--gr-accent">Войти в кабинет</button>
+          </form>
         </div>
       </div>
-    </header>
-    <!---->
-    <section class="breadcrumbs section">
-      <div class="container"><a href="page-index.html">Главная</a>
-        <div class="breadcrumbs__separator">/ </div><span>Политика конфиденциальности</span>
+      <div class="auth__col"><a class="auth__logo" href="page-index.html"><img src="img/logo.svg" alt=""></a>
+        <div class="auth__content">
+          <h1 class="auth__title">Авторизация</h1>
+          <div class="auth__desc">
+            <p>Введите свои учетные данные для входа в Личный кабинет!</p>
+          </div>
+        </div>
+        <ul class="auth__links">
+          <li><a href="page-index.html">Главная</a></li>
+          <li><a href="recover.html">Забыли пароль?</a></li>
+          <li><a href="reg.html">Регистрация</a></li>
+          <li><a href="#">Нужна помощь?</a></li>
+        </ul>
       </div>
-    </section>
+    </div>
     <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>

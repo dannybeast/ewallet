@@ -29,6 +29,7 @@
         color: #ebb95d;
         -webkit-text-fill-color: inherit;
     }
+
     .gr-white,
     .gr-diagonal {
         background-image: none;
@@ -38,11 +39,13 @@
 }
 
 $skewDeg: 11.75deg;
-$skewMargin: 10.5%;
+$skewMargin: 11.5%;
+
 .skew-l {
     transform: skewY(-$skewDeg);
     transform-origin: top;
     margin-top: -$skewMargin;
+
     .container {
         transform: skewY($skewDeg);
     }
@@ -51,8 +54,9 @@ $skewMargin: 10.5%;
 .skew-r {
     transform: skewY($skewDeg);
     transform-origin: top;
-    padding: 32% 0 10%;
+    padding: 0% 0 10%;
     margin-top: -21%;
+
     .container {
         transform: skewY(-$skewDeg);
     }
@@ -64,21 +68,27 @@ $skewMargin: 10.5%;
     position: relative;
     overflow: hidden;
     padding-top: 15%;
-    margin-top: -4.2%;
-    .form-section{
+    margin-top: -5.5%;
+
+    .form-section {
         padding-top: 80px;
     }
-    @include media-breakpoint-down(sm){
+
+    @include media-breakpoint-down(sm) {
         margin-top: -2.2%;
-        .form-section{
-            padding-bottom: 0;
+
+        .form-section {
+            padding-top: 40px;
+            margin-bottom: 0;
         }
-      }
+    }
+
     section,
     footer {
         position: relative;
         z-index: 2;
     }
+
     &__decor {
         transform: skewY(-$skewDeg);
         position: relative;
@@ -91,6 +101,7 @@ $skewMargin: 10.5%;
         left: 0;
         margin-top: $skewMargin;
         overflow: hidden;
+
         &:after {
             content: '';
             width: 100%;
@@ -105,14 +116,15 @@ $skewMargin: 10.5%;
             transform: skewY($skewDeg);
             margin-top: -$skewMargin;
         }
-        
-    }  
+
+    }
 }
 
 //
 .language-module {
     position: relative;
     $parent: &;
+
     &__dropdown {
         position: absolute;
         top: 100%;
@@ -122,6 +134,7 @@ $skewMargin: 10.5%;
         opacity: 0;
         transform: translateY(-10px);
         transition: all .3s ease;
+
         a {
             width: 100%;
             padding: 5px;
@@ -129,13 +142,16 @@ $skewMargin: 10.5%;
             border: solid 1px #fff;
             color: #fff !important;
             margin-bottom: -1px;
+
             &:hover {
                 background: $color-4;
                 color: #000 !important;
             }
         }
+
         // display: none;
     }
+
     &:hover {
         #{$parent}__dropdown {
             opacity: 1;
@@ -151,6 +167,7 @@ $skewMargin: 10.5%;
     flex-wrap: wrap;
     align-items: center;
     margin: -10px;
+
     .btn {
         margin: 10px;
     }

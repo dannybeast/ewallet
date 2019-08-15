@@ -21,9 +21,87 @@ block content
         +e.separator / 
         span О компании
 
-      +b.page-title
-        h3.title Lux Life Club (LLC) 
+
+      // begin custom content
+      
+      +b.intro-module
+        .container
+          +e.block
+            +e.H3.title Lux Life Club (LLC)<br> 
+              span.gr-accent ЭТО
+            +e.content
+              p место встречи глобально мыслящих<br> профессионалов своего дела
+      
+      +b.intro-text
+        p Деятельность компаний сфокусирована вокруг двух основных направлений: знание и практика. В LLC ценится желание делиться знаниями, создавать что-то новое и сделать невозможное возможным.
+
+  +b.SECTION.icons-section.section
+    .container
+      +e.row
+        +e.col
+          +b.advantages-item
+            +e.icon
+              img(src="img/icon.gif", data-src="img/icons/001-employee.svg", alt="")
+            +e.P.title Профессии
+            +e.desc
+              p Качественное, доступное образование по мировым трендам, стоимостью от $200 до $5000 со скидкой 90%.
+        +e.col
+          +b.advantages-item
+            +e.icon
+              img(src="img/icon.gif", data-src="img/icons/004-bar-chart.svg", alt="")
+            +e.P.title Фин. грамотность
+            +e.desc
+              p Увеличение финансовой грамотности и вашего дохода, обучение без воды.
+        +e.col
+          +b.advantages-item
+            +e.icon
+              img(src="img/icon.gif", data-src="img/icons/002-creative.svg", alt="")
+            +e.P.title Продажи
+            +e.desc
+              p Ведение переговоров, искусство продаж, ораторское искусство. Обучение от самых лучших спикеров в своей отрасли.
+        +e.col
+          +b.advantages-item
+            +e.icon
+              img(src="img/icon.gif", data-src="img/icons/005-gym.svg", alt="")
+            +e.P.title ЗОЖ
+            +e.desc
+              p Правильное питание и здоровый образ жизни. Консультаций от высокооплачиваемых тренеров и диетологов.
+
+  +b.SECTION.target.section
+    .container
+      +e.row
+        +e.media
+          img(src="img/target/target-pic-thrumb.gif" data-src="img/target/target-pic.png", alt="")
+        +e.content
+          +b.H3.title
+            small.gr-accent Миссия 
+            | Lux Life Club
+          +e.text
+            p взращивать новое поколение профессионалов своего дела в разных отраслях, которые будут всегда востребованы и высокооплачиваемы за свои услуги.
   
+  +b.SECTION.about(class="skew-r").section
+    .container
+      +e.row
+        +e.col
+          +e.text
+            p LLC – компания, которая дает простому народу возможность освоить около 30-ти самых востребованных и высокооплачиваемых профессий 21 века . Все знают – теория без практики – обучение на ветер. Уникальность в методике обучения наших курсов предполагает моментальное применение полученных знаний на практике.
+        +e.col
+          +b.professions
+            img(src="img/tags.png", alt="")
+      +b.reviews
+        +b.H3.title
+          small.gr-accent Отзывы 
+          | Наших клиентов
+        +e.row
+          +e.col
+            +b.A(href="https://youtu.be/REBuXEWwUME").review-block(class="--video").js-modal
+              img(src="img/reviews/pic.png" data-src="img/reviews/pic.png", alt="")
+          +e.col
+            +b.A(href="https://youtu.be/REBuXEWwUME").review-block(class="--video").js-modal
+              img(src="img/reviews/pic.png" data-src="img/reviews/pic.png", alt="")
+        +e.buttons.buttons
+          +b.A(href="#" class="btn --border-gray") Смотреть все отзывы
+
   //
   +b.bottom-skew
     +e.decor

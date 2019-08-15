@@ -1,38 +1,45 @@
 .form-section {
-    padding-bottom: 53px;
-    .title{
+    .title {
         text-align: center;
         font-size: 34px;
         margin-bottom: 30px;
+
         @include media-breakpoint-down(sm) {
             font-size: 24px;
         }
     }
+
     &__block {
         border-radius: 10px;
         border: 2px solid $color-7;
         padding: 30px 85px 60px;
-        &--gradient{
+
+        &--gradient {
             background-image: linear-gradient(to top, #be801e 0%, #fcd07c 100%);
-            border:none;
+            border: none;
             padding-bottom: 30px;
             margin-top: 0px;
-            .field-row{
-                &__name{
+
+            .field-row {
+                &__name {
                     color: $white;
                 }
-                textarea{
+
+                textarea {
                     height: 160px;
                 }
-            }   
-            .btn{
-               flex-grow: initial !important;
             }
-            .field{
+
+            .btn {
+                flex-grow: initial !important;
+            }
+
+            .field {
                 border-color: $white;
             }
         }
     }
+
     &__title {
         text-align: center;
         font-size: 41px;
@@ -42,6 +49,7 @@
         font-weight: 400;
         margin-bottom: 14px;
     }
+
     &__desc {
         text-align: center;
         font-size: 26px;
@@ -50,6 +58,7 @@
         max-width: 470px;
         margin: 0 auto 43px;
         position: relative;
+
         &:before,
         &:after {
             content: '';
@@ -60,38 +69,46 @@
             top: 50%;
             background: url('../img/decor/form-desc-before.png') center no-repeat;
         }
+
         &:before {
             right: 100%;
             margin-right: 30px;
             transform: translateY(-50%);
         }
+
         &:after {
             transform: translateY(-50%) scale(-1, 1);
             left: 100%;
             margin-left: 30px;
         }
     }
+
     &__row {
         display: flex;
         align-items: flex-end;
         margin: 0px -15px 0;
     }
+
     .btn {
         height: 50px;
     }
+
     .field-row,
     .btn {
         flex-grow: 1;
         margin: 15px;
     }
+
     @include media-breakpoint-down(md) {
         &__block {
             padding: 30px 20px;
             margin: 0;
         }
+
         &__row {
             flex-wrap: wrap;
         }
+
         // .field-row {
         //     width: calc(50% - 30px);
         //     flex-grow: inherit;
@@ -100,25 +117,30 @@
         //     }
         // }
         &__desc {
+
             &:after,
             &:before {
                 display: none;
             }
         }
     }
+
     @include media-breakpoint-down(sm) {
         .field-row {
             margin-top: 0;
             width: 100%;
         }
+
         &__desc {
             font-size: 18px;
         }
+
         &__title {
             font-size: 36px;
             line-height: 1.2;
         }
     }
+
     @include media-breakpoint-down(xs) {
         &__title {
             font-size: 24px;

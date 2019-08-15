@@ -25,6 +25,55 @@ block content
         +b.decoration-title
           h4.gr-accent Свяжитесь с нами!
   
+    // begin custom content
+    +b.contacts-info
+      .container
+        +e.row
+          +e.col
+            +b.contacts-item
+              +e.icon
+                img(src="img/contacts/men.png", alt="")
+              +e.content
+                +e.P.title Менеджер по обучению
+                a(href="tel:72124347282") +7 (212) 434 72-82
+          +e.col
+            +b.contacts-item
+              +e.icon
+                img(src="img/contacts/fly.png", alt="")
+              +e.content
+                +e.P.title Мы в соцсетях
+                p Telegram: <a href="#" target="_blank">luxlifeclub</a>
+                p FB: <a href="#" target="_blank">facebook.com/llc</a>
+                p VK: <a href="#" target="_blank">vk.com/llc</a>
+    
+    +b.map
+      .container
+        +e.block#map
+        +e.desc
+          p Наш адрес:
+          p ул. Айманова, 126, (угол с ул. Абая) Алматы 050000, Казахстан
+          p Офис 403, 4 этаж.
+    
+    .container
+      +b.hr-decoration
+        span
+          img(src="img/decor/form-desc-before.png", alt="")
+    
+    +b.contacts-form
+      .container
+        +e.H3.title Не смогли с нами связаться?
+        +e.desc
+          p Введите данные ниже и мы с вами свжемся в ближайшее время
+        form
+          +e.row
+            +b.field-row
+              +e.LABEL.name ФИО:
+              +b.INPUT(type="text" class="field" placeholder="Введите ФИО")
+            +b.field-row
+              +e.LABEL.name Телефон:
+              +b.INPUT(type="text" class="field" placeholder="Введите номер телефона")
+            +b.BUTTON.btn(class="--gr-gray") Отправить запрос
+
   //
   +b.bottom-skew
     +e.decor
@@ -45,6 +94,5 @@ block content
                 +b.field-row
                   +e.LABEL.name Телефон:
                   +b.INPUT(type="text" class="field --white")
-                // btn--disabled
                 +b.BUTTON.btn(class="--gr-accent") Отправить
     +footer()

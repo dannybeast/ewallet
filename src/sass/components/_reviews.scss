@@ -1,44 +1,56 @@
 .reviews {
     font-size: 30px;
     font-family: $accent-font;
+    position: relative;
+    z-index: 2;
+
     .title {
         margin-bottom: 30px;
         text-align: center;
+
         small {
             display: block;
         }
     }
+
     &__row {
         display: flex;
         flex-wrap: wrap;
         margin: 0 -30px;
     }
+
     &__col {
         width: calc(50% - 60px);
         margin: 30px;
     }
+
     img {
         display: block;
         max-width: 100%;
     }
+
     .buttons {
         margin-top: 35px;
         text-align: center;
         justify-content: center;
     }
+
     @include media-breakpoint-down(xl) {
         &__row {
             margin: 0 -15px;
         }
+
         &__col {
             width: calc(50% - 30px);
             margin: 15px;
         }
     }
+
     @include media-breakpoint-down(sm) {
         &__row {
             margin: 0;
         }
+
         &__col {
             width: 100%;
             margin: 0px 0 15px 0;
@@ -50,10 +62,12 @@
     position: relative;
     $parent: &;
     display: block;
+
     img {
         display: block;
         max-width: 100%;
     }
+
     &--video {
         &:before {
             content: '';
@@ -68,6 +82,7 @@
             margin-left: -80px;
             opacity: 0.5;
             transition: all .3s ease;
+
             @include media-breakpoint-down(md) {
                 width: 100px;
                 height: 100px;
@@ -75,6 +90,7 @@
                 margin-left: -50px;
             }
         }
+
         &:hover {
             &:before {
                 opacity: 1;

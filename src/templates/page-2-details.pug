@@ -4,7 +4,7 @@ title: Профессии
 extends layouts/_layout
 include partials/_footer
 include partials/_header
-
+include partials/_profession-item
 block variables 
   - var pageName = "page-2-details"
 
@@ -20,9 +20,149 @@ block content
         +e.separator / 
         span Профессии
 
-      +b.page-title
-        h3.title Профессии
-  
+
+      // custom page content
+
+      +b.intro-module
+        .container
+          +e.block
+            +e.H3.title
+              span SEO оптимизатор
+            +e.content
+              +b.UL.profession-icons
+                +e.LI
+                  +b.profession-icon
+                    +e.icon
+                      img(src="img/icons/calendar.svg", alt="")
+                    +e.content
+                      p Когда
+                      p
+                        strong 12 августа — 19 ноября
+                +e.LI
+                  +b.profession-icon
+                    +e.icon
+                      img(src="img/icons/lesson.svg", alt="")
+                    +e.content
+                      p ФОРМАТ ОБУЧЕНИЯ
+                      p
+                        strong Онлайн
+                +e.LI
+                  +b.profession-icon
+                    +e.icon
+                      img(src="img/icons/level.svg", alt="")
+                    +e.content
+                      p Уровень
+                      p
+                        strong Начинающий
+      //
+      +b.profession-intro
+        +e.desc
+          p Начинают SEO-специалисты часто как помощники или стажеры. Хороший старт — попробовать «прокачать» собственную страничку: это будет лучшим примером для первого портфолио. 
+        +e.right
+          +e.P.price-desc Стоимость обучения
+          +e.P.price.gr-accent $499
+
+      //
+      +b.details-image
+        img(src="img/profession-details.jpg", alt="")
+      //
+      +b.decoration-title(class="--gray")
+        h4 Компания мечты
+      //
+      +b.UL.company-list
+        +e.LI
+          +b.company-item
+            +e.top
+              img(src="img/company/1.png", alt="")
+            +e.P.name Яндекс
+        +e.LI
+          +b.company-item
+            +e.top
+              img(src="img/company/2.png", alt="")
+            +e.P.name Ашманов и партнер
+        +e.LI
+          +b.company-item
+            +e.top
+              img(src="img/company/3.png", alt="")
+            +e.P.name Google
+        +e.LI
+          +b.company-item
+            +e.top
+              img(src="img/company/4.png", alt="")
+            +e.P.name Demis Group
+        +e.LI
+          +b.company-item
+            +e.top
+              img(src="img/company/5.png", alt="")
+            +e.P.name BDBD
+      //
+      +b.typography
+        p Чтобы стать SEO-оптимизатором, не нужно заканчивать вуз. Достаточно пройти специализированный курс, рассчитанный на несколько месяцев. Некоторые специалисты и вовсе учатся по книгам, вебинарам и статьям в интернете. Необходимый минимум — это знание основ HTML-верстки и основных систем управления, аналитических программ и пакетов инструментов для оптимизации. «Поисковики» не разглашают свои алгоритмы выдачи ответов и чуть ли не ежедневно вносят в них изменения, поэтому SEO должен все время «держать нос по ветру». Ему рекомендуют отводить на самообразование не менее часа рабочего времени в день.
+        p Чтобы стать SEO-оптимизатором, не нужно заканчивать вуз. Достаточно пройти специализированный курс, рассчитанный на несколько месяцев. Некоторые специалисты и вовсе учатся по книгам, вебинарам и статьям в интернете. Необходимый минимум — это знание основ HTML-верстки и основных систем управления, аналитических программ и пакетов инструментов для оптимизации. «Поисковики» не разглашают свои алгоритмы выдачи ответов и чуть ли не ежедневно вносят в них изменения, поэтому SEO должен все время «держать нос по ветру». Ему рекомендуют отводить на самообразование не менее часа рабочего времени в день.
+      
+      //
+      +b.decoration-title(class="--gray")
+        h4 Программа обучения
+
+      //
+      +b.program
+        .container
+          +b.program-list.js-accordion
+            //
+            +e.block
+              +e.H4.title 
+                span Принципы поисковых алгоритмов
+                +e.SPAN.time
+                  span 8 часов теории
+                  span 4 часа практики
+              +e.content
+                +e.col
+                  .typography
+                    p Узнаем типы поисковых алгоритмов, выявим конкурентов. Определим коммерческие факторы, оказывающие влияние на ранжирование. Научимся на базовом уровне визуально разбираться в коде страниц сайта.
+                    ul
+                      li Основы устройства поисковых систем, типы пользовательских запросов
+                      li Факторы ранжирования сайтов
+                      li Основы html-верстки для SEO-специалистов
+                +e.col
+                  +b.what-to-learn
+                    +e.H3.title Чему вы научитесь?
+                    ul
+                      li определение типов поисковых запросов
+                      li выявление своих конкурентов в поиске
+                      li умение определять коммерческие факторы, которые оказывают влияние на ранжирование в вашей тематике
+                      li умение на базовом уровне визуально разбираться в коде и находить ошибки, допущенные при html-верстке документов 
+      
+      // 
+      +b.form-section
+        h3.title Запишитесь на курс SEO оптимизатора
+        form
+          +e.block(class="--gradient")
+            +e.row
+              +b.field-row
+                +e.LABEL.name Ваше имя:
+                +b.INPUT(type="text" class="field")
+              +b.field-row
+                +e.LABEL.name E-mail:
+                +b.INPUT(type="email" class="field")
+              +b.field-row
+                +e.LABEL.name Телефон:
+                +b.INPUT(type="text" class="field")
+              +b.BUTTON.btn(class="--gr-gray") Записаться
+
+
+      +b.decoration-title(class="--gray")
+        h4 Похожие профессии
+
+      +b.UL.professions-list
+        +e.LI
+          +profession-item()
+        +e.LI
+          +profession-item()
+        +e.LI
+          +profession-item()
+        +e.LI
+          +profession-item()
+
   //
   +b.bottom-skew
     +e.decor

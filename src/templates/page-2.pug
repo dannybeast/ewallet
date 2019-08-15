@@ -4,7 +4,7 @@ title: Профессии
 extends layouts/_layout
 include partials/_footer
 include partials/_header
-
+include partials/_profession-item
 block variables 
   - var pageName = "page-2"
 
@@ -20,9 +20,122 @@ block content
         +e.separator / 
         span Профессии
 
-      +b.page-title
-        h3.title Профессии
+      // begin custom content
+      
+      +b.intro-module
+        .container
+          +e.block
+            +e.H3.title Профессии<br> 
+              span.gr-accent Lux Life Club
+            +e.content
+              p Качественное, доступное образование по мировым трендам, стоимостью от $200 до $5000 со скидкой 90%
+      +b.intro-text
+        p Мы даем сжатое, качественное и современное образование за доступную цену и за короткий период, в соответствии с мировыми трендами.
+
+      +b.decoration-title(class="--gray")
+          h4 Категория профессий
+      
+      +b.UL.professions-list
+        +e.LI
+          +profession-item()
+        +e.LI
+          +profession-item()
+        +e.LI
+          +profession-item()
+        +e.LI
+          +profession-item()
+
+      +b.decoration-title(class="--gray")
+        h4 Категория профессий
+      
+      +b.UL.professions-list
+        +e.LI
+          +profession-item()
+        +e.LI
+          +profession-item()
+        +e.LI
+          +profession-item()
+      
+      +b.decoration-title(class="--gray")
+          h4 Категория профессий
+      
+      +b.UL.professions-list
+        +e.LI
+          +profession-item()
+        +e.LI
+          +profession-item()
+        +e.LI
+          +profession-item()
+        +e.LI
+          +profession-item()
+        +e.LI
+          +profession-item()
+        +e.LI
+          +profession-item()
+
+      +b.decoration-title(class="--gray")
+          h4 Категория профессий
+
+      +b.UL.professions-list
+        +e.LI
+          +profession-item()
+        +e.LI
+          +profession-item()
+        +e.LI
+          +profession-item()
+        +e.LI
+          +profession-item()
+
+  +b.SECTION.problems(class="--not-shadow ").section
+    .container
+      +b.H3.title(class="--center")
+        small.gr-accent Какие проблемы  
+        | Мы решаем?
+      +e.row
+        +e.col
+          +b.card-block
+            +e.icon
+              img(src="img/icon.gif", data-src="img/icons/care.svg", alt="")
+            +e.P.title ЗДОРОВЬЕ
+            +e.desc
+              p Большая часть населения не имеют достаточного времени и денег, чтобы следить за здоровьем
+        +e.col
+          +b.card-block
+            +e.icon
+              img(src="img/icon.gif", data-src="img/icons/money.svg", alt="")
+            +e.P.title ДОЛГОВАЯ ЯМА
+            +e.desc
+              p Неправильное мышление, отсутствие идеи и не видят четких направлений для создания благополучия
+        +e.col
+          +b.card-block
+            +e.icon
+              img(src="img/icon.gif", data-src="img/icons/employee.svg", alt="")
+            +e.P.title ПРОФЕССИОНАЛИЗМ 
+            +e.desc
+              p 95% люди не владеют искусством продаж и боятся выступать публично
+        +e.col
+          +b.card-block
+            +e.icon
+              img(src="img/icon.gif", data-src="img/icons/analysis.svg", alt="")
+            +e.P.title ФИНАНСОВАЯ НЕГРАМОТНОСТЬ 
+            +e.desc
+              p Финансово не грамотны, не умеют правильно распоряжаться деньгами
+        +e.col
+          +b.card-block
+            +e.icon
+              img(src="img/icon.gif", data-src="img/icons/internet.svg", alt="")
+            +e.P.title ИНСТРУМЕНТЫ
+            +e.desc
+              p Не применяют современные тренды продвижения бизнеса в интернете 
+        +e.col
+          +b.card-block
+            +e.icon
+              img(src="img/icon.gif", data-src="img/icons/robber.svg", alt="")
+            +e.P.title ПОТЕРЯ ДЕНЕГ
+            +e.desc
+              p Не знают куда инвестировать, не умеют выбирать нишу для нужных навыков и инвестирования, теряют деньги в разных мошеннических схемах, остаются в долгах
   
+
   //
   +b.bottom-skew
     +e.decor
