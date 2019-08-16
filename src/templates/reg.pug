@@ -2,18 +2,61 @@
 title: LuxLife Club
 ---
 extends layouts/_layout
-include partials/_footer
-include partials/_header
-
 block variables 
-  - var pageName = "reg"
+  - var pageName = "auth"
 
 block content
-  +header()
-  
-  //
-  +b.SECTION.breadcrumbs.section
-    .container
-      a(href="page-index.html") Главная
-      +e.separator / 
-      span Политика конфиденциальности
+  +b.auth
+    +e.col(class="--left")
+      +e.col-content
+        +b.auth-module
+          +e.desc
+            p Заполните следующую информацию для регистрации в Lux Life Club, затем подвтердите ее с помощью ссылки на Вашем e-mail:
+          form
+
+            +b.field-row
+              +e.LABEL.name Логин
+              +b.INPUT(type="text" class="field" placeholder="Введите логин")
+
+            +b.field-row
+              +e.LABEL.name E-mail
+              +b.INPUT(type="text" class="field" placeholder="Введите e-mail")
+            +b.field-row
+              +e.LABEL.name Номер телефона
+              +b.INPUT(type="text" class="field" placeholder="+7 702 777 77 77")
+            +b.field-row
+              +e.LABEL.name Введите пароль
+              +b.INPUT(type="password" class="field" placeholder="Введите пароль")
+              +e.BUTTON.eye(class=" js-show-password")
+                +icon('eye')
+            
+            .row
+              .col-sm-6
+                +b.field-row
+                  +e.LABEL.name Кто пригласил
+                  +b.INPUT(type="text" class="field" placeholder="Логин")
+              .col-sm-6
+                +b.field-row
+                  +e.LABEL.name Спикер презентации
+                  +b.INPUT(type="text" class="field" placeholder="Логин")
+            +b.field-row
+              +checkbox()
+                | Согласен с <a href="policy.html" target="_blank">условиями соглашения</a>
+
+            +b.BUTTON.btn(class="--gr-accent-2") Зарегистрироваться
+      
+    +e.col(class="--right")
+      +e.col-content
+        +e.A(href="page-index.html").logo
+          img(src="img/logo/logo.png", alt="")
+        +e.content
+          +e.H1.title Регистрация
+          +e.desc
+            p Создайте свой профиль прямо сейчас и получите возможность освоить новые высокодоходные профессии!
+        +e.UL.links
+          li
+            a(href="page-index.html") Главная
+          li
+            a(href="recover.html") Забыли пароль?
+          li
+            a(href="#") Нужна помощь?

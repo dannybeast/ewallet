@@ -1,7 +1,7 @@
 .checkbox,
 .radio {
     user-select: none;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     cursor: pointer;
 
@@ -14,7 +14,8 @@
     &__icon {
         width: 30px;
         height: 30px;
-        border: solid 2px $color-6;
+        border: solid 2px #edeef0;
+        border-radius: 8px;
         display: flex;
         flex-shrink: 0;
         align-items: center;
@@ -27,8 +28,8 @@
             display: block;
             width: 14px;
             height: 14px;
-            background: $color-14;
             border-radius: 3px;
+            background: $color-13;
             display: none;
         }
     }
@@ -38,6 +39,12 @@
         .checkbox__icon,
         .radio__icon {
             border-color: #dedbdb;
+        }
+    }
+
+    a {
+        &:hover {
+            text-decoration: underline;
         }
     }
 
@@ -81,9 +88,19 @@
 
             .checkbox__icon,
             .radio__icon {
-                border-color: $color-6;
+                border-color: #dedbdb;
             }
         }
     }
 
+}
+
+.radio {
+    &__icon {
+        border-radius: 50%;
+
+        &:before {
+            border-radius: 50%;
+        }
+    }
 }

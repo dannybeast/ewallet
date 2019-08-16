@@ -7,43 +7,43 @@ block variables
 
 block content
   +b.auth
-    +e.col
+    +e.col(class="--left")
+      +e.col-content
+        +b.auth-module
+          +e.H3.title Войдите используя свой логин и пароль
+          form
 
-      +b.auth-module
-        +e.H3.title Войдите используя свой логин и пароль
-        form
+            +b.field-row
+              +e.LABEL.name Логин
+              +b.INPUT(type="text" class="field" placeholder="Введите логин")
 
-          +b.field-row
-            +e.LABEL.name Логин
-            +b.INPUT(type="text" class="field" placeholder="Введите логин")
+            +b.field-row
+              +e.LABEL.name Пароль
+              +b.INPUT(type="password" class="field" placeholder="Введите пароль")
+              +e.BUTTON.eye(class=" js-show-password")
+                +icon('eye')
+            +b.field-row(class="--row")
+              +checkbox()
+                | Запомнить меня
 
-          +b.field-row
-            +e.LABEL.name Пароль
-            +b.INPUT(type="password" class="field" placeholder="Введите пароль")
-            +e.BUTTON.eye(class=" js-show-password")
-              +icon('eye')
-          +b.field-row
-            +b.LABEL.checkbox
-              input(type="checkbox")
-              +e.content
-                span Запомнить меня
+              a(href="recover.html") Забыли пароль?
+
+            +b.BUTTON.btn(class="--gr-accent-2") Войти в кабинет
+      
+    +e.col(class="--right")
+      +e.col-content
+        +e.A(href="page-index.html").logo
+          img(src="img/logo/logo.png", alt="")
+        +e.content
+          +e.H1.title Авторизация
+          +e.desc
+            p Введите свои учетные данные для входа в Личный кабинет!
+        +e.UL.links
+          li
+            a(href="page-index.html") Главная
+          li
             a(href="recover.html") Забыли пароль?
-
-          +b.BUTTON.btn(class="--gr-accent") Войти в кабинет
-    
-    +e.col
-      +e.A(href="page-index.html").logo
-        img(src="img/logo.svg", alt="")
-      +e.content
-        +e.H1.title Авторизация
-        +e.desc
-          p Введите свои учетные данные для входа в Личный кабинет!
-      +e.UL.links
-        li
-          a(href="page-index.html") Главная
-        li
-          a(href="recover.html") Забыли пароль?
-        li
-          a(href="reg.html") Регистрация
-        li
-          a(href="#") Нужна помощь?
+          li
+            a(href="reg.html") Регистрация
+          li
+            a(href="#") Нужна помощь?

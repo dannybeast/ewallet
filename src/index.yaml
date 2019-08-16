@@ -15,7 +15,7 @@ PageList:
   ready: 100
 - file: policy.html
   ready: 100
-- file: sign.html
+- file: auth.html
   ready: 100
 - file: reg.html
   ready: 100

@@ -258,6 +258,7 @@
 
         &:hover {
             color: #bf811f;
+            border-bottom: 1px solid;
         }
     }
 
@@ -265,6 +266,12 @@
         font-size: 18px;
         margin-bottom: 3px;
         color: #000;
+    }
+
+    &__phone {
+        &:hover {
+            border: none !important;
+        }
     }
 
     @media (max-width:320px) {

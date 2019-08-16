@@ -20,6 +20,28 @@
     color: #000;
     transition: all .2s ease;
 
+    &--gr-accent-2 {
+        background-image: linear-gradient(to top, #c37311 0%, #db9114 100%);
+        color: #fff;
+        font-family: $accent-font;
+        letter-spacing: normal;
+        text-transform: none;
+        font-weight: normal;
+        border-radius: 10px;
+        padding: 0 2em;
+        height: 50px;
+        font-size: 21px;
+        box-shadow: 10px 10px 14px rgba($black, 0.1);
+
+        &:hover {
+            background-image: linear-gradient(to top, #c37311 0%, #db9114 100%);
+        }
+
+        &:active {
+            box-shadow: none;
+        }
+    }
+
     &--gr-accent {
         background-image: linear-gradient(to top, #be801e 0%, #fcd07c 100%);
         color: #fff;
@@ -33,7 +55,7 @@
         text-shadow: 0 1px #000;
 
         &:hover {
-            background-image: linear-gradient(to top, #fcd07c 0%, #be801e 100%);
+            background-image: linear-gradient(to top, #be801e 0%, #be801e 100%);
         }
     }
 
@@ -50,7 +72,7 @@
         text-shadow: 0 1px #000;
 
         &:hover {
-            background-image: linear-gradient(to top, #989898 0%, #505050 100%);
+            background-image: linear-gradient(to top, #505050 0%, #505050 100%);
         }
     }
 

@@ -1,2 +1,11 @@
 include ./_icon
 include ./bemto/bemto
+
+mixin checkbox(itemClass)
+	+b.LABEL.checkbox(class=itemClass)
+		+e.INPUT.input(type="checkbox")
+		span
+			+e.icon
+			+e.content
+				if block
+					block
