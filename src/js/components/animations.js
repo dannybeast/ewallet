@@ -36,6 +36,9 @@ $(window).on('load', function(){
                 if ($('.well-being').length){
                     posChecker('.well-being', tl_wellBeing);
                 }
+                if ($('.auth').length){
+                    posChecker('.auth', tl_auth);
+                }
                 // if ($('.form-section').length){
                 //     posChecker('.form-section', tl_formSection);
                 // }
@@ -120,13 +123,19 @@ tl_wellBeing
     .fromTo('.circle-item__desc', 0.3, { y: -10, opacity:0 }, { y:0, opacity: 1 }) 
 //-
 }
-// animation form section
-// if ($('.form-section').length) {
-// var tl_formSection = new TimelineLite({paused:true}); 
-// tl_formSection
-//     .fromTo('.form-section__block', 0.5, { y: -10, opacity:0 }, { y:0, opacity: 1 })  
-// //-
-// }
+
+
+
+// animation auth
+if ($('.auth').length) {
+var tl_auth = new TimelineLite({paused:true}); 
+tl_auth
+    .fromTo('.auth__col--right', 0.5, { opacity:0 }, { opacity: 1 })  
+    .fromTo('.auth-module', 0.5, { x: -10, opacity: 0 }, { x: 0, opacity: 1 })  
+//-
+}
+
+
 
 function posChecker(sectionClass, timelineName, beforeTop){
     var windowHeight = $(window).outerHeight();

@@ -96,13 +96,16 @@ body {
     }
 
     .btn {
-        white-space: inherit;
         height: auto;
         padding-top: 13px;
         padding-bottom: 13px;
     }
 
     @include media-breakpoint-down(lg) {
+        .btn {
+            white-space: inherit;
+
+        }
         &__col {
             #{$parent}__col-content {
                 max-width: 380px;

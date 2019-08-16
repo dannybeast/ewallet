@@ -30,7 +30,7 @@ $(document).ready(function () {
   //-
 
 
-  // show password
+  // toggle show password
   $('.js-show-password').click(function (e) {
     const input = $(this).parent().children('input');
     e.preventDefault();
