@@ -40,11 +40,11 @@
 
     &__separator {
         margin: 0 15px;
-        color: #C7913C;
+        color: #c7913c;
     }
 
     span {
-        color: #C7913C;
+        color: #c7913c;
     }
 
     @include media-breakpoint-down(sm) {
@@ -71,7 +71,6 @@
 
     &--gray {
         * {
-
             &:before,
             &:after {
                 border-color: #cecece;
@@ -109,7 +108,6 @@
 }
 
 .faq-answers {
-
     &__content {
         @include blockStyle();
         z-index: 2;
@@ -158,7 +156,6 @@
                 transform: rotate(-180deg);
             }
         }
-
     }
 
     &__block {
@@ -274,7 +271,7 @@
         }
     }
 
-    @media (max-width:320px) {
+    @media (max-width: 320px) {
         &__icon {
             img {
                 width: 50px;
@@ -366,7 +363,6 @@
     &__desc {
         text-align: center;
         line-height: 1.65;
-
     }
 }
 
@@ -378,7 +374,11 @@
     padding-bottom: 0;
     margin-bottom: -45px;
     position: relative;
-    background: linear-gradient(to bottom, rgba(233, 233, 233, 1) 20%, transparent 80%);
+    background: linear-gradient(
+        to bottom,
+        rgba(233, 233, 233, 1) 20%,
+        transparent 80%
+    );
     z-index: 5;
     padding-top: 140px;
 
@@ -392,7 +392,6 @@
 
         img {
             max-width: 100%;
-
         }
     }
 
@@ -460,7 +459,6 @@
     }
 
     @include media-breakpoint-down(sm) {
-
         padding-top: 80px;
 
         &__text {
@@ -489,17 +487,18 @@
 
     &__row {
         @include make-row();
+        margin-bottom: -30px;
     }
 
     &__col {
         @include make-col(3, 12);
         @include make-col-ready();
+        margin-bottom: 30px;
     }
 
     @include media-breakpoint-down(md) {
         &__col {
-            @include make-col(6,
-                12);
+            @include make-col(6, 12);
             margin-bottom: 30px;
         }
 
@@ -510,15 +509,13 @@
 
     @include media-breakpoint-down(sm) {
         margin-bottom: 0px;
-
     }
 
     @include media-breakpoint-down(xs) {
         margin-bottom: 0px;
 
         &__col {
-            @include make-col(12,
-                12);
+            @include make-col(12, 12);
         }
     }
 }
@@ -555,7 +552,8 @@
         top: 0;
         background: rgb(255, 255, 255);
         padding: 0 30px;
-        min-width: 70%;
+        min-width: 75%;
+        line-height: 1.2;
 
         span {
             display: inline-flex;
@@ -566,11 +564,14 @@
 
             &:before,
             &:after {
-                content: '';
+                content: "";
                 display: block;
                 width: 124px;
                 height: 29px;
-                background: url(../img/decor/form-desc-before.png) center no-repeat;
+                background: url(../img/decor/form-desc-before.png) center
+                    no-repeat;
+                background-size: contain;
+                flex-shrink: 0;
             }
 
             &:before {
@@ -585,15 +586,16 @@
             }
         }
     }
-
+    @include media-breakpoint-down(lg) {
+        &__title {
+            font-size: 36px;
+            min-width: 90%;
+        }
+    }
     @include media-breakpoint-down(md) {
         &__block {
             padding: 60px 30px 30px;
             font-size: 22px;
-        }
-
-        &__title {
-            font-size: 36px;
         }
     }
 
@@ -613,7 +615,6 @@
             padding: 0;
 
             span {
-
                 &:after,
                 &:before {
                     width: 100px;
@@ -631,12 +632,10 @@
                 }
             }
         }
-
     }
 }
 
 //-
-
 
 // professions
 .professions-list {
@@ -684,7 +683,7 @@
     border: solid 1px transparent;
     display: block;
     color: $black;
-    transition: background .2s ease;
+    transition: background 0.2s ease;
     $parent: &;
 
     &__top {
@@ -723,7 +722,11 @@
 
     &:hover {
         border: solid 1px #c58928;
-        background: linear-gradient(to bottom, rgba(252, 207, 124, 1) 0%, rgba(197, 137, 40, 1) 100%);
+        background: linear-gradient(
+            to bottom,
+            rgba(252, 207, 124, 1) 0%,
+            rgba(197, 137, 40, 1) 100%
+        );
         color: $white;
 
         #{$parent}__content {
@@ -745,7 +748,6 @@
         padding: 15px 20px 20px;
 
         &__icon {
-
             img,
             svg {
                 width: 60px;
@@ -856,7 +858,7 @@
         flex-grow: 1;
 
         &:before {
-            content: '';
+            content: "";
             width: 2px;
             height: 110px;
             display: block;
@@ -866,7 +868,6 @@
             right: 100%;
             margin-right: 50px;
             background: linear-gradient(to top, #bf8120 0%, #fccf7b 100%);
-
         }
     }
 
@@ -932,7 +933,6 @@
         max-width: 100%;
     }
 }
-
 
 .company-list {
     display: flex;
@@ -1024,7 +1024,7 @@
         padding-bottom: 40px;
         border-bottom-left-radius: 2px;
         border-bottom-right-radius: 2px;
-        transition: border .3s ease;
+        transition: border 0.3s ease;
 
         &.ui-accordion-content-active {
             border: solid 2px #eac88a;
@@ -1044,11 +1044,11 @@
         display: none;
 
         &:before {
-            content: '';
+            content: "";
             width: 23px;
             height: 23px;
             display: block;
-            background: url('../img/icons/clock.svg') center no-repeat;
+            background: url("../img/icons/clock.svg") center no-repeat;
             background-size: contain;
             position: absolute;
             top: 50%;
@@ -1074,7 +1074,7 @@
         padding-right: 60px;
         border-top-left-radius: 2px;
         border-top-right-radius: 2px;
-        transition: border 0.2s ease-in .3s;
+        transition: border 0.2s ease-in 0.3s;
 
         &.ui-state-active {
             background: #fff;
@@ -1109,7 +1109,6 @@
                 transform: rotate(-180deg);
             }
         }
-
     }
 
     &__block {
@@ -1166,13 +1165,13 @@
             }
 
             &:before {
-                content: '';
+                content: "";
                 width: 10px;
                 height: 1px;
                 display: block;
                 background: #000;
                 position: absolute;
-                top: .75em;
+                top: 0.75em;
                 left: 0;
             }
         }

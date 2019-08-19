@@ -175,6 +175,20 @@
         }
     }
 
+    @include media-breakpoint-down(lg) {
+        &__pic {
+            max-width: 35%;
+            padding-top: 220px;
+
+            svg,
+            img {
+                max-width: 100%;
+                margin: 0;
+                float: right;
+            }
+        }
+    }
+
     @include media-breakpoint-down(md) {
         &__title {
             font-size: 48px;
