@@ -842,6 +842,7 @@
     &__right {
         display: flex;
         align-items: center;
+        flex-shrink: 0;
     }
 
     &__desc {
@@ -855,7 +856,7 @@
         position: relative;
         margin-right: 50px;
         line-height: 1.2;
-        flex-grow: 1;
+        max-width: 150px;
 
         &:before {
             content: "";
@@ -874,7 +875,6 @@
     &__price {
         font-size: 97px;
         white-space: nowrap;
-        flex-grow: 1;
         font-family: $accent-font;
     }
 
