@@ -1,0 +1,61 @@
+---
+title: Личный кабинет
+---
+
+extends layouts/layout-lk
+
+block variables 
+  - var pageName = "page-1"
+  
+block content
+
+    +b.SECTION.lk-section
+        //
+        +b.lk-info
+            +e.row
+                +e.item
+                    +e.P.name Представитель
+                    p Username
+                +e.item
+                    +e.P.name Ваш ID
+                    p 00001036
+                +e.item
+                    +e.P.name Ваш телефон
+                    p +7 707 491-04-87
+                +e.item
+                    +e.P.name Ваш статус
+                    p Представитель
+                +e.item
+                    +e.P.name Ваш куратор <a href="#">vvvmoney</a>
+                    p +7 707 491-04-87
+    
+    +b.SECTION.lk-section
+        //
+        +b.lk-banners
+            +e.row
+                +e.col
+                    +b.banner-module
+                        +e.content
+                            +e.P.title Активировать бэк-офис
+                            +e.P.desc <span>Стоимость:</span> <big>25</big> у.е.
+                            +e.buttons
+                                +b.A(href="#", class="btn --gr-accent") Активировать
+                        +e.icon
+                            img(src="img/icons/rocket.svg", alt="")
+                +e.col
+                    +b.banner-module
+                        +e.content
+                            +e.P.title Приглашайте рефералов
+                            +e.INPUT(type="text", value="http://ll-club.com/ref?=sadhsahjdbjhasda", class="field")
+                            +e.buttons
+                                +b.A(href="#", class="btn --gr-gray") Скопировать
+    
+    +b.SECTION.lk-section
+        //
+        +b.lk-title-module
+            +e.H3.title Ваши профессии
+            +e.buttons
+                +b.A(href="#", class="btn --brown-border")
+                    span Начать новый курс
+                    +icon('circle-plus')
+                

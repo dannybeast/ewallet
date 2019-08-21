@@ -33,6 +33,8 @@
     white-space: nowrap;
     font-family: $accent-font;
     margin-top: -23px;
+    position: relative;
+    z-index: 2;
 
     a {
         color: $black;
@@ -71,6 +73,7 @@
 
     &--gray {
         * {
+
             &:before,
             &:after {
                 border-color: #cecece;
@@ -374,11 +377,9 @@
     padding-bottom: 0;
     margin-bottom: -45px;
     position: relative;
-    background: linear-gradient(
-        to bottom,
-        rgba(233, 233, 233, 1) 20%,
-        transparent 80%
-    );
+    background: linear-gradient(to bottom,
+            rgba(233, 233, 233, 1) 20%,
+            transparent 80%);
     z-index: 5;
     padding-top: 140px;
 
@@ -568,8 +569,7 @@
                 display: block;
                 width: 124px;
                 height: 29px;
-                background: url(../img/decor/form-desc-before.png) center
-                    no-repeat;
+                background: url(../img/decor/form-desc-before.png) center no-repeat;
                 background-size: contain;
                 flex-shrink: 0;
             }
@@ -586,12 +586,14 @@
             }
         }
     }
+
     @include media-breakpoint-down(lg) {
         &__title {
             font-size: 36px;
             min-width: 90%;
         }
     }
+
     @include media-breakpoint-down(md) {
         &__block {
             padding: 60px 30px 30px;
@@ -615,6 +617,7 @@
             padding: 0;
 
             span {
+
                 &:after,
                 &:before {
                     width: 100px;
@@ -722,11 +725,9 @@
 
     &:hover {
         border: solid 1px #c58928;
-        background: linear-gradient(
-            to bottom,
-            rgba(252, 207, 124, 1) 0%,
-            rgba(197, 137, 40, 1) 100%
-        );
+        background: linear-gradient(to bottom,
+                rgba(252, 207, 124, 1) 0%,
+                rgba(197, 137, 40, 1) 100%);
         color: $white;
 
         #{$parent}__content {
@@ -748,6 +749,7 @@
         padding: 15px 20px 20px;
 
         &__icon {
+
             img,
             svg {
                 width: 60px;
@@ -856,7 +858,7 @@
         position: relative;
         margin-right: 50px;
         line-height: 1.2;
-        max-width: 150px;
+        max-width: 100px;
 
         &:before {
             content: "";

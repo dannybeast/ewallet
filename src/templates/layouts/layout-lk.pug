@@ -1,0 +1,94 @@
+include ../mixins/all
+block variables
+
+doctype html
+html
+  head
+    include _head
+    link(rel="stylesheet" media="all" href="css/lk.css")
+
+  body(class=bodyClass)
+    +b.loader
+      +e.inside
+        img(src="img/logo/logo.png", alt="")
+        img(src="img/loader.svg", alt="")
+    
+    +b.lk
+        +e.col-left
+            //
+            +b.user-module
+                +e.avatar
+                    img(src="img/lk/avatar.png", alt="")
+                +e.content
+                    +e.P.name Username
+                    +e.P.type Представитель
+            //
+            +b.NAV.navigation-module
+                +e.UL
+                    +e.LI
+                        +e.A(href="lk-1.html")
+                            +e.icon
+                                +icon('home')
+                            span Главная
+                    +e.LI
+                        +e.A(href="lk-2.html")
+                            +e.icon
+                                +icon('home')
+                            span Финансы
+                    +e.LI
+                        +e.A(href="lk-3.html")
+                            +e.icon
+                                +icon('home')
+                            span Партнеры
+                    +e.LI
+                        +e.A(href="lk-4.html")
+                            +e.icon
+                                +icon('home')
+                            span Новости
+                    +e.LI
+                        +e.A(href="lk-5.html")
+                            +e.icon
+                                +icon('home')
+                            span Моя команда
+                    +e.LI
+                        +e.A(href="lk-6.html")
+                            +e.icon
+                                +icon('home')
+                            span Обучение
+                    +e.LI
+                        +e.A(href="lk-7.html")
+                            +e.icon
+                                +icon('home')
+                            span Настройки
+                    +e.LI
+                        +e.A(href="lk-8.html")
+                            +e.icon
+                                +icon('home')
+                            span Обратная связь
+                    +e.LI
+                        +e.A(href="page-index.html")
+                            +e.icon
+                                +icon('home')
+                            span Выход
+        
+        +e.col-right
+            //
+            +e.HEADER.header
+                +b.A(href="#").lk-link
+                    span Пополнить счет
+                    +e.icon
+                        +icon('plus')
+                +b.A(href="#").lk-link
+                    span Вывести средства
+                    +e.icon
+                        +icon('minus')
+                +b.balance-module
+                    +e.P.name Ваш баланс:
+                    +e.P.count 450.65 
+                        span у.е.
+            //
+            block content
+
+
+    block scripts
+      script(type="text/javascript" src="js/app.js")
