@@ -44,7 +44,6 @@ copy.forEach(function (element) {
   const copyInput = element.getElementsByClassName('js-copy-input')[0];
   copyButton.onclick = function (e) {
     e.preventDefault;
-    console.log('q');
     copyInput.select();
     document.execCommand('copy');
     showSuccess('Скопировано')
