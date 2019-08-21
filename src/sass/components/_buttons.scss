@@ -94,6 +94,20 @@
         }
     }
 
+    &--gray {
+        background: #393939;
+        color: #fff;
+        transition: all .2s ease;
+        border-radius: 2px;
+        text-transform: none;
+        font-weight: 400;
+        letter-spacing: normal;
+        font-family: $accent-font;
+
+        &:hover {
+            background: #111;
+        }
+    }
 
     &--border-gray {
         border: solid 2px $color-6;
@@ -102,6 +116,30 @@
             border-color: $color-6;
             background: $color-6;
             color: #fff !important;
+        }
+    }
+
+    &--border-gray-radius {
+        border: solid 1px #757575;
+        border-radius: 3px;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        font-size: 18px;
+        color: #000;
+        font-weight: 400;
+        transition: all .1s ease;
+        box-shadow: 0 1px #7575754d;
+
+        img {
+            margin: 0 0 0 10px;
+            display: block;
+        }
+
+        &:hover {
+            color: #fff;
+            background: #757575;
+            box-shadow: none;
         }
     }
 

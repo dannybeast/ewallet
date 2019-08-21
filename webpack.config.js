@@ -22,7 +22,8 @@ function createConfig(env) {
       // vendor: ['jquery'],
       app: './app.js',
       about: './about.js',
-      contacts: './contacts.js'
+      contacts: './contacts.js',
+      lk: './lk.js'
     },
     output: {
       path: path.join(__dirname, config.dest.js),

@@ -11,6 +11,10 @@ import './components/ieDetect';
 import './components/animations';
 import './components/navigation';
 import './components/supports';
+import {
+  showSuccess,
+  showError
+} from './components/notice';
 
 // main
 $(document).ready(function () {

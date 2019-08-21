@@ -21,3 +21,5 @@ PageList:
   ready: 100
 - file: recover.html
   ready: 100
+- file: lk-1.html
+  ready: 100

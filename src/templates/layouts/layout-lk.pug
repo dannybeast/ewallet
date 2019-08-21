@@ -12,83 +12,117 @@ html
       +e.inside
         img(src="img/logo/logo.png", alt="")
         img(src="img/loader.svg", alt="")
-    
     +b.lk
-        +e.col-left
-            //
-            +b.user-module
-                +e.avatar
-                    img(src="img/lk/avatar.png", alt="")
+        +e.row
+            +e.col-left.js-sticky
+                //
+                +b.user-module
+                    +e.avatar
+                        img(src="img/avatar.png", alt="")
+                    +e.content
+                        +e.P.name Username
+                        +e.P.type Представитель
+                //
+                +b.NAV.navigation-module
+                    +e.UL
+                        +e.LI(class=" active")
+                            +e.A(href="lk-1.html")
+                                +e.icon
+                                    +icon('home')
+                                span Главная
+                        +e.LI
+                            +e.A(href="lk-2.html")
+                                +e.icon
+                                    +icon('money')
+                                span Финансы
+                        +e.LI
+                            +e.A(href="lk-3.html")
+                                +e.icon
+                                    +icon('partners')
+                                span Партнеры
+                        +e.LI
+                            +e.A(href="lk-4.html")
+                                +e.icon
+                                    +icon('news')
+                                span Новости
+                        +e.LI
+                            +e.A(href="lk-5.html")
+                                +e.icon
+                                    +icon('team')
+                                span Моя команда
+                        +e.LI
+                            +e.A(href="lk-6.html")
+                                +e.icon
+                                    +icon('book')
+                                span Обучение
+                        +e.LI
+                            +e.A(href="lk-7.html")
+                                +e.icon
+                                    +icon('settings')
+                                span Настройки
+                        +e.LI
+                            +e.A(href="lk-8.html")
+                                +e.icon
+                                    +icon('mail')
+                                span Обратная связь
+                        +e.LI
+                            +e.A(href="page-index.html")
+                                +e.icon
+                                    +icon('exit')
+                                span Выход
+            
+            +e.col-right
+                //
+                +e.HEADER.header
+                    +e.content
+                        +b.A(href="#").lk-link
+                            span Пополнить счет
+                            +e.icon
+                                img(src="icons/plus.svg", alt="")
+                        +b.A(href="#").lk-link
+                            span Вывести средства
+                            +e.icon
+                                img(src="icons/minus.svg", alt="")
+                        +b.balance-module
+                            +e.P.name Ваш баланс:
+                            +e.P.count 450.65 
+                                span у.е.
+                
+                //
                 +e.content
-                    +e.P.name Username
-                    +e.P.type Представитель
-            //
-            +b.NAV.navigation-module
-                +e.UL
-                    +e.LI
-                        +e.A(href="lk-1.html")
-                            +e.icon
-                                +icon('home')
-                            span Главная
-                    +e.LI
-                        +e.A(href="lk-2.html")
-                            +e.icon
-                                +icon('home')
-                            span Финансы
-                    +e.LI
-                        +e.A(href="lk-3.html")
-                            +e.icon
-                                +icon('home')
-                            span Партнеры
-                    +e.LI
-                        +e.A(href="lk-4.html")
-                            +e.icon
-                                +icon('home')
-                            span Новости
-                    +e.LI
-                        +e.A(href="lk-5.html")
-                            +e.icon
-                                +icon('home')
-                            span Моя команда
-                    +e.LI
-                        +e.A(href="lk-6.html")
-                            +e.icon
-                                +icon('home')
-                            span Обучение
-                    +e.LI
-                        +e.A(href="lk-7.html")
-                            +e.icon
-                                +icon('home')
-                            span Настройки
-                    +e.LI
-                        +e.A(href="lk-8.html")
-                            +e.icon
-                                +icon('home')
-                            span Обратная связь
-                    +e.LI
-                        +e.A(href="page-index.html")
-                            +e.icon
-                                +icon('home')
-                            span Выход
+                    block content
+
         
-        +e.col-right
-            //
-            +e.HEADER.header
-                +b.A(href="#").lk-link
-                    span Пополнить счет
-                    +e.icon
-                        +icon('plus')
-                +b.A(href="#").lk-link
-                    span Вывести средства
-                    +e.icon
-                        +icon('minus')
-                +b.balance-module
-                    +e.P.name Ваш баланс:
-                    +e.P.count 450.65 
-                        span у.е.
-            //
-            block content
-
-
+    +b.FOOTER.footer-lk
+        +e.content
+            +e.A(href="lk-1.hmtl").logo
+                img(src="img/logo/logo.png", alt="")
+            +b.payments
+                ul
+                    li
+                        a(href="#", target="_blank")
+                            img(src="img/payments/pax.png", alt="pax")
+                    li
+                        a(href="#", target="_blank")
+                            img(src="img/payments/pm.png", alt="pm")
+                    li
+                        a(href="#", target="_blank")
+                            img(src="img/payments/visa.png", alt="visa")
+                    li
+                        a(href="#", target="_blank")
+                            img(src="img/payments/mastercard.png", alt="mastercard")
+                    li
+                        a(href="#", target="_blank")
+                            img(src="img/payments/pay-box.png", alt="paybox")
+                    li
+                        a(href="#", target="_blank")
+                            img(src="img/payments/payeer.png", alt="payeer")
+            +b.footer-links
+                li
+                    a(href="policy.html") Политика конфиденциальности
+                li
+                    a(href="policy.html") Политика безопасности
+                li
+                    a(href="page-4.html") Обратная связь
     block scripts
-      script(type="text/javascript" src="js/app.js")
+      script(type="text/javascript" src="js/lk.js")
