@@ -30,6 +30,11 @@ function createConfig(env) {
       filename: '[name].js',
       publicPath: 'js/',
     },
+    
+    externals: {
+        moment: 'moment'
+    },
+  
     devtool: isProduction ?
       '#source-map' : '#cheap-module-eval-source-map',
     plugins: [
