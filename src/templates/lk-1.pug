@@ -98,7 +98,7 @@ block content
     +b.SECTION.lk-section
         //
         +b.growth-graph
-            img(src="img/growth-graph.png", alt="")
+            <canvas id="growth-graph" width="1097" height="385"></canvas>
     
     +b.SECTION.lk-section
         //
@@ -114,36 +114,31 @@ block content
                         +e.P.name 
                             span Всего приглашений
                         +e.P.count 28
-                    +e.bar(class="--brown")
-                        span(style="width:33%")
+                    +e.bar(class="--brown", data-percent="33")
                 +e.LI
                     +e.content
                         +e.P.name 
                             span Starter
                         +e.P.count 81
-                    +e.bar(class="--gray-light")
-                        span(style="width:65%")
+                    +e.bar(class="--gray-light", data-percent="65")
                 +e.LI
                     +e.content
                         +e.P.name 
                             span Business
                         +e.P.count 136
-                    +e.bar(class="--gray")
-                        span(style="width:95%")
+                    +e.bar(class="--gray", data-percent="95")
                 +e.LI
                     +e.content
                         +e.P.name 
                             span Lux
                         +e.P.count 53
-                    +e.bar(class="--dark")
-                        span(style="width:44%")
+                    +e.bar(class="--dark" , data-percent="44")
                 +e.LI
                     +e.content
                         +e.P.name 
                             span Не оплаченное
                         +e.P.count 10
-                    +e.bar(class="--yellow")
-                        span(style="width:17%")
+                    +e.bar(class="--yellow", data-percent="17")
 
 
     +b.SECTION.lk-section

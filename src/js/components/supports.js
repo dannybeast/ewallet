@@ -14,5 +14,6 @@ const SupportsCSS = function (property, value) {
 const supGrad = SupportsCSS('-webkit-background-clip', 'text');
 
 if(supGrad === false){
-  $('body').addClass('not-support-gradients');
+  const body = document.querySelector('body');
+  body.classList.add('not-support-gradients');
 }

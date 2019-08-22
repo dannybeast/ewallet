@@ -63,7 +63,11 @@
         <div class="lk__col-right">
           <!---->
           <header class="lk__header">
-            <div class="lk__content"><a class="lk-link" href="#"><span>Пополнить счет</span><span class="lk-link__icon"><img src="icons/plus.svg" alt=""></span></a><a class="lk-link" href="#"><span>Вывести средства</span><span class="lk-link__icon"><img src="icons/minus.svg" alt=""></span></a>
+            <div class="lk__content"><a class="lk__logo" href="page-index.html"><img src="img/logo/logo.png" alt=""></a>
+              <div class="lk__mobile-nav-button">
+                <div class="menu-button"><span></span><span></span><span></span></div>
+              </div>
+              <div class="lk__links"><a class="lk-link" href="#"><span>Пополнить счет</span><span class="lk-link__icon"><img src="icons/plus.svg" alt=""></span></a><a class="lk-link" href="#"><span>Вывести средства</span><span class="lk-link__icon"><img src="icons/minus.svg" alt=""></span></a></div>
               <div class="balance-module">
                 <p class="balance-module__name">Ваш баланс:</p>
                 <p class="balance-module__count">450.65 <span>у.е.</span></p>
@@ -177,7 +181,7 @@
             </section>
             <section class="lk-section">
               <!---->
-              <div class="growth-graph"><img src="img/growth-graph.png" alt=""></div>
+              <div class="growth-graph"><canvas id="growth-graph" width="1097" height="385"></canvas></div>
             </section>
             <section class="lk-section">
               <!---->
@@ -194,35 +198,35 @@
                       <p class="lk-refferal__name"> <span>Всего приглашений</span></p>
                       <p class="lk-refferal__count">28</p>
                     </div>
-                    <div class="lk-refferal__bar lk-refferal__bar--brown"><span style="width:33%"></span></div>
+                    <div class="lk-refferal__bar lk-refferal__bar--brown" data-percent="33"></div>
                   </li>
                   <li>
                     <div class="lk-refferal__content">
                       <p class="lk-refferal__name"> <span>Starter</span></p>
                       <p class="lk-refferal__count">81</p>
                     </div>
-                    <div class="lk-refferal__bar lk-refferal__bar--gray-light"><span style="width:65%"></span></div>
+                    <div class="lk-refferal__bar lk-refferal__bar--gray-light" data-percent="65"></div>
                   </li>
                   <li>
                     <div class="lk-refferal__content">
                       <p class="lk-refferal__name"> <span>Business</span></p>
                       <p class="lk-refferal__count">136</p>
                     </div>
-                    <div class="lk-refferal__bar lk-refferal__bar--gray"><span style="width:95%"></span></div>
+                    <div class="lk-refferal__bar lk-refferal__bar--gray" data-percent="95"></div>
                   </li>
                   <li>
                     <div class="lk-refferal__content">
                       <p class="lk-refferal__name"> <span>Lux</span></p>
                       <p class="lk-refferal__count">53</p>
                     </div>
-                    <div class="lk-refferal__bar lk-refferal__bar--dark"><span style="width:44%"></span></div>
+                    <div class="lk-refferal__bar lk-refferal__bar--dark" data-percent="44"></div>
                   </li>
                   <li>
                     <div class="lk-refferal__content">
                       <p class="lk-refferal__name"> <span>Не оплаченное</span></p>
                       <p class="lk-refferal__count">10</p>
                     </div>
-                    <div class="lk-refferal__bar lk-refferal__bar--yellow"><span style="width:17%"></span></div>
+                    <div class="lk-refferal__bar lk-refferal__bar--yellow" data-percent="17"></div>
                   </li>
                 </ul>
               </div>
@@ -249,7 +253,14 @@
       </div>
     </div>
     <footer class="footer-lk">
-      <div class="footer-lk__content"><a class="footer-lk__logo" href="lk-1.hmtl"><img src="img/logo/logo.png" alt=""></a>
+      <div class="footer-lk__content"><svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1259 195">
+          <path fill="#eaeaea" d="M1259 0L629 164 0 0z"></path>
+          <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="509.417" y1="-679.7" x2="509.417" y2="-678.7" gradientTransform="matrix(289 0 0 -38.018 -146592 -25645.816)">
+            <stop offset="0" stop-color="#be801e"></stop>
+            <stop offset="1" stop-color="#fcd07c"></stop>
+          </linearGradient>
+          <path d="M629.8 194.1l-.3-.1-.3.1v-.2L485 157.6l.1-.6 144.4 36.5L773.9 157l.1.6L629.8 194v.1zm-144.7-36.2l144.4 36.5 144.4-36.5.1.6-144.2 36.4v.2l-.3-.1-.3.1v-.2L485 158.4l.1-.5z" fill="url(#a)"></path>
+        </svg><a class="footer-lk__logo" href="lk-1.hmtl"><img src="img/logo/logo.png" alt=""></a>
         <div class="payments">
           <ul>
             <li><a href="#" target="_blank"><img src="img/payments/pax.png" alt="pax"></a></li>

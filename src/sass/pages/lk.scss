@@ -1,6 +1,7 @@
 $dark: #20201f;
 $header: #9f6b1b;
 $header-height: 90px;
+$header-height-mobile: 70px;
 $col-left-width: 190px;
 $lk-block-padding: 35px 40px;
 $border-color: #cbcbcb;
@@ -10,18 +11,47 @@ $border-color: #cbcbcb;
   max-width: 1260px;
   @include media-breakpoint-down(md) {
     padding: 0 30px;
+  } 
+  @include media-breakpoint-down(sm) {
+    padding: 0 15px;
   }
 }
+@mixin block-padding() {
+  padding: 35px 40px;
+  @include media-breakpoint-down(sm) {
+    padding: 25px 20px;
+  }
+}
+
 
 .lk {
   min-height: 100%;
   $parent: &;
-
+  background: #eaeaea;
+  position: relative;
+  z-index: 1;
   &__row {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
+  }
+  &__logo{
+    width: 70px;
+    margin-right: 30px;
+    display: none;
+    img{
+      display: block;
+      max-width: 100%;
+    }
+  }
+  &__mobile-nav-button{
+    display: none;
   }
 
+  &__links{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
   &__header {
     background: $header;
 
@@ -43,6 +73,27 @@ $border-color: #cbcbcb;
         margin-right: 0;
       }
     }
+    @include media-breakpoint-down(lg) {
+      background: $dark;
+      #{$parent}__logo{
+        display: block;
+      }
+      #{$parent}__mobile-nav-button{
+        display: block;
+        margin-right: 30px;
+      }
+    }
+    @include media-breakpoint-down(md) {
+
+      .lk-link{
+        display: none;
+      }
+  
+        #{$parent}__content{
+          height: $header-height-mobile;
+        }
+      
+    }
   }
 
   &__content {
@@ -53,24 +104,59 @@ $border-color: #cbcbcb;
     background: $dark;
     color: #fff;
     width: $col-left-width;
+ 
+    #{$parent}__links{
+      padding: 10px 5px;
+      &>*{
+        margin: 5px 10px;
+      }
+    }
   }
 
   &__col-right {
     width: calc(100% - 190px);
-    padding-bottom: 60px;
+    .lk-section{
+      position: relative;
+      z-index: 3;
+    }
+    .social-module {
+     transform: translateY(50px);
+     @include media-breakpoint-down(md) {
+      transform: none;
+     }
+    }
   }
   @include media-breakpoint-down(lg) {
     &__col-left{
+      position: absolute !important;
+      top: $header-height;
+      left: 0;
+      right: 0;
+      width: 100%;
+      z-index: 99;
+      height: calc(100vh - #{$header-height-mobile}) !important;
+      overflow: auto;
       display: none;
+      .inner-wrapper-sticky{
+        width: 100% !important;
+        position: relative !important;
+      }
+      &.open{
+        display: block;
+      }
     }
     &__col-right{
       width: 100%;
     }
   }
-  @include media-breakpoint-down(sm) {
-  
+  @include media-breakpoint-down(md) {
+    &__col-left{
+      top:$header-height-mobile;
+    }
   }
+ 
 }
+
 
 .user-module {
   height: $header-height;
@@ -90,6 +176,8 @@ $border-color: #cbcbcb;
     overflow: hidden;
     flex-shrink: 0;
     margin-right: 15px;
+    width: 53px;
+    height: 53px;
 
     img {
       max-width: 100%;
@@ -232,6 +320,18 @@ $border-color: #cbcbcb;
       color: #f2c36d;
     }
   }
+  @include media-breakpoint-down(sm) {
+    display: block;
+    &__name{
+      width: 100%;
+      margin-bottom: 5px;
+      font-size: 10px;
+    }
+    &__count{
+      margin: 0;
+      font-size: 24px;
+    }
+  }
 }
 
 // sections
@@ -254,14 +354,14 @@ $border-color: #cbcbcb;
   &__row {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: -30px;
+    margin-bottom: -20px;
     margin-left: -15px;
-    margin-right: -15px;
+    margin-right: -15px; 
   }
 
   &__item {
     padding: 0 15px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     width: 20%;
   }
 
@@ -281,9 +381,20 @@ $border-color: #cbcbcb;
       }
     }
   }
+  @include media-breakpoint-down(md) {
+    font-size: 15px;
+    &__name{
+      font-size: 13px;
+    }
+
+    &__item {
+      width: 25%;
+    }
+  }
   @include media-breakpoint-down(sm) {
     &__item {
-      width: 100%;
+      width: 50%;
+      flex-grow: 1;
     }
   }
 
@@ -293,14 +404,14 @@ $border-color: #cbcbcb;
   &__row {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: -30px;
+    margin-bottom: -15px;
     margin-left: -5px;
     margin-right: -5px;
   }
 
   &__col {
     padding: 0 2.5px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     width: 50%;
   }
 
@@ -345,13 +456,13 @@ $border-color: #cbcbcb;
   }
 
   &__content {
-    padding-right: 20px;
     flex-grow: 1;
   }
 
   &__icon {
     flex-shrink: 0;
     margin-left: auto;
+    padding-left: 10px;
 
     img {
       width: 105px;
@@ -405,9 +516,27 @@ $border-color: #cbcbcb;
       #fcf5ed
     );
   }
+  @include media-breakpoint-down(sm) {
+    padding: 20px;
+    &__title{
+      font-size: 24px;
+    }
+    &__field{
+      font-size: 15px;
+    }
+    &__icon{
+      img{
+        width: 80px;
+      }
+    }
+    .btn{
+      padding: 0 30px;
+    }
+  }
 }
 .lk-title-module {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   .btn {
@@ -422,9 +551,16 @@ $border-color: #cbcbcb;
     font-size: 22px;
     font-weight: 400;
   }
+  @include media-breakpoint-down(sm) {
+    &__title{
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
 }
 .social-module {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   li {
@@ -450,6 +586,15 @@ $border-color: #cbcbcb;
       }
     }
   }
+  @include media-breakpoint-down(sm){
+    li{
+      margin: 5px;
+    }
+    a{
+      width: 50px;
+      height: 50px;
+    }
+  }
 }
 .lk-professions {
   border-top: 1px solid $border-color;
@@ -463,6 +608,10 @@ $border-color: #cbcbcb;
     align-items: center;
     justify-content: center;
     margin-right: 15px;
+    width: 60px;
+    img{
+      max-width: 100%;
+    }
   }
   .status-graph {
     padding-left: 95px;
@@ -517,6 +666,26 @@ $border-color: #cbcbcb;
       }
     }
   }
+  @include media-breakpoint-down(sm){
+    flex-wrap: wrap;
+    &__col{
+      width: 100%;
+      &:last-child{
+        order:-1;
+      }
+      &:first-child{
+        flex-wrap: wrap;
+      }
+    }
+    &__buttons{
+      margin:15px 0 0 0;
+    }
+    .status-graph{
+      padding-left: 0;
+      padding-top: 20px;
+      padding-bottom: 5px;
+    }
+  }
 }
 .status-graph {
   &__name {
@@ -549,11 +718,20 @@ $border-color: #cbcbcb;
       background-image: linear-gradient(0deg, #be801e 0%, #fcd07c 100%);
     }
   }
+  @include media-breakpoint-down(sm){
+    &__bar{
+      height: 7px;
+    }
+    .graph-tooltip{
+      transform: scale(0.6);
+      top: 5px;
+    }
+  }
 }
 .lk-refferal {
   border: solid 1px $border-color;
-  padding: $lk-block-padding;
   line-height: 1;
+  @include block-padding();
   li {
     display: flex;
     align-items: center;
@@ -628,10 +806,27 @@ $border-color: #cbcbcb;
     font-size: 20px;
     font-weight: 700;
   }
+  @include media-breakpoint-down(sm){
+    li{
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    &__content{
+      width: 100%;
+    }
+    &__bar{
+      width: 100%;
+      margin-top: 15px;
+      padding-left: 0;
+    }
+  }
 }
 .footer-lk {
   font-size: 14px;
-  padding: 40px 15px;
+  padding: 0 15px 40px 15px;
   width: 100%;
   background: $dark;
   color: #fff;
@@ -642,7 +837,29 @@ $border-color: #cbcbcb;
     align-items: center;
     justify-content: space-between;
     @include content();
-    padding-left: 0;
+    padding-left: 0;  
+    padding-top: 230px;
+    position: relative;
+    &>svg{
+      position: absolute;
+        top:0px; 
+        width: 100%;
+        left: 0;
+        display: block;
+        right: 0;
+    }
+      // &:before{
+      //   content: "";
+      //   position: absolute;
+      //   top:-1px; 
+      //   width: 100%;
+      //   padding-bottom: 15.45%;
+      //   left: 0;
+      //   right: 0;
+      //   background: url('../img/triangle.svg') center top no-repeat;
+      //   background-size: contain;
+      // }
+    
   }
   &__logo {
     width: 110px;
@@ -670,15 +887,36 @@ $border-color: #cbcbcb;
 
   @include media-breakpoint-down(lg) {
    padding-left: 0;
+   padding-right: 0;
    &__content{
      padding-left: 85px;
+     padding-top: 180px;
    }
   }
+
+  @include media-breakpoint-down(sm) {
+    padding-left: 0;
+    padding-right: 0;
+    &__logo{
+      margin-bottom: 15px;
+    }
+    &__content{
+      padding-left: 15px; 
+      padding-right: 15px;
+      justify-content: center;
+      padding-top: 100px;
+    }
+   }
 }
 
 .growth-graph{
+  background: rgb(255, 255, 255);
+ padding: 30px;
   img{
     max-width: 100%;
     display: block;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 15px 15px 5px;
   }
 }

@@ -5,23 +5,19 @@ document.body.appendChild(notice);
 
 // close notice
 export function closeNotice() {
-  $('.notice')
-    .removeClass('notice--open notice--green notice--red')
-    .children('p')
-    .text('');
+  notice.classList = "";
+  notice.innerHTML = "";
 }
 // open success
 export function showSuccess(text) {
-  $('.notice')
-    .addClass('notice--green notice--open')
-    .text(text);
+  notice.innerHTML = text;
+  notice.classList.add('notice--green', 'notice--open');
   setTimeout(closeNotice, hideTime);
 }
 
 // open error
 export function showError(text) {
-  $('.notice')
-    .addClass('notice--red notice--open')
-    .text(text);
+  notice.innerHTML = text;
+  notice.classList.add('notice--red', 'notice--open');
   setTimeout(closeNotice, hideTime);
 }

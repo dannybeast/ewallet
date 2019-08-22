@@ -1,42 +1,40 @@
-let GM = {
+const GM = {
   init() {
     this.initCache();
     this.initMap();
   },
 
   initCache() {
-    this.$body = $('body');
+    this.$body = document.querySelector('body');
   },
 
   initMap() {
 
-    var coordinates = {
+    const coordinates = {
       lat: 45.03638489999999,
       lng: 38.99646469999993
     };
 
-    var centerMap = {
+    const centerMap = {
       lat: 45.03638489999999,
       lng: 38.99646469999993
     }
 
+    const markerImage = new google.maps.MarkerImage('img/map-marker.svg', null, null, null, new google.maps.Size(35, 35));
+      const zoom = 15;
 
-
-    var markerImage = new google.maps.MarkerImage('img/map-marker.svg', null, null, null, new google.maps.Size(35, 35)),
-      zoom = 15,
-
-      map = new google.maps.Map(document.getElementById('map'), {
+      const map = new google.maps.Map(document.getElementById('map'), {
         center: centerMap,
-        zoom: zoom,
+        zoom,
 
         disableDefaultUI: true,
         zoomControl: true,
         scrollwheel: false
-      }),
+      });
 
-      marker = new google.maps.Marker({
+      const marker = new google.maps.Marker({
         position: coordinates,
-        map: map,
+        map,
         icon: markerImage
       });
 
@@ -49,11 +47,12 @@ let GM = {
   }
 };
 
-$(document).ready(function () {
-  if ($('#map').length) {
+window.onload = function () {
+  const map = document.querySelector('#map');
+  if (map) {
     GM.init();
   }
-});
+}
 
 
 var dataStyles = [{

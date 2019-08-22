@@ -10,8 +10,8 @@ body
 	font-size: $fz
 	font-family: $main-font
 	line-height: 1.4
+	min-width: 320px
 	overflow-x: hidden
-  min-width: 320px
 	&.overflow
 		overflow: hidden
 	@include media-breakpoint-down(sm)
@@ -39,5 +39,10 @@ body
 		text-decoration: underline
 		&:hover 
 				opacity: 1
-		
+
+	@include media-breakpoint-down(sm)
+		text-align: center
+		margin-bottom: -10px
+		li
+			margin: 0 10px 10px
 

@@ -1,5 +1,6 @@
 import 'sticky-sidebar';
+import './resizeSensor';
 
-let sidebar = new StickySidebar('.js-sticky', {
+const sidebar = new StickySidebar('.js-sticky', {
   topSpacing: 0
 });
