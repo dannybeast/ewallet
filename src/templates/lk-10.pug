@@ -1,0 +1,43 @@
+---
+title: Личный кабинет
+---
+
+extends layouts/layout-lk
+
+block variables 
+  - var pageName = "lk-10"
+  
+block content
+
+    +b.SECTION.lk-section
+      //
+      include partials/_lk-info
+    +b.SECTION.lk-section
+      //
+      +b.lk-title-module
+        +e.H3.title Аналитика
+
+    +b.SECTION.lk-section
+      //
+      +b.analytics
+        +e.block
+          p Ваш пакет сейчас <strong>Begginer.</strong> Ваш доход от команды:
+          +e.P.price 2 180 у.е.
+        +e.row
+          +e.col
+            +b.analytics-item
+              +e.icon
+                img(src="img/icons/analytic-1.svg", alt="")
+              +e.content
+                p Если бы Ваш пакет был бы <a href="#" target="_blank">Business</a>, то Ваша прибыль составляла бы от команды:
+              +e.P.price 3 860 у.е.
+          +e.col
+            +b.analytics-item
+              +e.icon
+                img(src="img/icons/analytic-2.svg", alt="")
+              +e.content
+                p Если бы Ваш пакет был бы <a href="#" target="_blank">Lux</a>, то Ваша прибыль составляла бы от команды:
+              +e.P.price 6 180 у.е.
+    +b.SECTION.lk-section
+      //
+      include partials/_social-module

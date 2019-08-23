@@ -1,6 +1,5 @@
 // vendors
 import 'lazyload/lazyload.min';
-import '@fancyapps/fancybox';
 import './lib/jquery-ui.min';
 
 // polyfills
@@ -11,6 +10,9 @@ import './components/animations-lk';
 import './components/ieDetect';
 import './components/sticky';
 import './components/charts';
+import './components/modals';
+import './components/news';
+
 
 import {
   showSuccess,
@@ -66,20 +68,21 @@ lk_nav_button.onclick = function () {
 
 // клонируем ссылки в шапке и вставляем в мобильное меню на мобильных
 let added = false;
+
 function clonedToMobileMenu() {
   const menu = document.querySelector('.lk__col-left');
   const header_lk_links = document.querySelector('.lk__links');
   const nav_module = document.querySelector('.navigation-module');
   const cloned_lk_links = header_lk_links.cloneNode(true);
 
-  if (window.innerWidth <= 992 && !added){
+  if (window.innerWidth <= 992 && !added) {
     nav_module.before(cloned_lk_links);
     added = true
-  }else if (window.innerWidth > 992 && added){
+  } else if (window.innerWidth > 992 && added) {
     const links = menu.getElementsByClassName('lk__links')[0];
     links.remove();
     added = false
-  }  
+  }
 }
 window.onload = function () {
   clonedToMobileMenu();
@@ -98,3 +101,7 @@ bar.forEach(function (element) {
   span.style.width = `${percent}%`;
   element.appendChild(span)
 })
+
+
+
+//-

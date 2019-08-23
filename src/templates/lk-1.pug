@@ -5,29 +5,13 @@ title: Личный кабинет
 extends layouts/layout-lk
 
 block variables 
-  - var pageName = "page-1"
+  - var pageName = "lk-1"
   
 block content
 
     +b.SECTION.lk-section
         //
-        +b.lk-info
-            +e.row
-                +e.item
-                    +e.P.name Представитель
-                    p Username
-                +e.item
-                    +e.P.name Ваш ID
-                    p 00001036
-                +e.item
-                    +e.P.name Ваш телефон
-                    p +7 707 491-04-87
-                +e.item
-                    +e.P.name Ваш статус
-                    p Представитель
-                +e.item
-                    +e.P.name Ваш куратор <a href="#">vvvmoney</a>
-                    p +7 707 491-04-87
+        include partials/_lk-info
     
     +b.SECTION.lk-section
         //
@@ -61,34 +45,7 @@ block content
 
     +b.SECTION.lk-section
         //
-        +b.lk-professions
-            //
-            +b.lk-profession
-                +e.col
-                    +e.icon
-                        img(src="img/icons/user-line.svg", alt="")
-                    +e.content
-                        +e.P.title Название курса <span>$299</span>
-                        +e.P.date 12/08/2019 - 12/12/2019
-                    +e.buttons
-                        +b.A(href="#", class="btn --gray") Продолжить
-                +e.col
-                    +b.status-graph
-                        +e.P.name Название профессии
-                        +e.bar(data-status="56")
-            +b.lk-profession
-                +e.col
-                    +e.icon
-                        img(src="img/icons/user-line.svg", alt="")
-                    +e.content
-                        +e.P.title Название курса <span>$499</span>
-                        +e.P.date 12/08/2019 - 12/12/2019
-                    +e.buttons
-                        +b.A(href="#", class="btn --gray") Продолжить
-                +e.col
-                    +b.status-graph
-                        +e.P.name Название профессии
-                        +e.bar(data-status="74")
+        include partials/_lk-professions
     
     +b.SECTION.lk-section
         //
@@ -143,16 +100,4 @@ block content
 
     +b.SECTION.lk-section
         //
-        +b.UL.social-module
-            +e.LI
-                +e.A(href="#", target="_blank")
-                    +icon('instagram')
-            +e.LI
-                +e.A(href="#", target="_blank")
-                    +icon('vk')
-            +e.LI
-                +e.A(href="#", target="_blank")
-                    +icon('youtube')
-            +e.LI
-                +e.A(href="#", target="_blank")
-                    +icon('facebook')
+        include partials/_social-module

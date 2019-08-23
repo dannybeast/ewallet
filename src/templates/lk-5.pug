@@ -1,0 +1,19 @@
+---
+title: Личный кабинет
+---
+
+extends layouts/layout-lk
+
+block variables 
+  - var pageName = "lk-5"
+  
+block content
+
+    +b.SECTION.lk-section
+      //
+      include partials/_lk-info
+
+    +b.SECTION.lk-section
+      //
+      +b.lk-title-module
+        +e.H3.title Команда

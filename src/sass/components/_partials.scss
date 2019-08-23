@@ -223,8 +223,15 @@
         }
     }
 
+    &__col-33 {
+        width: 33.3333%;
+        margin-bottom: 30px;
+    }
+
     @include media-breakpoint-down(sm) {
-        &__col {
+
+        &__col,
+        &__col-33 {
             width: 100%;
             margin-bottom: 30px;
 
@@ -246,6 +253,10 @@
     &__icon {
         flex-shrink: 0;
         margin-right: 50px;
+    }
+
+    &__content {
+        max-width: 190px;
     }
 
     p {
@@ -761,8 +772,6 @@
         }
     }
 }
-
-//-
 
 // professions details
 .profession-icons {

@@ -25,42 +25,68 @@ html
                 //
                 +b.NAV.navigation-module
                     +e.UL
-                        +e.LI(class=" active")
+                        +e.LI(class=(pageName === "lk-1" ? " active" : undefined))
                             +e.A(href="lk-1.html")
                                 +e.icon
                                     +icon('home')
                                 span Главная
-                        +e.LI
+                        +e.LI(class=(pageName === "lk-9" ? " active" : undefined))
+                            +e.A(href="lk-9.html")
+                                +e.icon
+                                    +icon('sharer')
+                                span Акционеры
+                        +e.LI(class=(pageName === "lk-2" || pageName === "lk-2-2" || pageName === "lk-2-3" || pageName === "lk-2-4" ? " active" : undefined))
                             +e.A(href="lk-2.html")
                                 +e.icon
                                     +icon('money')
                                 span Финансы
-                        +e.LI
-                            +e.A(href="lk-3.html")
+                            +e.UL
+                                +e.LI(class=(pageName === "lk-2" ? " active" : undefined))
+                                    +e.A(href="lk-2.html")
+                                        +e.icon
+                                            +icon('money')
+                                        span Пополнение
+                                +e.LI(class=(pageName === "lk-2-2" ? " active" : undefined))
+                                    +e.A(href="lk-2-2.html")
+                                        +e.icon
+                                            +icon('money')
+                                        span Вывод
+                                +e.LI(class=(pageName === "lk-2-3" ? " active" : undefined))
+                                    +e.A(href="lk-2-3.html")
+                                        +e.icon
+                                            +icon('money')
+                                        span Перевод
+                                +e.LI(class=(pageName === "lk-2-4" ? " active" : undefined))
+                                    +e.A(href="lk-2-4.html")
+                                        +e.icon
+                                            +icon('money')
+                                        span Партнерские начисления
+                        +e.LI(class=(pageName === "lk-10" ? " active" : undefined))
+                            +e.A(href="lk-10.html")
                                 +e.icon
-                                    +icon('partners')
-                                span Партнеры
-                        +e.LI
+                                    +icon('chart')
+                                span Аналитика
+                        +e.LI(class=(pageName === "lk-4" ? " active" : undefined))
                             +e.A(href="lk-4.html")
                                 +e.icon
                                     +icon('news')
                                 span Новости
-                        +e.LI
+                        +e.LI(class=(pageName === "lk-5" ? " active" : undefined))
                             +e.A(href="lk-5.html")
                                 +e.icon
                                     +icon('team')
                                 span Моя команда
-                        +e.LI
+                        +e.LI(class=(pageName === "lk-6" ? " active" : undefined))
                             +e.A(href="lk-6.html")
                                 +e.icon
                                     +icon('book')
                                 span Обучение
-                        +e.LI
+                        +e.LI(class=(pageName === "lk-7" ? " active" : undefined))
                             +e.A(href="lk-7.html")
                                 +e.icon
                                     +icon('settings')
                                 span Настройки
-                        +e.LI
+                        +e.LI(class=(pageName === "lk-8" ? " active" : undefined))
                             +e.A(href="lk-8.html")
                                 +e.icon
                                     +icon('mail')
@@ -82,11 +108,11 @@ html
                             include ../partials/_menu-button
                         
                         +e.links
-                            +b.A(href="#").lk-link
+                            +b.A(href="lk-2.html").lk-link
                                 span Пополнить счет
                                 +e.icon
                                     img(src="icons/plus.svg", alt="")
-                            +b.A(href="#").lk-link
+                            +b.A(href="lk-2-2.html").lk-link
                                 span Вывести средства
                                 +e.icon
                                     img(src="icons/minus.svg", alt="")

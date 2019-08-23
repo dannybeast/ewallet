@@ -1,6 +1,5 @@
 // vendors
 import 'lazyload/lazyload.min';
-import '@fancyapps/fancybox';
 import './lib/jquery-ui.min';
 
 // polyfills
@@ -11,6 +10,7 @@ import './components/ieDetect';
 import './components/animations';
 import './components/navigation';
 import './components/supports';
+import './components/modals';
 import {
   showSuccess,
   showError
@@ -20,9 +20,6 @@ import {
 $(document).ready(function () {
   $('img[data-src]').lazyload();
 
-  // modal window
-  $('.js-modal').fancybox();
-  //-
 
   // accordion
   $('.js-accordion').accordion({

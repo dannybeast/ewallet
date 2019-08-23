@@ -1,4 +1,5 @@
 const GM = {
+
   init() {
     this.initCache();
     this.initMap();
@@ -9,7 +10,6 @@ const GM = {
   },
 
   initMap() {
-
     const coordinates = {
       lat: 45.03638489999999,
       lng: 38.99646469999993
