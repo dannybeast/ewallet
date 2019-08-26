@@ -14,42 +14,42 @@ block content
       include partials/_lk-info
     +b.SECTION.lk-section
       //
-      +b.lk-title-module
+      +b.lk-title-module(class="--border")
         +e.H3.title Настройки
         
     +b.SECTION.lk-section
-      .row
-        .col-sm-6
-          //
-          +b.form
-            +e.row
-              +e.LABEL.label Фамилия
-              +b.INPUT(type="text").field
-            +e.row
-              +e.LABEL.label Имя
-              +b.INPUT(type="text").field
-            +e.row
-              +e.LABEL.label E-mail
-              +b.INPUT(type="text").field
-            +e.row
-              +e.LABEL.label Номер телефона
-              +b.INPUT(type="text").field
-            +e.row
-              +e.LABEL.label Фото для аватара
-              +b.LABEL.file-button
-                +b.INPUT(type="file")
-                span.btn Загрузить
-        .col-sm-6
-          +b.avatar-module
-            img(src="img/lk/avatar.jpg", alt="")
+        +b.settings-top
+          +e.col
+            //
+            +b.form(class="--border")
+              +e.row
+                +e.LABEL.label Фамилия
+                +b.INPUT(type="text").field(class="--error")
+              +e.row
+                +e.LABEL.label Имя
+                +b.INPUT(type="text").field
+              +e.row
+                +e.LABEL.label E-mail
+                +b.INPUT(type="text").field
+              +e.row
+                +e.LABEL.label Номер телефона
+                +b.INPUT(type="text").field
+              +e.row
+                +e.LABEL.label Фото для аватара
+                +b.LABEL.file-button
+                  +b.INPUT(type="file")
+                  span.btn.btn--gr-gray-2 Загрузить
+          +e.col
+            +b.avatar-module
+              img(src="img/lk/avatar.jpg", alt="")
     +b.SECTION.lk-section
       //
-      +b.lk-title-module
+      +b.lk-title-module(class="--border")
         +e.H3.title Ваши кошельки
 
     +b.SECTION.lk-section
       //
-      +b.form
+      +b.form(class="--border")
         +e.row
           +e.LABEL.label Кошелек Payeer
           +b.INPUT(type="text").field
@@ -62,7 +62,7 @@ block content
     
     +b.SECTION.lk-section
       //
-      +b.lk-title-module
+      +b.lk-title-module(class="--border")
         +e.H3.title Настройки безопасности
 
     +b.SECTION.lk-section
@@ -77,7 +77,7 @@ block content
         +e.row
           +e.LABEL.label Повторите пароль
           +b.INPUT(type="password").field
-      +b.BUTTON.btn(class="--gr-accent") Сохранить изменения
+        +b.BUTTON.btn(class="--gr-accent") Сохранить изменения
 
     +b.SECTION.lk-section
       //

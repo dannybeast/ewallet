@@ -14,12 +14,12 @@ block content
       include partials/_lk-info
     +b.SECTION.lk-section
       //
-      +b.lk-title-module
+      +b.lk-title-module(class="--border")
         +e.H3.title Обратная связь
         
     +b.SECTION.lk-section
       //
-      +b.FORM.form
+      +b.FORM.form(class="--border")
         +e.row
           +e.LABEL.label Заголовок сообщения
           +b.INPUT(type="text").field
@@ -33,12 +33,12 @@ block content
           +b.TEXTAREA.field
         
         +e.row(class="--space")
-          +b.BUTTON.btn(class="") Отправить
+          +b.BUTTON.btn(class="--gr-gray-2") Отправить
 
 
     +b.SECTION.lk-section
       //
-      +b.lk-title-module
+      +b.lk-title-module(class="--border")
         +e.H3.title Или свяжитесь с нами другими способами
 
     +b.SECTION.lk-section
@@ -65,11 +65,11 @@ block content
             +e.col-33
               +b.contacts-item
                 +e.icon
-                  img(src="img/contacts/map.png", alt="")
+                  img(src="img/contacts/location.png", alt="")
                 +e.content
                   +e.P.title Наш адрес
                   p.
-                    <span class="color-accent">ул. Айманова, 126<span>
+                    <span class="color-accent">ул. Айманова, 126</span>
                     Алматы, Казахстан 
                     Офис 403, 4 этаж.
     +b.SECTION.lk-section

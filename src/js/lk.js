@@ -102,6 +102,30 @@ bar.forEach(function (element) {
   element.appendChild(span)
 })
 
+// filename
+$(".file-button input").on('change', function () {
+  var file = this.files[0];
+  var preview = document.querySelector('.avatar-module img');
+  let reader = new FileReader();
+
+  // loader
+  reader.onprogress = function () {
+    preview.src = 'img/loader.svg'
+  }
+
+  // load complete
+  reader.onloadend = function () {
+    preview.src = reader.result;
+  }
+
+  if (file) {
+    reader.readAsDataURL(file);
+  } else {
+    preview.src = "";
+  }
+
+});
+
 
 
 //-

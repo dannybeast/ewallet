@@ -212,6 +212,8 @@
         flex-wrap: wrap;
         align-items: center;
         margin-bottom: -30px;
+        margin-left: -10px;
+        margin-right: -10px;
     }
 
     &__col {
@@ -226,9 +228,23 @@
     &__col-33 {
         width: 33.3333%;
         margin-bottom: 30px;
+        padding: 0 10px;
     }
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(lg) {
+
+        &__col,
+        &__col-33 {
+            width: 50%;
+            margin-bottom: 30px;
+
+            &:nth-child(2n) {
+                border: none;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
 
         &__col,
         &__col-33 {
@@ -282,6 +298,12 @@
     &__phone {
         &:hover {
             border: none !important;
+        }
+    }
+
+    @include media-breakpoint-down(xl) {
+        &__icon {
+            margin-right: 25px;
         }
     }
 

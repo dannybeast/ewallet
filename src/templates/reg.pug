@@ -9,39 +9,64 @@ block content
   +b.auth
     +e.col(class="--left")
       +e.col-content
-        +b.auth-module
+        +b.auth-module(class="--reg")
           +e.desc
             p Заполните следующую информацию для регистрации в Lux Life Club, затем подвтердите ее с помощью ссылки на Вашем e-mail:
+          
           form
-
             +b.field-row
-              +e.LABEL.name Логин
-              +b.INPUT(type="text" class="field" placeholder="Введите логин")
-
-            +b.field-row
-              +e.LABEL.name E-mail
-              +b.INPUT(type="text" class="field" placeholder="Введите e-mail")
-            +b.field-row
-              +e.LABEL.name Номер телефона
-              +b.INPUT(type="text" class="field" placeholder="+7 702 777 77 77")
-            +b.field-row
-              +e.LABEL.name Введите пароль
-              +b.INPUT(type="password" class="field" placeholder="Введите пароль")
-              +e.BUTTON.eye(class=" js-show-password")
-                +icon('eye')
+              +e.LABEL.name Фамилия, имя, отчество
+              +b.INPUT(type="text" class="field" placeholder="Введите ФИО")
             
             .row
               .col-sm-6
                 +b.field-row
-                  +e.LABEL.name Кто пригласил
-                  +b.INPUT(type="text" class="field" placeholder="Логин")
+                  +e.LABEL.name E-mail
+                  +b.INPUT(type="text" class="field" placeholder="Введите e-mail")
+              .col-sm-6
+                +b.field-row
+                  +e.LABEL.name Номер телефона
+                  +b.INPUT(type="text" class="field" placeholder="+7 702 777 77 77")
+            +b.field-row
+              +e.LABEL.name Логин
+              +b.INPUT(type="text" class="field" placeholder="Введите логин")
+            
+            
+            .row.align-items-end
+              .col-sm-6
+                +b.field-row(class="--has-button")
+                  +e.LABEL.name Введите пароль
+                  +b.INPUT(type="password" class="field" placeholder="Введите пароль")
+                  +e.BUTTON.eye(class=" js-show-password")
+                    +icon('eye')
+              .col-sm-6
+                +b.field-row(class="--has-button")
+                  +b.INPUT(type="password" class="field" placeholder="Подтвердите пароль")
+                  +e.BUTTON.eye(class=" js-show-password")
+                    +icon('eye')
+
+            .row.align-items-end
+              .col-sm-6
+                +b.field-row
+                  +e.LABEL.name Введите капчу
+                  +b.INPUT(type="text" class="field" placeholder="Введите код")
+              .col-sm-6
+                +b.captcha
+                  img(src="img/captcha.png", alt="")
+            
+            .row
               .col-sm-6
                 +b.field-row
                   +e.LABEL.name Спикер презентации
                   +b.INPUT(type="text" class="field" placeholder="Логин")
+              .col-sm-6
+                +b.field-row
+                  +e.LABEL.name Кто пригласил
+                  +b.INPUT(type="text" class="field" placeholder="Логин")
+
             +b.field-row
               +checkbox()
-                | Согласен с <a href="policy.html" target="_blank">условиями соглашения</a>
+                | Согласен с условиями <a href="policy.html" target="_blank">соглашения</a>
 
             +b.BUTTON.btn(class="--gr-accent-2") Зарегистрироваться
       
