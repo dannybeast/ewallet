@@ -47,12 +47,12 @@ const GM = {
   }
 };
 
-window.onload = function () {
+document.addEventListener('DOMContentLoaded', function(){
   const map = document.querySelector('#map');
   if (map) {
     GM.init();
   }
-}
+})
 
 
 var dataStyles = [{

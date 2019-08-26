@@ -3,13 +3,15 @@ import 'sticky-sidebar';
 
 var sidebar = new StickySidebar('.js-sticky', {
   topSpacing: 0,
-  resizeSensor: true
+  responsiveWidth: true,
+  resizeSensor: true,
+
 });
 
 var stickyInterval;
 stickyInterval = setInterval(function () {
   if (sidebar) {
-      sidebar.updateSticky();
+    sidebar.updateSticky();
   }
 }, 500);
 
@@ -27,12 +29,12 @@ $('.navigation-module ul li').each(function () {
         // добавить active
         $(this).parent().find('ul').slideDown();
         $(this).parent().toggleClass('active');
-     
+
       } else {
         e.preventDefault();
         $(this).parent().find('ul').slideUp();
         $(this).parent().toggleClass('active');
-        
+
       }
     });
 

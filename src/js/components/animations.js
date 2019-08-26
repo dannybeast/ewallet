@@ -14,7 +14,7 @@ window.onload = function () {
                 let loader = document.querySelector('.loader');
                 loader.remove();
             
-                if ($('.header-intro').length){
+                if ($('.header').length){
                     posChecker('.header', tl_header_intro);
                 }
                 if ($('.advantages').length){

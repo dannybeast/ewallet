@@ -1,25 +1,49 @@
 ProjectTitle: testing
 
 PageList:
-- file: page-index.html
-  ready: 100
-- file: page-1.html
-  ready: 100
-- file: page-2.html
-  ready: 100
-- file: page-2-details.html
-  ready: 100
-- file: page-3.html
-  ready: 100
-- file: page-4.html
-  ready: 100
-- file: policy.html
-  ready: 100
-- file: auth.html
-  ready: 100
-- file: reg.html
-  ready: 100
-- file: recover.html
-  ready: 100
-- file: lk-1.html
-  ready: 100
+  - file: page-index.html
+    ready: 100
+  - file: page-1.html
+    ready: 100
+  - file: page-2.html
+    ready: 100
+  - file: page-2-details.html
+    ready: 100
+  - file: page-3.html
+    ready: 100
+  - file: page-4.html
+    ready: 100
+  - file: policy.html
+    ready: 100
+  - file: auth.html
+    ready: 100
+  - file: reg.html
+    ready: 100
+  - file: recover.html
+    ready: 100
+  - file: lk-1.html
+    ready: 100
+  - file: lk-2.html
+    ready: 100
+  - file: lk-2-2.html
+    ready: 100
+  - file: lk-2-3.html
+    ready: 100
+  - file: lk-2-4.html
+    ready: 100
+  - file: lk-3.html
+    ready: 100
+  - file: lk-4.html
+    ready: 100
+  - file: lk-5.html
+    ready: 100
+  - file: lk-6.html
+    ready: 100
+  - file: lk-7.html
+    ready: 100
+  - file: lk-8.html
+    ready: 100
+  - file: lk-9.html
+    ready: 100
+  - file: lk-10.html
+    ready: 100

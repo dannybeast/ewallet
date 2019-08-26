@@ -18,14 +18,30 @@ block content
         +b.lk-banners
             +e.row
                 +e.col
-                    +b.banner-module(class="--dark")
+                    // .active
+                    +b.banner-module(class="--dark active")
+                        +e.content
+                            +e.P.title Бэк-офис
+                            +e.P.desc <span>Окончание::</span> <big>22/09/19</big>
+                            +e.buttons
+                                +b.A(href="#", class="btn --gr-accent disabled") Активирован
+                        +e.icon
+                            svg(viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg')
+                                path(d='M510 15c-1-7-6-12-13-13a356 356 0 0 0-303 119c-24 25-44 51-61 75-30-1-63 13-86 36L4 274a15 15 0 0 0 15 25 209 209 0 0 1 55-6l-19 37c-3 6-3 14 2 18l25 25c-36 49-36 74-36 77 0 8 6 15 16 15 8 0 32-4 76-36l26 26c4 5 12 5 18 2l35-19c1 13-1 32-5 57-2 14 16 23 26 13l42-43c22-22 35-54 34-85 26-18 53-40 79-64 84-83 130-183 117-301zm-29 16c2 32 0 64-8 94-18-6-36-17-52-34-17-16-28-34-34-53 30-7 62-10 94-7zM58 263l10-10c12-12 28-21 43-24l-22 36c-9-2-20-3-31-2zm29 72l14-28 20 20-20 22zm73-6c11-11 21-13 34-13 0 13-2 24-13 35-46 46-78 67-97 76 9-19 30-51 76-98zm17 96l-16-15 23-20 21 21-28 14zm82 19l-12 12c1-15 1-25-1-33l36-22c-4 16-12 32-23 43zm-27-48l-27-27c20-22 19-43 19-68 0-8-6-15-15-15-23 0-45-1-67 19l-26-25C186 157 267 79 358 47c7 23 21 46 41 66 20 19 43 33 66 41-32 90-110 171-233 242zm0 0')
+                                path(d='M378 134a75 75 0 1 0-106 106 75 75 0 0 0 106-106zm-21 85a45 45 0 1 1-64-64 45 45 0 0 1 64 64zm0 0')
+                    
+                    // not-active
+                    +b.banner-module(class="--dark", style="display:none")
                         +e.content
                             +e.P.title Активировать бэк-офис
                             +e.P.desc <span>Стоимость:</span> <big>25</big> у.е.
                             +e.buttons
                                 +b.A(href="#", class="btn --gr-accent") Активировать
                         +e.icon
-                            img(src="icons/rocket.svg", alt="")
+                            svg(viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg')
+                                path(d='M510 15c-1-7-6-12-13-13a356 356 0 0 0-303 119c-24 25-44 51-61 75-30-1-63 13-86 36L4 274a15 15 0 0 0 15 25 209 209 0 0 1 55-6l-19 37c-3 6-3 14 2 18l25 25c-36 49-36 74-36 77 0 8 6 15 16 15 8 0 32-4 76-36l26 26c4 5 12 5 18 2l35-19c1 13-1 32-5 57-2 14 16 23 26 13l42-43c22-22 35-54 34-85 26-18 53-40 79-64 84-83 130-183 117-301zm-29 16c2 32 0 64-8 94-18-6-36-17-52-34-17-16-28-34-34-53 30-7 62-10 94-7zM58 263l10-10c12-12 28-21 43-24l-22 36c-9-2-20-3-31-2zm29 72l14-28 20 20-20 22zm73-6c11-11 21-13 34-13 0 13-2 24-13 35-46 46-78 67-97 76 9-19 30-51 76-98zm17 96l-16-15 23-20 21 21-28 14zm82 19l-12 12c1-15 1-25-1-33l36-22c-4 16-12 32-23 43zm-27-48l-27-27c20-22 19-43 19-68 0-8-6-15-15-15-23 0-45-1-67 19l-26-25C186 157 267 79 358 47c7 23 21 46 41 66 20 19 43 33 66 41-32 90-110 171-233 242zm0 0')
+                                path(d='M378 134a75 75 0 1 0-106 106 75 75 0 0 0 106-106zm-21 85a45 45 0 1 1-64-64 45 45 0 0 1 64 64zm0 0')
+                
                 +e.col
                     +b.banner-module(class="--light js-copy")
                         +e.content
@@ -33,7 +49,57 @@ block content
                             +e.INPUT(type="text", value="http://ll-club.com/ref?=sadhsahjdbjhasda", class="field js-copy-input")
                             +e.buttons
                                 +b.BUTTON(class="btn --gr-gray js-copy-button") Скопировать
-    
+                
+                // row products
+                +e.col-33
+                    +b.banner-product(class="--gray")
+                        +e.col
+                            +e.P.title Beginner
+                            +e.A(href="#", class="btn") Приобрести
+                        +e.col
+                            +e.P.price 100 <small>у.е</small>
+                +e.col-33
+                    +b.banner-product(class="--white")
+                        +e.col
+                            +e.P.title Business
+                            +e.A(href="#", class="btn") Приобрести
+                        +e.col
+                            +e.P.price 300 <small>у.е</small>
+                +e.col-33
+                    +b.banner-product(class="--accent")
+                        +e.col
+                            +e.P.title Lux
+                            +e.A(href="#", class="btn") Приобрести
+                        +e.col
+                            +e.P.price 1000 <small>у.е</small>
+                
+                // row products
+                +e.col-33
+                    // current = убирает кнопку
+                    // first = убирает стрелку
+                    // upgrade = добавляет уникальные градиенты в зависимости от модификатора --gray / --accent / --white
+                    +b.banner-product(class="--gray upgrade current first")
+                        +e.col
+                            +e.P.subtitle Ваш пакет:
+                            +e.P.title Beginner
+                        +e.col
+                            +e.P.price 100 <small>у.е</small>
+                +e.col-33
+                    +b.banner-product(class="--white upgrade")
+                        +e.col
+                            +e.P.subtitle Апгрейт на:
+                            +e.P.title Business
+                            +e.A(href="#", class="btn") Перейти
+                        +e.col
+                            +e.P.price <small>за</small> 300 <small>у.е</small>
+                +e.col-33
+                    +b.banner-product(class="--accent upgrade")
+                        +e.col
+                            +e.P.subtitle Апгрейт на:
+                            +e.P.title Lux
+                            +e.A(href="#", class="btn") Перейти
+                        +e.col
+                            +e.P.price <small>за</small> 1000 <small>у.е</small>
     +b.SECTION.lk-section
         //
         +b.lk-title-module

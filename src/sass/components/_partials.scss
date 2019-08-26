@@ -34,7 +34,7 @@
     font-family: $accent-font;
     margin-top: -23px;
     position: relative;
-    z-index: 2;
+    z-index: 1;
 
     a {
         color: $black;
@@ -516,7 +516,7 @@
 
 .icons-section {
     position: relative;
-    z-index: 5;
+    z-index: 1;
     margin-bottom: 80px;
 
     &__row {
