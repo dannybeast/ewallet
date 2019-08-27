@@ -6,7 +6,6 @@ const destPath = 'build';
 const config = {
   env: 'development',
   production,
-
   src: {
     root: 'src',
     templates: 'src/templates',

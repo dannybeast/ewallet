@@ -40,17 +40,15 @@
                       <use xlink:href="img/icons/sprite.svg#icon-money"></use>
                     </svg></span><span>Финансы</span></a>
                 <ul>
-                  <li class="active"><a href="lk-2.html"><span class="navigation-module__icon"><svg class="icon icon-money ">
-                          <use xlink:href="img/icons/sprite.svg#icon-money"></use>
+                  <li class="active"><a href="lk-2.html"><span class="navigation-module__icon"><svg class="icon icon-arrow-left ">
+                          <use xlink:href="img/icons/sprite.svg#icon-arrow-left"></use>
                         </svg></span><span>Пополнение</span></a></li>
-                  <li><a href="lk-2-2.html"><span class="navigation-module__icon"><svg class="icon icon-money ">
-                          <use xlink:href="img/icons/sprite.svg#icon-money"></use>
+                  <li><a href="lk-2-2.html"><span class="navigation-module__icon navigation-module__icon--rotate"><svg class="icon icon-arrow-left ">
+                          <use xlink:href="img/icons/sprite.svg#icon-arrow-left"></use>
                         </svg></span><span>Вывод</span></a></li>
-                  <li><a href="lk-2-3.html"><span class="navigation-module__icon"><svg class="icon icon-money ">
-                          <use xlink:href="img/icons/sprite.svg#icon-money"></use>
-                        </svg></span><span>Перевод</span></a></li>
-                  <li><a href="lk-2-4.html"><span class="navigation-module__icon"><svg class="icon icon-money ">
-                          <use xlink:href="img/icons/sprite.svg#icon-money"></use>
+                  <li><a href="lk-2-3.html"><span class="navigation-module__icon"><img src="img/lk/transaction.png" alt=""></span><span>Перевод</span></a></li>
+                  <li><a href="lk-2-4.html"><span class="navigation-module__icon"><svg class="icon icon-affiliate ">
+                          <use xlink:href="img/icons/sprite.svg#icon-affiliate"></use>
                         </svg></span><span>Партнерские начисления</span></a></li>
                 </ul>
               </li>
@@ -123,9 +121,242 @@
             </section>
             <section class="lk-section">
               <!---->
-              <div class="lk-title-module">
-                <h3 class="lk-title-module__title">Пополнение</h3>
+              <div class="lk-banners">
+                <div class="lk-banners__row">
+                  <div class="lk-banners__col">
+                    <div class="banner-price banner-price--dark">
+                      <div class="banner-price__col">
+                        <p class="banner-price__title">Доступная сумма для пополнения </p>
+                        <p class="banner-price__price"><big>121</big> у.е</p>
+                      </div>
+                      <div class="banner-price__icon"><img src="img/lk/002-money.png" alt=""></div>
+                    </div>
+                  </div>
+                  <div class="lk-banners__col">
+                    <div class="banner-price banner-price--accent">
+                      <div class="banner-price__col">
+                        <p class="banner-price__title">Заработано за весь период</p>
+                        <p class="banner-price__price"><big>56</big> у.е</p>
+                      </div>
+                      <div class="banner-price__icon"><img src="img/lk/001-save-money.png" alt=""></div>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </section>
+            <section class="lk-section">
+              <!---->
+              <div class="lk-block">
+                <div class="lk-block__top">
+                  <h3 class="lk-block__title">Пополнить баланс</h3>
+                </div>
+                <div class="lk-block__content">
+                  <form>
+                    <div class="field-row"><label class="field-row__name">Выберите платежную систему:</label>
+                      <div class="payment-checkboxes">
+                        <div class="payment-checkboxes__row"><label class="checkbox-cube"><input type="radio" name="payment_method" checked><span><img src="img/payments/1.png" alt=""></span></label><label class="checkbox-cube"><input type="radio" name="payment_method"><span><img src="img/payments/2.png" alt=""></span></label><label class="checkbox-cube"><input type="radio" name="payment_method"><span><img src="img/payments/3.png" alt=""></span></label></div>
+                      </div>
+                    </div>
+                    <div class="field-row"><label class="field-row__name">Введите сумму</label>
+                      <div class="field-row__row"><input class="field" type="text">
+                        <p class="field-row__italic">Минимальная сумма пополнения 1 у.е.</p>
+                      </div>
+                    </div><button class="btn btn--gr-accent">Пополнить</button>
+                  </form>
+                </div>
+              </div>
+            </section>
+            <section class="lk-section">
+              <!---->
+              <div class="lk-title-module">
+                <h3 class="lk-title-module__title lk-title-module__title--large">Историй транзакций</h3>
+              </div>
+            </section>
+            <section class="lk-section">
+              <!---->
+              <div class="table-wrapper">
+                <table class="js-data-tables">
+                  <thead>
+                    <tr>
+                      <th>Дата</th>
+                      <th>статус</th>
+                      <th>сумма</th>
+                      <th>метод пополнения</th>
+                      <th>Коментарии</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>22/02/2020</td>
+                      <td>Оплачено</td>
+                      <td>255 у.е</td>
+                      <td>
+                        <div class="payment-method"><span>Пополнение с Perfect Money </span><img src="img/payments/1.png" alt=""></div>
+                      </td>
+                      <td>Комментарий</td>
+                      <td class="text-right"><a class="btn btn--payment" href="#"> <span>Перевести</span><img src="img/payments/button-arrow.png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                      <td>22/02/2020</td>
+                      <td>Оплачено</td>
+                      <td>255 у.е</td>
+                      <td>
+                        <div class="payment-method"><span>Пополнение с Payeer </span><img src="img/payments/2.png" alt=""></div>
+                      </td>
+                      <td>Комментарий</td>
+                      <td class="text-right"><a class="btn btn--payment" href="#"> <span>Перевести</span><img src="img/payments/button-arrow.png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                      <td>22/02/2020</td>
+                      <td>Оплачено</td>
+                      <td>255 у.е</td>
+                      <td>
+                        <div class="payment-method"><span>Пополнение с Pax </span><img src="img/payments/3.png" alt=""></div>
+                      </td>
+                      <td>Комментарий</td>
+                      <td class="text-right"><a class="btn btn--payment" href="#"> <span>Перевести</span><img src="img/payments/button-arrow.png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                      <td>22/02/2020</td>
+                      <td>Оплачено</td>
+                      <td>255 у.е</td>
+                      <td>
+                        <div class="payment-method"><span>Пополнение с Perfect Money </span><img src="img/payments/1.png" alt=""></div>
+                      </td>
+                      <td>Комментарий</td>
+                      <td class="text-right"><a class="btn btn--payment" href="#"> <span>Перевести</span><img src="img/payments/button-arrow.png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                      <td>22/02/2020</td>
+                      <td>Оплачено</td>
+                      <td>255 у.е</td>
+                      <td>
+                        <div class="payment-method"><span>Пополнение с Payeer </span><img src="img/payments/2.png" alt=""></div>
+                      </td>
+                      <td>Комментарий</td>
+                      <td class="text-right"><a class="btn btn--payment" href="#"> <span>Перевести</span><img src="img/payments/button-arrow.png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                      <td>22/02/2020</td>
+                      <td>Оплачено</td>
+                      <td>255 у.е</td>
+                      <td>
+                        <div class="payment-method"><span>Пополнение с Pax </span><img src="img/payments/3.png" alt=""></div>
+                      </td>
+                      <td>Комментарий</td>
+                      <td class="text-right"><a class="btn btn--payment" href="#"> <span>Перевести</span><img src="img/payments/button-arrow.png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                      <td>22/02/2020</td>
+                      <td>Оплачено</td>
+                      <td>255 у.е</td>
+                      <td>
+                        <div class="payment-method"><span>Пополнение с Perfect Money </span><img src="img/payments/1.png" alt=""></div>
+                      </td>
+                      <td>Комментарий</td>
+                      <td class="text-right"><a class="btn btn--payment" href="#"> <span>Перевести</span><img src="img/payments/button-arrow.png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                      <td>22/02/2020</td>
+                      <td>Оплачено</td>
+                      <td>255 у.е</td>
+                      <td>
+                        <div class="payment-method"><span>Пополнение с Payeer </span><img src="img/payments/2.png" alt=""></div>
+                      </td>
+                      <td>Комментарий</td>
+                      <td class="text-right"><a class="btn btn--payment" href="#"> <span>Перевести</span><img src="img/payments/button-arrow.png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                      <td>22/02/2020</td>
+                      <td>Оплачено</td>
+                      <td>255 у.е</td>
+                      <td>
+                        <div class="payment-method"><span>Пополнение с Pax </span><img src="img/payments/3.png" alt=""></div>
+                      </td>
+                      <td>Комментарий</td>
+                      <td class="text-right"><a class="btn btn--payment" href="#"> <span>Перевести</span><img src="img/payments/button-arrow.png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                      <td>22/02/2020</td>
+                      <td>Оплачено</td>
+                      <td>255 у.е</td>
+                      <td>
+                        <div class="payment-method"><span>Пополнение с Perfect Money </span><img src="img/payments/1.png" alt=""></div>
+                      </td>
+                      <td>Комментарий</td>
+                      <td class="text-right"><a class="btn btn--payment" href="#"> <span>Перевести</span><img src="img/payments/button-arrow.png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                      <td>22/02/2020</td>
+                      <td>Оплачено</td>
+                      <td>255 у.е</td>
+                      <td>
+                        <div class="payment-method"><span>Пополнение с Payeer </span><img src="img/payments/2.png" alt=""></div>
+                      </td>
+                      <td>Комментарий</td>
+                      <td class="text-right"><a class="btn btn--payment" href="#"> <span>Перевести</span><img src="img/payments/button-arrow.png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                      <td>22/02/2020</td>
+                      <td>Оплачено</td>
+                      <td>255 у.е</td>
+                      <td>
+                        <div class="payment-method"><span>Пополнение с Pax </span><img src="img/payments/3.png" alt=""></div>
+                      </td>
+                      <td>Комментарий</td>
+                      <td class="text-right"><a class="btn btn--payment" href="#"> <span>Перевести</span><img src="img/payments/button-arrow.png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                      <td>22/02/2020</td>
+                      <td>Оплачено</td>
+                      <td>255 у.е</td>
+                      <td>
+                        <div class="payment-method"><span>Пополнение с Perfect Money </span><img src="img/payments/1.png" alt=""></div>
+                      </td>
+                      <td>Комментарий</td>
+                      <td class="text-right"><a class="btn btn--payment" href="#"> <span>Перевести</span><img src="img/payments/button-arrow.png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                      <td>22/02/2020</td>
+                      <td>Оплачено</td>
+                      <td>255 у.е</td>
+                      <td>
+                        <div class="payment-method"><span>Пополнение с Payeer </span><img src="img/payments/2.png" alt=""></div>
+                      </td>
+                      <td>Комментарий</td>
+                      <td class="text-right"><a class="btn btn--payment" href="#"> <span>Перевести</span><img src="img/payments/button-arrow.png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                      <td>22/02/2020</td>
+                      <td>Оплачено</td>
+                      <td>255 у.е</td>
+                      <td>
+                        <div class="payment-method"><span>Пополнение с Pax </span><img src="img/payments/3.png" alt=""></div>
+                      </td>
+                      <td>Комментарий</td>
+                      <td class="text-right"><a class="btn btn--payment" href="#"> <span>Перевести</span><img src="img/payments/button-arrow.png" alt=""></a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section class="lk-section">
+              <!---->
+              <ul class="social-module">
+                <li><a href="#" target="_blank"><svg class="icon icon-instagram ">
+                      <use xlink:href="img/icons/sprite.svg#icon-instagram"></use>
+                    </svg></a></li>
+                <li><a href="#" target="_blank"><svg class="icon icon-vk ">
+                      <use xlink:href="img/icons/sprite.svg#icon-vk"></use>
+                    </svg></a></li>
+                <li><a href="#" target="_blank"><svg class="icon icon-youtube ">
+                      <use xlink:href="img/icons/sprite.svg#icon-youtube"></use>
+                    </svg></a></li>
+                <li><a href="#" target="_blank"><svg class="icon icon-facebook ">
+                      <use xlink:href="img/icons/sprite.svg#icon-facebook"></use>
+                    </svg></a></li>
+              </ul>
             </section>
           </div>
         </div>

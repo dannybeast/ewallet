@@ -66,6 +66,13 @@ $fixed-line-height: 1.2;
 $heading-font-family: $main-font;
 $heading-font-weight: 400;
 
+
+.table-wrapper {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+}
+
 .typography {
     &>* {
         &:first-child {

@@ -1,7 +1,7 @@
 import './resizeSensor';
 import 'sticky-sidebar';
 
-var sidebar = new StickySidebar('.js-sticky', {
+export let sidebar = new StickySidebar('.js-sticky', {
   topSpacing: 0,
   responsiveWidth: true,
   resizeSensor: true,
@@ -29,11 +29,13 @@ $('.navigation-module ul li').each(function () {
         // добавить active
         $(this).parent().find('ul').slideDown();
         $(this).parent().toggleClass('active');
+        sidebar.updateSticky();
 
       } else {
         e.preventDefault();
         $(this).parent().find('ul').slideUp();
         $(this).parent().toggleClass('active');
+        sidebar.updateSticky();
 
       }
     });

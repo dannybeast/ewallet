@@ -112,6 +112,30 @@ textarea {
     margin-bottom: 30px;
     position: relative;
 
+    &__italic {
+        font-style: italic;
+        color: rgba(#000, 0.6);
+        font-size: 15px;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+
+        .field {
+            margin-right: 30px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            flex-wrap: wrap;
+
+            .field {
+                margin-bottom: 5px;
+                margin-right: 0;
+            }
+        }
+    }
+
     &--has-button {
         .field {
             padding-right: 55px;

@@ -12,7 +12,7 @@ import './components/sticky';
 import './components/charts';
 import './components/modals';
 import './components/news';
-
+import './components/datatables';
 
 import {
   showSuccess,

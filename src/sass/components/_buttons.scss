@@ -227,6 +227,30 @@
         }
     }
 
+    &--payment {
+        border-radius: 3px;
+        border: 1px solid rgba(#000, 0.5);
+        text-transform: none;
+        letter-spacing: normal;
+        font-size: 16px;
+        height: 33px;
+        line-height: 0.2em;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: inline-flex;
+        align-items: center;
+        font-weight: 400;
+
+        img {
+            margin-left: 10px;
+        }
+
+        &:hover {
+            color: #fff;
+            background: rgba(#000, 0.5);
+        }
+    }
+
     &--disabled {
         cursor: not-allowed;
         background: #8f8f8f;
@@ -251,7 +275,8 @@
     &--full {
         width: 100%;
     }
-    &.disabled{
+
+    &.disabled {
         border: 1px solid rgba(255, 255, 255, 0.55);
         background-color: #ff9400;
         background-image: linear-gradient(to top, #494949 0%, #818181 100%);
