@@ -13,7 +13,7 @@ import './components/charts';
 import './components/modals';
 import './components/news';
 import './components/datatables';
-
+import './components/lk-team';
 import {
   showSuccess,
   showError
