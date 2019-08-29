@@ -19,7 +19,6 @@ function createConfig(env) {
     mode: isProduction ? 'production' : 'development',
     context: path.join(__dirname, config.src.js),
     entry: {
-      // vendor: ['jquery'],
       app: './app.js',
       about: './about.js',
       contacts: './contacts.js',
@@ -50,6 +49,8 @@ function createConfig(env) {
       //     }
       //   }
       // }),
+     
+      new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /de|fr|hu/),
       new webpack.ProvidePlugin({
         $: 'jquery',
         jQuery: 'jquery',
@@ -66,6 +67,7 @@ function createConfig(env) {
     resolve: {
       extensions: ['.js'],
       alias: {
+        moment: 'moment/src/moment',
         TweenLite: path.resolve('node_modules', 'gsap/src/uncompressed/TweenLite.js'),
         TweenMax: path.resolve('node_modules', 'gsap/src/uncompressed/TweenMax.js'),
         TimelineLite: path.resolve('node_modules', 'gsap/src/uncompressed/TimelineLite.js'),
@@ -75,9 +77,19 @@ function createConfig(env) {
         'debug.addIndicators': path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js'),
       },
     },
-    optimization: {
+    optimization: { 
+      splitChunks: {
+        cacheGroups: {
+          commons: {
+            name: 'vendor',
+            chunks: 'initial',
+            minChunks: 2
+          }
+        }
+      },
       minimize: isProduction
     },
+    
     module: {
       rules: [
         // {
@@ -119,6 +131,7 @@ function createConfig(env) {
       new webpack.LoaderOptionsPlugin({
         minimize: true,
       })
+    
     );
   }
 

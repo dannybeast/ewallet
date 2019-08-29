@@ -4,7 +4,7 @@ import './lib/jquery-ui.min';
 
 // polyfills
 import 'svgxuse';
-
+ 
 // components
 import './components/animations-lk';
 import './components/ieDetect';

@@ -19,7 +19,6 @@
       "htmlhint --config .htmlhintrc"
     ]
   },
-  "authors": "Coderiver <html@coderiver.com.ua>",
   "devDependencies": {
     "autoprefixer": "^9.4.10",
     "babel-core": "^6.26.3",
@@ -76,6 +75,7 @@
     "sass-rem": "^2.0.1",
     "svgxuse": "^1.2.6",
     "through2": "^3.0.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.29.6",
     "webpack-bundle-analyzer": "^3.1.0",
     "webpack-cli": "^3.3.0"
