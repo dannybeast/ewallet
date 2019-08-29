@@ -1,12 +1,12 @@
 import 'slick-carousel';
 
 function reviewsSlider() {
-  // l 1
+  // l1
   $('.refferal__scheme > ul > li > ul').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
     infinite: false,
- 
+
     // arrows: false,
     responsive: [{
         breakpoint: 1630,
@@ -48,27 +48,25 @@ function reviewsSlider() {
   });
 }
 
-function beforeWidth(){
+function beforeWidth() {
   $('.refferal__scheme ul ul ul').each(function () {
     let items = $(this).find('.slick-slide');
     let itemWidth = items[0].clientWidth;
 
     let beforeWidth = $(this).find('.slick-track').width() - itemWidth;
-    let beforeWidthFour = itemWidth*3;
+    let beforeWidthFour = itemWidth * 3;
 
-    if(items.length <=4){
-      $(this).append('<span class="line" style="width:'+beforeWidth+'px"></span>')
-    }else{
-      $(this).append('<span class="line" style="width:'+beforeWidthFour+'px"></span>')
+    if (items.length <= 4) {
+      $(this).append('<span class="line" style="width:' + beforeWidth + 'px"></span>')
+    } else {
+      $(this).append('<span class="line" style="width:' + beforeWidthFour + 'px"></span>')
     }
-
-   
-  }) 
-} 
-$(document).ready(function() {
+  })
+}
+$(document).ready(function () {
   beforeWidth();
 })
-$(window).resize(function() {
+$(window).resize(function () {
   beforeWidth();
 })
 
