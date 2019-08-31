@@ -7,13 +7,19 @@ if (ctx) {
 
   Chart.defaults.global.elements.rectangle.backgroundColor = 'rgb(225, 173, 82)';
   Chart.defaults.global.legend.display = false;
+
+  let labels = ctx.getAttribute('data-labels');
+  let values = ctx.getAttribute('data-values');
+  let labels_array = labels.split(',');
+  let values_array = values.split(',');
+
   const myBarChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['22/02', '23/02', '24/02', '25/02', '26/02', '27/02', '28/02', '01/03', '02/03', '03/03', '04/03', '05/03', '06/03', '07/03', '08/03'],
+      labels: labels_array,
       datasets: [{
         label: 'процентов',
-        data: [5, 19, 3, 5, 2, 3, 5, 19, 3, 5, 2, 3, 5, 7, 10],
+        data: values_array,
         hoverBackgroundColor: 'rgb(225, 173, 82)'
       }]
     },
