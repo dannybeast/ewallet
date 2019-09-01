@@ -1,0 +1,65 @@
+// modal Beginner
++b.modal#buy-beginner
+  +e.block
+    +e.top
+      +e.H3.title Покупка пакета
+      +e.BUTTON.close.js-hide-modal
+        +icon('cross')
+    +e.content
+        +b.buy-package
+            +e.row
+                +e.name Стоимость пакета <strong>Beginner</strong>
+                +e.sep
+                +e.P.price
+                    big 100 
+                    | у.е.
+            +e.row
+                +e.name Кошелек <strong>Perfect Money</strong> <img src="img/payments/1.png" />
+                +e.sep
+                +e.P.price(class="--gray") 121.00 у.е.
+    +e.buttons
+        +b.A(href="#", class="btn --gr-accent") Купить
+
+// modal Business
++b.modal#buy-business
+  +e.block
+    +e.top
+      +e.H3.title Покупка пакета
+      +e.BUTTON.close.js-hide-modal
+        +icon('cross')
+    +e.content
+        +b.buy-package
+            +e.row
+                +e.name Стоимость пакета <strong>Business</strong>
+                +e.sep
+                +e.P.price
+                    big 300 
+                    | у.е.
+            +e.row
+                +e.name Кошелек <strong>Perfect Money</strong> <img src="img/payments/1.png" />
+                +e.sep
+                +e.P.price(class="--gray") 121.00 у.е.
+    +e.buttons
+        +b.A(href="#", class="btn --gr-accent") Купить
+
+// modal Lux
++b.modal#buy-lux
+  +e.block
+    +e.top
+      +e.H3.title Покупка пакета
+      +e.BUTTON.close.js-hide-modal
+        +icon('cross')
+    +e.content
+        +b.buy-package
+            +e.row
+                +e.name Стоимость пакета <strong>Lux</strong>
+                +e.sep
+                +e.P.price
+                    big 1000 
+                    | у.е.
+            +e.row
+                +e.name Кошелек <strong>Perfect Money</strong> <img src="img/payments/1.png" />
+                +e.sep
+                +e.P.price(class="--gray") 121.00 у.е.
+    +e.buttons
+        +b.A(href="#", class="btn --gr-accent") Купить

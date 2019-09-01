@@ -128,7 +128,7 @@
                     <div class="banner-module banner-module--dark active">
                       <div class="banner-module__content">
                         <p class="banner-module__title">Бэк-офис</p>
-                        <p class="banner-module__desc"><span>Окончание::</span> <big>22/09/19</big></p>
+                        <p class="banner-module__desc"><span>Окончание:</span> <big>22/09/19</big></p>
                         <div class="banner-module__buttons"><a class="btn btn--gr-accent disabled" href="#">Активирован</a></div>
                       </div>
                       <div class="banner-module__icon"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -159,7 +159,7 @@
                   <div class="lk-banners__col-33">
                     <div class="banner-product banner-product--gray">
                       <div class="banner-product__col">
-                        <p class="banner-product__title">Beginner</p><a class="banner-product__btn" href="#">Приобрести</a>
+                        <p class="banner-product__title">Beginner</p><a class="banner-product__btn js-custom-modal" data-modal-id="buy-beginner">Приобрести</a>
                       </div>
                       <div class="banner-product__col">
                         <p class="banner-product__price">100 <small>у.е</small></p>
@@ -169,7 +169,7 @@
                   <div class="lk-banners__col-33">
                     <div class="banner-product banner-product--white">
                       <div class="banner-product__col">
-                        <p class="banner-product__title">Business</p><a class="banner-product__btn" href="#">Приобрести</a>
+                        <p class="banner-product__title">Business</p><a class="banner-product__btn js-custom-modal" data-modal-id="buy-business">Приобрести</a>
                       </div>
                       <div class="banner-product__col">
                         <p class="banner-product__price">300 <small>у.е</small></p>
@@ -179,7 +179,7 @@
                   <div class="lk-banners__col-33">
                     <div class="banner-product banner-product--accent">
                       <div class="banner-product__col">
-                        <p class="banner-product__title">Lux</p><a class="banner-product__btn" href="#">Приобрести</a>
+                        <p class="banner-product__title">Lux</p><a class="banner-product__btn js-custom-modal" data-modal-id="buy-lux">Приобрести</a>
                       </div>
                       <div class="banner-product__col">
                         <p class="banner-product__price">1000 <small>у.е</small></p>
@@ -204,7 +204,7 @@
                     <div class="banner-product banner-product--white upgrade">
                       <div class="banner-product__col">
                         <p class="banner-product__subtitle">Апгрейт на:</p>
-                        <p class="banner-product__title">Business</p><a class="banner-product__btn" href="#">Перейти</a>
+                        <p class="banner-product__title">Business</p><a class="banner-product__btn js-custom-modal" data-modal-id="buy-business">Перейти</a>
                       </div>
                       <div class="banner-product__col">
                         <p class="banner-product__price"><small>за</small> 300 <small>у.е</small></p>
@@ -215,7 +215,7 @@
                     <div class="banner-product banner-product--accent upgrade">
                       <div class="banner-product__col">
                         <p class="banner-product__subtitle">Апгрейт на:</p>
-                        <p class="banner-product__title">Lux</p><a class="banner-product__btn" href="#">Перейти</a>
+                        <p class="banner-product__title">Lux</p><a class="banner-product__btn js-custom-modal" data-modal-id="buy-lux">Перейти</a>
                       </div>
                       <div class="banner-product__col">
                         <p class="banner-product__price"><small>за</small> 1000 <small>у.е</small></p>
@@ -376,7 +376,79 @@
           <li><a href="page-4.html">Обратная связь</a></li>
         </div>
       </div>
-    </footer>
+    </footer><!-- modal Beginner-->
+    <div class="modal" id="buy-beginner">
+      <div class="modal__block">
+        <div class="modal__top">
+          <h3 class="modal__title">Покупка пакета</h3><button class="modal__close js-hide-modal"><svg class="icon icon-cross ">
+              <use xlink:href="img/icons/sprite.svg#icon-cross"></use>
+            </svg></button>
+        </div>
+        <div class="modal__content">
+          <div class="buy-package">
+            <div class="buy-package__row">
+              <div class="buy-package__name">Стоимость пакета <strong>Beginner</strong></div>
+              <div class="buy-package__sep"></div>
+              <p class="buy-package__price"><big>100 </big>у.е.</p>
+            </div>
+            <div class="buy-package__row">
+              <div class="buy-package__name">Кошелек <strong>Perfect Money</strong> <img src="img/payments/1.png" /></div>
+              <div class="buy-package__sep"></div>
+              <p class="buy-package__price buy-package__price--gray">121.00 у.е.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__buttons"><a class="btn btn--gr-accent" href="#">Купить</a></div>
+      </div>
+    </div><!-- modal Business-->
+    <div class="modal" id="buy-business">
+      <div class="modal__block">
+        <div class="modal__top">
+          <h3 class="modal__title">Покупка пакета</h3><button class="modal__close js-hide-modal"><svg class="icon icon-cross ">
+              <use xlink:href="img/icons/sprite.svg#icon-cross"></use>
+            </svg></button>
+        </div>
+        <div class="modal__content">
+          <div class="buy-package">
+            <div class="buy-package__row">
+              <div class="buy-package__name">Стоимость пакета <strong>Business</strong></div>
+              <div class="buy-package__sep"></div>
+              <p class="buy-package__price"><big>300 </big>у.е.</p>
+            </div>
+            <div class="buy-package__row">
+              <div class="buy-package__name">Кошелек <strong>Perfect Money</strong> <img src="img/payments/1.png" /></div>
+              <div class="buy-package__sep"></div>
+              <p class="buy-package__price buy-package__price--gray">121.00 у.е.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__buttons"><a class="btn btn--gr-accent" href="#">Купить</a></div>
+      </div>
+    </div><!-- modal Lux-->
+    <div class="modal" id="buy-lux">
+      <div class="modal__block">
+        <div class="modal__top">
+          <h3 class="modal__title">Покупка пакета</h3><button class="modal__close js-hide-modal"><svg class="icon icon-cross ">
+              <use xlink:href="img/icons/sprite.svg#icon-cross"></use>
+            </svg></button>
+        </div>
+        <div class="modal__content">
+          <div class="buy-package">
+            <div class="buy-package__row">
+              <div class="buy-package__name">Стоимость пакета <strong>Lux</strong></div>
+              <div class="buy-package__sep"></div>
+              <p class="buy-package__price"><big>1000 </big>у.е.</p>
+            </div>
+            <div class="buy-package__row">
+              <div class="buy-package__name">Кошелек <strong>Perfect Money</strong> <img src="img/payments/1.png" /></div>
+              <div class="buy-package__sep"></div>
+              <p class="buy-package__price buy-package__price--gray">121.00 у.е.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__buttons"><a class="btn btn--gr-accent" href="#">Купить</a></div>
+      </div>
+    </div>
     <script defer src="js/vendor.js"></script>
     <script type="text/javascript" src="js/lk.js"></script>
   </body>

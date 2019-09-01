@@ -11,6 +11,7 @@ import './components/ieDetect';
 import './components/sticky';
 import './components/charts';
 import './components/modals';
+import './components/custom-modal';
 import './components/news';
 import './components/datatables';
 import './components/lk-team';
