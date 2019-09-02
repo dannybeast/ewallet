@@ -2129,11 +2129,13 @@ $body-bg: #eaeaea;
 }
 
 .checkbox-cube {
-  span {
-    width: 133px;
+  &>span {
+    &:first-of-type{
+      width: 133px;
     height: 133px;
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     vertical-align: top;
     border: solid 2px #747474;
@@ -2141,6 +2143,15 @@ $body-bg: #eaeaea;
     opacity: 0.3;
     transition: all .2s ease;
     cursor: pointer;
+    position: relative;
+    }
+  }
+  &__balance{
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+    width: 100%;
   }
 
   img {
@@ -2156,7 +2167,7 @@ $body-bg: #eaeaea;
   }
 
   @include media-breakpoint-down(sm) {
-    span {
+    span:first-of-type{
       width: 80px;
       height: 80px;
     }

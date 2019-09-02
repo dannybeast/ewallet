@@ -47,14 +47,17 @@ block content
                     input(type="radio", name="payment_method", checked)
                     span
                       img(src="img/payments/1.png", alt="")
+                    +e.SPAN.balance 1 200 руб.
                   +b.LABEL.checkbox-cube
                     input(type="radio", name="payment_method")
                     span
                       img(src="img/payments/2.png", alt="")
+                    +e.SPAN.balance 0 руб.
                   +b.LABEL.checkbox-cube
                     input(type="radio", name="payment_method")
                     span
                       img(src="img/payments/3.png", alt="")
+                    +e.SPAN.balance 230 руб.
               
             +b.field-row
               +e.LABEL.name Введите сумму
