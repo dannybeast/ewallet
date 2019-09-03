@@ -18,7 +18,7 @@ if (ctx) {
     data: {
       labels: labels_array,
       datasets: [{
-        label: 'процентов',
+        label: 'Оборот',
         data: values_array,
         hoverBackgroundColor: 'rgb(225, 173, 82)'
       }]

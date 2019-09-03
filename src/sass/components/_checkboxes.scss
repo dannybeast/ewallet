@@ -26,10 +26,10 @@
         &:before {
             content: '';
             display: block;
-            width: 14px;
-            height: 14px;
-            border-radius: 3px;
-            background: $color-13;
+            width: 18px;
+            height: 18px;
+            background: url('../img/icons/check-bold.svg') center no-repeat;
+            background-size: contain;
             display: none;
         }
     }

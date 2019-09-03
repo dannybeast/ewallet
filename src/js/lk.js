@@ -4,7 +4,7 @@ import './lib/jquery-ui.min';
 
 // polyfills
 import 'svgxuse';
- 
+
 // components
 import './components/animations-lk';
 import './components/ieDetect';
@@ -14,7 +14,7 @@ import './components/modals';
 import './components/custom-modal';
 import './components/news';
 import './components/datatables';
-import './components/lk-team';
+//import './components/lk-team';
 import {
   showSuccess,
   showError
@@ -50,8 +50,9 @@ copy.forEach(function (element) {
   copyButton.onclick = function (e) {
     e.preventDefault;
     copyInput.select();
+    copyInput.setSelectionRange(0, 9999);
     document.execCommand('copy');
-    showSuccess('Скопировано')
+    showSuccess('Скопировано');
   }
 });
 

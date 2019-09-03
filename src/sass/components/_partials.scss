@@ -1212,3 +1212,58 @@
 }
 
 //-
+
+.video-module {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 500px;
+    overflow: hidden;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        transition: all .3s ease;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .35);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    &::after {
+        content: '';
+        width: 25%;
+        display: block;
+        height: 88px;
+        background: url('../img/icons/youtube.svg') center no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.1;
+        transition: all .3s ease;
+        z-index: 2;
+    }
+
+    img {
+        display: block !important;
+        max-width: 100%;
+        margin: 0 !important;
+    }
+
+    &:hover {
+        &:after {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+    }
+}

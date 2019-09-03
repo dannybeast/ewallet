@@ -2,9 +2,14 @@
 import {
   TimelineLite
 } from 'gsap';
-import {posChecker} from './posChecker';
+import {
+  posChecker
+} from './posChecker';
 // animation loader
-$(window).on('load', function () {
+
+//-
+
+document.addEventListener("DOMContentLoaded", () => {
   var tl_loader = new TimelineLite();
   tl_loader
     .fromTo('.loader__inside', 0.3, {
@@ -24,19 +29,25 @@ $(window).on('load', function () {
         $('.loader').remove();
 
         if ($('.lk-section').length) {
-       
+
           tl_lk_section.play();
         }
 
       }
     })
-})
-//-
-
+});
 // animation header-intro
-if ($('.lk-section').length){
-  var tl_lk_section = new TimelineLite({paused:true}); 
+if ($('.lk-section').length) {
+  var tl_lk_section = new TimelineLite({
+    paused: true
+  });
   tl_lk_section
-      .staggerFromTo('.lk-section', 0.5, { y:-10, opacity: 0 }, { y:0, opacity: 1 }, 0.1)
-  }
-  //-
+    .staggerFromTo('.lk-section', 0.5, {
+      y: -10,
+      opacity: 0
+    }, {
+      y: 0,
+      opacity: 1
+    }, 0.1)
+}
+//-
