@@ -44,7 +44,7 @@
 
     &--gr-accent {
         background-image: linear-gradient(to top, #be801e 0%, #fcd07c 100%);
-        color: #fff;
+        color: #fff !important;
         font-family: $accent-font;
         letter-spacing: normal;
         text-transform: none;
