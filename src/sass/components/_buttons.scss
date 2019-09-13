@@ -8,269 +8,51 @@
     justify-content: center;
     text-decoration: none;
     text-align: center;
-    font-size: 14px;
-    height: 45px;
-    font-family: $main-font;
+    font-family: $accent-font;
     transition: all 0.05s ease;
-    padding: 0 1.65em;
+    padding: .65em 1.9em;
     white-space: nowrap;
     text-transform: uppercase;
     font-weight: 700;
-    letter-spacing: 3.36px;
-    color: #000;
-    transition: all .2s ease;
+    letter-spacing: 1.15px;
+    font-size: 21px;
+    border-radius: 26px;
+    transition: all .4s ease;
 
-    &--gr-accent-2 {
-        background-image: linear-gradient(to top, #c37311 0%, #db9114 100%);
-        color: #fff;
-        font-family: $accent-font;
-        letter-spacing: normal;
-        text-transform: none;
-        font-weight: normal;
-        border-radius: 10px;
-        padding: 0 2em;
-        height: 50px;
-        font-size: 21px;
-        box-shadow: 10px 10px 14px rgba($black, 0.1);
-
-        &:hover {
-            background-image: linear-gradient(to top, #c37311 0%, #db9114 100%);
-        }
-
-        &:active {
-            box-shadow: none;
-        }
-    }
-
-    &--gr-accent {
-        background-image: linear-gradient(to top, #be801e 0%, #fcd07c 100%);
+    &--gr-blue {
+        @extend .gr-blue;
         color: #fff !important;
-        font-family: $accent-font;
-        letter-spacing: normal;
-        text-transform: none;
-        font-weight: normal;
-        border-radius: 10px;
-        padding: 0 1em;
-        font-size: 24px;
-        text-shadow: 0 1px #000;
+        text-shadow: 2px 2px #0B577A;
 
         &:hover {
-            color:#fff;
-            background-image: linear-gradient(to top, #be801e 0%, #be801e 100%);
+            color: #fff;
+            background: linear-gradient(-185deg, #0055a5 0%, #0055a5 1%, #0055a5 91%, #0055a5 100%);
         }
     }
 
-    &--gr-gray-2 {
-        background-image: linear-gradient(to top, #b3b3b3 0%, #ebebeb 100%);
-        color: #000;
-        font-family: $accent-font;
-        letter-spacing: normal;
-        text-transform: none;
-        font-weight: normal;
-        border-radius: 2px;
-        border: 1px solid #747474;
-        padding: 0 30px;
-        font-weight: 500;
-        font-size: 21px;
-        text-shadow: 0 1px #fff;
+    &--line-blue {
+        border: 1px solid #0B577A;
+        color: #00a2b5;
 
         &:hover {
-            background-image: linear-gradient(to top, #b3b3b3 0%, #b3b3b3 100%);
-        }
-    }
-
-    &--gr-gray {
-        background-image: linear-gradient(to top, #505050 0%, #989898 100%);
-        color: #fff;
-        font-family: $accent-font;
-        letter-spacing: normal;
-        text-transform: none;
-        font-weight: normal;
-        border-radius: 10px;
-        padding: 0 1em;
-        font-size: 28px;
-        text-shadow: 0 1px #000;
-
-        &:hover {
-            background-image: linear-gradient(to top, #505050 0%, #505050 100%);
-        }
-    }
-
-    &--white {
-        color: #fff;
-
-        svg {
-            fill: #fff;
-        }
-
-    }
-
-    &--black {
-        background: #000;
-        color: #fff;
-
-        svg {
-            fill: #fff;
-        }
-    }
-
-    &--gray {
-        background: #393939;
-        color: #fff;
-        transition: all .2s ease;
-        border-radius: 2px;
-        text-transform: none;
-        font-weight: 400;
-        letter-spacing: normal;
-        font-family: $accent-font;
-
-        &:hover {
-            background: #111;
-        }
-    }
-
-    &--border-gray {
-        border: solid 2px $color-6;
-
-        &:hover {
-            border-color: $color-6;
-            background: $color-6;
             color: #fff !important;
         }
     }
 
-    &--border-gray-radius {
-        border: solid 1px #757575;
-        border-radius: 3px;
-        line-height: 1;
-        text-transform: none;
-        letter-spacing: normal;
-        font-size: 18px;
-        color: #000;
-        font-weight: 400;
-        transition: all .1s ease;
-        box-shadow: 0 1px #7575754d;
+    &--icon {
 
+        svg,
         img {
-            margin: 0 0 0 10px;
+            height: 25px;
             display: block;
-        }
-
-        &:hover {
-            color: #fff;
-            background: #757575;
-            box-shadow: none;
+            margin-right: 30px;
         }
     }
 
-    &--border-accent {
-        border: solid 2px $color-2;
-        color: $color-2;
-
-        svg {
-            fill: $color-2;
-        }
-
-        &:hover {
-            border-color: $color-2;
-            background: $color-2;
-            color: #fff;
-        }
-    }
-
-    &--border-white {
-        border: solid 2px #fff;
-        color: #fff;
-
-        svg {
-            fill: #fff;
-        }
-
-        &:hover {
-            border-color: #fff;
-            background: #fff;
-            color: #000 !important;
-
-            svg {
-                fill: #000;
-            }
-        }
-    }
-
-    &--icon-right {
-        display: inline-flex;
-        align-items: center;
-        padding-right: 1.5em;
-
-        svg {
-            margin-left: 10px;
-        }
-
-        img {
-            margin-left: 10px;
-            display: block;
-        }
-    }
-
-    &--icon-left {
-        display: inline-flex;
-        align-items: center;
-        padding-left: 1.5em;
-
-        svg {
-            margin-right: 10px;
-            order: -1;
-        }
-
-        img {
-            margin-right: 10px;
-            display: block;
-        }
-    }
-
-    &--payment {
-        border-radius: 3px;
-        border: 1px solid rgba(#000, 0.5);
-        text-transform: none;
-        letter-spacing: normal;
-        font-size: 16px;
-        height: 33px;
-        line-height: 0.2em;
-        padding-left: 15px;
-        padding-right: 15px;
-        display: inline-flex;
-        align-items: center;
-        font-weight: 400;
-
-        img {
-            margin-left: 10px;
-        }
-
-        &:hover {
-            color: #fff;
-            background: rgba(#000, 0.5);
-        }
-    }
-
-    &--disabled {
-        cursor: not-allowed;
-        background: #8f8f8f;
-        color: #dbdbdb;
-        box-shadow: none;
-
-        &:hover {
-            background: #8f8f8f;
-            color: #dbdbdb;
-            box-shadow: none;
-
-            svg {
-                fill: #dbdbdb;
-            }
-        }
-
-        svg {
-            fill: #dbdbdb;
-        }
+    &--large {
+        font-size: 25px;
+        padding: 0.8em 2.97em;
+        border-radius: 38px;
     }
 
     &--full {

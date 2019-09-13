@@ -16,7 +16,7 @@
         td,
         th {
             font-weight: 400;
-            border: solid 1px $color-4;
+            border: solid 1px $color-1;
             padding: 10px;
             vertical-align: middle;
         }
@@ -45,14 +45,14 @@
 
 // Variables
 
-$text-color: $color-18;
+$text-color: $color-1;
 $quiet-color: #ccc;
 $loud-color: #000;
 $heading-color: #111;
 
-$link-color: $color-2;
-$link-hover-color: $color-2;
-$link-visited-color: $color-12;
+$link-color: $color-1;
+$link-hover-color: $color-1;
+$link-visited-color: $color-1;
 
 $base-font-family: $main-font;
 $base-font-size: 15px;
@@ -100,31 +100,36 @@ body {
 /*
  * Typography
  */
-
-.title {
-    $baseFz: 52px;
-    font-size: $baseFz;
-    font-weight: 400;
-    text-transform: uppercase;
-    font-family: $accent-font;
+.subtitle {
+    font-size: 22px;
+    font-family: $main-font;
+    font-weight: 100;
     line-height: 1.1;
 
     small {
         font-size: 80%;
     }
 
-    &--center {
-        text-align: center;
-        margin: 0 auto;
+    // @include media-breakpoint-down(md) {
+    //     font-size: 43px;
+    // }
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: $accent-font;
+    line-height: 1.1;
+    letter-spacing: 3.15px;
+
+    small {
+        font-size: 80%;
     }
 
-    @include media-breakpoint-down(md) {
-        font-size: 43px;
-    }
-
-    @include media-breakpoint-down(sm) {
-        font-size: 36px;
-    }
+    // @include media-breakpoint-down(md) {
+    //     font-size: 43px;
+    // }
 }
 
 .link,

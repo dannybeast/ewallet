@@ -1,5 +1,5 @@
 ---
-title: LuxLife Club
+title: eWallet
 ---
 extends layouts/_layout
 include partials/_header
@@ -9,226 +9,223 @@ block variables
   - var pageName = "page-index"
 
 block content
+  //
+  +header()
+  //
+  +b.SECTION.intro.section
+    .container
+      +e.H2.subtitle The World’s first wallet thaht pays
+      +e.H1.title WHILE YOU KEEP YOUR MONEY IN IT!
+      +e.slider
+        div
+          +b.intro-slide
+            p 
+              strong 1-10 
+              span.color-gray days
+            +b.notebook
+              img(src="img/intro/notebook.png", alt="")
+            p 
+              strong 0.2% profits <br>
+              span.color-gray every day
+      +e.buttons
+        +b.A(href="#", class="btn --gr-blue") Create a wallet 
+        +e.P.desc and make a profit every day!
+      
+      +e.A(href="#" class="mouse js-scrollTo")
+        +icon('mouse')
+  //
+  +b.SECTION.watch.section
+    .container
+      +e.H3.title THE PURSE PAYS YOU THE COMMISSION!
+      +e.buttons
+        +b.A(href="#", class="btn --line-blue --icon") 
+          img(src="img/icons/play.svg", alt="")
+          span WATCH VIDEO
+  //
+  +b.SECTION.about.section
+    .container
+      +b.H3.section-title Media about us
+      +e.row
+        +e.col
+          +b.about-item
+            +e.icon
+              img(src="img/about/about-icon.png", alt="")
+            +e.logo
+              img(src="img/about/1.png", alt="")
+            +e.desc
+              p VanEck, SolidX to Offer Limited Bitcoin ETF for Institutions Via Exemption
+        +e.col
+          +b.about-item
+            +e.icon
+              img(src="img/about/about-icon.png", alt="")
+            +e.logo
+              img(src="img/about/2.png", alt="")
+            +e.desc
+              p Bitcoin Dominance Hits 70% as Keiser Warns Altcoins ‘Not Coming Back’
+        +e.col
+          +b.about-item
+            +e.icon
+              img(src="img/about/about-icon.png", alt="")
+            +e.logo
+              img(src="img/about/3.png", alt="")
+            +e.desc
+              p Dutch Central Bank: Crypto Firms to Be Regulated as of January 2020
+  //
+  +b.SECTION.advantages.section
+    .container
+      +b.H3.section-title OUR ADVANTAGES
+      +e.row
+        +e.col
+          +b.advantages-item
+            +e.icon
+              img(src="img/icons/001-zero.svg", alt="")
+            +e.P.title zero commissions
+            +e.desc
+              p VanEck, SolidX to Offer Limited Bitcoin ETF for Institutions 
+        +e.col
+          +b.advantages-item
+            +e.icon
+              img(src="img/icons/002-transfer.svg", alt="")
+            +e.P.title instant transfers
+            +e.desc
+              p VanEck, SolidX to Offer Limited Bitcoin ETF for Institutions 
+        +e.col
+          +b.advantages-item
+            +e.icon
+              img(src="img/icons/003-profit.svg", alt="")
+            +e.P.title Passive<br> profit
+            +e.desc
+              p VanEck, SolidX to Offer Limited Bitcoin ETF for Institutions 
+        +e.col
+          +b.advantages-item
+            +e.icon
+              img(src="img/icons/004-security.svg", alt="")
+            +e.P.title safety and reliability
+            +e.desc
+              p VanEck, SolidX to Offer Limited Bitcoin ETF for Institutions 
+        +e.col
+          +b.advantages-item
+            +e.icon
+              img(src="img/icons/006-idea.svg", alt="")
+            +e.P.title New<br> options
+            +e.desc
+              p VanEck, SolidX to Offer Limited Bitcoin ETF for Institutions 
+        +e.col
+          +b.advantages-item
+            +e.icon
+              img(src="img/icons/005-technical-support.svg", alt="")
+            +e.P.title open<br> technology
+            +e.desc
+              p VanEck, SolidX to Offer Limited Bitcoin ETF for Institutions 
+        +e.col
+          +b.advantages-item
+            +e.icon
+              img(src="img/icons/007-volume-control.svg", alt="")
+            +e.P.title Full control over their funds
+            +e.desc
+              p VanEck, SolidX to Offer Limited Bitcoin ETF for Institutions 
+  //
+  +b.SECTION.top100.section
+    .container
+      +b.H3.section-title Top 100 Cryptocurrencies
+      +e.imac
+        img(src="img/top100/imac.png", alt="")
+  //
+  +b.SECTION.coming.section
+    .container
+      +e.H3.title EWALLET COIN COMING SOON
+      +e.image
+        img(src="img/coming/coin.png", alt="")
+      +e.text
+        p That we have big plans for the future and soon we will issue our token, which will be traded on all major crypto-currency exchanges of the world!
+  
+  //
+  +b.SECTION.apps.section
+    .container
+      +e.row
+        +e.col
+          +e.phone
+            img(src="img/apps/phone.png", alt="")
+        +e.col
+          +b.H3.section-title DOWNLOAD APPLICATION <br> ON IOS and ANDROID
+          +e.UL.list
+            li
+              a(href="#")
+                img(src="img/apps/appstore.png", alt="")
+            li
+              a(href="#")
+                img(src="img/apps/google_play.png", alt="")
+          +e.P.subtitle COMING SOON
+  //
+  +b.SECTION.faq.section
+    .container
+      +b.H3.section-title frequently asked questions
+      
+      +b.faq-answers.js-accordion
+        
+        +e.block
+          +e.H4.title 
+            span Can I use an old code from the previous campaign for inviting referrals?
+          +e.content
+            .typography
+              p That we have big plans for the future and soon we will issue our token, which will be traded on all major crypto-currency exchanges of the world!
+        
+        +e.block
+          +e.H4.title How does the referral programme work?
+            span 
+          +e.content
+            .typography
+              p That we have big plans for the future and soon we will issue our token, which will be traded on all major crypto-currency exchanges of the world!
+        +e.block
+          +e.H4.title How much commission will I receive as part of the referral programme?
+            span 
+          +e.content
+            .typography
+              p That we have big plans for the future and soon we will issue our token, which will be traded on all major crypto-currency exchanges of the world!
 
-  +header('header--intro')
-    +b.header-intro
-      +e.content
-        +e.H1.title 
-          span <small class="gr-accent">Самые востребованные</small> <br><small class="gr-accent">и высокооплачиваемые</small> 
-          span <big class="gr-white">профессии XXI века</big>
-        +e.desc
-          p. 
-            По доступным ценам и<br>
-            за короткий срок
-        +b.buttons
-          +b.A(href="#", class="btn --border-accent") Зарегистрироваться
-      +e.pic
-        img(src="img/header-intro/pic.png", alt="")
+        +e.block
+          +e.H4.title Can I deposit funds and trade before my account is verified?
+            span 
+          +e.content
+            .typography
+              p That we have big plans for the future and soon we will issue our token, which will be traded on all major crypto-currency exchanges of the world!
+        
+        +e.block
+          +e.H4.title How can I change the address I entered during registration?
+            span 
+          +e.content
+            .typography
+              p That we have big plans for the future and soon we will issue our token, which will be traded on all major crypto-currency exchanges of the world!
+        
+        +e.block
+          +e.H4.title Is 2FA mandatory?
+            span 
+          +e.content
+            .typography
+              p That we have big plans for the future and soon we will issue our token, which will be traded on all major crypto-currency exchanges of the world!
+         
+        +e.block
+          +e.H4.title How do you deal with corporate actions?
+            span 
+          +e.content
+            .typography
+              p That we have big plans for the future and soon we will issue our token, which will be traded on all major crypto-currency exchanges of the world!
+      +e.buttons
+        +b.A(href="#", class="btn --gr-blue --large") TO CREATE A WEB WALLET NOW
   
-  +b.SECTION.advantages(class="skew-l")
+  //
+  +b.SECTION.social-icons.section
     .container
-      +b.H3.title
-        small 
-          span.gr-diagonal Наши 
-        span.gr-accent преимущества
-      +e.row
-        +e.col
-          +b.advantages-item
-            +e.icon
-              img(src="img/icon.gif", data-src="img/icons/001-employee.svg", alt="")
-            +e.P.title Профессии
-            +e.desc
-              p Качественное, доступное образование по мировым трендам, стоимостью от $200 до $5000 со скидкой 90%.
-        +e.col
-          +b.advantages-item
-            +e.icon
-              img(src="img/icon.gif", data-src="img/icons/004-bar-chart.svg", alt="")
-            +e.P.title Фин. грамотность
-            +e.desc
-              p Увеличение финансовой грамотности и вашего дохода, обучение без воды.
-        +e.col
-          +b.advantages-item
-            +e.icon
-              img(src="img/icon.gif", data-src="img/icons/002-creative.svg", alt="")
-            +e.P.title Продажи
-            +e.desc
-              p Ведение переговоров, искусство продаж, ораторское искусство. Обучение от самых лучших спикеров в своей отрасли.
-        +e.col
-          +b.advantages-item
-            +e.icon
-              img(src="img/icon.gif", data-src="img/icons/005-gym.svg", alt="")
-            +e.P.title ЗОЖ
-            +e.desc
-              p Правильное питание и здоровый образ жизни. Консультаций от высокооплачиваемых тренеров и диетологов.
-      +b.buttons
-        +b.A(href="#" class="btn --border-gray --white") Подробнее о нас
-  
-  +b.SECTION.how-work(class="skew-r").section
-    .container
-      +e.row
-        +e.col-l
-        +e.col-r
-          +b.H3.title
-            small Как это 
-            | работает?
-      +e.row
-        +e.col-l
-          +b.UL.dark-list
-            li У нас может обучаться любой человек из любой точки мира  
-            li Самые востребованные и иновационные профессии  
-            li Применяйте последние технологий для продвижения вашего бизнеса  
-            li Наши навыки нужны абсолютно всем: от школьников до крупных инвесторов
-        +e.col-r
-          +b.A(href="https://youtu.be/REBuXEWwUME").dark-video.js-modal
-            img(src="img/how-work/video.gif", data-src="img/how-work/video.jpg", alt="")
-      +e.row
-        +e.col-l
-          +b.sign-module
-            +e.P.desc Прямо сейчас
-            +e.P.title Запишитесь 
-              span.
-                на бесплатную 
-                консультацию!
-            +e.buttons
-              +b.A(href="#", class="btn --black") Записаться
-        +e.col-r
-  
-  +b.SECTION.target.section
-    .container
-      +e.row
-        +e.media
-          img(src="img/target/target-pic-thrumb.gif" data-src="img/target/target-pic.png", alt="")
-        +e.content
-          +b.H3.title
-            small.gr-accent цель 
-            | Lux Life Club
-          +e.text
-            p ДАТЬ СЖАТОЕ, КАЧЕСТВЕННОЕ И СОВРЕМЕННОЕ ОБРАЗОВАНИЕ ЗА ДОСТУПНУЮ ЦЕНУ И ЗА КОРОТКИЙ ПЕРИОД, В СООТВЕТСТВИИ С МИРОВЫМИ ТРЕНДАМИ
-
-  +b.SECTION.problems(class="--skew skew-r").section
-    .container
-      +b.H3.title
-        small.gr-accent Какие 
-        small.gr-accent проблемы  
-        | Мы решаем?
-      +e.row
-        +e.col
-          +b.card-block
-            +e.icon
-              img(src="img/icon.gif", data-src="img/icons/care.svg", alt="")
-            +e.P.title ЗДОРОВЬЕ
-            +e.desc
-              p Большая часть населения не имеют достаточного времени и денег, чтобы следить за здоровьем
-        +e.col
-          +b.card-block
-            +e.icon
-              img(src="img/icon.gif", data-src="img/icons/money.svg", alt="")
-            +e.P.title ДОЛГОВАЯ ЯМА
-            +e.desc
-              p Неправильное мышление, отсутствие идеи и не видят четких направлений для создания благополучия
-        +e.col
-          +b.card-block
-            +e.icon
-              img(src="img/icon.gif", data-src="img/icons/employee.svg", alt="")
-            +e.P.title ПРОФЕССИОНАЛИЗМ 
-            +e.desc
-              p 95% люди не владеют искусством продаж и боятся выступать публично
-        +e.col
-          +b.card-block
-            +e.icon
-              img(src="img/icon.gif", data-src="img/icons/analysis.svg", alt="")
-            +e.P.title ФИНАНСОВАЯ НЕГРАМОТНОСТЬ 
-            +e.desc
-              p Финансово не грамотны, не умеют правильно распоряжаться деньгами
-        +e.col
-          +b.card-block
-            +e.icon
-              img(src="img/icon.gif", data-src="img/icons/internet.svg", alt="")
-            +e.P.title ИНСТРУМЕНТЫ
-            +e.desc
-              p Не применяют современные тренды продвижения бизнеса в интернете 
-        +e.col
-          +b.card-block
-            +e.icon
-              img(src="img/icon.gif", data-src="img/icons/robber.svg", alt="")
-            +e.P.title ПОТЕРЯ ДЕНЕГ
-            +e.desc
-              p Не знают куда инвестировать, не умеют выбирать нишу для нужных навыков и инвестирования, теряют деньги в разных мошеннических схемах, остаются в долгах
-  
-  +b.SECTION.percent-section.section
-    .container
-      +e.row
-        +e.text
-          p Не работают по своей специальности
-        +e.P.count 86%
-        +e.text
-          p выпускников образовательных вузов
-  
-  +b.SECTION.reviews.section
-    .container
-      +b.H3.title
-        small.gr-accent Отзывы 
-        | Наших клиентов
-      +e.row
-        +e.col
-          +b.A(href="https://youtu.be/REBuXEWwUME").review-block(class="--video").js-modal
-            img(src="img/reviews/pic.png" data-src="img/reviews/pic.png", alt="")
-        +e.col
-          +b.A(href="https://youtu.be/REBuXEWwUME").review-block(class="--video").js-modal
-            img(src="img/reviews/pic.png" data-src="img/reviews/pic.png", alt="")
-        +e.col
-          +b.A(href="https://youtu.be/REBuXEWwUME").review-block(class="--video").js-modal
-            img(src="img/reviews/pic.png" data-src="img/reviews/pic.png", alt="")
-        +e.col
-          +b.A(href="https://youtu.be/REBuXEWwUME").review-block(class="--video").js-modal
-            img(src="img/reviews/pic.png" data-src="img/reviews/pic.png", alt="")
-      +e.buttons.buttons
-        +b.A(href="#" class="btn --border-gray") Смотреть все отзывы
-  
-  +b.bottom-skew
-    +e.decor
-    +b.SECTION.well-being
-      .container
-        +b.H3.title
-          small Lux Life Club - это путь 
-          span.gr-accent к вашему благополучию!
-        +e.row
-          +e.col
-            +b.circle-item
-              +e.icon
-                img(src="img/icon.gif", data-src="img/icons/research.svg", alt="")
-              +e.desc
-                p Освой более 10 самых<br> востребованных<br> профессий 21 века!
-          +e.col
-            +b.circle-item
-              +e.icon
-                img(src="img/icon.gif", data-src="img/icons/education.svg", alt="")
-              +e.desc
-                p Прокачай свою<br> финансовую грамотность<br> в LuxLife Club!
-          +e.col
-            +b.circle-item
-              +e.icon
-                img(src="img/icon.gif", data-src="img/icons/bars.svg", alt="")
-              +e.desc
-                p Пробей свой финансовый<br> потолок и реши главные<br> денежные проблемы за 3 мес.
-    
-    +b.SECTION.form-section.section
-        .container
-          form
-            +e.block
-              +e.H3.title.gr-accent Вступайте в LuxLife Club!
-              +e.desc
-                p Просто заполните эту форму и наши консультанты перезвонят Вам!
-              +e.row
-                +b.field-row
-                  +e.LABEL.name Ваше имя:
-                  +b.INPUT(type="text" class="field --white")
-                +b.field-row
-                  +e.LABEL.name E-mail:
-                  +b.INPUT(type="email" class="field --white --error")
-                +b.field-row
-                  +e.LABEL.name Телефон:
-                  +b.INPUT(type="text" class="field --white")
-                // btn--disabled
-                +b.BUTTON.btn(class="--gr-accent") Отправить
-    +footer()
+      +b.H3.section-title Follow us on social media
+      +e.UL.list
+        +e.LI
+          +e.A(href="#")
+            img(src="img/social/1.png", alt="")
+        +e.LI
+          +e.A(href="#")
+            img(src="img/social/telegram.svg", alt="")
+        +e.LI
+          +e.A(href="#")
+            img(src="img/social/twitter.svg", alt="")
+  //
+  +footer()

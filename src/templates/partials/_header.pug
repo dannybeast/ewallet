@@ -1,21 +1,43 @@
 mixin header(itemClass)
+
   +b.HEADER.header(class=itemClass)
     .container
-      +b.header-top
+      +e.row
         +e.A(href="page-index.html").logo
-          img(src="img/logo/logo.png", alt="LuxLife")
-        +e.right
-          include ./_nav
-          +b.buttons
-            +b.A(href="auth.html", class="btn --icon-left --border-white --white")
-              +icon('user')
-              span Войти
-            +b.language-module.btn.btn--border-accent
-              +e.current RU
-              +e.UL.dropdown
-                li
-                  a(href="#") EN
-                li
-                  a(href="#") CZ
-      if block
-        block
+          img(src="img/logo.png", alt="")
+        
+        +e.NAV.nav
+          ul
+            li(class="active")
+              a(href="#") Home
+            li
+              a(href="#") White papper
+            li
+              a(href="#") Affiliate program
+            li
+              a(href="#") FAQ
+            li
+              a(href="#") Support
+        
+        +e.UL.social
+          li
+            a(href="#")
+              img(src="img/social/1.png", alt="")
+          li
+            a(href="#")
+              img(src="img/social/telegram.svg", alt="")
+          li
+            a(href="#")
+              img(src="img/social/twitter.svg", alt="")
+        
+        +b.language-module
+          +e.current En
+          +e.UL.dropdown
+            li
+              a(href="#") Ru
+            li
+              a(href="#") Cz
+
+        +e.buttons
+          a(href="#") Login
+          a(href="#" class="color-accent") Sign Up

@@ -1,29 +1,86 @@
 mixin footer()
   +b.FOOTER.footer
-    .container
-      +e.top
-        +e.A(href="page-index.html").logo
-          img(src="img/logo/logo.png", alt="LuxLife")
-        
-        +b.payments
-          ul
-            li
-              a(href="#", target="_blank")
-                img(src="img/payments/pm.png", alt="pm")
-            li
-              a(href="#", target="_blank")
-                img(src="img/payments/visa.png", alt="visa")
-            li
-              a(href="#", target="_blank")
-                img(src="img/payments/mastercard.png", alt="mastercard")
-        
-        include ./_nav
-      +e.bottom
-        +e.P.copyright (с) 2019, LuxLife Club
-        +e.UL.links
-          li
-            a(href="policy.html") Политика конфиденциальности
-          li
-            a(href="policy.html") Политика безопасности
-          li
-            a(href="page-4.html") Обратная связь
+    +e.top
+      .container
+        +e.row
+          +e.col
+            +e.P.title Markets
+            +e.UL.list
+              li
+                a(href="#") Overview of tokenised securities
+              li
+                a(href="#") Tokenised commodities
+              li
+                a(href="#") Tokenised indices
+              li
+                a(href="#") Tokenised shares
+              li
+                a(href="#") Cryptocurrencies
+              li
+                a(href="#") Tokenised bonds
+          +e.col
+            +e.P.title Whitepaper
+            +e.UL.list
+              li
+                a(href="#") Affiliate Programme
+          +e.col
+            +e.P.title Regulation
+            +e.UL.list
+              li
+                a(href="#") Privacy policy
+              li
+                a(href="#") Cookies policy
+              li
+                a(href="#") Security
+              li
+                a(href="#") Deposits and withdrawals
+              li
+                a(href="#") Fees and charges
+              li
+                a(href="#") Conflict of interest policy
+              li
+                a(href="#") Information on tokens trading
+          +e.col
+            +e.P.title Support
+            +e.UL.list
+              li
+                a(href="#") Support
+              li
+                a(href="#") FAQ
+          +e.col
+            +e.P.title Follow us
+            +e.UL.list
+              li
+                a(href="#") Telegram
+              li
+                a(href="#") Reddit
+              li
+                a(href="#") Twitter
+              li
+                a(href="#") Youtube
+              li
+                a(href="#") Facebook
+              li
+                a(href="#") Linkedin
+
+    +e.bottom
+      .container
+        +e.bottom-row
+          p.copyright © 2019 E-wallet.io. All rights reserved.
+          +e.bottom-links
+            a(href="#") Private policy
+        +e.bottom-text
+          .typography
+            p 
+              strong “Cryptoexchange” is a legal entity, authorized to perform activity of cryptoplatform operator in the meaning of Decree of the President of the Republic of Belarus No.8 “On development of digital economy” dated December 21, 2017
+            br
+            p Currency Com Bel LLC warns the clients about the following risks:
+            br
+            p 1. digital signs (tokens) (hereinafter referred to as “tokens”) are not legal tender and are not required to be accepted as a means of payment;
+            p 2. the Republic of Belarus, its administrative and territorial units, the Supervisory Board of the High Technologies Park and the administration of the High Technologies Park are not liable to token owners for their technical and legal properties, both as declared during their creation and placement and necessary for token owners to achieve the goals they set when acquiring tokens;
+            p 3. tokens are not provided by the state;
+            p 4. acquisition of tokens may lead to complete loss of funds and other objects of civil rights (investments) transferred in exchange for tokens (including as a result of token cost volatility; technical failures (errors); illegal actions, including theft);
+            p 5. the technology of the register of transaction blocks (blockchain), other distributed information system and similar technologies are innovative and constantly updated, which implies the need for periodic updates (periodic improvement) of the information system of Currency Com Bel LLC and the risk of technical failures (errors) in its operation;
+            p 6. certain tokens sold by Currency Com Bel LLC may be of value only when using the information system of Currency Com Bel LLC and (or) the services rendered by Currency Com Bel LLC;
+            p 7. as the attitude of different states (their regulators) to token transactions (operations) and approaches to their legal regulation differ from jurisdiction to jurisdiction, there is a risk that contracts between Currency Com Bel LLC and its clients or their particular terms and conditions may be invalid and (or) unenforceable in certain states.
+
