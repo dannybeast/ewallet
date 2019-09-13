@@ -483,6 +483,63 @@
     }
 }
 
+.faq-answers {
+    &__block {
+        border-bottom: 1px solid #444444;
+        padding-bottom: 40px;
+        padding-top: 40px;
+    }
+
+    &__content {
+        padding-top: 20px;
+        color: #b9b9b9;
+
+        .typography {
+            font-size: 15px;
+        }
+    }
+
+    &__title {
+        letter-spacing: 1.96px;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: rgba(#fff, 0.5);
+        font-family: $accent-font;
+        font-weight: 700;
+        padding-left: 40px;
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+            color: rgba(#fff, 0.7);
+        }
+
+        &.ui-state-active {
+            color: #fff;
+
+            &:before {
+                filter: grayscale(0);
+                transform: translateY(-50%) rotate(-90deg);
+            }
+        }
+
+        &:before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            display: block;
+            background: url('../img/icons/arrow.svg') center no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%) rotate(90deg);
+            filter: grayscale(1);
+            transition: all .3s ease;
+        }
+    }
+}
+
 .social-icons {
     &__list {
         display: flex;
