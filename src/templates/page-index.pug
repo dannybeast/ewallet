@@ -31,14 +31,14 @@ block content
         +b.A(href="#", class="btn --gr-blue") Create a wallet 
         +e.P.desc and make a profit every day!
       
-      +e.A(href="#" class="mouse js-scrollTo")
+      +e.A(class="mouse js-scrollTo" data-scrollTo="#watch")
         +icon('mouse')
   //
-  +b.SECTION.watch.section
+  +b.SECTION.watch.section#watch
     .container
       +e.H3.title THE PURSE PAYS YOU THE COMMISSION!
       +e.buttons
-        +b.A(href="#", class="btn --line-blue --icon") 
+        +b.A(href="https://youtu.be/HNLWJxMD67c", class="btn --line-blue --icon js-modal") 
           img(src="img/icons/play.svg", alt="")
           span WATCH VIDEO
   //
@@ -129,6 +129,8 @@ block content
     .container
       +b.H3.section-title Top 100 Cryptocurrencies
       +e.imac
+        +e.wrap
+          img(src="img/top100/media.png", alt="")
         img(src="img/top100/imac.png", alt="")
   //
   +b.SECTION.coming.section
@@ -138,7 +140,6 @@ block content
         img(src="img/coming/coin.png", alt="")
       +e.text
         p That we have big plans for the future and soon we will issue our token, which will be traded on all major crypto-currency exchanges of the world!
-  
   //
   +b.SECTION.apps.section
     .container

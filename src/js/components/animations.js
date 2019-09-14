@@ -28,31 +28,28 @@ document.addEventListener("DOMContentLoaded", () => {
                 loader.remove();
 
                 if ($('.header').length) {
-                    posChecker('.header', tl_header_intro);
+                    posChecker('.header', tl_header);
+                }
+                if ($('.intro').length) {
+                    posChecker('.intro', tl_intro);
                 }
                 if ($('.advantages').length) {
                     posChecker('.advantages', tl_advantages);
                 }
-                if ($('.header-intro').length) {
-                    posChecker('.how-work', tl_howWork, 0);
+                if ($('.watch').length) {
+                    posChecker('.watch', tl_watch);
                 }
-                if ($('.target').length) {
-                    posChecker('.target', tl_target);
+                if ($('.about').length) {
+                    posChecker('.about', tl_about);
                 }
-                if ($('.problems').length) {
-                    posChecker('.problems', tl_problems);
+                if ($('.top100').length) {
+                    posChecker('.top100', tl_top100);
                 }
-                if ($('.percent-section').length) {
-                    posChecker('.percent-section', tl_percentSection);
+                if ($('.coming').length) {
+                    posChecker('.coming', tl_coming);
                 }
-                if ($('.reviews').length) {
-                    posChecker('.reviews', tl_reviews);
-                }
-                if ($('.well-being').length) {
-                    posChecker('.well-being', tl_wellBeing);
-                }
-                if ($('.auth').length) {
-                    posChecker('.auth', tl_auth);
+                if ($('.apps').length) {
+                    posChecker('.apps', tl_apps);
                 }
 
             }
@@ -60,42 +57,46 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 //-
 
-// animation header-intro
-var tl_header_intro = new TimelineLite({
+// animation header
+var tl_header = new TimelineLite({
     paused: true
 });
-tl_header_intro
-    .fromTo('.header-top', 0.2, {
+tl_header
+    .fromTo('.header__row', 0.15, {
         opacity: 0
     }, {
         opacity: 1
     })
-    .fromTo('.header-intro__title', 0.5, {
-        x: -10,
-        opacity: 0
+// animation intro
+var tl_intro = new TimelineLite({
+    paused: true,
+});
+tl_intro
+    .fromTo('.intro-slide', 0.7, {
+        opacity: 0,
     }, {
-        x: 0,
+        opacity: 1,
+        ease: Power2.easeInOut
+    })
+    .fromTo('.intro__subtitle', 0.3, {
+        opacity: 0,
+        y: -5
+    }, {
+        y: 0,
         opacity: 1
     })
-    .fromTo('.header-intro__desc', 0.2, {
-        x: -10,
-        opacity: 0
+    .fromTo('.intro__title', 0.3, {
+        opacity: 0,
+        y: -5
     }, {
-        x: 0,
+        y: 0,
         opacity: 1
     })
-    .fromTo('.header-intro .buttons', 0.2, {
-        x: -10,
-        opacity: 0
+    .fromTo('.intro__buttons, .intro__mouse', 0.3, {
+        opacity: 0,
+        y: -5
     }, {
-        x: 0,
-        opacity: 1
-    })
-    .fromTo('.header-intro__pic', 0.1, {
-        x: 10,
-        opacity: 0
-    }, {
-        x: 0,
+        y: 0,
         opacity: 1
     })
 
@@ -104,172 +105,126 @@ var tl_advantages = new TimelineLite({
     paused: true
 });
 tl_advantages
-    .staggerFromTo('.advantages__col', 0.5, {
-        y: -10,
-        opacity: 0
-    }, {
-        y: 0,
-        opacity: 1
-    }, 0.1)
-    .fromTo('.advantages .buttons', 1, {
+    .fromTo('.advantages .section-title', 0.5, {
         opacity: 0
     }, {
         opacity: 1
     })
+    .staggerFromTo('.advantages__col', 1, {
+        y: -5,
+        opacity: 0
+    }, {
+        y: 0,
+        opacity: 1
+    }, 0.15)
 
-// animation
-var tl_howWork = new TimelineLite({
+// animation watch
+var tl_watch = new TimelineLite({
     paused: true
 });
-tl_howWork
-    .fromTo('.dark-list', 0.5, {
-        y: -10,
+tl_watch
+    .fromTo('.watch__title', 0.5, {
+        opacity: 0
+    }, {
+        opacity: 1
+    })
+    .fromTo('.watch__buttons', 0.5, {
+        y: -5,
         opacity: 0
     }, {
         y: 0,
         opacity: 1
     })
-    .fromTo('.dark-video', 0.5, {
-        y: -10,
-        opacity: 0
-    }, {
-        y: -0,
-        opacity: 1
-    })
-    .fromTo('.sign-module', 0.5, {
-        y: -10,
-        opacity: 0
-    }, {
-        y: -0,
-        opacity: 1
-    })
-
-// animation target
-var tl_target = new TimelineLite({
+// animation about
+var tl_about = new TimelineLite({
     paused: true
 });
-tl_target
-    .fromTo('.target__media img', 0.5, {
-        y: -10,
+tl_about
+    .fromTo('.about .section-title', 0.5, {
+        opacity: 0
+    }, {
+        opacity: 1
+    })
+    .staggerFromTo('.about__col', 1, {
+        y: -5,
         opacity: 0
     }, {
         y: 0,
         opacity: 1
-    })
-    .fromTo('.target__content', 0.5, {
-        y: 10,
-        opacity: 0
-    }, {
-        y: 0,
-        opacity: 1
-    })
-
-// animation problems
-var tl_problems = new TimelineLite({
+    }, 0.15)
+// animation top100
+var tl_top100 = new TimelineLite({
     paused: true
 });
-tl_problems
-    .fromTo('.problems .title', 0.5, {
-        x: -10,
+tl_top100
+    .fromTo('.top100 .section-title', 0.5, {
         opacity: 0
     }, {
-        x: 0,
         opacity: 1
     })
-    .staggerFromTo('.problems__col', 0.5, {
-        y: -10,
+    .fromTo('.top100__imac', 0.8, {
+        y: -5,
         opacity: 0
     }, {
         y: 0,
         opacity: 1
-    }, 0.1)
-
-// animation percent-section
-var tl_percentSection = new TimelineLite({
+    })
+// animation coming
+var tl_coming = new TimelineLite({
     paused: true
 });
-tl_percentSection
-    .fromTo('.percent-section__count', 0.5, {
-        y: 10,
+tl_coming
+    .fromTo('.coming__title', 0.5, {
+        opacity: 0
+    }, {
+        opacity: 1
+    })
+    .fromTo('.coming__image', 0.5, {
+        y: -5,
         opacity: 0
     }, {
         y: 0,
         opacity: 1
     })
-    .fromTo('.percent-section__text', 0.5, {
-        y: -10,
+    .fromTo('.coming__text', 0.5, {
+        y: -5,
         opacity: 0
     }, {
         y: 0,
         opacity: 1
     })
-
-// animation reviews
-var tl_reviews = new TimelineLite({
+// animation apps
+var tl_apps = new TimelineLite({
     paused: true
 });
-tl_reviews
-    .fromTo('.reviews .title', 0.5, {
-        opacity: 0
+tl_apps
+    .fromTo('.apps__phone', 0.5, {
+        opacity: 0,
+        y: 10
     }, {
-        opacity: 1
-    })
-    .staggerFromTo('.reviews__col', 0.5, {
-        y: 10,
-        opacity: 0
-    }, {
-        y: 0,
-        opacity: 1
-    }, 0.1)
-    .fromTo('.reviews__buttons', 0.5, {
-        opacity: 0
-    }, {
-        opacity: 1
+        opacity: 1,
+        y: 0
     })
 
-// animation reviews
-var tl_wellBeing = new TimelineLite({
-    paused: true
-});
-tl_wellBeing
-    .fromTo('.circle-item__icon', 0.5, {
-        scale: 0.1,
-        opacity: 0
-    }, {
-        scale: 1,
-        opacity: 1
-    })
-    .fromTo('.circle-item__icon img', 0.3, {
-        y: -10,
+    .fromTo('.apps .section-title', 0.3, {
+        y: -5,
         opacity: 0
     }, {
         y: 0,
         opacity: 1
     })
-    .fromTo('.circle-item__desc', 0.3, {
-        y: -10,
+    .fromTo('.apps__list', 0.3, {
+        y: -5,
         opacity: 0
     }, {
         y: 0,
         opacity: 1
     })
-
-// animation auth
-var tl_auth = new TimelineLite({
-    paused: true
-});
-tl_auth
-    .fromTo('.auth__col--right', 0.5, {
+    .fromTo('.apps__subtitle', 0.3, {
+        y: -5,
         opacity: 0
     }, {
+        y: 0,
         opacity: 1
     })
-    .fromTo('.auth-module', 0.5, {
-        x: -10,
-        opacity: 0
-    }, {
-        x: 0,
-        opacity: 1
-    })
-
 /* eslint-enable */

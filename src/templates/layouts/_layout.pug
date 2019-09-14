@@ -9,12 +9,10 @@ html
   body(class=bodyClass)
     +b.loader
       +e.inside
-        img(src="img/logo/logo.png", alt="")
         img(src="img/loader.svg", alt="")
       
     block content
 
 
     block scripts
-      script(defer src='js/vendor.js')
       script(defer type="text/javascript" src="js/app.js")

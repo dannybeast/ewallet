@@ -19,21 +19,18 @@ function createConfig(env) {
     mode: isProduction ? 'production' : 'development',
     context: path.join(__dirname, config.src.js),
     entry: {
-      app: './app.js',
-      about: './about.js',
-      contacts: './contacts.js',
-      lk: './lk.js'
+      app: './app.js'
     },
     output: {
       path: path.join(__dirname, config.dest.js),
       filename: '[name].js',
       publicPath: 'js/',
     },
-    
+
     externals: {
-        moment: 'moment'
+      moment: 'moment'
     },
-  
+
     devtool: isProduction ?
       '#source-map' : '#cheap-module-eval-source-map',
     plugins: [
@@ -49,7 +46,7 @@ function createConfig(env) {
       //     }
       //   }
       // }),
-     
+
       new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /de|fr|hu/),
       new webpack.ProvidePlugin({
         $: 'jquery',
@@ -77,7 +74,7 @@ function createConfig(env) {
         'debug.addIndicators': path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js'),
       },
     },
-    optimization: { 
+    optimization: {
       splitChunks: {
         cacheGroups: {
           commons: {
@@ -89,7 +86,7 @@ function createConfig(env) {
       },
       minimize: isProduction
     },
-    
+
     module: {
       rules: [
         // {
@@ -131,7 +128,7 @@ function createConfig(env) {
       new webpack.LoaderOptionsPlugin({
         minimize: true,
       })
-    
+
     );
   }
 

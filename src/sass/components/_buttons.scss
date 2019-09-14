@@ -11,7 +11,6 @@
     font-family: $accent-font;
     transition: all 0.05s ease;
     padding: .65em 1.9em;
-    white-space: nowrap;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1.15px;
@@ -35,17 +34,25 @@
         color: #00a2b5;
 
         &:hover {
-            color: #fff !important;
+            background: #fff;
+            color: #0B577A !important;
+            border-color: #fff;
+
+            img {
+                transform: scale(1.1)
+            }
         }
     }
 
     &--icon {
+        white-space: nowrap;
 
         svg,
         img {
             height: 25px;
             display: block;
             margin-right: 30px;
+            transition: all .2s ease;
         }
     }
 
@@ -53,6 +60,16 @@
         font-size: 25px;
         padding: 0.8em 2.97em;
         border-radius: 38px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 16px;
+            padding: .65em 1.9em;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        font-size: 16px;
+        padding: .65em 1.9em;
     }
 
     &--full {

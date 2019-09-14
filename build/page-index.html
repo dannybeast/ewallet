@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="loader">
-      <div class="loader__inside"><img src="img/logo/logo.png" alt=""><img src="img/loader.svg" alt=""></div>
+      <div class="loader__inside"><img src="img/loader.svg" alt=""></div>
     </div>
     <!---->
     <header class="header">
@@ -41,6 +41,7 @@
             </ul>
           </div>
           <div class="header__buttons"><a href="#">Login</a><a class="color-accent" href="#">Sign Up</a></div>
+          <div class="menu-button"><span></span><span></span><span></span></div>
         </div>
       </div>
     </header>
@@ -60,16 +61,16 @@
         </div>
         <div class="intro__buttons"><a class="btn btn--gr-blue" href="#">Create a wallet </a>
           <p class="intro__desc">and make a profit every day!</p>
-        </div><a class="intro__mouse js-scrollTo" href="#"><svg class="icon icon-mouse ">
+        </div><a class="intro__mouse js-scrollTo" data-scrollTo="#watch"><svg class="icon icon-mouse ">
             <use xlink:href="img/icons/sprite.svg#icon-mouse"></use>
           </svg></a>
       </div>
     </section>
     <!---->
-    <section class="watch section">
+    <section class="watch section" id="watch">
       <div class="container">
         <h3 class="watch__title">THE PURSE PAYS YOU THE COMMISSION!</h3>
-        <div class="watch__buttons"><a class="btn btn--line-blue btn--icon" href="#"> <img src="img/icons/play.svg" alt=""><span>WATCH VIDEO</span></a></div>
+        <div class="watch__buttons"><a class="btn btn--line-blue btn--icon js-modal" href="https://youtu.be/HNLWJxMD67c"> <img src="img/icons/play.svg" alt=""><span>WATCH VIDEO</span></a></div>
       </div>
     </section>
     <!---->
@@ -182,7 +183,9 @@
     <section class="top100 section">
       <div class="container">
         <h3 class="section-title">Top 100 Cryptocurrencies</h3>
-        <div class="top100__imac"><img src="img/top100/imac.png" alt=""></div>
+        <div class="top100__imac">
+          <div class="top100__wrap"><img src="img/top100/media.png" alt=""></div><img src="img/top100/imac.png" alt="">
+        </div>
       </div>
     </section>
     <!---->
@@ -366,7 +369,6 @@
         </div>
       </div>
     </footer>
-    <script defer src="js/vendor.js"></script>
     <script defer type="text/javascript" src="js/app.js"></script>
   </body>
 </html>

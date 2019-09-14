@@ -11,7 +11,7 @@ import './components/animations';
 import './components/navigation';
 import './components/supports';
 import './components/modals';
-
+import './components/scrollTo';
 import {
   showSuccess,
   showError
@@ -30,22 +30,6 @@ $(document).ready(function () {
     heightStyle: 'content'
   });
   //-
-
-
-  // toggle show password
-  $('.js-show-password').click(function (e) {
-    const input = $(this).parent().children('input');
-    e.preventDefault();
-    if (input.attr('type') === 'text') {
-      $(this).parent().children('input').attr('type', 'password');
-      $(this).removeClass('active');
-    } else {
-      $(this).parent().children('input').attr('type', 'text');
-      $(this).addClass('active');
-    }
-  });
-  //-
-
 
 
 });
