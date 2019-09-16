@@ -1,3 +1,32 @@
+mixin nav()
+  ul
+    li(class=(pageName === "page-index" ? " active" : undefined))
+      a(href="page-index.html") Home
+    li(class=(pageName === "paper" ? " active" : undefined))
+      a(href="page-index.html") White papper
+    li(class=(pageName === "affiliate" ? " active" : undefined))
+      a(href="affiliate.html") Affiliate program
+    li(class=(pageName === "faq" ? " active" : undefined))
+      a(href="page-index.html") FAQ
+    li(class=(pageName === "support" ? " active" : undefined))
+      a(href="support.html") Support
+
+mixin buttons()
+  +b.top-buttons
+    a(data-modal-id="login" class="js-custom-modal") Login
+    a(data-modal-id="signup" class="color-accent js-custom-modal") Sign Up
+
+mixin social()
+  +b.UL.top-social
+    li
+      a(href="#")
+        img(src="img/social/1.png", alt="")
+    li
+      a(href="#")
+        img(src="img/social/telegram.svg", alt="")
+    li
+      a(href="#")
+        img(src="img/social/twitter.svg", alt="")
 mixin header(itemClass)
 
   +b.HEADER.header(class=itemClass)
@@ -7,28 +36,9 @@ mixin header(itemClass)
           img(src="img/logo.png", alt="")
         
         +e.NAV.nav
-          ul
-            li(class="active")
-              a(href="#") Home
-            li
-              a(href="#") White papper
-            li
-              a(href="#") Affiliate program
-            li
-              a(href="#") FAQ
-            li
-              a(href="#") Support
+          +nav()
         
-        +e.UL.social
-          li
-            a(href="#")
-              img(src="img/social/1.png", alt="")
-          li
-            a(href="#")
-              img(src="img/social/telegram.svg", alt="")
-          li
-            a(href="#")
-              img(src="img/social/twitter.svg", alt="")
+        +social()
         
         +b.language-module
           +e.current En
@@ -38,11 +48,19 @@ mixin header(itemClass)
             li
               a(href="#") Cz
 
-        +e.buttons
-          a(href="#") Login
-          a(href="#" class="color-accent") Sign Up
+        +buttons()
         
         .menu-button
           span
           span
           span
+  
+  //
+  +b.mobile-menu
+    .container
+      +e.top
+        +buttons()
+      +e.NAV.nav
+        +nav()
+
+      +social()

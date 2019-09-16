@@ -51,7 +51,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 if ($('.apps').length) {
                     posChecker('.apps', tl_apps);
                 }
-
+                if ($('.page-intro').length) {
+                    posChecker('.page-intro', tl_pIntro);
+                }
+                if ($('.form').length) {
+                    posChecker('.form', tl_form);
+                }
+                if ($('section.typography').length) {
+                    posChecker('.section.typography', tl_sTypography);
+                }
+                if ($('.contact-items').length) {
+                    posChecker('.contact-items', tl_cItems);
+                }
             }
         })
 });
@@ -63,9 +74,11 @@ var tl_header = new TimelineLite({
 });
 tl_header
     .fromTo('.header__row', 0.15, {
-        opacity: 0
+        opacity: 0,
+        y: -5,
     }, {
-        opacity: 1
+        opacity: 1,
+        y: 0
     })
 // animation intro
 var tl_intro = new TimelineLite({
@@ -227,4 +240,50 @@ tl_apps
         y: 0,
         opacity: 1
     })
+// animation page-intro
+var tl_pIntro = new TimelineLite({
+    paused: true
+});
+tl_pIntro
+    .staggerFromTo('.page-intro__col', 0.8, {
+        y: -5,
+        opacity: 0
+    }, {
+        y: 0,
+        opacity: 1
+    }, 0.15)
+// animation typography section
+var tl_sTypography = new TimelineLite({
+    paused: true
+});
+tl_sTypography
+    .fromTo('section.typography', 0.5, {
+        opacity: 0
+    }, {
+        opacity: 1
+    })
+// animation form
+var tl_form = new TimelineLite({
+    paused: true
+});
+tl_form
+    .fromTo('.form', 0.5, {
+        opacity: 0,
+        y: -5
+    }, {
+        opacity: 1,
+        y: 0
+    })
+// animation contact-items
+var tl_cItems = new TimelineLite({
+    paused: true
+});
+tl_cItems
+    .staggerFromTo('.contact-items__col', 0.8, {
+        y: -5,
+        opacity: 0
+    }, {
+        y: 0,
+        opacity: 1
+    }, 0.15)
 /* eslint-enable */

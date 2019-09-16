@@ -21,14 +21,14 @@
         <div class="header__row"><a class="header__logo" href="page-index.html"><img src="img/logo.png" alt="" /></a>
           <nav class="header__nav">
             <ul>
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">White papper</a></li>
-              <li><a href="#">Affiliate program</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Support</a></li>
+              <li class=" active"><a href="page-index.html">Home</a></li>
+              <li><a href="page-index.html">White papper</a></li>
+              <li><a href="affiliate.html">Affiliate program</a></li>
+              <li><a href="page-index.html">FAQ</a></li>
+              <li><a href="support.html">Support</a></li>
             </ul>
           </nav>
-          <ul class="header__social">
+          <ul class="top-social">
             <li><a href="#"><img src="img/social/1.png" alt="" /></a></li>
             <li><a href="#"><img src="img/social/telegram.svg" alt="" /></a></li>
             <li><a href="#"><img src="img/social/twitter.svg" alt="" /></a></li>
@@ -40,26 +40,60 @@
               <li><a href="#">Cz</a></li>
             </ul>
           </div>
-          <div class="header__buttons"><a href="#">Login</a><a class="color-accent" href="#">Sign Up</a></div>
+          <div class="top-buttons"><a class="js-custom-modal" data-modal-id="login">Login</a><a class="color-accent js-custom-modal" data-modal-id="signup">Sign Up</a></div>
           <div class="menu-button"><span></span><span></span><span></span></div>
         </div>
       </div>
     </header>
     <!---->
+    <div class="mobile-menu">
+      <div class="container">
+        <div class="mobile-menu__top">
+          <div class="top-buttons"><a class="js-custom-modal" data-modal-id="login">Login</a><a class="color-accent js-custom-modal" data-modal-id="signup">Sign Up</a></div>
+        </div>
+        <nav class="mobile-menu__nav">
+          <ul>
+            <li class=" active"><a href="page-index.html">Home</a></li>
+            <li><a href="page-index.html">White papper</a></li>
+            <li><a href="affiliate.html">Affiliate program</a></li>
+            <li><a href="page-index.html">FAQ</a></li>
+            <li><a href="support.html">Support</a></li>
+          </ul>
+        </nav>
+        <ul class="top-social">
+          <li><a href="#"><img src="img/social/1.png" alt="" /></a></li>
+          <li><a href="#"><img src="img/social/telegram.svg" alt="" /></a></li>
+          <li><a href="#"><img src="img/social/twitter.svg" alt="" /></a></li>
+        </ul>
+      </div>
+    </div>
+    <!---->
     <section class="intro section">
       <div class="container">
         <h2 class="intro__subtitle">The World’s first wallet thaht pays</h2>
         <h1 class="intro__title">WHILE YOU KEEP YOUR MONEY IN IT!</h1>
-        <div class="intro__slider">
-          <div>
-            <div class="intro-slide">
+        <div class="intro-slide">
+          <div class="intro-slide__prev"></div>
+          <div class="intro-slide__next"></div>
+          <div class="intro-slide__slider slider-left">
+            <div>
               <p> <strong>1-10 </strong><span class="color-gray">days</span></p>
-              <div class="notebook"><img src="img/intro/notebook.png" alt=""></div>
+            </div>
+            <div>
+              <p> <strong>1-12 </strong><span class="color-gray">days</span></p>
+            </div>
+          </div>
+          <div class="notebook"><img src="img/intro/notebook.png" alt=""></div>
+          <div class="intro-slide__slider slider-right">
+            <div>
               <p> <strong>0.2% profits <br></strong><span class="color-gray">every day</span></p>
+            </div>
+            <div>
+              <p> <strong>0.3% profits <br></strong><span class="color-gray">every day</span></p>
             </div>
           </div>
         </div>
-        <div class="intro__buttons"><a class="btn btn--gr-blue" href="#">Create a wallet </a>
+        <div class="intro__buttons"><a class="btn btn--gr-blue" href="#"> <span>Create a wallet </span></a>
           <p class="intro__desc">and make a profit every day!</p>
         </div><a class="intro__mouse js-scrollTo" data-scrollTo="#watch"><svg class="icon icon-mouse ">
             <use xlink:href="img/icons/sprite.svg#icon-mouse"></use>
@@ -184,7 +218,170 @@
       <div class="container">
         <h3 class="section-title">Top 100 Cryptocurrencies</h3>
         <div class="top100__imac">
-          <div class="top100__wrap"><img src="img/top100/media.png" alt=""></div><img src="img/top100/imac.png" alt="">
+          <div class="top100__wrap">
+            <div class="top-table js-scrollbar">
+              <table>
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Market cap</th>
+                    <th>Price</th>
+                    <th>Volume (24H)</th>
+                    <th>Circulating supply</th>
+                    <th>c change (24h)</th>
+                    <th>i price graph (7d)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <div class="currency"><span>Bitcoin</span><img src="img/currency/btc.png" alt=""></div>
+                    </td>
+                    <td>$189 161 322 136</td>
+                    <td>$10 558,88</td>
+                    <td>$18 577 322 957</td>
+                    <td>17 914 912 BTC</td>
+                    <td>
+                      <div class="status status--green">+1,61%</div>
+                    </td>
+                    <td>
+                      <div class="graph"><img src="img/graph.png" alt=""></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>
+                      <div class="currency"><span>Etherium</span><img src="img/currency/eth.png" alt=""></div>
+                    </td>
+                    <td>$189 161 322 136</td>
+                    <td>$10 558,88</td>
+                    <td>$18 577 322 957</td>
+                    <td>17 914 912 BTC</td>
+                    <td>
+                      <div class="status status--red">-6,55%</div>
+                    </td>
+                    <td>
+                      <div class="graph"><img src="img/graph.png" alt=""></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      <div class="currency"><span>Bitcoin</span><img src="img/currency/btc.png" alt=""></div>
+                    </td>
+                    <td>$189 161 322 136</td>
+                    <td>$10 558,88</td>
+                    <td>$18 577 322 957</td>
+                    <td>17 914 912 BTC</td>
+                    <td>
+                      <div class="status status--green">+1,55%</div>
+                    </td>
+                    <td>
+                      <div class="graph"><img src="img/graph.png" alt=""></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <div class="currency"><span>Bitcoin</span><img src="img/currency/btc.png" alt=""></div>
+                    </td>
+                    <td>$189 161 322 136</td>
+                    <td>$10 558,88</td>
+                    <td>$18 577 322 957</td>
+                    <td>17 914 912 BTC</td>
+                    <td>
+                      <div class="status status--green">+1,61%</div>
+                    </td>
+                    <td>
+                      <div class="graph"><img src="img/graph.png" alt=""></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>
+                      <div class="currency"><span>Etherium</span><img src="img/currency/eth.png" alt=""></div>
+                    </td>
+                    <td>$189 161 322 136</td>
+                    <td>$10 558,88</td>
+                    <td>$18 577 322 957</td>
+                    <td>17 914 912 BTC</td>
+                    <td>
+                      <div class="status status--red">-6,55%</div>
+                    </td>
+                    <td>
+                      <div class="graph"><img src="img/graph.png" alt=""></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      <div class="currency"><span>Bitcoin</span><img src="img/currency/btc.png" alt=""></div>
+                    </td>
+                    <td>$189 161 322 136</td>
+                    <td>$10 558,88</td>
+                    <td>$18 577 322 957</td>
+                    <td>17 914 912 BTC</td>
+                    <td>
+                      <div class="status status--green">+1,55%</div>
+                    </td>
+                    <td>
+                      <div class="graph"><img src="img/graph.png" alt=""></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <div class="currency"><span>Bitcoin</span><img src="img/currency/btc.png" alt=""></div>
+                    </td>
+                    <td>$189 161 322 136</td>
+                    <td>$10 558,88</td>
+                    <td>$18 577 322 957</td>
+                    <td>17 914 912 BTC</td>
+                    <td>
+                      <div class="status status--green">+1,61%</div>
+                    </td>
+                    <td>
+                      <div class="graph"><img src="img/graph.png" alt=""></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>
+                      <div class="currency"><span>Etherium</span><img src="img/currency/eth.png" alt=""></div>
+                    </td>
+                    <td>$189 161 322 136</td>
+                    <td>$10 558,88</td>
+                    <td>$18 577 322 957</td>
+                    <td>17 914 912 BTC</td>
+                    <td>
+                      <div class="status status--red">-6,55%</div>
+                    </td>
+                    <td>
+                      <div class="graph"><img src="img/graph.png" alt=""></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      <div class="currency"><span>Bitcoin</span><img src="img/currency/btc.png" alt=""></div>
+                    </td>
+                    <td>$189 161 322 136</td>
+                    <td>$10 558,88</td>
+                    <td>$18 577 322 957</td>
+                    <td>17 914 912 BTC</td>
+                    <td>
+                      <div class="status status--green">+1,55%</div>
+                    </td>
+                    <td>
+                      <div class="graph"><img src="img/graph.png" alt=""></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div><img src="img/top100/imac.png" alt="">
         </div>
       </div>
     </section>
@@ -278,7 +475,11 @@
             </div>
           </div>
         </div>
-        <div class="faq__buttons"><a class="btn btn--gr-blue btn--large" href="#">TO CREATE A WEB WALLET NOW</a></div>
+      </div>
+    </section><!-- -->
+    <section class="create section">
+      <div class="container">
+        <div class="create__buttons"><a class="btn btn--gr-blue btn--large" href="#"> <span>TO CREATE A WEB WALLET NOW</span></a></div>
       </div>
     </section>
     <!---->

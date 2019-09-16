@@ -55,12 +55,12 @@ $link-hover-color: $color-1;
 $link-visited-color: $color-1;
 
 $base-font-family: $main-font;
-$base-font-size: 15px;
+$base-font-size: 17px;
 $base-font-weight: 400;
 $base-line-height: 1.6;
 
 $fixed-font-family: $main-font;
-$fixed-font-size: 15px;
+$fixed-font-size: 17px;
 $fixed-line-height: 1.2;
 
 $heading-font-family: $main-font;
@@ -74,6 +74,22 @@ $heading-font-weight: 400;
 }
 
 .typography {
+    p {
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__text {
+        max-width: 1040px;
+        margin: 0 auto;
+        font-weight: 300;
+    }
+
+    &--center {
+        text-align: center;
+    }
+
     &>* {
         &:first-child {
             margin-top: 0;
@@ -141,16 +157,15 @@ a {
     color: $link-color;
     text-decoration: none;
 
-    &:visited {
-        color: $link-visited-color;
-    }
+    // &:visited {
+    //     color: $link-visited-color;
+    // }
 
-    &:active {
-        color: $link-color;
-    }
+    // &:active {
+    //     color: $link-color;
+    // }
 
-    &:hover,
-    &:visited:hover {
+    &:hover {
         text-decoration: none;
         color: $link-hover-color;
     }

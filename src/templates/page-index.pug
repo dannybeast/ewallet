@@ -16,19 +16,36 @@ block content
     .container
       +e.H2.subtitle The World’s first wallet thaht pays
       +e.H1.title WHILE YOU KEEP YOUR MONEY IN IT!
-      +e.slider
-        div
-          +b.intro-slide
+      
+      +b.intro-slide
+        +e.prev
+        +e.next
+        +e.slider.slider-left
+          div
             p 
               strong 1-10 
               span.color-gray days
-            +b.notebook
-              img(src="img/intro/notebook.png", alt="")
+          div
+            p 
+              strong 1-12 
+              span.color-gray days
+
+        +b.notebook
+          img(src="img/intro/notebook.png", alt="")
+
+        +e.slider.slider-right
+          div
             p 
               strong 0.2% profits <br>
               span.color-gray every day
+          div
+            p 
+              strong 0.3% profits <br>
+              span.color-gray every day
+
       +e.buttons
-        +b.A(href="#", class="btn --gr-blue") Create a wallet 
+        +b.A(href="#", class="btn --gr-blue") 
+          span Create a wallet 
         +e.P.desc and make a profit every day!
       
       +e.A(class="mouse js-scrollTo" data-scrollTo="#watch")
@@ -126,11 +143,73 @@ block content
               p VanEck, SolidX to Offer Limited Bitcoin ETF for Institutions 
   //
   +b.SECTION.top100.section
+    mixin tr()
+      tr
+        td 1
+        td 
+          +b.currency
+            span Bitcoin
+            img(src="img/currency/btc.png", alt="")
+        td $189 161 322 136
+        td $10 558,88
+        td $18 577 322 957
+        td 17 914 912 BTC
+        td
+          +b.status(class="--green") +1,61%
+        td
+          +b.graph
+            img(src="img/graph.png", alt="")
+      tr
+        td 2
+        td 
+          +b.currency
+            span Etherium
+            img(src="img/currency/eth.png", alt="")
+        td $189 161 322 136
+        td $10 558,88
+        td $18 577 322 957
+        td 17 914 912 BTC
+        td
+          +b.status(class="--red") -6,55%
+        td
+          +b.graph
+            img(src="img/graph.png", alt="")
+      tr
+        td 3
+        td 
+          +b.currency
+            span Bitcoin
+            img(src="img/currency/btc.png", alt="")
+        td $189 161 322 136
+        td $10 558,88
+        td $18 577 322 957
+        td 17 914 912 BTC
+        td
+          +b.status(class="--green") +1,55%
+        td
+          +b.graph
+            img(src="img/graph.png", alt="")
     .container
       +b.H3.section-title Top 100 Cryptocurrencies
       +e.imac
         +e.wrap
-          img(src="img/top100/media.png", alt="")
+          +b.top-table.js-scrollbar
+            table
+              thead
+                tr
+                  th #
+                  th Name
+                  th Market cap
+                  th Price
+                  th Volume (24H)
+                  th Circulating supply
+                  th c change (24h)
+                  th i price graph (7d)
+              tbody
+                +tr()
+                +tr()
+                +tr()
+
         img(src="img/top100/imac.png", alt="")
   //
   +b.SECTION.coming.section
@@ -211,9 +290,12 @@ block content
           +e.content
             .typography
               p That we have big plans for the future and soon we will issue our token, which will be traded on all major crypto-currency exchanges of the world!
+  // 
+  +b.SECTION.create.section
+    .container
       +e.buttons
-        +b.A(href="#", class="btn --gr-blue --large") TO CREATE A WEB WALLET NOW
-  
+        +b.A(href="#", class="btn --gr-blue --large") 
+          span TO CREATE A WEB WALLET NOW
   //
   +b.SECTION.social-icons.section
     .container

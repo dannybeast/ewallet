@@ -15,17 +15,44 @@
     font-weight: 700;
     letter-spacing: 1.15px;
     font-size: 21px;
-    border-radius: 26px;
+    border-radius: 30px;
     transition: all .4s ease;
+    $parent: &;
+
+    &:active {
+        transform: scale(0.98);
+    }
 
     &--gr-blue {
         @extend .gr-blue;
         color: #fff !important;
         text-shadow: 2px 2px #0B577A;
+        overflow: hidden;
+
+        span {
+            position: relative;
+            z-index: 2;
+        }
+
+        &:after {
+            content: '';
+            width: 50%;
+            height: 70px;
+            border-radius: 50%;
+            background: rgba(0, 85, 165, 0.219);
+            position: absolute;
+            top: 100%;
+            left: -70px;
+            transition: all 1s ease;
+        }
 
         &:hover {
             color: #fff;
-            background: linear-gradient(-185deg, #0055a5 0%, #0055a5 1%, #0055a5 91%, #0055a5 100%);
+            opacity: 0.9;
+
+            &:after {
+                transform: scale(7);
+            }
         }
     }
 
