@@ -1329,14 +1329,34 @@ $margin-sm: 80px;
 
         a {
             transition: all 0.3s ease;
+            text-align: center;
 
             &:hover {
-                opacity: 0.8;
+                img {
+                    opacity: 0.8;
+                }
             }
         }
 
         img {
             height: 56px;
+            display: block;
+            transition: all .2s ease;
+        }
+
+        span.coming-text {
+            color: #0ab78d;
+            display: block;
+            font-size: 11px;
+            margin-top: 10px;
+            opacity: 0;
+            transition: all .2s ease;
+            transform: translateY(-5px);
+
+            &.show {
+                opacity: 1;
+                transform: none;
+            }
         }
     }
 

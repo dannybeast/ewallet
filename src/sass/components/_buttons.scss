@@ -9,14 +9,13 @@
     text-decoration: none;
     text-align: center;
     font-family: $accent-font;
-    transition: all 0.05s ease;
+    //transition: all 0.05s ease;
     padding: .65em 1.9em;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1.15px;
     font-size: 21px;
     border-radius: 30px;
-    transition: all .4s ease;
     $parent: &;
 
     &:active {
@@ -24,11 +23,11 @@
     }
 
     &--gr-blue {
-        @extend .gr-blue;
+        background: linear-gradient(-185deg, rgba(0, 202, 209, 0.85) 0%, rgba(0, 202, 209, 0.85) 1%, rgba(0, 85, 165, 0.85) 91%, rgba(0, 85, 165, 0.85) 100%);
         color: #fff !important;
         //text-shadow: 2px 2px #0B577A;
         overflow: hidden;
-        opacity: 0.75;
+
 
         span {
             position: relative;
@@ -37,6 +36,7 @@
 
 
         &:hover {
+            background: linear-gradient(-185deg, rgba(0, 202, 209, 1) 0%, rgba(0, 202, 209, 1) 1%, rgba(0, 85, 165, 1) 91%, rgba(0, 85, 165, 1) 100%);
             color: #fff;
             opacity: 1;
         }
@@ -83,7 +83,7 @@
     &--white {
         background: #fff;
         color: #005fa8;
-        transition: all .1s ease;
+        //transition: all .1s ease;
 
         &:hover {
             background: #003762;

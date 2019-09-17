@@ -32,6 +32,17 @@ $(document).ready(function () {
   });
   //-
 
+  //
+  $(".js-coming-app").each(function () {
+    let text = '<span class="coming-text">COMING SOON</span>';
+    $(this).append(text);
+  });
+  $(".js-coming-app").click(function (e) {
+    e.preventDefault();
+    let text = $(this).children('.coming-text');
+    text.addClass('show');
+  });
+  //-
 
   // js-about-carousel
   $('.js-about-carousel').slick({
