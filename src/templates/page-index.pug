@@ -18,8 +18,8 @@ block content
       +e.H1.title WHILE YOU KEEP YOUR MONEY IN IT!
       
       +b.intro-slide
-        +e.prev
-        +e.next
+        .arrow-prev
+        .arrow-next
         +e.slider.slider-left
           div
             p 
@@ -27,10 +27,29 @@ block content
               span.color-gray days
           div
             p 
-              strong 1-12 
+              strong 11-20 
+              span.color-gray days
+          div
+            p 
+              strong 21-30 
+              span.color-gray days
+          div
+            p 
+              strong 31-40 
+              span.color-gray days
+          div
+            p 
+              strong 41+ 
               span.color-gray days
 
         +b.notebook
+          +e.slider
+            div
+              img(src="img/intro/1.jpg", alt="")
+            div
+              img(src="img/intro/2.jpg", alt="")
+            div
+              img(src="img/intro/3.jpg", alt="")
           img(src="img/intro/notebook.png", alt="")
 
         +e.slider.slider-right
@@ -42,9 +61,21 @@ block content
             p 
               strong 0.3% profits <br>
               span.color-gray every day
+          div
+            p 
+              strong 0.4% profits <br>
+              span.color-gray every day
+          div
+            p 
+              strong 0.5% profits <br>
+              span.color-gray every day
+          div
+            p 
+              strong 1% profits <br>
+              span.color-gray every day
 
       +e.buttons
-        +b.A(href="#", class="btn --gr-blue") 
+        +b.A(href="signup.html" class="btn --gr-blue") 
           span Create a wallet 
         +e.P.desc and make a profit every day!
       
@@ -63,7 +94,9 @@ block content
     .container
       +b.H3.section-title Media about us
       +e.row
-        +e.col
+        .arrow-prev
+        .js-about-carousel
+        
           +b.about-item
             +e.icon
               img(src="img/about/about-icon.png", alt="")
@@ -71,7 +104,7 @@ block content
               img(src="img/about/1.png", alt="")
             +e.desc
               p VanEck, SolidX to Offer Limited Bitcoin ETF for Institutions Via Exemption
-        +e.col
+        
           +b.about-item
             +e.icon
               img(src="img/about/about-icon.png", alt="")
@@ -79,7 +112,7 @@ block content
               img(src="img/about/2.png", alt="")
             +e.desc
               p Bitcoin Dominance Hits 70% as Keiser Warns Altcoins ‘Not Coming Back’
-        +e.col
+        
           +b.about-item
             +e.icon
               img(src="img/about/about-icon.png", alt="")
@@ -87,6 +120,15 @@ block content
               img(src="img/about/3.png", alt="")
             +e.desc
               p Dutch Central Bank: Crypto Firms to Be Regulated as of January 2020
+        
+          +b.about-item
+            +e.icon
+              img(src="img/about/about-icon.png", alt="")
+            +e.logo
+              img(src="img/about/3.png", alt="")
+            +e.desc
+              p Dutch Central Bank: Crypto Firms to Be Regulated as of January 2020
+        .arrow-next
   //
   +b.SECTION.advantages.section
     .container
@@ -294,21 +336,9 @@ block content
   +b.SECTION.create.section
     .container
       +e.buttons
-        +b.A(href="#", class="btn --gr-blue --large") 
+        +b.A(href="signup.html", class="btn --gr-blue --large") 
           span TO CREATE A WEB WALLET NOW
   //
-  +b.SECTION.social-icons.section
-    .container
-      +b.H3.section-title Follow us on social media
-      +e.UL.list
-        +e.LI
-          +e.A(href="#")
-            img(src="img/social/1.png", alt="")
-        +e.LI
-          +e.A(href="#")
-            img(src="img/social/telegram.svg", alt="")
-        +e.LI
-          +e.A(href="#")
-            img(src="img/social/twitter.svg", alt="")
+  include partials/_social
   //
   +footer()

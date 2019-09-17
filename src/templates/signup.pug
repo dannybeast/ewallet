@@ -1,0 +1,62 @@
+---
+title: eWallet
+---
+extends layouts/_layout
+
+block variables 
+    - var pageName = "SignUp"
+
+block content
+
+  +b.modal.active#signup
+    +e.header
+      
+      +e.A(href="page-index.html" class="logo")
+        img(src="img/logo.png", alt="e-wallet")
+      
+      include partials/_language
+      
+      +b.top-buttons
+        p Already have a wallet?
+        a(href="login.html" class="color-accent") Login
+
+    +b.gr-block
+      +e.content
+        form
+          +e.H3.title Create A Wallet
+          // .field--error
+          +b.field(class="--white")
+            label Your e-mail
+            input(type="text")
+
+          +b.field(class="--white")
+            label Password
+            input(type="password")
+
+          +b.field(class="--white")
+            label Confirm Password
+            input(type="password")
+
+          +b.field
+            // .checkbox--error
+            +b.LABEL.checkbox
+              input(type="checkbox")
+              +e.SPAN.content I have read and agreed to the <a href="#" target="_blank">Terms of Service</a> & <a href="#" target="_blank">Privacy Policy</a>.
+
+          +e.buttons
+              +b.BUTTON(class="btn --white --icon --small-radius")
+                img(src="img/icons/check.svg", alt="")
+                span Create E-wallet
+      +e.bottom
+        ul
+          li
+            a(href="page-index.html") Home page
+        
+        ul
+          li
+            a(href="login.html") Already have a wallet?
+    
+    +e.footer
+      .container
+        +e.P.copyright © 2019 E-wallet.io. All rights reserved.
+        a(href="#") Private policy

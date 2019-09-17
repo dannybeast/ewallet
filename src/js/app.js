@@ -12,6 +12,7 @@ import './components/animations';
 import './components/navigation';
 import './components/supports';
 import './components/modals';
+import './components/custom-modal';
 import './components/scrollTo';
 import {
   showSuccess,
@@ -22,13 +23,44 @@ import {
 $(document).ready(function () {
   $('img[data-src]').lazyload();
 
-
   // accordion
   $('.js-accordion').accordion({
     header: '> div > h4',
     collapsible: true,
     active: false,
     heightStyle: 'content'
+  });
+  //-
+
+
+  // js-about-carousel
+  $('.js-about-carousel').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    prevArrow: $('.about .arrow-prev'),
+    nextArrow: $('.about .arrow-next'),
+    responsive: [{
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2
+      }
+    }, {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1
+      }
+    }]
+  });
+  //-
+
+  //
+  $('.notebook__slider').slick({
+    fade: true,
+    autoplay: true,
+    pauseOnHover: false,
+    speed: 800,
+    arrows: false
   });
   //-
 
@@ -40,8 +72,21 @@ $(document).ready(function () {
   });
   //-
 
-
+  // scrollbar
   $('.js-scrollbar').scrollbar();
+  //-
+
+  // open languages
+  $('.language-module').click(function () {
+    $(this).toggleClass('open');
+  });
+  $(document).mouseup(function (e) {
+    var div = $('.language-module');
+    if (!div.is(e.target) && div.has(e.target).length === 0) {
+      $('.language-module').removeClass('open');
+    }
+  });
+  //-
 
   // intro slider
   $('.slider-left').slick({
@@ -51,8 +96,8 @@ $(document).ready(function () {
     vertical: true,
     infinite: false,
     asNavFor: '.slider-right',
-    prevArrow: $('.intro-slide__prev'),
-    nextArrow: $('.intro-slide__next')
+    prevArrow: $('.intro-slide .arrow-prev'),
+    nextArrow: $('.intro-slide .arrow-next')
   });
   $('.slider-right').slick({
     slidesToShow: 1,

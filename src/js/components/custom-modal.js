@@ -4,12 +4,12 @@
     let currentWindow = $(this).attr('data-modal-id');
     $('.modal').removeClass('active');
     $('div.modal[id="' + currentWindow + '"]').addClass('active');
-    $('body').addClass('overflow-bg');
+    $('body').addClass('overflow');
   });
   $('.js-hide-modal').click(function (e) {
     e.preventDefault();
     $('.modal').removeClass('active');
-    $('body').removeClass('overflow-bg');
+    $('body').removeClass('overflow');
   });
   // $(document).mouseup(function(e) {
   //   var div = $('.modal__block');

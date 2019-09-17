@@ -1,0 +1,52 @@
+---
+title: eWallet
+---
+extends layouts/_layout
+
+block variables 
+    - var pageName = "2fa"
+
+block content
+
+  +b.modal.active#2fa
+    +e.header
+      
+      +e.A(href="page-index.html" class="logo")
+        img(src="img/logo.png", alt="e-wallet")
+      
+      include partials/_language
+      
+      +b.top-buttons
+        p Don't have a wallet?
+        a(href="signup.html" class="color-accent") Create one now
+    +b.gr-block
+      +e.content
+        form
+          +e.H3.title 2FA Autentification
+
+          +b.auth-desc
+              img(src="img/2fa.png", alt="")
+              p Enter your 6-digit code in Google Authentication Code
+
+          +b.field(class="--white")
+              label Enter code
+              input(type="text")
+                
+          +e.buttons
+              +b.BUTTON(class="btn --white --icon --small-radius")
+                img(src="img/icons/lock.svg", alt="")
+                span Login E-wallet
+      +e.bottom
+        ul
+          li
+            a(href="signup.html") Don’t have a wallet?
+          li
+            a(href="page-index.html") Home page
+        
+        ul
+          li
+            a(href="remind.html" ) Forgot password?
+    +e.footer
+      .container
+        +e.P.copyright © 2019 E-wallet.io. All rights reserved.
+        a(href="#") Private policy

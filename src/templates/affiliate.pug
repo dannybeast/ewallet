@@ -20,7 +20,7 @@ block content
                     +e.text
                         p Earn up to 100% commission. for life. The world’s first regulated tokenised securities exchange.
                     +e.buttons
-                        +b.A(href="#", class="btn --gr-blue")
+                        +b.A(href="signup.html", class="btn --gr-blue")
                             span Create a wallet
                 +e.col
                     +e.image
@@ -73,21 +73,9 @@ block content
     +b.SECTION.create.section
         .container
             +e.buttons
-                +b.A(href="#", class="btn --gr-blue --large") 
+                +b.A(href="signup.html", class="btn --gr-blue --large") 
                     span TO CREATE A WEB WALLET NOW
     //
-    +b.SECTION.social-icons.section
-        .container
-        +b.H3.section-title Follow us on social media
-        +e.UL.list
-            +e.LI
-            +e.A(href="#")
-                img(src="img/social/1.png", alt="")
-            +e.LI
-            +e.A(href="#")
-                img(src="img/social/telegram.svg", alt="")
-            +e.LI
-            +e.A(href="#")
-                img(src="img/social/twitter.svg", alt="")
+    include partials/_social
     //
     +footer()

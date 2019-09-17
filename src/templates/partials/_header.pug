@@ -1,3 +1,4 @@
+
 mixin nav()
   ul
     li(class=(pageName === "page-index" ? " active" : undefined))
@@ -13,14 +14,14 @@ mixin nav()
 
 mixin buttons()
   +b.top-buttons
-    a(data-modal-id="login" class="js-custom-modal") Login
-    a(data-modal-id="signup" class="color-accent js-custom-modal") Sign Up
+    a(href="login.html") Login
+    a(href="signup.html" class="color-accent") Sign Up
 
 mixin social()
   +b.UL.top-social
     li
       a(href="#")
-        img(src="img/social/1.png", alt="")
+        img(src="img/social/1.svg", alt="")
     li
       a(href="#")
         img(src="img/social/telegram.svg", alt="")
@@ -33,20 +34,14 @@ mixin header(itemClass)
     .container
       +e.row
         +e.A(href="page-index.html").logo
-          img(src="img/logo.png", alt="")
+          img(src="img/logo.png", alt="e-wallet")
         
         +e.NAV.nav
           +nav()
         
         +social()
         
-        +b.language-module
-          +e.current En
-          +e.UL.dropdown
-            li
-              a(href="#") Ru
-            li
-              a(href="#") Cz
+        include ./_language
 
         +buttons()
         

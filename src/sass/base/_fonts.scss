@@ -1,29 +1,29 @@
 // Comfortaa
+
 @font-face {
   font-family: 'Comfortaa';
-  src: url('../fonts/Comfortaa/comfortaa-regular-webfont.woff') format('woff');
+  src: url('../fonts/Comfortaa/hinted-Comfortaa-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('../fonts/Comfortaa/Comfortaa-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
   font-family: 'Comfortaa';
-  src: url('../fonts/Comfortaa/comfortaa-bold-webfont.woff') format('woff');
+  src: url('../fonts/Comfortaa/hinted-Comfortaa-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
-
-@font-face {
-  font-family: 'Comfortaa';
-  src: url('../fonts/Comfortaa/hinted-Comfortaa-Light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
 
 // Noto Sans
 @font-face {

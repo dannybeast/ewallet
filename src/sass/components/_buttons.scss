@@ -26,33 +26,19 @@
     &--gr-blue {
         @extend .gr-blue;
         color: #fff !important;
-        text-shadow: 2px 2px #0B577A;
+        //text-shadow: 2px 2px #0B577A;
         overflow: hidden;
+        opacity: 0.75;
 
         span {
             position: relative;
             z-index: 2;
         }
 
-        &:after {
-            content: '';
-            width: 50%;
-            height: 70px;
-            border-radius: 50%;
-            background: rgba(0, 85, 165, 0.219);
-            position: absolute;
-            top: 100%;
-            left: -70px;
-            transition: all 1s ease;
-        }
 
         &:hover {
             color: #fff;
-            opacity: 0.9;
-
-            &:after {
-                transform: scale(7);
-            }
+            opacity: 1;
         }
     }
 
@@ -91,6 +77,17 @@
         @include media-breakpoint-down(sm) {
             font-size: 16px;
             padding: .65em 1.9em;
+        }
+    }
+
+    &--white {
+        background: #fff;
+        color: #005fa8;
+        transition: all .1s ease;
+
+        &:hover {
+            background: #003762;
+            color: #fff;
         }
     }
 
