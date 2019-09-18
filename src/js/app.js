@@ -3,8 +3,18 @@ import 'lazyload/lazyload.min';
 import './lib/jquery-ui.min';
 import './lib/scrollbar/jquery.scrollbar.min';
 import 'slick-slider';
+import 'jquery.inputmask/dist/jquery.inputmask.bundle';
+
 // polyfills
 import 'svgxuse';
+
+
+// Маски
+$('.js-mask-code').inputmask('mask', {
+  'mask': '999999',
+  'placeholder': '______'
+});
+
 
 // components
 import './components/ieDetect';
