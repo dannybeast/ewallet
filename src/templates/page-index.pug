@@ -1,5 +1,5 @@
 ---
-title: eWallet
+title: Портал дистанционного цифрового дополнительного образования Белгородской области
 ---
 extends layouts/_layout
 include partials/_header
@@ -12,333 +12,76 @@ block content
   //
   +header()
   //
+  mixin category(link, src, name)
+    +b.A(href=link).category-item
+      +e.icon
+        img(src=src, alt="")
+      span name
+
   +b.SECTION.intro.section
     .container
-      +e.H2.subtitle The World’s first wallet thaht pays
-      +e.H1.title WHILE YOU KEEP YOUR MONEY IN IT!
-      
-      +b.intro-slide
-        .arrow-prev
-        .arrow-next
-        +e.slider.slider-left
-          div
-            p 
-              strong 1-10 
-              span.color-gray days
-          div
-            p 
-              strong 11-20 
-              span.color-gray days
-          div
-            p 
-              strong 21-30 
-              span.color-gray days
-          div
-            p 
-              strong 31-40 
-              span.color-gray days
-          div
-            p 
-              strong 41+ 
-              span.color-gray days
-
-        +b.notebook
-          +e.slider
-            div
-              img(src="img/intro/1.jpg", alt="")
-            div
-              img(src="img/intro/2.jpg", alt="")
-            div
-              img(src="img/intro/3.jpg", alt="")
-          img(src="img/intro/notebook.png", alt="")
-
-        +e.slider.slider-right
-          div
-            p 
-              strong 0.2% profits <br>
-              span.color-gray every day
-          div
-            p 
-              strong 0.3% profits <br>
-              span.color-gray every day
-          div
-            p 
-              strong 0.4% profits <br>
-              span.color-gray every day
-          div
-            p 
-              strong 0.5% profits <br>
-              span.color-gray every day
-          div
-            p 
-              strong 1% profits <br>
-              span.color-gray every day
-
-      +e.buttons
-        +b.A(href="signup.html" class="btn --gr-blue") 
-          span Create a wallet 
-        +e.P.desc and make a profit every day!
-      
-      +e.A(class="mouse js-scrollTo" data-scrollTo="#watch")
-        +icon('mouse')
-  //
-  +b.SECTION.watch.section#watch
-    .container
-      +e.H3.title THE PURSE PAYS YOU THE COMMISSION!
-      +e.buttons
-        +b.A(href="https://youtu.be/HNLWJxMD67c", class="btn --line-blue --icon js-modal") 
-          img(src="img/icons/play.svg", alt="")
-          span WATCH VIDEO
-  //
-  +b.SECTION.about.section
-    .container
-      +b.H3.section-title Media about us
       +e.row
-        .arrow-prev
-        .js-about-carousel
-        
-          +b.about-item
-            +e.icon
-              img(src="img/about/about-icon.png", alt="")
-            +e.logo
-              img(src="img/about/1.png", alt="")
-            +e.desc
-              p VanEck, SolidX to Offer Limited Bitcoin ETF for Institutions Via Exemption
-        
-          +b.about-item
-            +e.icon
-              img(src="img/about/about-icon.png", alt="")
-            +e.logo
-              img(src="img/about/2.png", alt="")
-            +e.desc
-              p Bitcoin Dominance Hits 70% as Keiser Warns Altcoins ‘Not Coming Back’
-        
-          +b.about-item
-            +e.icon
-              img(src="img/about/about-icon.png", alt="")
-            +e.logo
-              img(src="img/about/3.png", alt="")
-            +e.desc
-              p Dutch Central Bank: Crypto Firms to Be Regulated as of January 2020
-        
-          +b.about-item
-            +e.icon
-              img(src="img/about/about-icon.png", alt="")
-            +e.logo
-              img(src="img/about/3.png", alt="")
-            +e.desc
-              p Dutch Central Bank: Crypto Firms to Be Regulated as of January 2020
-        .arrow-next
-  //
-  +b.SECTION.advantages.section
+        +e.UL.list
+          +e.LI
+            +category('#', 'img/icons/pencil.svg', 'Художественная направленность')
+          +e.LI
+            +category('#', 'img/icons/architecture.svg', 'Техническая направленность')
+          +e.LI
+            +category('#', 'img/icons/team.svg', 'Социально-педагогическая направленность')
+          +e.LI
+            +category('#', 'img/icons/strategy.svg', 'Физкультурно-спортивная направленность')
+          +e.LI
+            +category('#', 'img/icons/flasks.svg', 'Естественнонаучная направленность')
+          +e.LI
+            +category('#', 'img/icons/trip.svg', 'Туристско-краеведческая направленность')
+        +e.image
+          img(src="img/intro/lion.png", alt="")
+  
+  +b.SECTION.content-and-media.section
     .container
-      +b.H3.section-title OUR ADVANTAGES
+      +e.row(class="--media-comment")
+        +e.media
+          +e.comment
+            p Любой желающий может записаться на курсы дистанционного цифрового образования, вести дневник обучения, просматривать занятия, видеть результаты и достижения.
+          img(src="img/main/lion.png", alt="")
+        +e.content
+          .typography
+            h3 Туристско-краеведческая направленность
+            p cпособствует всестороннему развитию личности ребенка, направлена на совершенствование его интеллектуального, духовного и физического потенциала; способствует изучению родной страны и ее исторического и культурного наследия, приобретению навыков проектной деятельности, развитию самостоятельности, выносливости, познавательных процессов; получению опыта работы в коллективе и социализации в обществе, безопасного общения с природной средой.
+      +e.row(class="--media-right")
+        +e.media
+          img(src="img/main/lion.png", alt="")
+        +e.content
+          .typography
+            h3 Естественнонаучная направленность
+            p ориентирована на становление у детей и молодежи научного мировоззрения, освоение методов познания мира.  Дети учатся находить и обобщать нужную информацию, действовать в нестандартных ситуациях, работать в команде, получают навыки критического восприятия информации, развивают способность к творчеству, наблюдательность, любознательность, изобретательность.
       +e.row
-        +e.col
-          +b.advantages-item
-            +e.icon
-              img(src="img/icons/001-zero.svg", alt="")
-            +e.P.title zero commissions
-            +e.desc
-              p VanEck, SolidX to Offer Limited Bitcoin ETF for Institutions 
-        +e.col
-          +b.advantages-item
-            +e.icon
-              img(src="img/icons/002-transfer.svg", alt="")
-            +e.P.title instant transfers
-            +e.desc
-              p VanEck, SolidX to Offer Limited Bitcoin ETF for Institutions 
-        +e.col
-          +b.advantages-item
-            +e.icon
-              img(src="img/icons/003-profit.svg", alt="")
-            +e.P.title Passive<br> profit
-            +e.desc
-              p VanEck, SolidX to Offer Limited Bitcoin ETF for Institutions 
-        +e.col
-          +b.advantages-item
-            +e.icon
-              img(src="img/icons/004-security.svg", alt="")
-            +e.P.title safety and reliability
-            +e.desc
-              p VanEck, SolidX to Offer Limited Bitcoin ETF for Institutions 
-        +e.col
-          +b.advantages-item
-            +e.icon
-              img(src="img/icons/006-idea.svg", alt="")
-            +e.P.title New<br> options
-            +e.desc
-              p VanEck, SolidX to Offer Limited Bitcoin ETF for Institutions 
-        +e.col
-          +b.advantages-item
-            +e.icon
-              img(src="img/icons/005-technical-support.svg", alt="")
-            +e.P.title open<br> technology
-            +e.desc
-              p VanEck, SolidX to Offer Limited Bitcoin ETF for Institutions 
-        +e.col
-          +b.advantages-item
-            +e.icon
-              img(src="img/icons/007-volume-control.svg", alt="")
-            +e.P.title Full control over their funds
-            +e.desc
-              p VanEck, SolidX to Offer Limited Bitcoin ETF for Institutions 
-  //
-  +b.SECTION.top100.section
-    mixin tr()
-      tr
-        td 1
-        td 
-          +b.currency
-            span Bitcoin
-            img(src="img/currency/btc.png", alt="")
-        td $189 161 322 136
-        td $10 558,88
-        td $18 577 322 957
-        td 17 914 912 BTC
-        td
-          +b.status(class="--green") +1,61%
-        td
-          +b.graph
-            img(src="img/graph.png", alt="")
-      tr
-        td 2
-        td 
-          +b.currency
-            span Etherium
-            img(src="img/currency/eth.png", alt="")
-        td $189 161 322 136
-        td $10 558,88
-        td $18 577 322 957
-        td 17 914 912 BTC
-        td
-          +b.status(class="--red") -6,55%
-        td
-          +b.graph
-            img(src="img/graph.png", alt="")
-      tr
-        td 3
-        td 
-          +b.currency
-            span Bitcoin
-            img(src="img/currency/btc.png", alt="")
-        td $189 161 322 136
-        td $10 558,88
-        td $18 577 322 957
-        td 17 914 912 BTC
-        td
-          +b.status(class="--green") +1,55%
-        td
-          +b.graph
-            img(src="img/graph.png", alt="")
-    .container
-      +b.H3.section-title Top 100 Cryptocurrencies
-      +e.imac
-        +e.wrap
-          +b.top-table.js-scrollbar
-            table
-              thead
-                tr
-                  th #
-                  th Name
-                  th Market cap
-                  th Price
-                  th Volume (24H)
-                  th Circulating supply
-                  th c change (24h)
-                  th i price graph (7d)
-              tbody
-                +tr()
-                +tr()
-                +tr()
-
-        img(src="img/top100/imac.png", alt="")
-  //
-  +b.SECTION.coming.section
-    .container
-      +e.H3.title EWALLET COIN COMING SOON
-      +e.image
-        img(src="img/coming/coin.png", alt="")
-      +e.text
-        p That we have big plans for the future and soon we will issue our token, which will be traded on all major crypto-currency exchanges of the world!
-  //
-  +b.SECTION.apps.section
-    .container
+        +e.media
+          img(src="img/main/lion.png", alt="")
+        +e.content
+          .typography
+            h3 Физкультурно-спортивная направленность
+            p обеспечивает развитие не только физических способностей, но и таких качеств детей, как благородство, рассудительность, честность, доброта, вежливость; а также воспитание чувства патриотизма, уважения друг к другу и к старшим.
+      +e.row(class="--media-right")
+        +e.media
+          img(src="img/main/lion.png", alt="")
+        +e.content
+          .typography
+            h3 Художественная направленность
+            p играет важную роль в личностном развитии детей, оказывает позитивное воздействие на эмоциональную сферу ребенка, развивает его воображение, творческое мышление, формирует нравственное самосознание. Выбирая художественную направленность, дети выбирают свободу выражения, полет фантазии, преодолевают застенчивость, скованность,  соприкасаются с достижениями мировой цивилизации, а значит - поднимают свой культурный уровень.
       +e.row
-        +e.col
-          +e.phone
-            img(src="img/apps/phone.png", alt="")
-        +e.col
-          +b.H3.section-title DOWNLOAD APPLICATION <br> ON IOS and ANDROID
-          +e.UL.list
-            li
-              a(href="#", class="js-coming-app")
-                img(src="img/apps/appstore.png", alt="")
-            li
-              a(href="#", class="js-coming-app")
-                img(src="img/apps/google_play.png", alt="")
-          +e.P.subtitle COMING SOON
-  //
-  +b.SECTION.faq.section
-    .container
-      +b.H3.section-title frequently asked questions
-      
-      +b.faq-answers.js-accordion
-        
-        +e.block
-          +e.H4.title 
-            span Can I use an old code from the previous campaign for inviting referrals?
-          +e.content
-            .typography
-              p That we have big plans for the future and soon we will issue our token, which will be traded on all major crypto-currency exchanges of the world!
-        
-        +e.block
-          +e.H4.title How does the referral programme work?
-            span 
-          +e.content
-            .typography
-              p That we have big plans for the future and soon we will issue our token, which will be traded on all major crypto-currency exchanges of the world!
-        +e.block
-          +e.H4.title How much commission will I receive as part of the referral programme?
-            span 
-          +e.content
-            .typography
-              p That we have big plans for the future and soon we will issue our token, which will be traded on all major crypto-currency exchanges of the world!
+        +e.media
+          img(src="img/main/lion.png", alt="")
+        +e.content
+          .typography
+            h3 Техническая направленность
+            p ориентирована на развитие интереса детей к инженерно-техническим и информационным технологиям, научно-исследовательской и конструкторской деятельности. Обучение по программам технической направленности способствует развитию технических и творческих способностей, формированию логического мышления, умения анализировать и конструировать.
+      +e.row(class="--media-right")
+        +e.media
+          img(src="img/main/lion.png", alt="")
+        +e.content
+          .typography
+            h3 Социально-педагогическая направленность
+            p основные задачи программ данной направленности: духовно- нравственное и гражданско-патриотическое воспитание, социальная адаптация, развитие патриотических чувств, раскрытие творческого потенциала детей.
 
-        +e.block
-          +e.H4.title Can I deposit funds and trade before my account is verified?
-            span 
-          +e.content
-            .typography
-              p That we have big plans for the future and soon we will issue our token, which will be traded on all major crypto-currency exchanges of the world!
-        
-        +e.block
-          +e.H4.title How can I change the address I entered during registration?
-            span 
-          +e.content
-            .typography
-              p That we have big plans for the future and soon we will issue our token, which will be traded on all major crypto-currency exchanges of the world!
-        
-        +e.block
-          +e.H4.title Is 2FA mandatory?
-            span 
-          +e.content
-            .typography
-              p That we have big plans for the future and soon we will issue our token, which will be traded on all major crypto-currency exchanges of the world!
-         
-        +e.block
-          +e.H4.title How do you deal with corporate actions?
-            span 
-          +e.content
-            .typography
-              p That we have big plans for the future and soon we will issue our token, which will be traded on all major crypto-currency exchanges of the world!
-  // 
-  +b.SECTION.create.section
-    .container
-      +e.buttons
-        +b.A(href="signup.html", class="btn --gr-blue --large") 
-          span TO CREATE A WEB WALLET NOW
-  //
-  include partials/_social
-  //
   +footer()

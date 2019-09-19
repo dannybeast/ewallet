@@ -1,51 +1,128 @@
-// Comfortaa
-
-@font-face {
-  font-family: 'Comfortaa';
-  src: url('../fonts/Comfortaa/hinted-Comfortaa-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Comfortaa';
-  src: url('../fonts/Comfortaa/Comfortaa-Light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Comfortaa';
-  src: url('../fonts/Comfortaa/hinted-Comfortaa-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-
 // Noto Sans
 @font-face {
-  font-family: 'NotoSans';
-  src: url('../fonts/NotoSans/hinted-NotoSans.woff') format('woff');
+  font-family: 'Noto Sans';
+  src: url('/fonts/NotoSans/hinted-NotoSans-Italic.woff') format('woff');
   font-weight: normal;
-  font-style: normal;
+  font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'NotoSans';
-  src: url('../fonts/NotoSans/NotoSans-Light.woff') format('woff');
+  font-family: 'Noto Sans';
+  src: url('/fonts/NotoSans/hinted-NotoSans-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'NotoSans';
-  src: url('../fonts/NotoSans/hinted-NotoSans-Bold.woff') format('woff');
+  font-family: 'Noto Sans ExtBd';
+  src: url('/fonts/NotoSans/hinted-NotoSans-ExtraBoldItalic.woff') format('woff');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('/fonts/NotoSans/hinted-NotoSans-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('/fonts/NotoSans/hinted-NotoSans-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans ExtLt';
+  src: url('/fonts/NotoSans/hinted-NotoSans-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('/fonts/NotoSans/hinted-NotoSans-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans Med';
+  src: url('/fonts/NotoSans/hinted-NotoSans-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans SemBd';
+  src: url('/fonts/NotoSans/hinted-NotoSans-SemiBoldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+// @font-face {
+//   font-family: 'Noto Sans Blk';
+//   src: url('/fonts/NotoSans/hinted-NotoSans-Black.woff') format('woff');
+//   font-weight: 900;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+@font-face {
+  font-family: 'Noto Sans Med';
+  src: url('/fonts/NotoSans/hinted-NotoSans-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('/fonts/NotoSans/hinted-NotoSans-Bold.woff') format('woff');
   font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+// @font-face {
+//   font-family: 'Noto Sans';
+//   src: url('/fonts/NotoSans/hinted-NotoSans-BoldItalic.woff') format('woff');
+//   font-weight: bold;
+//   font-style: italic;
+//   font-display: swap;
+// }
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('/fonts/NotoSans/hinted-NotoSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+// @font-face {
+//   font-family: 'Noto Sans ExtBd';
+//   src: url('/fonts/NotoSans/hinted-NotoSans-ExtraBold.woff') format('woff');
+//   font-weight: 800;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+@font-face {
+  font-family: 'Noto Sans SemBd';
+  src: url('/fonts/NotoSans/hinted-NotoSans-SemiBold.woff') format('woff');
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
