@@ -1,0 +1,81 @@
+---
+title: eWallet
+---
+extends layouts/_layout
+include partials/_header
+include partials/_footer
+
+block variables 
+    - var pageName = "affiliate"
+
+block content
+    //
+    +header()
+    //
+    +b.SECTION.page-intro
+        .container
+            +e.row
+                +e.col
+                    +b.H1.section-title A CRYPTO AFFILIATE PROGRAMME YOU’LL WANT TO SHOUT ABOUT
+                    +e.text
+                        p Earn up to 100% commission. for life. The world’s first regulated tokenised securities exchange.
+                    +e.buttons
+                        +b.A(href="signup.html", class="btn --gr-blue")
+                            span Create a wallet
+                +e.col
+                    +e.image
+                        img(src="img/affiliate.png", alt="")
+    // 
+    +b.ARTICLE.white.section
+        .container
+            //
+            +b.SECTION.typography(class="--center").section
+                +e.text
+                    p 
+                        strong A crypto affiliate programme you’ll want to shout about. earn up to 60% commission. for life. the world’s first regulated tokenised securities exchange.
+                    p A crypto affiliate programme you’ll want to shout about. earn up to 60% commission. for life. the world’s first regulated tokenised securities exchange. A crypto affiliate programme you’ll want to shout about. earn up to 60% commission. for life. the world’s first regulated tokenised securities exchange.
+
+            //
+            +b.SECTION.advantages.section
+              
+                +b.H3.section-title OUR ADVANTAGES
+                +e.row
+                    +e.col
+                        +b.advantages-item
+                            +e.icon
+                                img(src="img/icons/001-zero.svg", alt="")
+                            +e.P.title zero commissions
+                            +e.desc
+                                p VanEck, SolidX to Offer Limited Bitcoin ETF for Institutions 
+                    +e.col
+                        +b.advantages-item
+                            +e.icon
+                                img(src="img/icons/002-transfer.svg", alt="")
+                            +e.P.title instant transfers
+                            +e.desc
+                                p VanEck, SolidX to Offer Limited Bitcoin ETF for Institutions 
+                    +e.col
+                        +b.advantages-item
+                            +e.icon
+                                img(src="img/icons/003-profit.svg", alt="")
+                            +e.P.title Passive<br> profit
+                            +e.desc
+                                p VanEck, SolidX to Offer Limited Bitcoin ETF for Institutions 
+                    +e.col
+                        +b.advantages-item
+                            +e.icon
+                                img(src="img/icons/004-security.svg", alt="")
+                            +e.P.title safety and reliability
+                            +e.desc
+                                p VanEck, SolidX to Offer Limited Bitcoin ETF for Institutions 
+
+    // 
+    +b.SECTION.create.section
+        .container
+            +e.buttons
+                +b.A(href="signup.html", class="btn --gr-blue --large") 
+                    span TO CREATE A WEB WALLET NOW
+    //
+    include partials/_social
+    //
+    +footer()

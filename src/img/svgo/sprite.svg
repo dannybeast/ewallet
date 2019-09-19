@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-mouse" viewBox="0 0 300 512">
+    <path d="M150.6 0C67.6 0 0 67.6 0 150.6v210.8C0 444.4 67.6 512 150.6 512s150.6-67.6 150.6-150.6V150.6C301.2 67.6 233.6 0 150.6 0zm119.9 361.4c0 66.1-53.8 119.9-119.9 119.9S30.7 427.5 30.7 361.4V150.6c0-66.1 53.8-119.9 119.9-119.9s119.9 53.8 119.9 119.9v210.8z"/>
+    <path d="M150.6 101.9c-8.5 0-15.4 6.9-15.4 15.4V188c0 8.5 6.9 15.4 15.4 15.4S166 196.5 166 188v-70.7c0-8.6-6.9-15.4-15.4-15.4z"/>
+</symbol></svg>

@@ -1,39 +1,61 @@
+
 mixin nav()
   ul
-    li
-      a(href="#") Онлайн-курсы
-    li
-      a(href="#") Вебинары
-    li
-      a(href="#") Тестирование
-    li
-      a(href="#") Контакты
+    li(class=(pageName === "page-index" ? " active" : undefined))
+      a(href="page-index.html") Home
+    li(class=(pageName === "paper" ? " active" : undefined))
+      a(href="page-index.html") White papper
+    li(class=(pageName === "affiliate" ? " active" : undefined))
+      a(href="affiliate.html") Affiliate program
+    li(class=(pageName === "faq" ? " active" : undefined))
+      a(href="page-index.html") FAQ
+    li(class=(pageName === "support" ? " active" : undefined))
+      a(href="support.html") Support
 
+mixin buttons()
+  +b.top-buttons
+    a(href="login.html") Login
+    a(href="signup.html" class="color-accent") Sign Up
+
+mixin social()
+  +b.UL.top-social
+    li
+      a(href="#")
+        img(src="img/social/1.svg", alt="")
+    li
+      a(href="#")
+        img(src="img/social/telegram.svg", alt="")
+    li
+      a(href="#")
+        img(src="img/social/twitter.svg", alt="")
 mixin header(itemClass)
+
   +b.HEADER.header(class=itemClass)
-
-    +e.UL.icons
-      li
-        a(href="#")
-          +icon('eye')
-      li
-        a(href="#")
-          +icon('search')
-
     .container
       +e.row
-
         +e.A(href="page-index.html").logo
-          img(src="img/logo/logo-white.png", alt="e-wallet")
-          h2 Портал дистанционного цифрового дополнительного образования Белгородской области
+          img(src="img/logo.png", alt="e-wallet")
         
         +e.NAV.nav
           +nav()
+        
+        +social()
+        
+        include ./_language
 
-        +e.buttons
-          +b.A(href="#", class="btn --line-white")
-            +icon('lock')
-            span Вход
-          +b.A(href="#", class="btn --line-white")
-            +icon('user')
-            span Регистрация
+        +buttons()
+        
+        .menu-button
+          span
+          span
+          span
+  
+  //
+  +b.mobile-menu
+    .container
+      +e.top
+        +buttons()
+      +e.NAV.nav
+        +nav()
+
+      +social()

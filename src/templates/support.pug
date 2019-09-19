@@ -1,0 +1,81 @@
+---
+title: eWallet
+---
+extends layouts/_layout
+include partials/_header
+include partials/_footer
+
+block variables 
+    - var pageName = "support"
+
+block content
+    //
+    +header()
+    //
+    +b.SECTION.page-intro
+        .container
+            +e.row
+                +e.col
+                    +b.H1.section-title SUPPORT
+                    +e.text
+                        p At e-wallet.io, we’ve built the Fort Knox of cryptocurrency to guarantee the safety of your holdings – it’s our priority.
+    // 
+    +b.ARTICLE.white.section
+        .container
+            //
+            +b.SECTION.contact-items.section
+                +e.row
+                    +e.col
+                        +b.contact-item
+                            +e.icon
+                                img(src="img/icons/email.svg", alt="")
+                            +e.P.title Contact e-mail
+                            a(href="#") info@e-wallet.io
+                    +e.col
+                        +b.contact-item
+                            +e.icon
+                                img(src="img/icons/telegram.svg", alt="")
+                            +e.P.title telegram account
+                            a(href="#") @e-wallet.io
+                    +e.col
+                        +b.contact-item
+                            +e.icon
+                                img(src="img/icons/chat.svg", alt="")
+                            +e.P.title WeChat account
+                            a(href="#") @e-wallet.io
+            //
+            +b.SECTION.form.section
+                +e.FORM.wrap
+                    +e.H3.title Feedback form
+                    +e.desc
+                        p At e-wallet.io, we’ve built the Fort Knox of cryptocurrency to guarantee the safety of your holdings – it’s our priority.
+                    .row
+                        .col-md-4
+                            +b.field
+                                label Your e-mail
+                                input(type="text")
+                        .col-md-4
+                            +b.field(class="--error")
+                                label Phone number
+                                input(type="text")
+                        .col-md-4
+                            +b.field
+                                label Name
+                                input(type="text")
+                        .col-md-12
+                            +b.field
+                                label Message
+                                textarea
+                    +e.buttons
+                        +b.BUTTON(class="btn --gr-blue") 
+                            span Send message
+    // 
+    +b.SECTION.create.section
+        .container
+            +e.buttons
+                +b.A(href="signup.html", class="btn --gr-blue --large") 
+                    span TO CREATE A WEB WALLET NOW
+    //
+    include partials/_social
+    //
+    +footer()

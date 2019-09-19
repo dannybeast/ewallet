@@ -7,20 +7,12 @@ html
     include _head
 
   body(class=bodyClass)
-    
     +b.loader
       +e.inside
         img(src="img/loader.svg", alt="")
-    
+      
     block content
 
-
-    // Feedback
-    +b.feedback Обратная связь
-
-    // Windows
     include ../windows/index
-    
-    // Scripts
     block scripts
       script(defer type="text/javascript" src="js/app.js")

@@ -135,7 +135,7 @@ body {
     font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: $main-font;
+    font-family: $accent-font;
     line-height: 1.4;
     letter-spacing: 3.15px;
 
@@ -204,7 +204,7 @@ b {
 .h5,
 .h6 {
     font-weight: $heading-font-weight;
-    font-family: $main-font;
+    font-family: $accent-font;
 }
 
 .h1 {

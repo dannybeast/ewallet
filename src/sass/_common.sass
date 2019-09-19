@@ -6,8 +6,8 @@ body
   min-height: 100%
 
 body
-	background: #fff
-	color:#000
+	background: #000
+	color:#fff
 	font-size: $fz
 	font-family: $main-font
 	line-height: 1.4
@@ -39,6 +39,27 @@ body
 
 .section
 	margin: 45px 0
+
+
+.footer-links 
+	li 
+		display: inline-block
+		vertical-align: top
+		margin-left: 30px
+		&:first-child 
+				margin-left: 0
+	a 
+		color: #fff
+		opacity: 0.5
+		text-decoration: underline
+		&:hover 
+				opacity: 1
+
+	@include media-breakpoint-down(sm)
+		text-align: center
+		margin-bottom: -10px
+		li
+			margin: 0 10px 10px
 
 .text-right
 	text-align: right
