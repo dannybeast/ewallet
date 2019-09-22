@@ -1,0 +1,13 @@
+mixin lk-top(hasTitle)
+    +b.SECTION.lk-top
+        +e.buttons
+            +b.A(href="#", class="btn --square-light")
+                +icon('send')
+                span Send
+            +b.A(href="#", class="btn --square-gray")
+                +icon('request')
+                span Request  
+        +b.balance-module
+            if hasTitle
+                +e.P.title Total balance:
+            +e.P.count $121.12

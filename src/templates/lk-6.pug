@@ -1,0 +1,46 @@
+---
+title: eWallet
+---
+extends layouts/_layout-lk
+include partials/_lk-top
+block variables 
+  - var pageName = "lk-6"
+
+block content
+
+    +lk-top()
+
+    +b.H3.lk-title Debit card
+
+    +b.SECTION.debit.lk-block
+        +e.P.title Debit card issue linked to wallet balance <span class="color-blue">coming soon</span> 
+        +e.media
+            img(src="img/lk/debit.png", alt="")
+
+    +b.H3.lk-title Fill the form to take the card
+
+    +b.FORM.lk-form
+        +b.lk-block
+            // .field--error
+            +b.field
+                label Name
+                input(type="text")
+            +b.field
+                label Surname
+                input(type="text")
+            +b.field
+                label Address 1
+                input(type="text")
+            +b.field
+                label Address 2
+                input(type="text")
+            +b.field
+                label Country
+                input(type="text")
+            +b.field
+                label City
+                input(type="text")
+            +b.field
+                label ZIP code
+                input(type="text")
+        +b.BUTTON.btn(class="--square-gr") Send Request

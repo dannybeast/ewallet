@@ -1,0 +1,75 @@
+.language-module {
+    position: relative;
+    color: #8c8c8c;
+    font-size: 11px;
+    $parent: &;
+    position: relative;
+    z-index: 5;
+    transition: all .2s ease;
+
+    &__current {
+        cursor: pointer;
+        position: relative;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 10px;
+
+        &:after {
+            content: "";
+            width: 5px;
+            height: 5px;
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            margin: 0 0 0 5px;
+            border-bottom: 1px solid #8c8c8c;
+            border-right: solid 1px #8c8c8c;
+            transform: translateY(-60%) rotate(45deg);
+        }
+
+        &:hover {
+            color: #fff;
+
+            &:after {
+                border-color: #fff;
+            }
+        }
+    }
+
+    &__dropdown {
+        position: absolute;
+        top: 100%;
+        left: -1px;
+        width: 30px;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        background: #000;
+        transition: all 0.3s ease;
+
+        a {
+            width: 100%;
+            padding: 3px 5px;
+            display: block;
+            border: solid 1px #fff;
+            color: #fff !important;
+            margin-bottom: -1px;
+
+            &:hover {
+                background: $color-1;
+                color: #000 !important;
+            }
+        }
+
+        // display: none;
+    }
+
+    &.open {
+        #{$parent}__dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+        }
+    }
+}

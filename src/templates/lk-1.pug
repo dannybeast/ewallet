@@ -1,0 +1,100 @@
+---
+title: eWallet
+---
+extends layouts/_layout-lk
+include partials/_lk-top
+block variables 
+  - var pageName = "lk-1"
+
+block content
+
+    +lk-top('has-title')
+
+    +b.H3.lk-title Account summary
+
+    +b.SECTION.lk-row
+      
+      +e.col
+        +b.statistic.lk-block
+
+          +e.row
+            +e.currency
+              +e.icon
+                img(src="img/currency/btc-lg.png", alt="")
+              span Bitcoin
+            +e.counts
+              p
+                strong 0.0451 BTC
+              p $113.04
+
+          +e.row
+            +e.currency
+              +e.icon
+                img(src="img/currency/ether-lg.png", alt="")
+              span Ethereum
+            +e.counts
+              p
+                strong 0.671 ETH
+              p $98.04
+          
+          +e.row
+            +e.currency
+              +e.icon
+                img(src="img/currency/litecoin-lg.png", alt="")
+              span Litecoin
+            +e.counts
+              p
+                strong 12.451 LTC
+              p $113.04
+
+      +e.col
+        +b.lk-block.graph
+          img(src="img/lk/test-graph.png", alt="")
+      
+      +e.col
+        +b.activity.lk-block
+          +b.H4.block-title Your last activity
+          +e.row
+            +e.P.name
+              +e.icon
+                img(src="img/icons/gear-gray.svg", alt="")
+              span Get Account Settings
+            +e.P.date 13 SEP 21:31
+          +e.row
+            +e.P.name
+              +e.icon
+                img(src="img/icons/coins-gray.svg", alt="")
+              span Buy Cryptocurrency
+            +e.P.date 13 SEP 21:31
+          +e.row
+            +e.P.name
+              +e.icon
+                img(src="img/icons/lock-gray.svg", alt="")
+              span Change Password
+            +e.P.date 13 SEP 21:31
+          +e.row
+            +e.P.name
+              +e.icon
+                img(src="img/icons/home-gray.svg", alt="")
+              span View Login Page
+            +e.P.date 13 SEP 21:31
+          +e.row
+            +e.P.name
+              +e.icon
+                img(src="img/icons/users-gray.svg", alt="")
+              span Add Refferal
+            +e.P.date 13 SEP 21:31
+
+      +e.col
+        +b.know.lk-block
+          +e.top
+            +b.H4.block-title Do you know?
+            +e.A(href="faq.html").button Read FAQ
+          +e.content
+            .typography
+              p.color-blue
+                strong What is the biggest difference between keeping my wealth in stocks/government currency vs cryptocurrency?
+              p.
+                The biggest difference between crypto and stocks/fiat currency is that supply can’t be diluted in crypto like it can and does get diluted with the others from the supply getting increased. Example If there is only ever going to be 21 million bitcoins the supply goes down as they are lost by individuals and corporations. That results in fewer and fewer bitcoins for all the people that want to use it as it becomes 
+                more successful. 
+                Even with bitcoin going to the 8th decimal there is never going to be enough for everyone on earth to own a large amount of them. 

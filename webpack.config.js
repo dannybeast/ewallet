@@ -19,7 +19,8 @@ function createConfig(env) {
     mode: isProduction ? 'production' : 'development',
     context: path.join(__dirname, config.src.js),
     entry: {
-      app: './app.js'
+      app: './app.js',
+      lk: './lk.js'
     },
     output: {
       path: path.join(__dirname, config.dest.js),

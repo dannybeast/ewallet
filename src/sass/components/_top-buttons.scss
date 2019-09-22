@@ -1,0 +1,36 @@
+.top-buttons {
+
+    &>p,
+    &>a,
+    .language-module {
+        font-size: 11px;
+        text-transform: uppercase;
+        color: #8c8c8c;
+        letter-spacing: 1.76px;
+        font-weight: 700;
+        font-family: $accent-font;
+        padding: 5px 15px;
+        display: inline-block;
+        border-right: solid 1px #00bbd1;
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    .language-module {
+        padding-left: 0;
+    }
+
+    &>a {
+        cursor: pointer;
+
+        &.color-accent {
+            color: #00bbd1;
+        }
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}

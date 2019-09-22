@@ -1,0 +1,19 @@
+<svg id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 272">
+    <style>
+        .st0,.st1{fill:#ccc}.st1{clip-path:url(#SVGID_2_)}
+    </style>
+    <path class="st0" d="M80 48h16v16H80z"/>
+    <path class="st0" d="M48 48h16v16H48z"/>
+    <defs>
+        <path id="SVGID_1_" d="M0 0h400v272H0z"/>
+    </defs>
+    <clipPath id="SVGID_2_">
+        <use xlink:href="#SVGID_1_" overflow="visible"/>
+    </clipPath>
+    <path class="st1" d="M328 104c0-13.3-10.7-24-24-24s-24 10.7-24 24v24h48v-24z"/>
+    <path class="st1" d="M48 80h48v32H48z"/>
+    <path class="st1" d="M112 96h16v16h-16z"/>
+    <path class="st1" d="M112 48h16v32h-16z"/>
+    <path class="st1" d="M344 144h-80c-4.4 0-8 3.6-8 8v80c0 4.4 3.6 8 8 8h80c4.4 0 8-3.6 8-8v-80c0-4.4-3.6-8-8-8m-24 48v16h-8v8h8v16h-24v-50.2c-7.7-4.4-10.3-14.2-5.9-21.9 4.4-7.7 14.2-10.3 21.9-5.9 7.7 4.4 10.3 14.2 5.9 21.9-1.4 2.4-3.4 4.5-5.9 5.9V192h8z"/>
+    <path class="st1" d="M400 24c0-13.3-10.7-24-24-24H24C10.7 0 0 10.7 0 24v224c0 13.3 10.7 24 24 24h352c13.3 0 24-10.7 24-24V24zM32 48c0-8.8 7.2-16 16-16h80c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H48c-8.8 0-16-7.2-16-16V48zm32 160H32v-16h32v16zm48 0H80v-16h32v16zm48 0h-32v-16h32v16zm48 0h-32v-16h32v16zm160 24c0 13.3-10.7 24-24 24h-80c-13.3 0-24-10.7-24-24v-80c0-13.3 10.7-24 24-24v-24c0-22.1 17.9-40 40-40s40 17.9 40 40v24c13.3 0 24 10.7 24 24v80z"/>
+</svg>

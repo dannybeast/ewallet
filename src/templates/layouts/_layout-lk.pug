@@ -1,0 +1,97 @@
+include ../mixins/all
+block variables
+include ../partials/_footer
+doctype html
+html
+  head
+    include _head-lk
+
+  body.body-lk
+    +b.loader
+      +e.inside
+        img(src="img/loader.svg", alt="")
+    
+    +b.lk
+        //
+        +b.HEADER.header-lk
+            .container
+                +e.row
+                    +e.A(href="page-index.html").logo
+                        img(src="img/logo.png", alt="e-wallet")   
+                    +e.welcome
+                        p Welcome, <a href="#">Username!</a> 
+                    +e.buttons
+                        +b.A(href="lk-7.html" class="icon-link")
+                            +e.icon
+                                +icon('gear')
+                            span Settings
+                        +b.top-buttons
+                            include ../partials/_language
+                            a(href="page-index.html") Logout
+        //
+        +b.notification-bar
+            .container
+                +e.BUTTON.button
+                    span
+                    span
+                    span
+                +e.content
+                    img(src="img/icons/warning.svg", alt="")
+                    p YOU ARE NOW CHARGED 0.2% PER DAY. <strong>If your balance is more than $100 within 10 days, your interest rate will rise to 0.3%</strong>
+        //
+        +b.lk-content-and-aside
+            .container
+                +e.ASIDE.sidebar
+                    +b.NAV.lk-navigation.js-sticky
+                        ul
+                            li(class=(pageName === "lk-1" ? " active" : undefined))
+                                a(href="lk-1.html")
+                                    +e.SPAN.icon
+                                        img(src="img/icons/home.svg", alt="")
+                                    span Account
+                            li(class=(pageName === "lk-2" ? " active" : undefined))
+                                a(href="lk-2.html")
+                                    +e.SPAN.icon
+                                        img(src="img/icons/coins.svg", alt="")
+                                    span Buy Cryptocurrency
+                            li(class=(pageName === "lk-3" ? " active" : undefined))
+                                a(href="lk-3.html")
+                                    +e.SPAN.icon
+                                        img(src="img/icons/profit.svg", alt="")
+                                    span My Profit
+                            li(class=(pageName === "lk-4" ? " active" : undefined))
+                                a(href="lk-4.html")
+                                    +e.SPAN.icon
+                                        img(src="img/icons/users.svg", alt="")
+                                    span Refferal
+                            li(class=(pageName === "lk-5" ? " active" : undefined))
+                                a(href="lk-5.html")
+                                    +e.SPAN.icon
+                                        img(src="img/icons/megaphone.svg", alt="")
+                                    span Promo
+                            li(class=(pageName === "lk-6" ? " active" : undefined))
+                                a(href="lk-6.html")
+                                    +e.SPAN.icon
+                                        img(src="img/icons/card.svg", alt="")
+                                    span Debit card
+                            li(class=(pageName === "lk-7" ? " active" : undefined))
+                                a(href="lk-7.html")
+                                    +e.SPAN.icon
+                                        img(src="img/icons/gear-red.svg", alt="")
+                                    span Settings 
+                            li
+                                a(href="page-index.html")
+                                    +e.SPAN.icon
+                                        img(src="img/icons/remove.svg", alt="")
+                                    span Logout
+                //
+                +e.ARTICLE.content
+                    // Begin page content
+                    block content
+    +footer()
+    
+
+    include ../windows/index
+    block scripts
+      script(defer type="text/javascript" src="js/vendor.js")
+      script(defer type="text/javascript" src="js/lk.js")

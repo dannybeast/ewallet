@@ -15,13 +15,13 @@ $('.js-mask-code').inputmask('mask', {
   'placeholder': '______'
 });
 
-
 // components
 import './components/ieDetect';
 import './components/animations';
 import './components/navigation';
 import './components/supports';
 import './components/modals';
+import './components/language-module';
 import './components/custom-modal';
 import './components/scrollTo';
 import {
@@ -97,17 +97,6 @@ $(document).ready(function () {
   $('.js-scrollbar').scrollbar();
   //-
 
-  // open languages
-  $('.language-module').click(function () {
-    $(this).toggleClass('open');
-  });
-  $(document).mouseup(function (e) {
-    var div = $('.language-module');
-    if (!div.is(e.target) && div.has(e.target).length === 0) {
-      $('.language-module').removeClass('open');
-    }
-  });
-  //-
 
   // intro slider
   $('.slider-left').slick({
