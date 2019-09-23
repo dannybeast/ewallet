@@ -105,7 +105,6 @@
         }
     }
 
-    @include media-breakpoint-down(xs) {}
 }
 
 .copyright {
@@ -123,6 +122,10 @@ body.not-support-gradients {
 
         @media (max-width: $tablet-sm) {
             padding-top: 80px;
+        }
+
+        @media (max-width: $mobile) {
+            padding-top: 50px;
         }
     }
 }

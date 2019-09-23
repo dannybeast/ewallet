@@ -129,15 +129,15 @@
         color: #fff;
         font-size: 21px;
         border-radius: 0;
-        padding: 0 30px;
-        height: 41px;
+        padding: 5px 30px;
         letter-spacing: 0.31px;
         text-transform: none;
         font-family: $main-font;
         font-weight: 500;
 
         @include media-breakpoint-down(sm) {
-            padding: 0 1.9em;
+            padding: 5px 1.2em;
+            font-size: 19px;
         }
 
         svg {

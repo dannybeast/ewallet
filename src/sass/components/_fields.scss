@@ -82,6 +82,12 @@
       height: 17px;
       flex-shrink: 0;
     }
+
+    @media (max-width: $mobile) {
+      .field__row {
+        flex-wrap: nowrap;
+      }
+    }
   }
 
   &--error {

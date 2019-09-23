@@ -53,7 +53,7 @@ $(document).ready(function () {
 
     $('.js-toogle-menu').click(function () {
         $(this).toggleClass('open');
-        $('.lk-content-and-aside__sidebar').toggleClass('hide');
+        $('.lk-content-and-aside__sidebar').toggleClass('active');
         $('.lk-content-and-aside__content').toggleClass('full');
     });
 });
