@@ -218,6 +218,15 @@ body.not-support-gradients {
         background: #f3f3f3;
         padding-right: 30px;
         position: relative;
+        transition: all .5s linear;
+
+        &.hide {
+            transform: translateX(-999px);
+            opacity: 0;
+            visibility: hidden;
+            width: 0;
+
+        }
 
         .inner-wrapper-sticky {
             padding-top: 20px;
@@ -238,6 +247,13 @@ body.not-support-gradients {
     &__content {
         width: calc(100% - 350px);
         padding: 30px 45px 60px;
+        transition: all .5s linear;
+
+        &.full {
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 }
 
@@ -308,7 +324,7 @@ body.not-support-gradients {
         display: block;
         transition: 0.2s ease-in-out;
         background: transparent;
-        cursor: default;
+        cursor: pointer;
         position: relative;
         margin-left: 30px;
 
@@ -317,11 +333,10 @@ body.not-support-gradients {
             position: absolute;
             height: 3px;
             width: 100%;
-            opacity: 0.2;
             left: 0;
             transform: rotate(0deg);
             transition: 0.25s ease-in-out;
-            background: #000;
+            background: rgb(0, 154, 165);
 
             &:nth-child(1) {
                 top: 0px;
@@ -353,7 +368,7 @@ body.not-support-gradients {
 
             &:nth-child(3) {
                 transform: rotate(-45deg);
-                top: 21px;
+                top: 16px;
                 left: 8px;
             }
         }
@@ -831,7 +846,7 @@ body.not-support-gradients {
     }
 }
 
-.color-blue {
+.color-blue-dark {
     color: #0062aa;
 }
 

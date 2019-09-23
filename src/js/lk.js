@@ -6,6 +6,8 @@ import './components/ieDetect';
 import './components/supports';
 // polyfills
 import 'svgxuse';
+import 'nodelist-foreach-polyfill';
+
 import {
     closeCustomModal,
     openCustomModal
@@ -35,10 +37,9 @@ stickyInterval = setInterval(function () {
 }, 500);
 
 
-
-
 // main
 $(document).ready(function () {
+    $('.loader').fadeOut();
     var table = $('.js-data-tables').DataTable();
     table.on('draw', function () {
         sidebar.updateSticky();
@@ -49,11 +50,14 @@ $(document).ready(function () {
             openCustomModal('2fa');
         }
     });
+
+    $('.js-toogle-menu').click(function () {
+        $(this).toggleClass('open');
+        $('.lk-content-and-aside__sidebar').toggleClass('hide');
+        $('.lk-content-and-aside__content').toggleClass('full');
+    });
 });
 
-$(window).on('load', function () {
-    $('.loader').fadeOut();
-})
 
 // copy to clipboard
 const copy = document.querySelectorAll('.js-copy');
