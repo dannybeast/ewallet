@@ -69,6 +69,10 @@
     &>* {
       margin: 10px;
     }
+
+    @media (max-width: $mobile) {
+      flex-wrap: wrap;
+    }
   }
 
   &--amount {

@@ -96,10 +96,6 @@
             }
         }
 
-        &__top {
-            padding-bottom: 45px;
-        }
-
         &__bottom {
             padding-bottom: 60px;
 
@@ -117,8 +113,16 @@
     font-weight: 300;
 }
 
-.body-lk {
+.body-lk,
+body.not-support-gradients {
+    background: #fff;
+    color: #000;
+
     .footer {
         padding-top: 130px;
+
+        @media (max-width: $tablet-sm) {
+            padding-top: 80px;
+        }
     }
 }

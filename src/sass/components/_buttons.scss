@@ -18,6 +18,11 @@
     border-radius: 30px;
     $parent: &;
 
+    @include media-breakpoint-down(sm) {
+        font-size: 16px;
+        padding: .65em 1.9em;
+    }
+
     &:active {
         transform: scale(0.98);
     }
@@ -131,6 +136,10 @@
         font-family: $main-font;
         font-weight: 500;
 
+        @include media-breakpoint-down(sm) {
+            padding: 0 1.9em;
+        }
+
         svg {
             width: 20px;
             height: 20px;
@@ -148,10 +157,6 @@
         background: rgba(#b2b2b2, 0.2);
     }
 
-    @include media-breakpoint-down(sm) {
-        font-size: 16px;
-        padding: .65em 1.9em;
-    }
 
     &--full {
         width: 100%;

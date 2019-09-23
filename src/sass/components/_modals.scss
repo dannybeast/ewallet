@@ -260,8 +260,6 @@
 .modal-block {
     width: 100%;
     max-width: 565px;
-    margin-bottom: 40px;
-    margin-top: 40px;
     $parent: &;
     position: relative;
 
@@ -281,6 +279,11 @@
             svg {
                 fill: #0062aa;
             }
+        }
+
+        @media (max-width: $mobile) {
+            top: 15px;
+            right: 15px;
         }
     }
 
@@ -363,6 +366,11 @@
     .btn {
         font-weight: 500;
         font-size: 21px;
+        height: auto;
+        line-height: 1.1;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        min-height: 45px;
         padding-left: 20px;
         padding-right: 20px;
         width: 100%;
