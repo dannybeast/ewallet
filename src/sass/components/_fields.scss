@@ -64,14 +64,18 @@
   &__row {
     display: flex;
     align-items: center;
+    margin: -10px;
+
+    &>* {
+      margin: 10px;
+    }
   }
 
   &--amount {
     svg {
       transform: rotate(-180deg);
-      width: 13px;
-      height: 11px;
-      margin: 0 10px;
+      width: 20px;
+      height: 17px;
       flex-shrink: 0;
     }
   }
@@ -119,8 +123,24 @@
     padding-right: 45px;
   }
 
+  &--has-before {
+    input {
+      padding-left: 45px !important;
+    }
+  }
+
   img {
     display: block;
+  }
+
+  &__before {
+    position: absolute;
+    top: 50%;
+    font-weight: 700;
+    font-size: 14px;
+    color: #888;
+    transform: translateY(-50%);
+    left: 10px;
   }
 
   &__after {

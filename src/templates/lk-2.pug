@@ -1,0 +1,72 @@
+---
+title: eWallet
+---
+extends layouts/_layout-lk
+include partials/_lk-top
+block variables 
+  - var pageName = "lk-2"
+
+block content
+
+    +lk-top()
+
+    +b.H3.lk-title Buy Cryptocurrency
+
+    +b.SECTION.lk-row
+      +e.col
+        +b.choose.lk-block
+          form
+            
+            +b.field
+              label Choose currency:
+              select
+                option Bitcoin
+            
+            +b.field
+              label Enter amount:
+              +b.P.amount 0.02359322 <small>BTC</small>
+            
+            +b.field
+              +e.row
+                +b.input(class="--has-before")
+                  +e.before MIN
+                  input(type="text" value="0.0001")
+                  +e.after BTC
+                +b.input(class="--has-before")
+                  +e.before MAX
+                  input(type="text" value="1.0000")
+                  +e.after BTC
+
+            +b.BUTTON.btn(class="--square-gr") Buy Cryptocurrency
+      +e.col
+        +b.statistic.lk-block
+
+          +e.row
+            +e.currency
+              +e.icon
+                img(src="img/currency/btc-lg.png", alt="")
+              span Bitcoin
+            +e.counts
+              p
+                strong 0.0451 BTC
+              p $113.04
+
+          +e.row
+            +e.currency
+              +e.icon
+                img(src="img/currency/ether-lg.png", alt="")
+              span Ethereum
+            +e.counts
+              p
+                strong 0.671 ETH
+              p $98.04
+          
+          +e.row
+            +e.currency
+              +e.icon
+                img(src="img/currency/litecoin-lg.png", alt="")
+              span Litecoin
+            +e.counts
+              p
+                strong 12.451 LTC
+              p $113.04

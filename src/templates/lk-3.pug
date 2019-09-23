@@ -1,0 +1,112 @@
+---
+title: eWallet
+---
+extends layouts/_layout-lk
+include partials/_lk-top
+block variables 
+  - var pageName = "lk-3"
+
+block content
+
+    +lk-top()
+
+    +b.SECTION.lk-row(class="--title")
+      +e.col
+
+        +b.H3.lk-title My profit
+        +b.my-profit.lk-block
+          +e.row
+            +e.icon
+              img(src="img/icons/user.svg", alt="")
+            +e.content
+              +e.P.name User status:
+              +e.P.value Beginner
+          +e.row
+            +e.icon
+              img(src="img/icons/profits.svg", alt="")
+            +e.content
+              +e.P.name Day profits: 
+              +b.UL.profits
+                li
+                  img(src="img/currency/btc-lg.png", alt="")
+                  span 0.00000123
+                li
+                  img(src="img/currency/ether-lg.png", alt="")
+                  span 0.00231
+                li
+                  img(src="img/currency/litecoin-lg.png", alt="")
+                  span 0.01
+          +e.row
+            +e.icon
+              img(src="img/icons/calendar.svg", alt="")
+            +e.content
+              +e.P.name Days before increase the status:
+              +e.P.value(class="--light") 121
+
+      +e.col
+
+        +b.H3.lk-title available profit
+        +b.available-profit.lk-block
+          +e.row(class="--btc")
+            +e.currency
+              +e.icon
+                img(src="img/currency/btc-lg.png", alt="")
+              span Bitcoin
+            +e.arrow
+              +icon('arrow')
+            +e.content
+              +e.counts
+                strong 0.0451 BTC
+                span $113.04
+              +b.A(href="#" class="btn --square-gr") Send profit to the main wallet
+          +e.row(class="--ltc")
+            +e.currency
+              +e.icon
+                img(src="img/currency/ether-lg.png", alt="")
+              span Ethereum
+            +e.arrow
+              +icon('arrow')
+            +e.content
+              +e.counts
+                strong 0.671 ETH
+                span $98.04
+              +b.A(href="#" class="btn --square-gr") Send profit to the main wallet
+          +e.row(class="--eth")
+            +e.currency
+              +e.icon
+                img(src="img/currency/litecoin-lg.png", alt="")
+              span Litecoin
+            +e.arrow
+              +icon('arrow')
+            +e.content
+              +e.counts
+                strong 12.451 LTC
+                span $113.04
+              +b.A(href="#" class="btn --square-gr") Send profit to the main wallet
+
+    +b.H3.lk-title Profit withdraw history
+
+    +b.SECTION.table.lk-block
+      mixin tr()
+        tr
+          td $ 186
+          td U.S dollars
+          td $ 2 123
+          td yes
+          td 2018-09-29 15:11:29
+      table.js-data-tables
+        thead
+          tr
+            th Amount
+            th Currency
+            th Type
+            th Approved
+            th Date
+        tbody
+          +tr()
+          +tr()
+          +tr()
+          +tr()
+          +tr()
+          +tr()
+            

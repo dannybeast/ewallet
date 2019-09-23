@@ -1,0 +1,43 @@
+---
+title: eWallet
+---
+extends layouts/_layout-lk
+include partials/_lk-top
+block variables 
+  - var pageName = "lk-5"
+
+block content
+
+    +lk-top()
+
+    +b.H3.lk-title Promo materials
+
+    +b.SECTION.promo
+      +e.FORM.search.js-copy 
+        label Your referral link
+        input(type="text", value="Link here").js-copy-input
+        button.js-copy-button
+          +icon('copy')
+      +e.content
+        +b.referral-banners
+          +e.row
+            +e.info
+              +e.P.name Banner
+              +e.P.size 768x90
+              +e.A(href="#", class="link") Download
+            +e.content
+              img(src="img/banners/banner1.png", alt="")
+          +e.row
+            +e.info
+              +e.P.name Banner
+              +e.P.size 468x60
+              +e.A(href="#", class="link") Download
+            +e.content
+              img(src="img/banners/banner2.png", alt="")
+          +e.row
+            +e.info
+              +e.P.name Banner
+              +e.P.size 125x125
+              +e.A(href="#", class="link") Download
+            +e.content
+              img(src="img/banners/banner3.png", alt="")

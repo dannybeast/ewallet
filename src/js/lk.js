@@ -1,3 +1,5 @@
+import 'datatables.net-dt';
+import './lib/dataTables.responsive.min';
 import './components/language-module';
 import './components/sticky';
 import './components/code';
@@ -13,6 +15,12 @@ import {
 // main
 $(document).ready(function () {
     $('.loader').fadeOut();
+
+    // data tables
+    $('.js-data-tables').DataTable({
+        responsive: true
+    });
+
 });
 
 // copy to clipboard
