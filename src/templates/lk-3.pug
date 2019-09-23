@@ -86,10 +86,11 @@ block content
 
     +b.H3.lk-title Profit withdraw history
 
-    +b.SECTION.table.lk-block
+    +b.SECTION.table-block(class="--hide-filter").lk-block
       mixin tr()
         tr
-          td $ 186
+          td 
+            strong $ 186
           td U.S dollars
           td $ 2 123
           td yes
@@ -103,6 +104,12 @@ block content
             th Approved
             th Date
         tbody
+          +tr()
+          +tr()
+          +tr()
+          +tr()
+          +tr()
+          +tr()
           +tr()
           +tr()
           +tr()

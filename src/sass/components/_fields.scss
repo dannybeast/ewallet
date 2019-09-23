@@ -200,7 +200,7 @@
       display: block;
       width: 10px;
       height: 10px;
-      background: url("../img/icons/check-white.svg") center no-repeat;
+      background: url("../img/icons/check-black.svg") center no-repeat;
       background-size: contain;
       display: none;
       position: absolute;
@@ -215,6 +215,16 @@
     &:checked+span {
       &:after {
         display: block;
+      }
+    }
+  }
+
+  &:hover {
+
+    .checkbox__content,
+    .radio__content {
+      &:before {
+        border-color: #c1c1c1;
       }
     }
   }
@@ -249,5 +259,19 @@
         border-color: #ccc;
       }
     }
+  }
+}
+
+.radio {
+  &__content {
+
+    &:before {
+      border-radius: 50%;
+    }
+
+    &:after {
+      transform: scale(0.95);
+    }
+
   }
 }

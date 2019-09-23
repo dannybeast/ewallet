@@ -1,7 +1,6 @@
-import 'datatables.net-dt';
+import 'datatables.net-dt/js/dataTables.dataTables.min';
 import './lib/dataTables.responsive.min';
 import './components/language-module';
-import './components/sticky';
 import './components/code';
 import {
     closeCustomModal,
@@ -12,15 +11,31 @@ import {
     showError
 } from './components/notice';
 
+import './components/resizeSensor';
+import 'sticky-sidebar';
+
+export let sidebar = new StickySidebar('.js-sticky', {
+    topSpacing: 0,
+    responsiveWidth: true,
+    resizeSensor: true,
+
+});
+
+var stickyInterval;
+stickyInterval = setInterval(function () {
+    if (sidebar) {
+        sidebar.updateSticky();
+    }
+}, 500);
+
+
 // main
 $(document).ready(function () {
-    $('.loader').fadeOut();
-
-    // data tables
-    $('.js-data-tables').DataTable({
-        responsive: true
+    var table = $('.js-data-tables').DataTable();
+    table.on('draw', function () {
+        sidebar.updateSticky();
     });
-
+    $('.loader').fadeOut();
 });
 
 // copy to clipboard

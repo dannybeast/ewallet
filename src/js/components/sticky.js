@@ -1,3 +1,6 @@
+import 'datatables.net-dt/js/dataTables.dataTables.min';
+import './lib/dataTables.responsive.min';
+
 import './resizeSensor';
 import 'sticky-sidebar';
 
@@ -15,31 +18,10 @@ stickyInterval = setInterval(function () {
   }
 }, 500);
 
-// navigation podmenu
-$('.navigation-module ul li').each(function () {
 
-  if ($(this).find('ul').length) {
 
-    $(this).children('a').click(function (e) {
-      if (!$(this).parent().hasClass('active')) {
-        e.preventDefault();
-        // удалить у всех active
-        $('.navigation-module ul li ul').slideUp();
-        $('.navigation-module ul li').removeClass('active');
-        // добавить active
-        $(this).parent().find('ul').slideDown();
-        $(this).parent().toggleClass('active');
-        sidebar.updateSticky();
 
-      } else {
-        e.preventDefault();
-        $(this).parent().find('ul').slideUp();
-        $(this).parent().toggleClass('active');
-        sidebar.updateSticky();
-
-      }
-    });
-
-  }
-
+var table = $('.js-data-tables').DataTable();
+table.on('draw', function () {
+  sidebar.updateSticky();
 });

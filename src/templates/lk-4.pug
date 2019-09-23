@@ -10,4 +10,80 @@ block content
 
     +lk-top()
 
-    +b.H3.lk-title My profit
+    +b.H3.lk-title Refferal
+
+    +b.SECTION.search
+      +e.row
+        label Search partner 
+        input(type="text")
+        +b.BUTTON(class="btn --square-gr") Search partner
+      +e.filter
+        +b.LABEL.radio
+          input(type="radio", name="refferal")
+          +e.SPAN.content Partners
+        +b.LABEL.radio
+          input(type="radio", name="refferal")
+          +e.SPAN.content By Login
+    
+    +b.SECTION.search-results
+      +e.table
+        +b.table-block(class="--hide-filter").lk-block
+          mixin tr()
+            tr
+              td 
+                +b.P.date 16/09/2019 
+              td Partner name
+              td Login
+              td
+                strong 0.00000112 <span class="color-orange">BTC</span>
+              td 
+                strong 0.0011 <span class="color-green">ETH</span>
+              td 
+                strong 0.0011 <span class="color-blue">LTC</span>
+          table.js-data-tables
+            thead
+              tr
+                th Reg. date
+                th Partner name
+                th Login
+                th Earned <span class="color-orange">BTC</span>
+                th <span class="color-green">ETH</span>
+                th <span class="color-blue">LTC</span>
+            tbody
+              +tr()
+              +tr()
+              +tr()
+              +tr()
+              +tr()
+              +tr()
+              +tr()
+              +tr()
+              +tr()
+              +tr()
+              +tr()
+              +tr()
+              +tr()
+              +tr()
+              +tr()
+      +e.total
+        +b.total-earned.lk-block
+          +e.top
+            +e.H4.title
+              img(src="img/icons/wallet.svg", alt="")
+              span Total earned
+            +e.UL.list
+              +e.LI
+                +e.icon
+                  img(src="img/currency/btc-lg.png", alt="")
+                p 0.00000112 <span class="color-orange">BTC</span>
+              +e.LI
+                +e.icon
+                  img(src="img/currency/ether-lg.png", alt="")
+                p 0.0011 <span class="color-green">ETH</span>
+              +e.LI
+                +e.icon
+                  img(src="img/currency/litecoin-lg.png", alt="")
+                p 0.0011 <span class="color-blue">LTC</span>
+          +e.bottom
+            img(src="img/icons/user2.svg", alt="")
+            p Total partners: <strong>12</strong>
