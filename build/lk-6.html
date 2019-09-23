@@ -69,9 +69,9 @@
           <article class="lk-content-and-aside__content">
             <!-- Begin page content-->
             <section class="lk-top">
-              <div class="lk-top__buttons"><a class="btn btn--square-light" href="#"><svg class="icon icon-send ">
+              <div class="lk-top__buttons"><a class="btn btn--square-light js-custom-modal" data-modal-id="send"><svg class="icon icon-send ">
                     <use xlink:href="img/icons/sprite.svg#icon-send"></use>
-                  </svg><span>Send</span></a><a class="btn btn--square-gray" href="#"><svg class="icon icon-request ">
+                  </svg><span>Send</span></a><a class="btn btn--square-gray js-custom-modal" data-modal-id="req"><svg class="icon icon-request ">
                     <use xlink:href="img/icons/sprite.svg#icon-request"></use>
                   </svg><span>Request </span></a></div>
               <div class="balance-module">
@@ -176,6 +176,105 @@
         </div>
       </div>
     </footer>
+    <div class="modal modal--white" id="2fa">
+      <div class="modal-block modal-block--gray"><span class="modal-block__close js-hide-modal"><svg class="icon icon-cross ">
+            <use xlink:href="img/icons/sprite.svg#icon-cross"></use>
+          </svg></span>
+        <div class="modal-block__content">
+          <form>
+            <h3 class="modal-block__title">2FA Autentification</h3>
+            <div class="auth-desc"><img src="img/2fa.png" alt="">
+              <p>Enter your 6-digit code in Google Authentication Code</p>
+            </div>
+            <div class="code"><label>Enter code</label>
+              <div class="code__group"><input type="text" maxLength="1" placeholder="0"><input type="text" maxLength="1" placeholder="0"><input type="text" maxLength="1" placeholder="0"><input type="text" maxLength="1" placeholder="0"><input type="text" maxLength="1" placeholder="0"><input type="text" maxLength="1" placeholder="0"></div>
+            </div>
+            <div class="field">
+              <div class="qr"><img src="img/lk/qr.png" alt=""></div>
+            </div>
+            <div class="modal-block__buttons"><button class="btn btn--square-gr">Set 2FA Authentification</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--white" id="send">
+      <div class="modal-block modal-block--light"><span class="modal-block__close js-hide-modal"><svg class="icon icon-cross ">
+            <use xlink:href="img/icons/sprite.svg#icon-cross"></use>
+          </svg></span>
+        <div class="modal-block__content">
+          <form>
+            <h3 class="modal-block__title"> <svg class="icon icon-send ">
+                <use xlink:href="img/icons/sprite.svg#icon-send"></use>
+              </svg><span>Send Funds</span></h3>
+            <div class="field field--white"><label>Currency:</label><select>
+                <option>BTC</option>
+              </select></div>
+            <div class="field field--white"><label>To:</label>
+              <div class="input"><input type="text">
+                <div class="input__after"><img src="img/lk/qr-small.png" alt=""></div>
+              </div>
+            </div>
+            <div class="field field--white field--amount"><label>Amount:</label>
+              <div class="field__row">
+                <div class="input"><input type="number" min="1">
+                  <div class="input__after">USD</div>
+                </div><svg class="icon icon-arrow ">
+                  <use xlink:href="img/icons/sprite.svg#icon-arrow"></use>
+                </svg>
+                <div class="input"><input type="number" min="1">
+                  <div class="input__after">BTC</div>
+                </div>
+              </div>
+            </div>
+            <div class="field field--white"><label>Description:</label><input type="text"></div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="field field--white"><label>Network fee:</label><select>
+                    <option> </option>
+                  </select>
+                  <p class="field__desc">Estimated confirmation time + 1 hour</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <p class="network-balance">0.00121 BTC ($121,22)</p>
+              </div>
+            </div>
+            <div class="modal-block__buttons"><button class="btn btn--square-gr">Send Funds</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--white" id="req">
+      <div class="modal-block modal-block--gray"><span class="modal-block__close js-hide-modal"><svg class="icon icon-cross ">
+            <use xlink:href="img/icons/sprite.svg#icon-cross"></use>
+          </svg></span>
+        <div class="modal-block__content">
+          <form>
+            <h3 class="modal-block__title"> <svg class="icon icon-send ">
+                <use xlink:href="img/icons/sprite.svg#icon-send"></use>
+              </svg><span>Request Funds</span></h3>
+            <div class="field field--white"><label>Currency:</label><select>
+                <option>Bitcoin</option>
+              </select></div>
+            <div class="field field--white"><label>Receive To:</label><select>
+                <option> </option>
+              </select></div>
+            <div class="field">
+              <div class="qr"><img src="img/lk/qr.png" alt=""></div>
+            </div>
+            <div class="field field--white"><label>Address:</label>
+              <div class="input js-copy"> <input class="js-copy-input" type="text" value="">
+                <div class="input__after"><span class="copy-btn js-copy-button"><svg class="icon icon-copy ">
+                      <use xlink:href="img/icons/sprite.svg#icon-copy"></use>
+                    </svg></span></div>
+              </div>
+            </div>
+            <div class="modal-block__buttons"><button class="btn btn--square-gr">Request Funds</button></div>
+            <div class="modal-block__links"><a href="#">Copy Shareable Request Link </a></div>
+          </form>
+        </div>
+      </div>
+    </div>
     <script defer type="text/javascript" src="js/vendor.js"></script>
     <script defer type="text/javascript" src="js/lk.js"></script>
   </body>

@@ -1,0 +1,50 @@
++b.modal(class="--white")#send
+
+    +b.modal-block(class="--light")
+      +e.SPAN.close.js-hide-modal
+        +icon('cross')
+      +e.content
+        form
+          +e.H3.title 
+            +icon('send')
+            span Send Funds
+
+          +b.field(class="--white")
+            label Currency:
+            select
+              option BTC
+              
+          +b.field(class="--white")
+            label To:
+            +b.input
+              input(type="text")
+              +e.after
+                img(src="img/lk/qr-small.png", alt="")
+
+          +b.field(class="--white --amount")
+            label Amount:
+            +e.row
+              +b.input
+                input(type="number", min="1")
+                +e.after USD
+              +icon('arrow')
+              +b.input
+                input(type="number", min="1")
+                +e.after BTC
+
+          +b.field(class="--white")
+            label Description:
+            input(type="text")
+
+          .row
+            .col-sm-6
+              +b.field(class="--white")
+                label Network fee:
+                select
+                  option 
+                +e.P.desc Estimated confirmation time + 1 hour
+            .col-sm-6
+              +b.P.network-balance 0.00121 BTC ($121,22)
+          +e.buttons
+              +b.BUTTON(class="btn --square-gr") Send Funds
+

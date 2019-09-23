@@ -1,0 +1,28 @@
++b.modal(class="--white")#2fa
+
+    +b.modal-block(class="--gray")
+      +e.SPAN.close.js-hide-modal
+        +icon('cross')
+      +e.content
+        form
+          +e.H3.title 2FA Autentification
+
+          +b.auth-desc
+              img(src="img/2fa.png", alt="")
+              p Enter your 6-digit code in Google Authentication Code
+
+          +b.code
+            label Enter code
+            +e.group
+              input(type="text", maxLength="1", placeholder="0")
+              input(type="text", maxLength="1" , placeholder="0")
+              input(type="text", maxLength="1" , placeholder="0")
+              input(type="text", maxLength="1" , placeholder="0")
+              input(type="text", maxLength="1" , placeholder="0")
+              input(type="text", maxLength="1" , placeholder="0")
+          +b.field
+            +b.qr
+              img(src="img/lk/qr.png", alt="")
+          +e.buttons
+              +b.BUTTON(class="btn --square-gr") Set 2FA Authentification
+

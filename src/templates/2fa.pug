@@ -28,9 +28,16 @@ block content
               img(src="img/2fa.png", alt="")
               p Enter your 6-digit code in Google Authentication Code
 
-          +b.field(class="--white")
-              label Enter code
-              input(type="text" class="js-mask-code")
+          // .code--error
+          +b.code
+            label Enter code
+            +e.group
+              input(type="text", maxLength="1", placeholder="0")
+              input(type="text", maxLength="1" , placeholder="0")
+              input(type="text", maxLength="1" , placeholder="0")
+              input(type="text", maxLength="1", placeholder="0" )
+              input(type="text", maxLength="1" , placeholder="0")
+              input(type="text", maxLength="1", placeholder="0" )
                 
           +e.buttons
               +b.BUTTON(class="btn --white --icon --small-radius")

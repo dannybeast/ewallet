@@ -23,6 +23,7 @@ import './components/supports';
 import './components/modals';
 import './components/language-module';
 import './components/custom-modal';
+import './components/code';
 import './components/scrollTo';
 import {
   showSuccess,

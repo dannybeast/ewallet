@@ -14,7 +14,8 @@
 @import './components/_top-buttons';
 @import './components/_footer';
 @import './components/_fields';
-
+@import './components/_notice';
+@import './components/_modals';
 
 $light: #00b8ca;
 $margin: 70px;
@@ -523,12 +524,14 @@ $border-color:#ededed;
 .lk-form {
     .field {
         display: flex;
+        align-items: center;
         margin-bottom: 23px;
 
         &:last-child {
             margin-bottom: 0;
         }
 
+        select,
         input {
             height: 40px;
             padding-left: 15px;
@@ -539,6 +542,7 @@ $border-color:#ededed;
             height: 90px;
         }
 
+        select,
         input,
         textarea {
             border: solid 1px rgba(#898989, 0.4);
@@ -546,18 +550,162 @@ $border-color:#ededed;
         }
 
         label {
-            width: 120px;
+            width: 170px;
+            flex-shrink: 0;
             text-transform: none;
             font-family: $main-font;
             letter-spacing: normal;
             font-weight: 400;
-            padding-top: 9px;
         }
     }
 
     .lk-block {
         padding: 40px;
         margin-bottom: 20px;
+    }
+
+    &--max-width {
+        .field {
+            max-width: 470px;
+        }
+    }
+}
+
+.switch {
+    cursor: pointer;
+    $parent: &;
+    user-select: none;
+
+    @mixin on() {
+        background-image: linear-gradient(-267deg, #00cad1 0%, #00cad1 1%, #0055a5 91%, #0055a5 100%);
+        color: #fff;
+    }
+
+    @mixin off() {
+        background-image: none;
+        background-color: #dedede;
+        color: #afafaf;
+    }
+
+    &__buttons {
+        display: flex;
+        margin: -1px;
+
+        span {
+            display: block;
+            padding: 10px 15px;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.61px;
+            font-weight: 700;
+            margin: 1px;
+
+            &:first-child {
+                @include off();
+            }
+
+            &:last-child {
+                @include on();
+            }
+        }
+    }
+
+    input {
+        display: none;
+
+        &:checked+span.switch__buttons {
+            span {
+                &:last-child {
+                    @include off();
+                }
+
+                &:first-child {
+                    @include on();
+                }
+            }
+        }
+    }
+}
+
+.email-module {
+    display: flex;
+    align-items: center;
+
+    &__status {
+        font-size: 16px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin-right: 10px;
+            width: 26px;
+            height: 19px;
+        }
+
+        &--success {
+            color: #00d1a2;
+
+            svg {
+                fill: #00d1a2;
+            }
+        }
+
+        &--error {
+            color: red;
+
+            svg {
+                fill: red;
+            }
+        }
+    }
+
+    input {
+        border: none !important;
+        padding: 0 !important;
+        font-size: 16px;
+        pointer-events: none;
+        color: #929292;
+        font-weight: 700;
+    }
+}
+
+.wallet-id {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    input {
+        border: none !important;
+        padding: 0 !important;
+        font-size: 16px;
+        color: #929292;
+        flex-grow: 1;
+        width: calc(100% - 50px);
+        font-weight: 700;
+        pointer-events: none;
+    }
+
+    &__copy {
+        width: 50px;
+        height: 30px;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        svg {
+            width: 21px;
+            height: 24px;
+            fill: #0062aa;
+        }
+
+        &:hover {
+            svg {
+                fill: #000;
+            }
+        }
     }
 }
 

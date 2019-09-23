@@ -1,0 +1,36 @@
++b.modal(class="--white")#req
+
+    +b.modal-block(class="--gray")
+      +e.SPAN.close.js-hide-modal
+        +icon('cross')
+      +e.content
+        form
+          +e.H3.title 
+            +icon('send')
+            span Request Funds
+
+          +b.field(class="--white")
+            label Currency:
+            select
+              option Bitcoin
+
+          +b.field(class="--white")
+            label Receive To:
+            select
+              option 
+
+          +b.field
+            +b.qr
+              img(src="img/lk/qr.png", alt="")
+          +b.field(class="--white")
+            label Address:
+            +b.input.js-copy 
+              input(type="text" value="").js-copy-input
+              +e.after
+                +b.SPAN.copy-btn.js-copy-button
+                  +icon('copy')
+          +e.buttons
+              +b.BUTTON(class="btn --square-gr") Request Funds
+          +e.links
+            a(href="#") Copy Shareable Request Link 
+

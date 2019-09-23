@@ -1,10 +1,10 @@
 mixin lk-top(hasTitle)
     +b.SECTION.lk-top
         +e.buttons
-            +b.A(href="#", class="btn --square-light")
+            +b.A(data-modal-id="send", class="btn --square-light js-custom-modal")
                 +icon('send')
                 span Send
-            +b.A(href="#", class="btn --square-gray")
+            +b.A(data-modal-id="req", class="btn --square-gray js-custom-modal")
                 +icon('request')
                 span Request  
         +b.balance-module
