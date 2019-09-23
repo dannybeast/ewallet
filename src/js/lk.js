@@ -2,6 +2,10 @@ import 'datatables.net-dt/js/dataTables.dataTables.min';
 import './lib/dataTables.responsive.min';
 import './components/language-module';
 import './components/code';
+import './components/ieDetect';
+import './components/supports';
+// polyfills
+import 'svgxuse';
 import {
     closeCustomModal,
     openCustomModal
@@ -12,9 +16,11 @@ import {
 } from './components/notice';
 
 import './components/resizeSensor';
-import 'sticky-sidebar';
 
-export let sidebar = new StickySidebar('.js-sticky', {
+import StickySidebar from 'sticky-sidebar/dist/sticky-sidebar';
+
+
+var sidebar = new StickySidebar('.js-sticky', {
     topSpacing: 0,
     responsiveWidth: true,
     resizeSensor: true,
@@ -29,14 +35,25 @@ stickyInterval = setInterval(function () {
 }, 500);
 
 
+
+
 // main
 $(document).ready(function () {
     var table = $('.js-data-tables').DataTable();
     table.on('draw', function () {
         sidebar.updateSticky();
     });
-    $('.loader').fadeOut();
+    // 2fa checker
+    $('.js-2fa-checker').click(function () {
+        if ($('.js-2fa-checker').is(':checked')) {
+            openCustomModal('2fa');
+        }
+    });
 });
+
+$(window).on('load', function () {
+    $('.loader').fadeOut();
+})
 
 // copy to clipboard
 const copy = document.querySelectorAll('.js-copy');
@@ -49,12 +66,5 @@ copy.forEach(function (element) {
         copyInput.setSelectionRange(0, 9999);
         document.execCommand('copy');
         showSuccess('Скопировано');
-    }
-});
-
-// 2fa checker
-$('.js-2fa-checker').click(function () {
-    if ($('.js-2fa-checker').is(':checked')) {
-        openCustomModal('2fa');
     }
 });

@@ -782,7 +782,7 @@ $margin-sm: 80px;
         margin: 0 auto 55px;
         position: relative;
 
-        &::before {
+        &:before {
             content: "";
             width: 100%;
             height: 100%;
@@ -790,13 +790,13 @@ $margin-sm: 80px;
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translateX(-50%) translateY(-50%);
+            transform: translate(-50%, -50%);
             border: solid 1px #0084b0;
             border-radius: 10em;
             animation: border 2.1s ease infinite;
         }
 
-        &::after {
+        &:after {
             content: "";
             width: 128%;
             height: 128%;
@@ -804,15 +804,14 @@ $margin-sm: 80px;
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translateX(-50%) translateY(-50%);
+            transform: translate(-50%, -50%);
             border: solid 1px #0084b0;
             border-radius: 10em;
             animation: border 2s ease infinite;
         }
 
         img {
-            max-width: 74px;
-            height: 74px;
+            width: 74px;
         }
     }
 
@@ -1629,6 +1628,18 @@ $margin-sm: 80px;
         &__desc {
             font-size: 18px;
             margin-bottom: 30px;
+        }
+    }
+}
+
+.ie11,
+.ie10 {
+    .advantages-item__icon {
+        border: solid 1px rgb(0, 132, 176);
+
+        &:after,
+        &:before {
+            display: none;
         }
     }
 }

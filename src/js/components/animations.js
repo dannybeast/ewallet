@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
             x: 0,
             opacity: 0,
             onComplete: function () {
-                let loader = document.querySelector('.loader');
+                let loader = $('.loader');
                 loader.remove();
 
                 // if ($('.header').length) {
