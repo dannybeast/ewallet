@@ -48,9 +48,10 @@ block content
               p $113.04
 
       +e.col
-        +b.lk-block.graph
-          img(src="img/lk/test-graph.png", alt="")
-      
+        +b.graph(data-dates="Jun 19,Jun 20,Jun 21,Jun 22,Jun 23,Jun 24,Jun 25,Jun 26,Jun 27,Jun 28" data-values="123.01, 150.5, 160.3, 142.5, 165.5, 150.5, 140.01, 150.5, 160.3, 142.5")
+          canvas#summary-chart(width="654" height="393")
+          
+        
       +e.col
         +b.activity.lk-block
           +b.H4.block-title Your last activity

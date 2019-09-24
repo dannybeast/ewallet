@@ -18,6 +18,10 @@ import {
 } from './components/notice';
 
 import './components/resizeSensor';
+import {
+    myChart
+} from './components/lk-chart';
+
 
 import StickySidebar from 'sticky-sidebar/dist/sticky-sidebar';
 
@@ -39,7 +43,7 @@ stickyInterval = setInterval(function () {
 
 // main
 $(document).ready(function () {
-
+    console.log(myChart);
     // loader
     $('.loader').fadeOut();
 
@@ -61,6 +65,7 @@ $(document).ready(function () {
         $(this).toggleClass('open');
         $('.lk-content-and-aside__sidebar').toggleClass('active');
         $('.lk-content-and-aside__content').toggleClass('full');
+
     });
 
     // mobile menu
@@ -68,7 +73,7 @@ $(document).ready(function () {
     let welcome = $('.header-lk__welcome').clone();
     let language_module = $('.header-lk .language-module').clone();
     let mob_menu = "<div class='mobile-menu'></div>"
-    
+
 
     $('body').append(mob_menu);
     $('.mobile-menu').append(welcome);
@@ -79,7 +84,7 @@ $(document).ready(function () {
         $('body').toggleClass('overflow-bg');
         $(this).toggleClass('open');
         $('.mobile-menu').toggleClass('open');
-      });
+    });
     //-
 
 
