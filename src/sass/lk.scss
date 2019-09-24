@@ -21,15 +21,10 @@
 @import './components/_menu-button';
 @import "./lib/jquery.dataTables.min";
 
-
-.ie11,
-.ie10 {
-    .loader {
-        display: none !important;
-    }
+body.not-support-gradients {
+    background: #fff;
+    color: #000;
 }
-
-
 .lk {
     display: flex;
     flex-wrap: wrap;
@@ -2004,4 +1999,20 @@ body{
             }
     }
 
+}
+
+.ie11,
+.ie10 {
+
+    .btn--square-gr{
+        min-height: auto;
+        height: 45px;
+    }
+    .lk-content-and-aside__content,
+    .lk-content-and-aside__sidebar{
+        transition: none;
+    }
+    .loader {
+        display: none !important;
+    }
 }
