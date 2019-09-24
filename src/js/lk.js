@@ -18,9 +18,7 @@ import {
 } from './components/notice';
 
 import './components/resizeSensor';
-import {
-    myChart
-} from './components/lk-chart';
+import './components/lk-chart';
 
 
 import StickySidebar from 'sticky-sidebar/dist/sticky-sidebar';
@@ -43,7 +41,7 @@ stickyInterval = setInterval(function () {
 
 // main
 $(document).ready(function () {
-    console.log(myChart);
+
     // loader
     $('.loader').fadeOut();
 
