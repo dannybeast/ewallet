@@ -21,7 +21,7 @@
 @import './components/_menu-button';
 @import "./lib/jquery.dataTables.min";
 
-body.not-support-gradients {
+body.not-support-gradients, body.ie11,body.ie10 {
     background: #fff;
     color: #000;
 }

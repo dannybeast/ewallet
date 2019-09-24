@@ -113,7 +113,9 @@
 }
 
 .body-lk,
-body.not-support-gradients {
+body.not-support-gradients, 
+body.ie11,
+body.ie10 {
 
     .footer {
         padding-top: 130px;
