@@ -16,6 +16,10 @@ html
         +b.HEADER.header-lk
             .container
                 +e.row
+                    .menu-button
+                        span
+                        span
+                        span
                     +e.A(href="page-index.html").logo
                         img(src="img/logo.png", alt="e-wallet")   
                     +e.welcome
@@ -27,7 +31,7 @@ html
                             span Settings
                         +b.top-buttons
                             include ../partials/_language
-                            a(href="page-index.html") Logout
+                            a(href="page-index.html" class="logout") Logout
         //
         +b.notification-bar
             .container

@@ -18,9 +18,8 @@
 @import "./components/_fields";
 @import "./components/_notice";
 @import "./components/_modals";
+@import './components/_menu-button';
 @import "./lib/jquery.dataTables.min";
-
-
 
 
 .ie11,
@@ -196,20 +195,55 @@
             }
         }
     }
-
+    .menu-button{
+        display: none;
+        flex-shrink: 0;
+        margin-right: 15px;
+    }
     @media (max-width: $tablet) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 990;
+        .menu-button{
+            display: flex;
+        }
         &__logo {
             margin-left: 0;
         }
     }
 
     @media (max-width: $mobile) {
-
+        .top-buttons{
+            display: flex;
+            align-items: center;
+        }
+        .language-module{
+            border: none;
+            display: none;
+        }
+        &__logo{
+            margin-right: auto;
+        }
+        .logout{
+            font-size: 0;
+            width: 40px;
+            padding: 0;
+            height: 40px;
+            background: url('../img/icons/logout.svg') center no-repeat;
+            background-size: 20px;
+        }
 
         .icon-link,
         &__welcome {
             display: none;
         }
+    }
+}
+body{
+    @media (max-width: $tablet) {
+    padding-top: 70px;
     }
 }
 
@@ -1532,8 +1566,6 @@
     }
 }
 
-
-
 .table-block {
     padding: 25px 30px;
 
@@ -1922,4 +1954,54 @@
             padding: 0;
         }
     }
+}
+
+.mobile-menu{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(243, 243, 243);
+    height: calc(100vh - 70px);
+    overflow: auto;
+    z-index: 990;
+    display: none;
+
+    &>ul{
+        a{
+            padding:15px 50px;
+            @media (max-width: $mobile) {
+                padding:15px 25px;
+            }
+            display: flex;
+            align-items: center;
+        }
+       li{
+        border-bottom: 1px solid #fff;
+        &.active{
+            a{
+                background: #fff;
+            }
+        }
+       }
+    }
+
+    &.open{
+        display: block;
+    }
+    .language-module{
+        font-size: 15px;
+    }
+    .header-lk__welcome{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        background: #222;
+        padding:15px 50px;
+            @media (max-width: $mobile) {
+                padding:15px 25px;
+            }
+    }
+
 }

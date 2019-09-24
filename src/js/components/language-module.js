@@ -1,5 +1,5 @@
   // open languages
-  $('.language-module').click(function () {
+  $('body').delegate('.language-module', 'click', function () {
       $(this).toggleClass('open');
   });
   $(document).mouseup(function (e) {

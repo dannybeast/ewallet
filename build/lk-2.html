@@ -19,7 +19,8 @@
       <!---->
       <header class="header-lk">
         <div class="container">
-          <div class="header-lk__row"><a class="header-lk__logo" href="page-index.html"><img src="img/logo.png" alt="e-wallet"></a>
+          <div class="header-lk__row">
+            <div class="menu-button"><span></span><span></span><span></span></div><a class="header-lk__logo" href="page-index.html"><img src="img/logo.png" alt="e-wallet"></a>
             <div class="header-lk__welcome">
               <p>Welcome, <a href="#" class="username">Username!</a> </p>
             </div>
@@ -34,7 +35,7 @@
                     <li><a href="#">Ko</a></li>
                     <li><a href="#">Es</a></li>
                   </ul>
-                </div><a href="page-index.html">Logout</a>
+                </div><a class="logout" href="page-index.html">Logout</a>
               </div>
             </div>
           </div>
@@ -92,11 +93,11 @@
                     <div class="field">
                       <div class="field__row">
                         <div class="input input--has-before">
-                          <div class="input__before">MIN</div><input type="text" value="0.0001">
+                          <div class="input__before">MIN</div><input type="number" value="0.0001">
                           <div class="input__after">BTC</div>
                         </div>
                         <div class="input input--has-before">
-                          <div class="input__before">MAX</div><input type="text" value="1.0000">
+                          <div class="input__before">MAX</div><input type="number" value="1.0000">
                           <div class="input__after">BTC</div>
                         </div>
                       </div>
@@ -268,14 +269,14 @@
             </div>
             <div class="field field--white"><label>Description:</label><input type="text"></div>
             <div class="row">
-              <div class="col-sm-6">
+              <div class="col-md-6">
                 <div class="field field--white"><label>Network fee:</label><select>
                     <option> </option>
                   </select>
                   <p class="field__desc">Estimated confirmation time + 1 hour</p>
                 </div>
               </div>
-              <div class="col-sm-6">
+              <div class="col-md-6">
                 <p class="network-balance">0.00121 BTC ($121,22)</p>
               </div>
             </div>

@@ -39,11 +39,16 @@ stickyInterval = setInterval(function () {
 
 // main
 $(document).ready(function () {
+
+    // loader
     $('.loader').fadeOut();
+
+    // datatables
     var table = $('.js-data-tables').DataTable();
     table.on('draw', function () {
         sidebar.updateSticky();
     });
+
     // 2fa checker
     $('.js-2fa-checker').click(function () {
         if ($('.js-2fa-checker').is(':checked')) {
@@ -51,11 +56,33 @@ $(document).ready(function () {
         }
     });
 
+    // menu button desktop
     $('.js-toogle-menu').click(function () {
         $(this).toggleClass('open');
         $('.lk-content-and-aside__sidebar').toggleClass('active');
         $('.lk-content-and-aside__content').toggleClass('full');
     });
+
+    // mobile menu
+    let lk_nav = $('.lk-navigation ul').clone();
+    let welcome = $('.header-lk__welcome').clone();
+    let language_module = $('.header-lk .language-module').clone();
+    let mob_menu = "<div class='mobile-menu'></div>"
+    
+
+    $('body').append(mob_menu);
+    $('.mobile-menu').append(welcome);
+    $('.mobile-menu').append(lk_nav);
+    $('.mobile-menu .header-lk__welcome').append(language_module);
+
+    $('.menu-button').click(function () {
+        $('body').toggleClass('overflow-bg');
+        $(this).toggleClass('open');
+        $('.mobile-menu').toggleClass('open');
+      });
+    //-
+
+
 });
 
 
