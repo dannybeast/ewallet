@@ -1588,6 +1588,17 @@ body {
 .table-block {
     padding: 25px 30px;
 
+    a {
+        text-decoration: underline;
+        color: #0062aa;
+        cursor: pointer;
+
+        &:hover {
+            color: #000;
+            text-decoration: none;
+        }
+    }
+
     .dataTables_wrapper {
         @media (max-width: $mobile) {
             overflow-x: auto;
@@ -1681,7 +1692,7 @@ body {
             td {
                 font-family: $main-font;
                 font-weight: 400;
-                padding: 1.2em .5em;
+                padding: 1.1em .5em;
 
                 @media (max-width: $mobile) {
                     padding: 1em;
@@ -2047,5 +2058,106 @@ body {
 
     .loader {
         display: none !important;
+    }
+}
+
+.amount-view {
+    border-radius: 6px;
+    background-color: #f0f0f0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    display: inline-block;
+    padding: 8px 15px;
+
+    &--light {
+        background-color: #d4f1f6;
+    }
+
+    @media (max-width: $mobile) {
+        font-size: 13px;
+    }
+}
+
+.status {
+    &--green {
+        color: #018e2c;
+    }
+
+    &--red {
+        color: red;
+    }
+}
+
+.operation-details {
+    margin-bottom: 30px;
+
+    &__comission {
+        position: absolute;
+        top: 100%;
+        left: 170px;
+        margin-top: 5px;
+        font-size: 13px;
+        color: rgba(#000, 0.7);
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #fff;
+        padding: 17px 0 17px 15px;
+        position: relative;
+
+        &--light {
+            background: #d4f1f6;
+            border-color: #d4f1f6;
+            padding: 12px 17px;
+            margin-bottom: 15px;
+        }
+
+    }
+
+    &__sent {
+        color: #0062aa;
+        font-size: 23px;
+        font-weight: 700;
+
+        span {
+            font-size: 18px;
+            margin-left: 20px;
+            color: rgba(#0062aa, 0.5);
+        }
+    }
+
+    &__content {
+        color: rgba(#000, 0.7);
+        width: calc(100% - 155px);
+        font-size: 16px;
+    }
+
+    &__name {
+        width: 155px;
+        display: block;
+        font-size: 16px;
+    }
+
+    @media (max-width: $mobile) {
+        &__row {
+            flex-wrap: wrap;
+        }
+
+        &__content {
+            width: 100%;
+            font-size: 14px;
+        }
+
+        &__comission {
+            left: 15px;
+        }
+
+        &__name {
+            width: 100%;
+        }
     }
 }

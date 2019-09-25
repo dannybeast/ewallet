@@ -1,0 +1,45 @@
++b.modal(class="--white")#details
+
+  +b.modal-block(class="--gray")
+    +e.SPAN.close.js-hide-modal
+      +icon('cross')
+    +e.content
+      +e.H3.title 
+        +icon('import')
+        span Operation details
+      +b.operation-details
+
+        +e.row(class="--light")
+          +e.P.name Sent:
+          +e.content
+            +e.P.sent 0.00013431 BTC <span>($1,33)</span>
+          +e.P.comission Comission 0.0000000023 BTC
+        +e.row
+          +e.P.name Description:
+          +e.content
+            p Profit wallet! Try sending $1 here
+        
+        +e.row
+          +e.P.name To:
+          +e.content
+            p 56dc45d4x5454x54x55x5x5x5455x5xx5
+        
+        +e.row
+          +e.P.name From:
+          +e.content
+            p My wallet
+        
+        +e.row
+          +e.P.name Date:
+          +e.content
+            p 2019-22-08 12:33 pm
+            
+        +e.row
+          +e.P.name Status:
+          +e.content
+            // --red
+            +b.P.status(class="--green") Approved
+
+      +e.buttons
+        +b.A(href="#", class="btn --square-gr") Show on Blockchain
+

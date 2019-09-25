@@ -1,0 +1,46 @@
+---
+title: eWallet
+---
+extends layouts/_layout-lk
+include partials/_lk-top
+block variables 
+  - var pageName = "lk-8"
+
+block content
+
+    +lk-top()
+
+    +b.H3.lk-title Operations
+
+    +b.SECTION.table-block(class="--hide-filter").lk-block
+      mixin tr()
+        tr
+          td 
+            +b.amount-view(class="--light") 0.00203 BTC
+          td Sent
+          td yes
+          td 2018-09-29 15:11:29
+          td
+            a(class="js-custom-modal" data-modal-id="details") Details
+        tr
+          td 
+            +b.amount-view 0.00203 BTC
+          td Received
+          td yes
+          td 2018-09-29 15:11:29
+          td
+            a(class="js-custom-modal" data-modal-id="details") Details
+
+      table.js-data-tables
+        thead
+          tr
+            th Amount
+            th Type
+            th Approved
+            th Date
+            th Details
+        tbody
+          +tr()
+          +tr()
+          +tr()
+          +tr()
