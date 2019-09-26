@@ -51,7 +51,7 @@ $loud-color: #000;
 $heading-color: #111;
 
 $link-color: $color-1;
-$link-hover-color: $color-1;
+$link-hover-color: #3380a5;
 $link-visited-color: $color-1;
 
 $base-font-family: $main-font;
@@ -205,6 +205,10 @@ b {
 .h6 {
     font-weight: $heading-font-weight;
     font-family: $accent-font;
+
+    &:first-child {
+        margin-top: 0;
+    }
 }
 
 .h1 {
@@ -290,8 +294,14 @@ b {
     font-size: $base-font-size;
     line-height: $base-line-height;
 
+    &--small {
+        font-size: 14px;
+    }
+
     a {
         @extend .link;
+        font-weight: 400;
+        text-decoration: underline;
     }
 
     i,
@@ -402,4 +412,58 @@ b {
 
 .module-desc {
     @extend .h3;
+}
+
+.text-title {
+    text-align: center;
+    margin-top: 25px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    h2,
+    h3 {
+        font-weight: 700 !important;
+        font-size: 25px;
+        font-family: $main-font !important;
+        margin-bottom: 5px !important;
+    }
+
+    h3 {
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+    p {
+        margin-top: 0;
+    }
+
+    margin-bottom: 25px;
+}
+
+.ol-circle {
+    counter-reset: myCounter;
+    padding-left: 0 !important;
+
+    li {
+        list-style: none;
+        position: relative;
+
+        &:before {
+            counter-increment: myCounter;
+            content: counter(myCounter);
+            color: white;
+            background: #3380a5;
+            border-radius: 50%;
+            display: inline-block;
+            text-align: center;
+            margin: 5px 8px 5px 10px;
+            font-size: 10px;
+            font-weight: 700;
+            line-height: 20px;
+            width: 20px;
+            height: 20px;
+        }
+    }
 }

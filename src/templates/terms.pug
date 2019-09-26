@@ -1,0 +1,199 @@
+---
+title: eWallet
+---
+extends layouts/_layout
+include partials/_header
+include partials/_footer
+
+block variables 
+    - var pageName = "terms"
+
+block content
+    //
+    +header()
+    //
+    +b.SECTION.page-intro(class="--small")
+        .container
+            +e.row
+                +e.col
+                    +b.H1.section-title Terms
+                    +e.A(href="policy.html").link Privacy Policy
+                +e.col
+                    +e.buttons
+                      +b.A(href="test.pdf", download , class="btn --gr-blue")
+                        span Download PDF
+    // 
+    +b.ARTICLE.white.section
+        .container
+            //
+            +b.SECTION.typography(class="--small").section
+                +e.text
+                  +b.text-title
+                    h2 E-wallet Luxembourg S.A. User Agreement
+                    p Last Updated: July 30, 2019
+
+                  p This is an agreement between Blockchain Luxembourg S.A. and Blockchain Access UK LTD (collectively referred to herein as “Blockchain”, “we”, “us”, or “our”) and you (together with Blockchain, the “Parties” and each a “Party”). By using any Blockchain service, whether through blockchain.com, any associated website, API, or mobile application, you agree that you have read, understood, and accept all of the terms and conditions contained herein (the “User Agreement”), as well as our Privacy Policy available at https://www.blockchain.com/privacy, Cookie Policy, available at blockchain.com/cookies, API Agreement, available at blockchain.com/legal/api-terms and Trading Principles, located at pit.blockchain.com/legal#trading_principles.
+                  p THIS AGREEMENT CONTAINS AN ARBITRATION PROVISION. IF YOU ARE A U.S. PERSON AND WE CANNOT RESOLVE A DISPUTE THROUGH OUR USER OPERATIONS TEAM, ALL DISPUTES ARISING UNDER THIS USER AGREEMENT SHALL BE SETTLED IN BINDING ARBITRATION AS SET FORTH IN SECTION 15. ENTERING INTO THIS AGREEMENT CONSTITUTES A WAIVER OF YOUR RIGHT TO A TRIAL BY JURY AND PARTICIPATION IN A CLASS ACTION LAWSUIT.
+
+                  +b.text-title
+                    h3 1. GENERAL USE
+                    
+                  p 1.1 Eligibility. By using the Blockchain Site and entering into this User Agreement, you affirm that you are an individual, at least 18 years of age or older, have the capacity to enter into this User Agreement and agree to be legally bound by the terms and conditions of this User Agreement, including the Cookie Policy, the Privacy Policy and the Trading Principles as incorporated herein, as amended from time to time. In order to use the Services, you may be required to provide certain identifying information pursuant to our Compliance Program.
+                  p 1.2 Modification
+                  p 1.2.1 We may change the terms of this User Agreement at any time. Any such changes shall take effect when posted on the Blockchain Site, or when you use the Services. If you have supplied us with an email address, we shall also attempt to notify you by email of changes to this User Agreement. If you disagree with any changes to this User Agreement, contact us.
+                  p 1.2.2 It is your responsibility to update your contact information, including but not limited to the email address provided to us (if any); failure to do so may result in you not receiving notice of any such changes to the User Agreement.
+                  p 1.2.3 Read the User Agreement carefully on each occasion you use the Services. Your continued use of the Services shall signify your acceptance to be bound by the current User Agreement. Our failure or delay in enforcing or partially enforcing any provision of this User Agreement shall not be construed as a waiver of any of our rights.
+
+                  +b.text-title
+                    h3 2. DEFINITIONS
+
+                  p “Airdrop Program” means the provision of virtual currency by Blockchain Access UK LTD at no cost and on the terms set forth in Section 8.
+
+                  p “API” means application programming interface, is not a Service and is governed by a separate agreement.
+
+                  p "Fork" means a change to the underlying protocol of a Virtual Currency network that results in more than one version of a Virtual Currency, the result of which may be one or more versions that are not supported by Blockchain.
+
+                  p “Blockchain Site” means the webpages and information available via blockchain.com and any Blockchain mobile application.
+
+                  p “Compliance Program” means the requirements set by Blockchain for collecting, verifying, recording and reporting information about you, upon first accessing certain Services and on an ongoing basis, whether for our business risk-management purposes or to comply with legal requirements applicable to us.
+
+                  p “Fork” means a change to the underlying protocol of a Virtual Currency network that results in more than one version of a Virtual Currency, the result of which may be one or more versions that are not supported by Blockchain.
+
+                  p “Lockbox” means the electronic hardware key management device supported by the Wallet but provided by a third party as set forth in Section 7.
+
+                  p The“PIT” means the electronic trade execution system provided by Blockchain Access UK LTD that is used for trading Virtual Currency on the terms set forth in Section 9.
+
+                  p “Services” means one or more of the following services offered or provided by Blockchain via website or local application (mobile, desktop, or otherwise), including the Wallet, Lockbox, Swap, any Third Party Conversion Service, the Airdrop Program, Blockchain Site, and the PIT.
+
+                  p “Swap” means the noncustodial conversion service provided by Blockchain Access UK LTD that allows you to exchange one virtual currency for another virtual currency or for fiat currency on the terms set forth in Section 6.
+
+                  p “Third Party Conversion Service” means a noncustodial conversion service provided by a third party that allows you to exchange one virtual currency for another or for fiat currency on the terms set forth in Section 6.5.
+
+                  p “User Account” means an account kept by Blockchain Access UK LTD for the PIT, the Airdrop Program, Swap and any Third Party Conversion Service. For the avoidance of doubt, no User Account is associated with a Wallet unless the Wallet is linked to one of the foregoing Services.
+
+                  p “Virtual Currency” means a cryptocurrency, digital currency, digital asset, cryptoasset or other such similar term describing, for example, Bitcoin or Ether but does not include a derivative of a virtual currency, or a security, as defined under applicable law.
+
+                  p “Wallet” means the wallet software published by Blockchain Luxembourg S.A., consisting of software that permits you to self-custody virtual currency, organize network addresses, view transaction history and transact in virtual currencies as set forth in Section 5.
+
+
+                  +b.text-title
+                    h3 3. COMPLIANCE WITH APPLICABLE LAW
+
+
+                  p Your relationship with Blockchain and use of any of the Services may be subject to the laws, regulations, and rules of governmental or regulatory authorities in your or our jurisdiction (“Applicable Law”). By entering into this User Agreement, you agree to act in compliance with and be legally bound to any and all Applicable Law.
+
+
+                  +b.text-title
+                    h3 4. ACCESSING THE SERVICES
+
+
+                  p 4.1 Limited License. We grant you a limited, nonexclusive, nontransferable license to access and use the Services and the Blockchain Site solely in accordance with the terms of this Agreement.
+
+                  p 4.2 Credentials. You must keep secret all credentials associated with the Services. You are solely responsible for managing and maintaining the security of any information relating to such credentials and agree that Blockchain shall not be held responsible (and you shall not hold us responsible) for any unauthorized access to the Services or any resulting harm you may suffer.
+
+                  p 4.3 Compliance. Your access to one or more Services may be contingent upon satisfaction of our onboarding processes as well as our Compliance Program, which may include verification of your identity and source of funds, and additional information we may request from time-to-time. The information we request may include, without limitation, personally identifiable information such as network address, name, email, address, telephone number, date of birth, taxpayer identification or social security number, official government-issued photo identification, and bank account information or other information we may reasonably deem helpful in satisfying our risk management or legal obligations. In providing this information to us you represent that it is accurate and agree to update your User Account information promptly, but in no event later than 14 days following any change in your information. Failure to provide information or update it promptly may result in Services or funds being unavailable to you.
+
+                  p 4.4 Communications. Any and all communications from Blockchain may be provided to you via electronic mail at the address you provided when accessing the Services. Blockchain shall not be responsible for any harm you may suffer as a result of your failure to receive any notice provided to you in connection with this User Agreement or your use of Services so long as such notice is provided to such email address. Blockchain may also communicate with you through other methods, including via telephone call, instant messaging or chat applications either operated by Blockchain or a third party.
+
+                  p 4.5 Termination. We may close, terminate, enable or disable any or all of the Services, your User Account or your access to the Services at any time and for any reason. You may close your User Account at any time and for any reason. Depending on the Services available to you in your User Account, we may require you to take certain actions in order to complete a pending transaction or provide additional information prior to closing such User Account. You are solely responsible for any fees already incurred or associated with the closing of your User Account, whether incurred directly by you from Blockchain, or incurred by Blockchain on your behalf with a third party in order to complete any such action. Closing your User Account may not result in the deletion of information we hold about you or your activity.
+
+
+                  +b.text-title
+                    h3 5. THE WALLET
+
+                  p 5.1 Description
+
+                  p 5.1.1 The Wallet is provided to you exclusively by Blockchain Luxembourg S.A. At no point will Blockchain ever take custody of Virtual Currency stored in a Wallet. The Wallet is only capable of supporting certain Virtual Currencies. Under no circumstances should you attempt to store Virtual Currencies in your Wallet that the Wallet does not support.
+
+                  p 5.1.2 When you create a Wallet, the Wallet software generates a cryptographic private and public key pair that you may use to send and receive any supported Virtual Currency via the relevant Virtual Currency network. YOU MUST STORE, OUTSIDE OF THE SERVICES, A BACKUP OF ALL WALLET CREDENTIALS, INCLUDING YOUR PASSPHRASES, IDENTIFIERS, BACKUP PHRASES, PRIVATE KEYS AND NETWORK ADDRESSES. If you do not maintain a backup of your Wallet data outside of the Services, you will not be able to access Virtual Currency previously accessed using your Wallet in the event that we discontinue or no longer offer some or all of the Services or may otherwise lose access to Virtual Currency. We are not responsible for maintaining this data on your behalf.
+
+                  p 5.2 Risk Disclosures Relating to the Wallet.
+
+                  p 5.2.1 In order to be completed, any Virtual Currency transaction created with the Wallet must be confirmed and recorded in the Virtual Currency ledger associated with the relevant Virtual Currency network. Such networks are decentralized, peer-to-peer networks supported by independent third parties, which are not owned, controlled or operated by Blockchain.
+
+                  p 5.2.2 Blockchain has no control over any Virtual Currency network and therefore cannot and does not ensure that any transaction details you submit via our Services will be confirmed on the relevant Virtual Currency network. The transaction details you submit via our Services may not be completed, or may be substantially delayed, by the Virtual Currency network used to process the transaction. We do not guarantee that the Wallet can transfer title or right in any Virtual Currency or make any warranties whatsoever with regard to title.
+
+                  p 5.2.3 Once transaction details have been submitted to a Virtual Currency network, we cannot assist you to cancel or otherwise modify your transaction or transaction details. Blockchain has no control over any Virtual Currency network and does not have the ability to facilitate any cancellation or modification requests.
+
+                  p 5.3 Forks. In the event of a Fork or other network disruption, Blockchain may not be able to support activity related to your Virtual Currency. In the event of a Fork, the transactions may not be completed, completed partially, incorrectly completed, or substantially delayed. Blockchain is not responsible for any loss incurred by you caused in whole or in part, directly or indirectly, by a Fork or other network disruption.
+
+                  p 5.4 No Password Retrieval.
+
+                  p 5.4.1 With respect to the Wallet, Blockchain does not receive or store your Wallet password, nor any keys, network addresses or transaction history. We cannot assist you with Wallet password retrieval. You are solely responsible for remembering, storing and keeping secret your Wallet password. Any Virtual Currency you have associated with such Wallet may become inaccessible if you do not know or keep secret your Wallet password. Any third party with knowledge of one or more of your credentials (including, without limitation, a backup phrase, wallet identifier or password) can dispose of Virtual Currency in your Wallet
+
+                  p 5.4.2 When you create a Wallet, you must: (a) create a strong password that you do not use for any other website or online service; (b) provide accurate and truthful information; (c) protect and keep secret all credentials for the Wallet; (d) protect access to your device and your Wallet; (e) promptly notify us if you discover or otherwise suspect any security breaches related to your Wallet; and (f) use the backup functionality provided through the Wallet and safeguard your backup files. You agree to take responsibility for all activities that occur with your Wallet and accept all risks of any authorized or unauthorized access to your Wallet, to the maximum extent permitted by law.
+
+                  p 5.5 Fees. Blockchain does not currently charge a fee for the Wallet receiving, sending or controlling Virtual Currency. However, we reserve the right to do so in the future, and in such case shall display to you any applicable fees prior to you incurring the fee. Network fees (including, without limitation “miner’s fees”) required to use a Virtual Currency network may apply to a transaction. We may attempt to calculate such a fee for you. Our calculation may not be sufficient, or it may be excessive. You may select a greater or lesser fee. You are solely responsible for selecting and paying any such fee and Blockchain shall neither advance nor fund such a fee on your behalf, nor be responsible for any excess or insufficient fee calculation.
+
+
+                  +b.text-title
+                    h3 6. SWAP
+
+
+                  p 6.1 Description. We may provide Swap to you using the Wallet interface. Swap is provided to you exclusively by Blockchain Access UK LTD or a Third Party Conversion Service. Through Swap, Blockchain shall display to you a conversion rate that may include a fee, which you agree to pay. Swap works in connection with the Wallet, by which we shall deliver to you the requested Virtual Currency, less any applicable fees, by executing a transaction from a Virtual Currency address we control to one associated with your Wallet.
+
+                  p 6.2 Due Diligence. We may, at our sole discretion and from time-to-time, require you to satisfy our Compliance Program before participating in Swap or receiving funds. In order to use Swap, you agree to cooperate with any such request and pay any associated fees, which may be modified or supplemented at any time.
+
+                  p 6.3 No Cancellation. You may not cancel, reverse or change any Swap transaction. We may suspend, delay, redirect, reverse or cancel any Swap transaction at any time and for any reason. For example, and without limitation, we may do so if we suspect any risk of fraud, crime, breach of this User Agreement, or illicit activity.
+
+                  p 6.4 Transaction Limitation. We may implement Swap transaction limits. These may vary based on a variety of factors, including, without limitation, the time of your transaction, your location, the Virtual Currency purchased, and the Virtual Currency sold. We implement, raise and lower Swap transaction limits in our sole discretion.
+
+                  p 6.5 Third Party Conversion Service. On occasion, a third party service provider, selected by Blockchain in our sole discretion, may operate Swap. YOUR USE OF A THIRD PARTY CONVERSION SERVICE FOR SWAP SHALL BE ON AN ‘AS-IS’ BASIS. Blockchain is not your counterparty in any transaction completed via any Third Party Conversion Service and cannot be held liable for any loss caused in whole or in part, directly or indirectly, by your use of the Third Party Conversion Service.
+
+
+                  +b.text-title
+                    h3 7. LOCKBOX
+
+
+                  p 7.1 Description. We may advertise to you a Blockchain Lockbox hardware device to be used in connection with the Wallet or other Services. A Lockbox is manufactured, offered, sold and supported (if applicable) by third parties, not Blockchain. You have no relationship, contractual or otherwise, with Blockchain in connection with your purchase of a Lockbox from such third party. We do not act as a reseller. We may, from time-to-time, include features permitting you to use a Lockbox in connection with the Wallet. We do not guarantee support for, or access to, any Lockbox as part of the Services. We shall not be responsible for any damages caused in whole or in part, directly or indirectly, by a Lockbox or any use of a Lockbox, whether or not it was used in connection with the Services.
+
+                  p 7.2 No Password Retrieval.
+
+                  p 7.2.1 Blockchain does not receive or store passwords, keys, network addresses, transaction history, personal identification numbers (“PINs”) or other credentials associated with a Lockbox. We cannot assist you with Lockbox credential retrieval. You are solely responsible for remembering, storing and keeping secret any Lockbox credentials. Any Virtual Currency you have associated with a Lockbox may become inaccessible if you do not know or keep secret your credentials. Any third party with knowledge of one or more of your credentials (including, without limitation, a backup phrase or PIN) can dispose of Virtual Currency in your Lockbox.
+
+                  p 7.2.2 When you set up a Lockbox, you must: (a) create strong credentials (like PINs) that you do not use for any other service; (b) protect and keep secret all credentials; (c) protect access to your Lockbox; (d) promptly notify us if you discover or otherwise suspect any security breaches related to your Lockbox; and (e) use the backup functionality provided with the Lockbox, keeping all backup information secure and confidential. You agree to take responsibility for all activities that occur in connection with your Lockbox and accept all risks of any authorized or unauthorized access to your Lockbox, to the maximum extent permitted by law.
+
+                  p 7.3 Risk Disclosures Relating to the Lockbox.
+
+                  p 7.3.1 At no point will Blockchain ever take custody or control over any Virtual Currency stored using a Lockbox, nor will we have access to any credentials associated with your Lockbox or the ability to recover any Virtual Currency used in connection with a Lockbox.
+
+                  p 7.3.2 Information relating to Virtual Currency, like balances, availability or value, may not reflect the actual balance in real-time. You must independently verify all information before relying on it, and any decisions or actions taken based upon such information are your sole responsibility.
+
+                  p 7.4 Disclaimer of Warranties.
+
+                  p 7.4.1 Any Services offered in connection with the Lockbox are provided on an "AS IS" basis without any representation or warranty, whether express, implied or statutory. To the maximum extent permitted by applicable law, we specifically disclaim any implied warranties of title, merchantability, fitness for a particular purpose and/or non-infringement.
+
+                  p 7.4.2 We make no warranty that any Lockbox will be free from viruses, malware, or other related harmful material and make no representation that your ability to access any Lockbox will be uninterrupted. Any defects or malfunction in the product should be directed to the third party offering the Lockbox and not Blockchain. We shall not be responsible or liable to you for any loss of any kind, from action taken, or taken in reliance on material, or information, contained on or through the Lockbox.
+
+
+                  +b.text-title
+                    h3 8. AIRDROP PROGRAM
+
+
+                  p 8.1 Description. We may offer you the opportunity to receive Virtual Currency at no cost (“Airdrop”), subject to the terms described in this section. The Airdrop Program is provided to you exclusively by Blockchain Access UK LTD. The Virtual Currency is delivered by us to you, but is manufactured, offered and supported by the network creator or developer, if any, and not by Blockchain.
+
+                  p 8.2 Terms of Airdrop Program.
+
+                  p 8.2.1 No Purchase Necessary. There is no purchase necessary to receive Virtual Currency in an Airdrop. However, you must have a Wallet and a User Account. Although Blockchain does not charge a fee for participation in the Airdrop Program, we reserve the right to do so in the future and shall provide prior notice to you in such case.
+
+                  p 8.2.2 Timing. Each Airdrop shall be subject to any terms displayed in the Services and marked with an asterisk (*) or other similar notation.
+
+                  p 8.2.3 Limited Supply. An offer to receive Virtual Currency in an Airdrop is only available to you while supplies last. Once the amount of Virtual Currency offered by Blockchain in an Airdrop is exhausted, any party who has either been placed on a waitlist, or has completed certain additional steps, but not yet received notice of award of Virtual Currency in such Airdrop, shall no longer be eligible to receive Virtual Currency in that Airdrop. Blockchain reserves the right, in our sole discretion, to modify or suspend any Airdrop requirements at any time without notice, including the amount previously advertised as available.
+
+                  p 8.2.4 Eligibility. You may not be eligible to receive Virtual Currency from an Airdrop in your jurisdiction. In the event that you have multiple Wallets with Blockchain, you are only eligible to receive Virtual Currency from an Airdrop in one Wallet and for one User Account.
+
+                  +b.text-title
+                    h3 9. THE PIT
+
+                  p 9.1 Description. We may offer you the ability to purchase and sell Virtual Currency for other Virtual Currency or fiat currency via the PIT subject to the terms of this Agreement. The PIT is provided to you exclusively by Blockchain Access UK LTD. Use of the PIT requires a User Account, which may require you to complete certain actions pursuant to our Compliance Program. Your use of the PIT is subject to the terms of the Trading Principles as amended from time to time. In the event of any inconsistency between this Agreement and the Trading Principles, this Agreement shall apply with respect to matters relating to this Section.
+
+                  p 9.2 Availability of Service. The PIT may not be available in all markets and jurisdictions. We may restrict or prohibit use of the PIT in certain jurisdictions (“Restricted Locations”), and change such restrictions or prohibitions at any time.
+
+                  p 9.3 General Obligations.
+
+                  p 9.3.1 Number of User Accounts. We may, in our sole discretion, limit the number of User Accounts that you may create or maintain. We may terminate or suspend any User Account that exceeds such limit, and liquidate, freeze or refund positions and funds associated with such User Account.
+
+    //
+    include partials/_social
+    //
+    +footer()

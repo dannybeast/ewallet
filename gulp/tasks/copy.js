@@ -22,29 +22,11 @@ gulp.task('copy:fonts', () => gulp
   .pipe(gulp.dest(config.dest.fonts))
 );
 
-gulp.task('copy:data', () => gulp
-  .src(config.src.data + '/**/*.*')
-  .pipe(gulp.dest(config.dest.data))
-);
-
 gulp.task('copy:lib', () => gulp
   .src(config.src.lib + '/**/*.*')
   .pipe(gulp.dest(config.dest.lib))
 );
 
-// gulp.task('copy:animate', () => gulp
-//   .src(config.src.js + '/screen-animate.js')
-//   .uglify()
-//   .pipe(gulp.dest(config.dest.js))
-// );
-
-// gulp.task('copy:animate', function () {
-//   return pipeline(
-//     gulp.src(config.src.js + '/screen-animate.js'),
-//     uglify(),
-//     gulp.dest(gulp.dest(config.dest.js))
-//   );
-// });
 
 gulp.task("copy:animate", function () {
   return gulp.src(config.src.js + '/screen-animate.js')

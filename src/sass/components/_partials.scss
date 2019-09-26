@@ -203,6 +203,7 @@ $margin-sm: 80px;
     padding-bottom: 90px;
     padding-top: 60px;
     position: relative;
+    $parent: &;
 
     &__row {
         @include make-row();
@@ -243,6 +244,36 @@ $margin-sm: 80px;
         margin-bottom: 15px;
     }
 
+    &__link {
+        color: #777777;
+        font-size: 18px;
+        text-decoration: underline;
+
+    }
+
+    &--small {
+        padding-bottom: 50px;
+        padding-top: 50px;
+
+        #{$parent}__col {
+            display: flex;
+            align-items: center;
+        }
+
+        #{$parent}__buttons {
+            margin-left: auto;
+        }
+
+        .btn {
+            font-size: 15px;
+        }
+
+        .section-title {
+            margin-bottom: 0;
+            margin-right: 60px;
+        }
+    }
+
     @include media-breakpoint-down(sm) {
         text-align: center;
         padding-top: 30px;
@@ -272,6 +303,29 @@ $margin-sm: 80px;
 
         &__text {
             font-size: 18px;
+        }
+
+
+        &--small {
+            padding-bottom: 30px;
+
+            #{$parent}__buttons {
+                margin: 0 auto;
+            }
+
+            .section-title {
+                margin-right: 20px;
+            }
+
+            #{$parent}__col {
+                justify-content: center;
+
+                &:last-child {
+                    order: 2;
+                    margin-bottom: 0;
+                    margin-top: 30px;
+                }
+            }
         }
     }
 }
@@ -389,7 +443,8 @@ $margin-sm: 80px;
         position: absolute;
         z-index: 3;
 
-        img, canvas {
+        img,
+        canvas {
             width: 100% !important;
             height: auto !important;
         }
@@ -1392,7 +1447,7 @@ $margin-sm: 80px;
     color: #000;
     margin-top: 0;
     overflow: hidden;
-    padding-top: 100px;
+    padding-top: 60px;
 
     .section {
         margin: 100px 0;
