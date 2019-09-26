@@ -95,9 +95,9 @@
           </div>
           <div class="notebook">
             <div class="notebook__slider">
-              <div><img src="img/intro/1.jpg" alt=""></div>
-              <div><img src="img/intro/2.jpg" alt=""></div>
-              <div><img src="img/intro/3.jpg" alt=""></div>
+              <div id="animation_container" style="background-color:rgba(0, 0, 153, 0.00); width:565px; height:351px"><canvas id="canvas" style="position: absolute; display: block; background-color:rgba(0, 0, 153, 0.00);"></canvas>
+                <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:565px; height:351px; position: absolute; left: 0px; top: 0px; display: block;"></div>
+              </div>
             </div><img src="img/intro/notebook.png" alt="">
           </div>
           <div class="intro-slide__slider slider-right">
@@ -755,5 +755,7 @@
     </div>
     <script defer type="text/javascript" src="js/vendor.js"></script>
     <script defer type="text/javascript" src="js/app.js"></script>
+    <script defer src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+    <script defer type="text/javascript" src="js/screen-animate.js"></script>
   </body>
 </html>

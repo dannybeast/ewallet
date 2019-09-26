@@ -44,12 +44,20 @@ block content
 
         +b.notebook
           +e.slider
-            div
-              img(src="img/intro/1.jpg", alt="")
-            div
-              img(src="img/intro/2.jpg", alt="")
-            div
-              img(src="img/intro/3.jpg", alt="")
+            #animation_container(style='background-color:rgba(0, 0, 153, 0.00); width:565px; height:351px')
+              canvas#canvas( style='position: absolute; display: block; background-color:rgba(0, 0, 153, 0.00);')
+              #dom_overlay_container(style='pointer-events:none; overflow:hidden; width:565px; height:351px; position: absolute; left: 0px; top: 0px; display: block;').
+                
+                
+  
+          //- +e.slider
+          //-   div
+          //-     img(src="img/intro/1.jpg", alt="")
+          //-   div
+          //-     img(src="img/intro/2.jpg", alt="")
+          //-   div
+          //-     img(src="img/intro/3.jpg", alt="")
+
           img(src="img/intro/notebook.png", alt="")
 
         +e.slider.slider-right
@@ -342,3 +350,7 @@ block content
   include partials/_social
   //
   +footer()
+
+block pageScripts
+  script(defer src='https://code.createjs.com/createjs-2015.11.26.min.js')
+  script(defer type="text/javascript" src="js/screen-animate.js")

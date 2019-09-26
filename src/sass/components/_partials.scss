@@ -389,8 +389,9 @@ $margin-sm: 80px;
         position: absolute;
         z-index: 3;
 
-        img {
-            width: 100%;
+        img, canvas {
+            width: 100% !important;
+            height: auto !important;
         }
     }
 

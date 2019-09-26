@@ -1,5 +1,6 @@
 import gulp from 'gulp';
 import config from '../config.js';
+let uglify = require('gulp-uglify-es').default;
 // import imagemin from 'gulp-imagemin';
 
 gulp.task('copy:img', () => gulp
@@ -31,12 +32,33 @@ gulp.task('copy:lib', () => gulp
   .pipe(gulp.dest(config.dest.lib))
 );
 
+// gulp.task('copy:animate', () => gulp
+//   .src(config.src.js + '/screen-animate.js')
+//   .uglify()
+//   .pipe(gulp.dest(config.dest.js))
+// );
+
+// gulp.task('copy:animate', function () {
+//   return pipeline(
+//     gulp.src(config.src.js + '/screen-animate.js'),
+//     uglify(),
+//     gulp.dest(gulp.dest(config.dest.js))
+//   );
+// });
+
+gulp.task("copy:animate", function () {
+  return gulp.src(config.src.js + '/screen-animate.js')
+    .pipe(uglify())
+    .pipe(gulp.dest(config.dest.js));
+});
+
+
 gulp.task('copy:rootfiles', () => gulp
   .src(config.src.root + '/*.*')
   .pipe(gulp.dest(config.dest.root))
 );
 
-const build = gulp => gulp.series('copy:img', 'copy:fonts', 'copy:icons');
+const build = gulp => gulp.series('copy:img', 'copy:fonts', 'copy:icons', 'copy:animate');
 const watch = gulp => () => gulp.watch(config.src.img + '/*', gulp.parallel('copy:img', 'copy:fonts'));
 
 module.exports.build = build;

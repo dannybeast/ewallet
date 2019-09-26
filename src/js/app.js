@@ -77,13 +77,13 @@ $(document).ready(function () {
   //-
 
   //
-  $('.notebook__slider').slick({
-    fade: true,
-    autoplay: true,
-    pauseOnHover: false,
-    speed: 800,
-    arrows: false
-  });
+  // $('.notebook__slider').slick({
+  //   fade: true,
+  //   autoplay: true,
+  //   pauseOnHover: false,
+  //   speed: 800,
+  //   arrows: false
+  // });
   //-
 
   // mobile menu
