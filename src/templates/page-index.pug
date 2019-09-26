@@ -44,12 +44,10 @@ block content
 
         +b.notebook
           +e.slider
-            #animation_container(style='background-color:rgba(0, 0, 153, 0.00); width:565px; height:351px')
-              canvas#canvas( style='position: absolute; display: block; background-color:rgba(0, 0, 153, 0.00);')
-              #dom_overlay_container(style='pointer-events:none; overflow:hidden; width:565px; height:351px; position: absolute; left: 0px; top: 0px; display: block;').
-                
-                
-  
+            #animation_container
+              canvas#canvas
+              #dom_overlay_container
+              
           //- +e.slider
           //-   div
           //-     img(src="img/intro/1.jpg", alt="")
@@ -285,7 +283,7 @@ block content
             li
               a(href="#", class="js-coming-app")
                 img(src="img/apps/google_play.png", alt="")
-          //+e.P.subtitle COMING SOON
+          //- +e.P.subtitle COMING SOON
   //
   +b.SECTION.faq.section
     .container

@@ -442,9 +442,11 @@ $margin-sm: 80px;
         top: 5%;
         position: absolute;
         z-index: 3;
+        overflow: hidden;
 
         img,
-        canvas {
+        canvas,
+        #animation_container {
             width: 100% !important;
             height: auto !important;
         }
