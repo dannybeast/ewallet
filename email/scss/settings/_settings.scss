@@ -12,14 +12,12 @@
 //   7. Menu
 //   8. Thumbnial
 
-
 //colors:
 $accent: #307b91;
 $blue: #004d7e;
 $grey: #65748a;
 $white: #fff;
-$bg: #F7F7F7;
-
+$bg: #f7f7f7;
 
 // 1. Global
 // ---------
@@ -35,18 +33,18 @@ $dark-gray: #8a8a8a;
 $black: #000000;
 $white: #ffffff;
 $pre-color: #ff6908;
-$global-width: 800px;
+$global-width: 600px;
 $global-width-small: 95%;
-$global-gutter:16px;
+$global-gutter: 16px;
 $body-background: $bg;
 $container-background: $white;
 $global-font-color: $black;
 $body-font-family: Arial;
 $global-padding: 16px;
-$global-margin:16px;
+$global-margin: 16px;
 $global-radius: 3px;
 $global-rounded: 500px;
-$global-breakpoint: $global-width+$global-gutter;
+$global-breakpoint: $global-width + $global-gutter;
 
 // 2. Grid
 // -------
@@ -101,15 +99,17 @@ $stat-font-size: 40px;
 // 5. Button
 // ---------
 
-$button-padding: (tiny: 4px 8px 4px 8px,
+$button-padding: (
+  tiny: 4px 8px 4px 8px,
   small: 5px 10px 5px 10px,
   default: 12px 35px 12px 35px,
-  large: 10px 20px 10px 20px,
+  large: 10px 20px 10px 20px
 );
-$button-font-size: (tiny: 10px,
+$button-font-size: (
+  tiny: 10px,
   small: 12px,
   default: 16px,
-  large: 20px,
+  large: 20px
 );
 $button-color: $white;
 $button-color-alt: $medium-gray;
