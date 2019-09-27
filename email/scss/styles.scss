@@ -46,6 +46,9 @@ html {
     vertical-align: middle;
     color: #fff;
   }
+  td {
+    padding: 15px !important;
+  }
 
   .subtitle {
     font-size: 22px;
@@ -81,7 +84,7 @@ html {
 
   .menu-item {
     text-align: right;
-    padding: 8px !important;
+    padding: 5px !important;
 
     a {
       color: #27bbd1 !important;
@@ -139,7 +142,6 @@ html {
 
       a {
         color: #00bbd1 !important;
-
       }
     }
   }
@@ -188,6 +190,9 @@ html {
   }
 
   .header {
+    * {
+      text-align: center !important;
+    }
     .logo-wrap {
       padding-bottom: 15px !important;
 
@@ -197,7 +202,6 @@ html {
     }
 
     .social {
-
       a {
         padding: 10px !important;
       }
@@ -209,7 +213,6 @@ html {
       td {
         padding-top: 10px !important;
       }
-
     }
   }
 
@@ -218,8 +221,10 @@ html {
     display: block;
   }
 
-
   .footer {
+    th.menu-item {
+      padding: 2px !important;
+    }
     .menu {
       tr {
         text-align: center !important;
@@ -228,7 +233,6 @@ html {
   }
 
   .section-text__content {
-
     p,
     a {
       font-size: 14px !important;
@@ -245,7 +249,7 @@ html {
         display: inline-block;
 
         img {
-          width: 30px !important;
+          width: 45px !important;
         }
       }
     }
@@ -255,6 +259,4 @@ html {
       padding-right: 0px !important;
     }
   }
-
-
 }

@@ -30,4 +30,5 @@ nbproject
 .tmp
 _tmp
 node_modules
+email/node_modules
 bower_components
