@@ -1139,6 +1139,16 @@ $margin-sm: 80px;
                 rgba(0, 0, 0, 1) 60%);
     }
 
+    &__slider{
+        background: #fff;
+        position: absolute;
+           top: 3%;
+           left: 6%;
+           width: 88%;
+        img{
+            display: block;
+        }
+    }
     &__row {
         display: flex;
         align-items: center;

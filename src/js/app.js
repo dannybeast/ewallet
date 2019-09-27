@@ -86,6 +86,15 @@ $(document).ready(function () {
   // });
   //-
 
+  //
+  $('.apps__slider').slick({
+    fade: true,
+    autoplay: true,
+    pauseOnHover: false,
+    speed: 800,
+    arrows: false
+  });
+  //-
   // mobile menu
   $('.menu-button').click(function () {
     $('body').toggleClass('overflow-bg');
