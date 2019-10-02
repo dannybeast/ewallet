@@ -46,8 +46,14 @@ $(document).ready(function () {
     $('.loader').fadeOut();
 
     // datatables
-    var table = $('.js-data-tables').DataTable();
+    let sort_col_number = $('.js-data-tables').attr('sort-col-number');
+    var table = $('.js-data-tables').DataTable({
+        "order": [
+            [sort_col_number, "desc"]
+        ]
+    });
     table.on('draw', function () {
+
         sidebar.updateSticky();
     });
 

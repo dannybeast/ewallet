@@ -87,15 +87,15 @@ block content
     +b.H3.lk-title Profit withdraw history
 
     +b.SECTION.table-block(class="--hide-filter").lk-block
-      mixin tr()
+      mixin tr(date, price)
         tr
           td 
-            strong $ 186
+            strong #{price}
           td U.S dollars
           td $ 2 123
           td yes
-          td 2018-09-29 15:11:29
-      table.js-data-tables
+          td #{date}
+      table.js-data-tables(sort-col-number="4")
         thead
           tr
             th Amount
@@ -104,16 +104,16 @@ block content
             th Approved
             th Date
         tbody
-          +tr()
-          +tr()
-          +tr()
-          +tr()
-          +tr()
-          +tr()
-          +tr()
-          +tr()
-          +tr()
-          +tr()
-          +tr()
-          +tr()
+          +tr('2018-09-18 15:11:29', '$ 186')
+          +tr('2018-09-19 04:11:29', '$ 187')
+          +tr('2018-09-20 03:11:29', '$ 188')
+          +tr('2018-09-21 01:11:29', '$ 189')
+          +tr('2018-09-22 15:11:29', '$ 190')
+          +tr('2018-09-23 09:11:29', '$ 186')
+          +tr('2018-09-24 19:11:29', '$ 170')
+          +tr('2018-09-25 10:11:29', '$ 186')
+          +tr('2018-09-26 12:11:29', '$ 160')
+          +tr('2018-09-27 13:11:29', '$ 186')
+          +tr('2018-09-28 14:11:29', '$ 10')
+          +tr('2018-09-29 15:11:29', '$ 150')
             
