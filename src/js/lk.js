@@ -42,9 +42,6 @@ stickyInterval = setInterval(function () {
 // main
 $(document).ready(function () {
 
-    // loader
-    $('.loader').fadeOut();
-
     // datatables
     let sort_col_number = $('.js-data-tables').attr('sort-col-number');
     var table = $('.js-data-tables').DataTable({
@@ -92,6 +89,8 @@ $(document).ready(function () {
     //-
 
 
+    // loader
+    $('.loader').fadeOut();
 });
 
 
