@@ -15,7 +15,7 @@
     font-weight: 700;
     letter-spacing: 1.15px;
     font-size: 21px;
-    border-radius: 30px;
+    border-radius: 5em;
     $parent: &;
 
     @include media-breakpoint-down(sm) {
@@ -32,7 +32,6 @@
         color: #fff !important;
         //text-shadow: 2px 2px #0B577A;
         overflow: hidden;
-
 
         span {
             position: relative;
@@ -51,10 +50,41 @@
         border: 1px solid #0B577A;
         color: #00a2b5;
 
+        svg {
+            fill: #00a2b5;
+        }
+
         &:hover {
             background: #fff;
             color: #0B577A !important;
             border-color: #fff;
+
+            svg {
+                fill: #0B577A;
+            }
+
+            img {
+                transform: scale(1.1)
+            }
+        }
+    }
+
+    &--line-gray {
+        border: 1px solid #aaaaaa;
+        color: #aaaaaa;
+
+        svg {
+            fill: #aaaaaa;
+        }
+
+        &:hover {
+            background: #fff;
+            color: #0B577A !important;
+            border-color: #fff;
+
+            svg {
+                fill: #0B577A;
+            }
 
             img {
                 transform: scale(1.1)

@@ -128,4 +128,21 @@ $(document).ready(function () {
   });
   //-
 
+  // affiliate tariffs
+  let table = $('.js-table-mobile-headers');
+  let ths = table.find('th');
+  let tds = table.find('td');
+
+  tds.each(function (i) {
+    let $text = $(ths[i]).text();
+    $(tds[i]).append(`<p class="t-descr">${$text}</p>`);
+  });
+  //-
+
+
+  // sale indicator
+  let indicator = $('.js-sale-indicator').find('[data-percent]');
+  let indicatorPercent = indicator.data('percent');
+  indicator.append(`<span style="width: ${indicatorPercent}"><strong>${indicatorPercent}</strong></span>`)
+  //-
 });

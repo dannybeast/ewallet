@@ -91,10 +91,32 @@ block content
   +b.SECTION.watch.section#watch
     .container
       +e.H3.title THE PURSE PAYS YOU THE COMMISSION!
-      +e.buttons
-        +b.A(href="https://youtu.be/HNLWJxMD67c", class="btn --line-blue --icon js-modal") 
-          img(src="img/icons/play.svg", alt="")
-          span WATCH VIDEO
+
+      +e.row
+        +e.col
+          +b.A(href="https://youtu.be/HNLWJxMD67c", class="video-module --blue js-modal")
+            +e.block
+              +e.block-content
+                +e.title Instructions on how to handle your wallet
+                +e.icon
+                  +icon('play')
+              img(src="img/v1.png", alt="")
+            +b.div(class="btn --line-blue --icon") 
+              +icon('play')
+              span Watch instruction
+        +e.col
+          +b.A(href="https://youtu.be/HNLWJxMD67c", class="video-module --gray js-modal")
+            +e.block(class="--gray")
+              +e.block-content
+                +e.title interview with<br> e-wallet director
+                +e.icon
+                  +icon('play')
+              img(src="img/v2.png", alt="")
+            +b.div(class="btn --line-gray --icon") 
+              +icon('play')
+              span Watch interview
+
+
   //
   +b.SECTION.about.section
     .container
@@ -262,11 +284,20 @@ block content
   //
   +b.SECTION.coming.section
     .container
-      +e.H3.title EWALLET COIN COMING SOON
-      +e.image
-        img(src="img/coming/coin.png", alt="")
-      +e.text
-        p That we have big plans for the future and soon we will issue our token, which will be traded on all major crypto-currency exchanges of the world!
+      +e.block
+        +e.H3.title 
+          span EWALLET COIN COMING SOON
+        +e.text
+          p The E-wallet coin is a coin in which after reaching 50,000 registration will begin to be paid rewards for the storage of crypto currency on the E-wallet.io purse. The coin will be available first on Bitmex, Binance and Polomiex exchanges. And then on other crypto exchanges. You can leave an E-wallet coin purchase requisition with a 50% discount now! Funds raised at the Pre-Sale E-wallet coin will be invested in developments.
+        +b.pre-sale.js-sale-indicator
+          +e.P.title Pre sale
+          +e.indicator(data-percent="6%")
+        +e.image
+          img(src="img/coming/coin.png", alt="")
+        +e.buttons
+          +b.A(class="btn --gr-blue js-modal") 
+              span Submit e-wallet coin purchase request
+  
   //
   +b.SECTION.apps.section
     .container
