@@ -247,7 +247,7 @@
 
         &--icon {
             img {
-                height: 15px;
+                //height: 15px;
                 margin-right: 10px;
             }
         }
@@ -270,29 +270,40 @@
     max-width: 565px;
     $parent: &;
     position: relative;
+    margin: 60px 0 30px;
+
+    .gr-block {
+        margin: 0;
+
+        .field input[type=number],
+        .field input[type=password],
+        .field input[type=text],
+        .field select,
+        .field textarea {
+            color: #fff;
+            border: solid 1px transparent;
+            background: rgba(255, 255, 255, .2);
+        }
+    }
 
     &__close {
         position: absolute;
-        top: 45px;
+        bottom: 100%;
+        margin-bottom: 10px;
         z-index: 10;
-        right: 45px;
+        right: 0;
         cursor: pointer;
+
+        @include media-breakpoint-down(sm) {
+            right: 15px;
+        }
 
         svg {
             width: 23px;
             height: 23px;
+            fill: #00a9c5;
         }
 
-        &:hover {
-            svg {
-                fill: #0062aa;
-            }
-        }
-
-        @media (max-width: $mobile) {
-            top: 15px;
-            right: 15px;
-        }
     }
 
     &--gray {
@@ -381,11 +392,10 @@
         min-height: 45px;
         padding-left: 20px;
         padding-right: 20px;
-        width: 100%;
+        //width: 100%;
 
         &--icon {
             img {
-                height: 15px;
                 margin-right: 10px;
             }
         }

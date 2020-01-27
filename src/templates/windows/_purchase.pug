@@ -1,0 +1,25 @@
++b.modal#purchase
+    +b.modal-block(class="--light")
+        +e.SPAN.close.js-hide-modal
+            +icon('cross')
+        +b.gr-block
+            +e.content
+                form
+                    +e.H3.title( class=" ttu") Purchase request
+                    +b.field(class="--white")
+                        label Your e-mail
+                        input(type="text")
+                    // .field--error
+                    +b.field(class="--white")
+                        label Quantity of coins
+                        input(type="text")
+
+                    +b.field(class="--white")
+                        label Currency in which you want to pay
+                        select
+                            option Bitcoin
+
+                    +e.buttons
+                        +b.BUTTON(class="btn --white --icon --small-radius")
+                            img(src="icons/ewallet.svg", alt="")
+                            span Send request

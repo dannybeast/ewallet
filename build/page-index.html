@@ -439,7 +439,7 @@
             <div class="pre-sale__indicator" data-percent="6%"></div>
           </div>
           <div class="coming__image"><img src="img/coming/coin.png" alt=""></div>
-          <div class="coming__buttons"><a class="btn btn--gr-blue js-modal"> <span>Submit e-wallet coin purchase request</span></a></div>
+          <div class="coming__buttons"><a class="btn btn--gr-blue js-custom-modal" data-modal-id="purchase"> <span>Submit e-wallet coin purchase request</span></a></div>
         </div>
       </div>
     </section>
@@ -704,6 +704,25 @@
             <div class="modal-block__buttons"><button class="btn btn--square-gr">Request Funds</button></div>
             <div class="modal-block__links"><a href="#">Copy Shareable Request Link </a></div>
           </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="purchase">
+      <div class="modal-block modal-block--light"><span class="modal-block__close js-hide-modal"><svg class="icon icon-cross ">
+            <use xlink:href="img/icons/sprite.svg#icon-cross"></use>
+          </svg></span>
+        <div class="gr-block">
+          <div class="gr-block__content">
+            <form>
+              <h3 class="gr-block__title ttu">Purchase request</h3>
+              <div class="field field--white"><label>Your e-mail</label><input type="text"></div><!-- .field--error-->
+              <div class="field field--white"><label>Quantity of coins</label><input type="text"></div>
+              <div class="field field--white"><label>Currency in which you want to pay</label><select>
+                  <option>Bitcoin</option>
+                </select></div>
+              <div class="gr-block__buttons"><button class="btn btn--white btn--icon btn--small-radius"><img src="icons/ewallet.svg" alt=""><span>Send request</span></button></div>
+            </form>
+          </div>
         </div>
       </div>
     </div>

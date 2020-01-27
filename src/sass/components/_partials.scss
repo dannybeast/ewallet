@@ -591,6 +591,13 @@ $margin-sm: 80px;
     display: block;
     $parent: &;
     max-width: 510px;
+    transition: all .3s ease;
+
+    &:hover {
+        #{$parent}__block {
+            transform: scale(1.02);
+        }
+    }
 
     @include media-breakpoint-down(sm) {
         max-width: 100%;
@@ -644,6 +651,8 @@ $margin-sm: 80px;
         position: relative;
         display: block;
         margin-bottom: 30px;
+        transition: all .3s ease;
+
 
         img {
             display: block;
@@ -1221,6 +1230,10 @@ $margin-sm: 80px;
     }
 }
 
+.ttu {
+    text-transform: uppercase;
+}
+
 .coming {
     &__block {
         border: solid 5px transparent;
@@ -1301,7 +1314,7 @@ $margin-sm: 80px;
         padding: 0 30px;
 
         @include media-breakpoint-down(sm) {
-            padding: 0 10px;
+            padding: 0 20px;
             font-size: 14px;
         }
     }
